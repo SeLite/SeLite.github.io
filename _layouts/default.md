@@ -24,6 +24,20 @@
             padding-left: 2px;
             padding-right: 2px;
         }
+        .dropdown-menu[data-placement="left"] {
+            left: auto;
+            right: 0px;
+        }
+        /* Following, and the respective data-placement="left" in TableOfContents.md, is from https://github.com/twbs/bootstrap/issues/1411 */
+        .navbar .nav>li>.dropdown-menu[data-placement="left"]:before {
+            left: auto;
+            right: 9px;
+        }
+
+        .navbar .nav>li>.dropdown-menu[data-placement="left"]:after {
+            left: auto;
+            right: 10px;
+        }
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
