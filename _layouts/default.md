@@ -21,8 +21,8 @@
             #toc-mobile-title {display: none;}
         }
         ul.nav > li > a {
-            padding-left: 3px;
-            padding-right: 3px;
+            padding-left: 2px;
+            padding-right: 2px;
         }
     </style>
     <script type="text/javascript">

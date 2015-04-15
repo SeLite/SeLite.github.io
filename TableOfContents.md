@@ -8,6 +8,15 @@
   </ul>
 </li>
 <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Add-ons<span class="caret"></span></a>
+  <ul class="dropdown-menu" role="menu"-->
+    <li><a href="AddOns">AddOns</a></li>
+    <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
+    <li><a href="AddOnsDependants">AddOnsDependants</a></li>
+    <li><a href="PackagedTests">PackagedTests</a></li>
+  </ul>
+</li>
+<li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Frameworks<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu"-->
     <li><a href="AppsFrameworks">AppsFrameworks</a></li>
@@ -37,15 +46,6 @@
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
     <li><a href="EnhancedSyntax">EnhancedSyntax</a></li>
     <li><a href="ExtraCommands">ExtraCommands</a></li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Add-ons<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu"-->
-    <li><a href="AddOns">AddOns</a></li>
-    <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
-    <li><a href="AddOnsDependants">AddOnsDependants</a></li>
-    <li><a href="PackagedTests">PackagedTests</a></li>
   </ul>
 </li>
 <li class="dropdown">
