@@ -25,6 +25,7 @@ See [SelBlocksGlobal Selenese reference](http://sel-blocks-global.selite.googlec
 Word 'function' can refer to a Javascript function, or to a function defined by SelBlocks Global/SelBlocks construct _function...endFunction_. If it's unclear, let's call the later 'test case function'.
 
 # Differences to SelBlocks #
+
 ## Doubling of back apostrophe ````` ##
 If parameters of your Selenese actions contain back apostrophe `````, you need to double it into ````````. See EnhancedSyntax.
 
@@ -56,5 +57,11 @@ use
 
 call|myFunction|myParam=$storedVariableInCallingScope
 ```
+
 ## Try/catch suppresses error counts ##
 _try...catch_ suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits scripts that test Selenese commands themselves (e.g. ones provided by SeLite or any custom commands).
+
+# Flow control with Selenese boolean accessors
+Selenium, SeLite and custom add-ons define _isXyz()_ Selenese boolean accessors. You may combine them with _if_, _elseIf_ or _while_, by passing _selenium.isXyz()_ or _selenium.isXyz('locatorString')_. Indeed, you may combine the accessor calls in more complex boolean expressions. An example:
+
+if \| !selenium.isVisible( 'id=pmf-navbar-collapse' )

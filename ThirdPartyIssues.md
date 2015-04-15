@@ -1,8 +1,4 @@
 ---
-title: Third party issues
-layout: default
----
----
 title: Third party issues affecting or blocking SeLite
 layout: default
 ---
@@ -10,17 +6,16 @@ layout: default
 # Your vote is significant #
 Below is a list of issues in Selenium IDE, Firefox or third party software that complicate maintenance and progress of SeLite. They also restrict usability of Selenium IDE. Many of them were reported by other people, but they affect SeLite, too. Some of those defects and requests even have fixes proposed, but not accepted by the third party.
 
-Those issues need your vote in order to get attention from those third parties. Please, vote for them - make the difference.
+Those issues need your vote in order to get attention from those third parties. Please, make the difference: vote for them.
 
 ## Your privacy is essential ##
 If you vote for an issue, by default you will receive automated emails on changes to that issue. However, you can deactivate those notifications. Indeed, voting for an issue doesn't add your email address to any forums.
 
-# Where to vote #
-## Quick links ##
-Use the following links to register with third parties, disable email notifications (unless you want them), list the issues and vote for them:
-<a href='Hidden comment: 
+# Where to vote
 
-Comment: update the following links whenever you update the detailed list.
+## Quick links
+Use the following links to register with third parties, disable email notifications (unless you want them), list the issues and vote for them:
+<!-- update the following links whenever you update the detailed list.
 
 How to get the links:
 
@@ -32,16 +27,16 @@ How to get the links:
 
 - For GitHub: I couldn"t make it search by pairs of [repository, issue #]. Therefore
 https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93. To edit that search, visit this link and then follow "Advanced search" link from that screen.
-'></a>
+-->
+
 | **Third party**   | **Hosted at** | **Registration**                                                                     | **Email preferences**                                                                         | **Issues relevant to SeLite** | **My votes/stars** |
 |:------------------|:--------------|:-------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:------------------------------|:-------------------|
 | Selenium      | Google Code | [Google registration](https://accounts.google.com/SignUp)                           | [Google settings](https://code.google.com/hosting/settings)                                 | [Selenium issues](https://code.google.com/p/selenium/issues/list?can=1&q=id%3A6903%2C3116%2C2706%2C5495%2C6697%2C1092%2C1816%2C5423%2C3028) | [Selenium stars](https://code.google.com/p/selenium/issues/list?can=5&q=&cells=tiles) |
 | Mozilla       | Mozilla     | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1094057%2C1051632%2C1003554%2C1108132%2C1096135%2C1071816&list_id=11740717&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Cvotes) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
 | NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
-<table><tbody>
-<tr><td> Selblocks       </td><td> GitHub     </td><td> <a href='https://github.com/join'>GitHub registration</a>                                    </td><td> <a href='https://github.com/settings/notifications'>GitHub notifications</a>                      </td><td>  <a href='https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93'>Selblocks issues</a> </td><td> <a href='https://github.com/stars'>GitHub stars</a>              </td></tr></tbody></table>
+| Selblocks     | GitHub     | [GitHub registration](https://github.com/join) | [GitHub notifications](https://github.com/settings/notifications) | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93) | [GitHub stars](https://github.com/stars) |
 
-Please, vote even if an issue is marked as not to be resolved (e.g. with a comment "<i>doesn't meet a 'feature bar'</i>"). Stay updated: subscribe to get updates about <a href='http://www.feed43.com/8850141255642605.xml'>new third party issues</a> (via RSS) and vote for them in future.<br>
+Please, vote even if an issue is marked as not to be resolved (e.g. with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about <a href='http://www.feed43.com/8850141255642605.xml'>new third party issues</a> (via RSS) and vote for them in future.<br>
 <h2>Selenium</h2>
 It's very easy to vote for Selenium issues. You need a <a href='https://accounts.google.com/SignUp'>Google account</a>, but you don't need GMail (you can use your existing email address). Just visit a page of the issue and click at the star left of the issue's title (the star becomes yellow).<br>
 <br>
