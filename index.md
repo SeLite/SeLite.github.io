@@ -3,7 +3,7 @@ title: SeLite - DB-driven browser automation
 layout: default
 ---
 
-# DB-driven browser automation
+# Database-driven browser automation
 
 ## SeLite makes Selenium better
 SeLite (Selenium+SQLite) is a family of extensions of [Selenium](SeleniumIDE). It
@@ -11,12 +11,12 @@ SeLite (Selenium+SQLite) is a family of extensions of [Selenium](SeleniumIDE). I
 * enhances development environment
 * facilitates team work.
 
-It serves for testing of web applications, and for other purposes, such as web-based administration or data mining/manipulation. It enables database-driven navigation with [SQLite](http://www.sqlite.org/) (the [most widely deployed](http://www.sqlite.org/mostdeployed.html) SQL database).
+It serves for testing of web applications, and for other purposes, such as web-based administration or data mining/manipulation. It enables DB-driven navigation with [SQLite](http://www.sqlite.org/) (the [most widely deployed](http://www.sqlite.org/mostdeployed.html) SQL database).
 
 ## Data separation (in automated testing)
 Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
 
-Data separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its data with the test, such defects would be difficult or even impossible to detect.
+Separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its database with the test, such defects would be difficult or even impossible to detect.
 
 See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheory](TestMethodsTheory).
 

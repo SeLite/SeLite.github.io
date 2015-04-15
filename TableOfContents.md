@@ -1,3 +1,6 @@
+{% comment %} This page doesn't have the header with layout and title. Otherwise, when included from _layouts/default.md, it would show that layout and title as text. As a side effect, you can't access this page at http://selite.github.io/TableOfContents. If need be, use http://selite.github.io/TableOfContents.md instead.
+This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. When it's an .md, Markup Viewer automatically changes the links from here to contain .md extension. Otherwise those local links don't work in Firefox.
+{% endcomment %}
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
