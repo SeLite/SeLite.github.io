@@ -1,0 +1,15 @@
+{% comment %} Based on https://github.com/ilastik/ilastik.github.io/blob/master/_includes/toc
+{% endcomment %}
+{% capture basemd %}
+{% raw %}
+<div markdown="1">
+
+* TOC
+{:toc}
+
+</div>
+{% endraw %}
+{{page.content}}
+{% endcapture %}
+
+{% assign toc = basemd | markdownify | split:'</div>' | first | append:'</div>' %}
