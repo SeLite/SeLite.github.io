@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style type="text/css">
-        /* Based on http://getbootstrap.com/css/#grid-media-queries */
-        @media (max-width: 991px) {
+        /* Based on http://getbootstrap.com/css/#grid-media-queries - @screen-sm-min */
+        @media (max-width: 767px) {
             #toc-desktop-button {display: none;}
         }
-        @media (min-width: 992px) {
+        @media (min-width: 768px) {
             #toc-mobile-button {display: none;}
             /* Mobiles browsers don't show title when scrolling down, so let's show it in BS menu even when vertically collapsed (where we have nothing else to show). Desktop browsers show title most of the time; also, we don't want the title in BS menu on desktops, since then there's less space for other menu items to show horizontally, which causes them to flow on further lines. */
             #toc-mobile-title {display: none;}
@@ -27,10 +27,11 @@
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
-        var shiftWindow = function() {
+        function shiftWindow() {
             scrollBy( 0, -1*$("#whole-navbar").height() );
-        };
+        }
         window.addEventListener("hashchange", shiftWindow);
+        
         function load() {
             $('body').css( "padding-top", $("#whole-navbar").height() );
             if (window.location.hash) {
@@ -64,8 +65,8 @@
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button">This page<span class="caret"></span></a>
         </li>
+        {% include_relative TableOfContents.md %}
       </ul>
-      {% include_relative TableOfContents.md %}
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">
         {{ toc }}

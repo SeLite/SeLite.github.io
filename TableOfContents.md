@@ -1,5 +1,3 @@
-
-<ul class="nav navbar-nav">
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu"-->
@@ -92,11 +90,8 @@
     <li><a href="TroubleShooting">TroubleShooting</a></li>
     <li><a href="ReportingIssues">ReportingIssues</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Internal<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu"-->
+    <li class="divider"></li>
+    <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
     <li><a href="JavascriptOther">JavascriptOther</a></li>
     <!-- TODO make an li-based header/title: -->
@@ -105,4 +100,3 @@
     <li><a href="SeleniumFlow">SeleniumFlow</a></li>
   </ul>
 </li>
-</ul>
