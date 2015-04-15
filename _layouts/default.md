@@ -52,7 +52,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#" id="toc-mobile-title">{{ page.title }}</a>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">{{ page.title }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
