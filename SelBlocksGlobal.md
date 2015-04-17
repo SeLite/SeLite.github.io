@@ -65,3 +65,6 @@ _try...catch_ suppresses error counts and some error logs for exceptions, errors
 Selenium, SeLite and custom add-ons define _isXyz()_ Selenese boolean accessors. You may combine them with _if_, _elseIf_ or _while_, by passing _selenium.isXyz()_ or _selenium.isXyz('locatorString')_. Indeed, you may combine the accessor calls in more complex boolean expressions. An example:
 
 if \| !selenium.isVisible( 'id=pmf-navbar-collapse' )
+
+@TODO DOC Selenese > ???: CombiningExpressions: Use variable selenium in Selenium Core scope (or SeLiteMisc.selenium in JS module scope) for the same as what 'this' keyword is in context of Selenese actions getEval (and related), if, while; however, in their context this===selenium, hence use selenium instead of this, so that it's the same as in Selenium Core scope.
+-> So, unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't use _storeEval_ but pass the Javascript expression directly within paired backticks `` (or =``, if the result can be other than a string). This minimises a need to use storeEval and auxiliary stored variables. That makes Selenese scripts shorter and clearer.

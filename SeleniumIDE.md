@@ -66,7 +66,7 @@ Selenese commands accept up to two parameters: Target and Value.
 * Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for _getEval_).
 * One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSyntax](EnhancedSyntax).
 * If Target is a locator, Value is usually an expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
-* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy.
+* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it also offline at _chrome://selenium-ide/content/selenium-core/reference.html#locators_ in Firefox).
 
 ## XPath
 Full XPath locators start with _xpath=_ or with //. Usually an XPath expression starts with //, with which you don't need to use _xpath=_. However, some SeLite commands (like _clickRandom_ and _selectRandom_) only accept XPath as the locator, but they require it not to contain any leading _xpath=_ prefix (whether the XPath starts with // or not).
@@ -82,7 +82,7 @@ See resources on XPath:
 * _ui=semanticPageName::semanticElementName(...)_ or
 * _ui=semanticPageName::semanticElementName(...)->xpathOffsetLocator_.
 
-(The example there is for Java only, while SeLite frameworks define UI Mappings in Javascript.) See also [detailed reference](https://selenium.googlecode.com/git/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, you can get the same reference offline through Selenium IDE menu > Help > UI-Element Documentation or at a Firefox URL: _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
+(The example there is for Java only, while SeLite frameworks define UI Mappings in Javascript.) See also [detailed reference](https://selenium.googlecode.com/git/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, see the same reference offline: through Selenium IDE menu > Help > UI-Element Documentation or at a Firefox URL _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
 
 # Variables
 ## Stored variables
