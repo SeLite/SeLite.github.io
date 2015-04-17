@@ -9,7 +9,7 @@ layout: default
   * Don't have any content before the first heading (<i><code>=</code> Heading... <code>=</code></i>)
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
   * Don't use fixed line length, especially not in documentation source. In code split expressions on multiple lines if they are quite complex. A good IDE/editor should be capable of wrapping lines, so you can benefit from all your available screen area and not worry about line lengths. Also, having longer lines is better when you search for something, as seeing the matches in the search results may give you enough information (e.g. you know you don't need to change that occurrence), which saves you opening that line in editor. Try NetBeans. There choose menu Tools > Options > Editor > Formatting > Line Wraps: After words. If you want Eclipse try http://dev.cdhq.de/eclipse/word-wrap/ (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
-  * format any chrome:// URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls).
+  * format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
 
 ### Drawn diagrams ###
 Make these nice. Draw them in LibreOffice/OpenOffice and save them as .odg. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In wiki use URLs to the .png images from git (https://code.google.com/p/selite/source/browse/diagrams > navigate to .png file > get the url of link 'View raw file').
@@ -43,3 +43,7 @@ Below the object constructor name are object fields. Indent them with two spaces
 [ ObjectConstructorName.SECRET_FIELD_NAME ] Field with a fixed name, not referred to via a string/numeric literal across the code,
 but rather as a value of a defined constant.
 ~~~
+
+
+### Headers IDs must be the same as their text
+Don't use [Kramdown-specific header IDs](http://kramdown.gettalong.org/syntax.html#specifying-a-header-id), since they don't show up well with Markdown Viewer in Firefox.

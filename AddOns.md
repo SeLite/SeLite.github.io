@@ -39,9 +39,9 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
             <li>tests (see also <a href="PackagedTests">PackagedTests</a>)</li>
             <li>source, only if there is no other documentation</li>
             <li>third party documentation</li>
-            <li><em>chrome://</em> URL to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
+            <li><em><a href="AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui">chrome://</em> URL</a> to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
         </ul>
-        (<em>chrome://</em> URLs only work after you install the add-on in Firefox. See also <a href="AboutDocumentation">AboutDocumentation</a> > <a href="AboutDocumentation#firefox-chrome-urls">Firefox <em>chrome://</em> URLs</a>)
+        (<em><a href="AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui">chrome://</em> URLs</a> only work after you install the add-on in Firefox. See also <a href="AboutDocumentation">AboutDocumentation</a> > <a href="AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui">Firefox chrome URLs</a>)
     </td>
 </tr>
 <tr>

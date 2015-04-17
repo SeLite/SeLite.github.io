@@ -82,7 +82,9 @@ See resources on XPath:
 * _ui=semanticPageName::semanticElementName(...)_ or
 * _ui=semanticPageName::semanticElementName(...)->xpathOffsetLocator_.
 
-(The example there is for Java only, while SeLite frameworks define UI Mappings in Javascript.) See also [detailed reference](https://selenium.googlecode.com/git/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, see the same reference offline: through Selenium IDE menu > Help > UI-Element Documentation or at a Firefox URL _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
+(The example there is for Java only, while SeLite frameworks define UI Mappings in Javascript.) See also [detailed reference](https://selenium.googlecode.com/git/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, see the same reference offline [offl][offline-link]: through Selenium IDE menu > Help > UI-Element Documentation or at a Firefox URL _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
+
+[offline-link]: www.sme.sk "Offline link available once you installed the add-on(s) in Firefox" {:alt="offline"}
 
 # Variables
 ## Stored variables

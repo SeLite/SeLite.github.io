@@ -6,8 +6,8 @@ layout: default
 # Format
 Having documentation in one large piece would make its structure too rigid, and maintenance and online navigation impractical. Instead, it's split in small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
 * get [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
-* clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip)
-<!-- TODO * open local [TableOfContents](TableOfContents)-->.
+* clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
+<!-- TODO * open local [TableOfContents](TableOfContents)-->
 
 We don't use GitHub Wiki, since it doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a too wide mandatory part).
 
@@ -19,12 +19,12 @@ SeLite doesn't cover general functionality of related technologies (see also [Re
 # 'scripts'
 Since Selenium and SeLite are not test-specific, documentation calls test cases or suites _scripts_. They're called <i>Selenese scripts</i> only when there's a need to differentiate them from Javascript or other scripts. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-# Firefox _chrome://_ URLs
-Some of SeLite GUI is accessible via special Firefox URLs that start with _chrome://_ (which don't work in other browsers). Such links can also show source of SeLite and its Selenese references.
+# Firefox chrome URLs for documentation and GUI
+Selenium/SeLite GUI, some of their documentation and all their source, is accessible via special Firefox URLs that start with _chrome://_. (Those addresses don't work in other browsers).
 
-The documentation presents such URLs text _in italics_, but not as links. That's because Firefox doesn't allow linking to them from the internet (neither from _file://_ based URLs).
+The documentation presents such URLs as text _in italics_, but not as links. (That's because Firefox doesn't allow linking to them from the internet, neither from _file://_ based URLs.)
 
-# Comments
+# Comments TODO move to ReportingIssues
 By submitting a comment you agree that project administrator(s) can, without notice,
   * edit your comment, or
   * incorporate your comment into SeLite documentation, under the current or any future license of SeLite documentation, or

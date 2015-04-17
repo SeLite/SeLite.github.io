@@ -17,7 +17,7 @@ Some extensions may depend on others and require them to be initiated first. For
   * initiation of the dependant relies on the dependee
 
 # Loading via Extension Sequencer #
-Your add-on needs to have _chrome://my-plugin/content/SeLiteExtensionSequencerManifest.js_ (in UTF-8) containing something like:
+Your add-on needs to have [chrome URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://my-plugin/content/SeLiteExtensionSequencerManifest.js_ (in UTF-8) containing something like:
 ```javascript
 
 "use strict";

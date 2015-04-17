@@ -20,7 +20,7 @@ Standard PHP detection class supports this (which works with [Xdebug](http://xde
 Positive checks validate that the page contains elements that match given selector(s). However, it can't validate that HTML of a page conforms to HTML standard. That's because Firefox automatically fixes incorrect HTML and it adds missing necessary elements.
 
 ## Configuration ##
-Configure these checks at _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_. In order to use [AutoCheck](AutoCheck) you must select at least autoCheckDetector or autoCheckDetectorCustom. Other fields are optional.
+Configure these checks at [chrome URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_. In order to use [AutoCheck](AutoCheck) you must select at least autoCheckDetector or autoCheckDetectorCustom. Other fields are optional.
   * autoCheckAssert - whether an occurrence should trigger an assert failure; by default it triggers a validation failure rather than an assert failure
   * autoCheckDetector - choose a standard detection class to use; or set it to null/undefined if you use a custom class
   * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into Selenium Core scope e.g. via [BootstrapLoader](BootstrapLoader)); used only if autoCheckDetector is null/undefined
@@ -31,4 +31,4 @@ Configure these checks at _chrome://selite-settings/content/tree.xul?module=exte
   * autoCheckRefused - enter locator(s) to be refused; none of the locator(s) must match any element, otherwise the page fails
   * autoCheckRequired - enter locator(s) to be required; each locator must match at least one element, otherwise the page fails
 
-(Those fields are not defined in chrome://selite-settings/content/common\_settings\_module.js. Instead, they are added on the fly by _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_).
+(Those fields are not defined in _chrome://selite-settings/content/common\_settings\_module.js_. Instead, they are added on the fly by _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_).
