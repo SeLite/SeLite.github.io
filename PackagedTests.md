@@ -47,7 +47,7 @@ These validate functionality
   * at lower level than Selenese tests, or
   * which would be awkward to test in Selenese, or
   * which is not Selenese-specific, and while it can (and should) be tested from Selenese, it should be tested without Selenium IDE, too.
-There's no extra installation - they are a part of their add-ons (in folders _javascript-tests_). You can invoke them directly (without Selenium IDE) through _chrome://_ links listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese tests.
+There's no extra installation - they are a part of their add-ons (in folders _javascript-tests_). You can invoke them directly (without Selenium IDE) through [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese tests.
 
 # Shell tests #
 These are invoked from (i.e. command line on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).

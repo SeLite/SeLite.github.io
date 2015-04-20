@@ -9,7 +9,7 @@ Having documentation in one large piece would make its structure too rigid, and 
 * clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
 <!-- TODO * open local [TableOfContents](TableOfContents)-->
 
-We don't use GitHub Wiki, since it doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a too wide mandatory part).
+We don't use GitHub Wiki, since it doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a wide mandatory part).
 
 # Scope
 We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedTests](PackagedTests) or the source code. Then you can experiment.

@@ -16,7 +16,7 @@ You can define a configuration module (schema) in a simple Javascript file (in U
   * class SeLiteSettings.Module
 The definition must be in a file available via
   * the filesystem (possibly a network drive), via either the path+name or via file:// url; or
-  * a custom Firefox extension (at a chrome:// or resource:// url)
+  * a custom Firefox extension (at a [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or resource:// url)
 
 See a highlighted example of a schema definition [test\_settings\_module.js](https://code.google.com/p/selite/source/browse/settings/test_settings_module.js) (or download [its source](https://selite.googlecode.com/git/settings/test_settings_module.js)).
 

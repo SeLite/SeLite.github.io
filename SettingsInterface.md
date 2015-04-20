@@ -6,7 +6,7 @@ layout: default
 # Accessing the interface of SeLiteSettings #
 Two most frequent use cases are available in Selenium IDE menu > Options. They link to <i>tree.xul</i> and <i>tree.xul?selectFolder</i> (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
 
-SeLiteSettings' configuration interface is within Firefox at a special urls (starting with chrome://). That way it's useable even without Selenium IDE. The urls are
+SeLiteSettings' configuration interface is within Firefox at a special urls starting with [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui). That way it's usable even without Selenium IDE. The URLs are
 | <i>chrome://selite-settings/content/tree.xul</i>                                   | to manage Firefox profile-based set(s) for all registered modules |
 |:-----------------------------------------------------------------------------------|:------------------------------------------------------------------|
 | <i>chrome://selite-settings/content/tree.xul?module=full-module-name</i>           | to manage set(s) for a given module |

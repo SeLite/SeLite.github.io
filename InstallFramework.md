@@ -30,7 +30,7 @@ This is already done for the tests that come with SeLite frameworks. If you're c
 ### Through GUI ###
 <!-- @TODO eliminate or Move to SettingsInterface? -->
 You can configure that via GUI as per [SettingsInterface](SettingsInterface):
-  1. Visit Firefox URL _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
+  1. Visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
   1. create a new set
   1. if you're using just one test configuration, make it default (click at 'Default' next to its name)
   1. select 'Add a new value' next to _bootstrapCoreExtensions_. Point it to where you downloaded the framework JS file.
@@ -57,7 +57,7 @@ This has a dual purpose: to maintain profile-based configuration set(s), and to 
 
 Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single test command, e.g. <i>getEval | true</i>. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
 
-If you'd like to review configuration, open Firefox URL _chrome://selite-settings/content/tree.xul?selectFolder_ (or _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_).
+If you'd like to review configuration, open [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?selectFolder_ (or _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_).
 
 If you'd like to edit profile-based configuration set(s), open _chrome://selite-settings/content/tree.xul_. Then follow [SettingsInterface](SettingsInterface) and edit the following fields (if they apply to your framework):
   * Enter usernames for _roles_ that you need.
