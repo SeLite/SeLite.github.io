@@ -5,7 +5,7 @@ layout: default
 [SelBlocksGlobal](SelBlocksGlobal) provides an enhancement to syntax of parameters _target_ and _value_ passed to Selenese commands. It allows those expressions to conveniently access stored variables through $ notation (any _$xxx_ refers to stored variable _xxx_). That allows the tests to be shorter and possibly clearer.
 
 # Javascript within \`...\` without special prefix (cast to a string) #
-This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of back ticks \`...\`) to Selenese commands in their parameter (Target or Value). This syntax is an alternative to both Selenese standard _javascript{...}_ and SelBlocks's simplified syntax _$xyz_.
+This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of back ticks \`...\`) to Selenese commands in their parameter (Target or Value).
 
 This evaluates any Javascript code in Target or Value that is between a pair of \`...\`. It then converts the result to a string (excluding back apostrophes \` themselves).
 
@@ -53,7 +53,7 @@ If you develop Selenese commands that may be used with =\`...\` or @\`...\` then
 # Alternatives in classic Selenese
 Selenium IDE supports access to stored variables via _${xyz}_ syntax. (Implementation note: it is handled by _preprocessParameter()_.)
 
-Alternatively, you may use shorthand _javascript{...}_ - see [Selenium IDE docs](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp) > [JavaScript Usage with Script Parameters](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#javascript-and-selenese-parameters). However, Javascript expressions passed within _javascript{...}_ don't support classic shorthand to standard stored variables _${xyz}_.
+Alternatively, you may use shorthand _javascript{...}_ - see [Selenium IDE docs](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp) > [JavaScript Usage with Non-Script Parameters](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#javascript-usage-with-non-script-parameters). However, Javascript expressions passed within _javascript{...}_ don't support classic shorthand to standard stored variables _${xyz}_.
 
 Also, you may call _getEval_ as _storeEval_, which stores the evaluated result of Target parameter in a Selenese variable that is named in Value parameter. E.g. if Value parameter is _xyz_, then you can access the result as _${xyz}_. However, \`...\` syntax operates at level different to level of _getEval_. So, you can't just copy any expression between \`...\` and _getEval_ (it would work for some values, but not for others).
 

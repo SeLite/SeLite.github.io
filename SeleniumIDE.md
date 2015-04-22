@@ -104,7 +104,7 @@ When saving a test case or a test suite, Selenium IDE doesn't add _'.html'_ exte
 ## Using multiple Selenium IDEs in parallel
 A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
 
-Don't modify same test case or test suite in various Selenium IDE windows simultaneously.
+Modify all test cases and test suites only in one Selenium IDE window. Alternatively, edit different test cases in different Selenium IDEs; however, beware that sometimes other Selenium IDEs don't pick up the change when saved (even if you switch between test cases in those other Selenium IDEs) or they notice it only later.
 
 ### Auxiliary Selenium IDEs inside browser
 This shows one (standard) Selenium IDE detached from Firefox browser windows. Other Selenium IDEs are inside browser windows, but they may look standard, too. Compared to the next method, this
