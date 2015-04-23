@@ -40,6 +40,3 @@ These are in files called _SeLiteSettingsAssociations.txt_. They connect tests a
 Module names and set names can't contain a space, so this syntax is non-ambiguous.
 
 A configuration set can be linked to any number of folders. But a folder can have maximum of one set associated with it per module per folder level.
-
-# Example #
-See [test\_settings\_module.js](https://code.google.com/p/selite/source/browse/settings/test_settings_module.js) and its [source](https://selite.googlecode.com/git/settings/test_settings_module.js).

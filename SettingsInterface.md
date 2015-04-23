@@ -26,9 +26,9 @@ SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of te
 See [TestMethodsTheory](TestMethodsTheory) for definition of test and app DB. Vanilla DB serves as a snapshot of app DB, which you can revert to when the test got out of sync with the app, because of a bug in your test, timeout etc.<br>
 <br>
 <table><thead><th>                                                                                                </th><th> <b>Source DB</b> </th><th> <b>Target DB</b> </th><th> <b>Extra target DB</b> </th></thead><tbody>
-<tr><td> <img src='https://selite.googlecode.com/git/settings/src/chrome/skin/classic/reload_test.png' />             </td><td> App       </td><td> Test      </td><td>                 </td></tr>
-<tr><td> <img src='https://selite.googlecode.com/git/settings/src/chrome/skin/classic/reload_vanilla_and_test.png' /> </td><td> App       </td><td> Test      </td><td> Vanilla         </td></tr>
-<tr><td> <img src='https://selite.googlecode.com/git/settings/src/chrome/skin/classic/reload_app_and_test.png' />     </td><td> Vanilla   </td><td> Test      </td><td> App             </td></tr></tbody></table>
+<tr><td> <img src='https://raw.githubusercontent.com/selite/main/master/settings/src/chrome/skin/classic/reload_test.png' />             </td><td> App       </td><td> Test      </td><td>                 </td></tr>
+<tr><td> <img src='https://raw.githubusercontent.com/selite/main/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png' /> </td><td> App       </td><td> Test      </td><td> Vanilla         </td></tr>
+<tr><td> <img src='https://raw.githubusercontent.com/selite/main/master/settings/src/chrome/skin/classic/reload_app_and_test.png' />     </td><td> Vanilla   </td><td> Test      </td><td> App             </td></tr></tbody></table>
 
 You should pause tests while using these buttons, otherwise the test script or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.<br>
 <br>
