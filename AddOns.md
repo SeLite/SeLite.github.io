@@ -16,9 +16,10 @@ Don't install SeLite together with SelBlocks (or Flow Control, GoTo or Sideflow)
 ## Latest releases
 Background: After Mozilla screens an add-on's update for security, you can get it at 'download' links below. However, the update doesn't show at add-on's 'info' page (nor at the above collection), until someone from Mozilla reviews it. If you've installed an older version of the add-on, you won't get an automatic update until then either.
 
-So, use the _download_ links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _latest version_ links (which can be out of date).
+So, use the _download_ links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
 {::options parse_block_html="true" /}
+
 # Add-ons
 <!-- Keep the following table sorted alphabetically. Using options parse_block_html="true" didn't help, so links are in HTML. -->
 <table>
@@ -94,8 +95,8 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/'>download</a>     </td>
     <td> <ul>
-        <li><a href='https://selite.googlecode.com/git/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
-        <li><a href='https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests'>Shell tests</a></li>
+        <li><a href='http://htmlpreview.github.io/?https://github.com/selite/main/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
+        <li><a href='https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests'>Shell tests (source)</a></li>
         <li>Apache License 2</li>
     </ul> </td>
 </tr>
