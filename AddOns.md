@@ -168,4 +168,4 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
 </table>
 
 # Cutting edge
-If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). Also, installing the add-ons that way may be faster than downloading them one by one. Additionally, the source contains [PackagedTests](PackagedTests), which serve as active documentation. If you use a <a href='http://git-scm.com/downloads'>GIT client</a>, it gives you easy access to future development versions.
+If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). Also, installing the add-ons that way may be faster than downloading them one by one. Additionally, the source contains [PackagedTests](PackagedTests), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
