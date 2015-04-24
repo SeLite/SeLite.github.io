@@ -35,6 +35,7 @@ Then it passes the result String object to the called action as a value of the i
 The Selenese command (i.e. a custom command or a custom override/intercept of standard Selenese) can access the result of Javascript through field _seLiteExtra_ if it is set on the parameter. Using @\`...\` makes the command receive instance of _String_ object rather than a primitive string. That is OK for the most of standard Selenese.
 
 ## Special rules on using =\`...\` or @\`...\`
+
 ### For script maintainers and framework developers
 A simple rule is: Don't pass =\`...\` or @\`...\` to _getEval_ or to custom commands that evaluate values of their Selenese parameters (Target or Value) as Javascript expression(s), unless those commands are designed for it. The same applies to derivative commands like _storeEval_ (as per  [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)).
 
