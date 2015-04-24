@@ -6,6 +6,7 @@ layout: default
 The test example logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
 
 # Install Drupal 7 #
+
 ## Install Drupal 7.24 on Fedora 19/20 ##
 These steps are for 7.24 on Fedora 19 and Drupal 7.24-1 on Fedora 20. For other systems see [installation docs](https://drupal.org/documentation/install).
 

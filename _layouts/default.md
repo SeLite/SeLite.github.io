@@ -108,8 +108,8 @@
         // A reverse of http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages/16389663#16389663. See also https://github.com/github/pages-gem/issues/69.
         if( location.host!=='selite.github.io' ) {
             $(function () {
-                // Match any URLs with no protocol, with any directory path (optional), ending with a filename that doesn't contain a dot. This doesn't match './' or URLs ending with '/' (e.g. ones for /index.md or subfolder/index.md), which is OK, since those work well with both GitHub pages and Jekyll.
-                var urlWithNoProtocolAndNoExtensionRegex= /^(?![a-z]+:\/\/)(.*\/)?([^/.]+)$/;
+                // Match any local URLs to other files with no extension, i.e. URLS with no protocol, not starting with #, with any directory path (optional), ending with a filename that doesn't contain a dot. This doesn't match './' or URLs ending with '/' (e.g. ones for /index.md or subfolder/index.md), which is OK, since those work well with both GitHub pages and Jekyll.
+                var urlWithNoProtocolAndNoExtensionRegex= /^(?!#|[a-z]+:\/\/)(.*\/)?([^/.]+)$/;
                 $('a').each(function () {
                     var href = $(this).attr('href');
                     if( urlWithNoProtocolAndNoExtensionRegex.test(href) ) {

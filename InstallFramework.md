@@ -14,6 +14,7 @@ If your web application uses SQLite, you'll get full functionality and smoother 
 The following instructions are generic. For any application-specific steps see documentation of the respective framework.
 
 # Configuration #
+
 ## Areas, methods and stages of configuration ##
 You need to configure two main areas
   * what framework (or any other bootstrapped extensions) to load
@@ -24,6 +25,7 @@ There are two methods for this. The simpler one manages it through text file(s),
 An alternative method is Firefox profile-based configuration set(s), controlled through GUI. It can also override any 'values' manifests. It's done through [SettingsManifests](SettingsManifests) > ['Associations' manifests](SettingsManifests#associations-manifests). However, using GUI (for any part of configuration) usually requires the whole configuration to be in two stages.
 
 ## Configure SeLite to load the framework ##
+
 ### Through 'values' manifests ###
 This is already done for the tests that come with SeLite frameworks. If you're creating tests with any of those frameworks, you can copy its 'values' manifest _SeLiteSettingsValues.txt_. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field _extensions.selite-settings.common.bootstrappedCoreExtensions_, so it points to location of the framework Javascript file. See also [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#values-manifests) and [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
@@ -38,9 +40,10 @@ You can configure that via GUI as per [SettingsInterface](SettingsInterface):
 If you're going to use several test configurations, then create one set for each configuration, but don't make any of them default. Then connect the sets with folders of your test suite(s) through 'associations' manifest as per [SettingsManifests](SettingsManifests) > ['Associations' manifests](SettingsManifests#associations-manifests).
 
 ## Edit or review configuration of the framework ##
+
 ### Edit through 'values' manifests ###
 Add values for applicable following fields and for any custom fields/keys to _SeLiteSettingsValues.txt_ from above
-```
+```TODO
 extensions.selite-settings.common.testDB
 extensions.selite-settings.common.appDB
 extensions.selite-settings.common.vanillaDB

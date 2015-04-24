@@ -5,7 +5,7 @@ layout: default
 
 
 # About the diagrams and descriptions #
-Time axis is from up downwards. Steps are grouped in runs which are separated by a vertical dotted line.
+Time axis is vertical, from up downwards. Steps are grouped in runs, which are separated by a vertical dotted line.
 
 A 'step' is an operation, either
   * data flow
