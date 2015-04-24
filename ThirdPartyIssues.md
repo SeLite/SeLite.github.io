@@ -15,7 +15,7 @@ If you vote for an issue, by default you will receive automated emails on change
 
 ## Quick links
 Use the following links to register with third parties, disable email notifications (unless you want them), list the issues and vote for them:
-<!-- update the following links whenever you update the detailed list.
+{% comment %} update the following links whenever you update the detailed list.
 
 How to get the links:
 
@@ -27,31 +27,33 @@ How to get the links:
 
 - For GitHub: I couldn"t make it search by pairs of [repository, issue #]. Therefore
 https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93. To edit that search, visit this link and then follow "Advanced search" link from that screen.
--->
+{% endcomment %}
 
 | **Third party**   | **Hosted at** | **Registration**                                                                     | **Email preferences**                                                                         | **Issues relevant to SeLite** | **My votes/stars** |
 |:------------------|:--------------|:-------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:------------------------------|:-------------------|
 | Selenium      | Google Code | [Google registration](https://accounts.google.com/SignUp)                           | [Google settings](https://code.google.com/hosting/settings)                                 | [Selenium issues](https://code.google.com/p/selenium/issues/list?can=1&q=id%3A6903%2C3116%2C2706%2C5495%2C6697%2C1092%2C1816%2C5423%2C3028) | [Selenium stars](https://code.google.com/p/selenium/issues/list?can=5&q=&cells=tiles) |
 | Mozilla       | Mozilla     | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1094057%2C1051632%2C1003554%2C1108132%2C1096135%2C1071816&list_id=11740717&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Cvotes) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
 | NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
-| Selblocks     | GitHub     | [GitHub registration](https://github.com/join) | [GitHub notifications](https://github.com/settings/notifications) | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93) | [GitHub stars](https://github.com/stars) |
+| Selblocks     | GitHub     | [GitHub registration](https://github.com/join) | [GitHub notifications](https://github.com/settings/notifications) | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93) | - |
 
-Please, vote even if an issue is marked as not to be resolved (e.g. with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about <a href='http://www.feed43.com/8850141255642605.xml'>new third party issues</a> (via RSS) and vote for them in future.<br>
-<h2>Selenium</h2>
-It's very easy to vote for Selenium issues. You need a <a href='https://accounts.google.com/SignUp'>Google account</a>, but you don't need GMail (you can use your existing email address). Just visit a page of the issue and click at the star left of the issue's title (the star becomes yellow).<br>
-<br>
+Please, vote even if an issue is marked as not to be resolved (e.g. with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/8850141255642605.xml) (via RSS) and star them/vote for them in future.
+
+## Selenium
+It's very easy to vote for Selenium issues. You need a <a href='https://accounts.google.com/SignUp'>Google account</a>, but you don't need GMail (you can use your existing email address). Just visit a page of the issue and click at the star left of the issue's title (the star becomes yellow).
+
 In order to disable notifications, visit <a href='https://code.google.com/hosting/settings'>Google Code preferences</a> > '<i>Issue tracker</i>' > uncheck '<i>If I starred the issue</i>' and submit by clicking at button '<i>Save preferences</i>' at the bottom. (There are also lists of your <a href='https://code.google.com/p/selenium/issues/list?can=5&q=&cells=tiles'>Selenium votes</a>.)<br>
-<br>
-<h2>Mozilla and NetBeans</h2>
-Mozilla and NetBeans require you to register in order to vote. It takes a few steps, but it's important: those products have many more other issues and voters (when compared to Selenium), so we need many votes to expedite the issues. Register yourself at <a href='https://netbeans.org/people/new'>NetBeans registration</a> and <a href='https://bugzilla.mozilla.org/createaccount.cgi'>Mozilla registration</a>. Submit those forms, then check your email inbox and confirm your registration by following a link that you'll receive.<br>
-<br>
-The actual voting is in two steps. Click at '<i>vote</i>' right of '<i>Importance</i>' (for Mozilla) or '<i>Priority</i>' (for NetBeans). That takes you to a page with a checkbox next to '<i>Vote For This Bug</i>'. Activate the checkbox and submit by clicking at button '<i>Change My Votes</i>' near the bottom-left.<br>
-<br>
-You can turn off any notifications at<br>
-<a href='https://bugzilla.mozilla.org/userprefs.cgi?tab=email'>Mozilla preferences</a> > button '<i>Disable All Mail</i>' and then button '<i>Submit Changes</i>' at the bottom. The same steps apply to <a href='https://netbeans.org/bugzilla/userprefs.cgi?tab=email'>NetBeans preferences</a>. (There are also lists of your <a href='https://bugzilla.mozilla.org/page.cgi?id=voting/user.html'>Mozilla votes</a> and <a href='https://netbeans.org/bugzilla/page.cgi?id=voting/user.html'>NetBeans votes</a>.)<br>
+
+## Mozilla and NetBeans
+Mozilla and NetBeans require you to register in order to vote. It takes a few steps, but it's important: those products have many more other issues and voters (when compared to Selenium), so we need many votes to expedite the issues. Register yourself at [NetBeans registration](https://netbeans.org/people/new) and [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi). Submit those forms, then check your email inbox and confirm your registration by following a link that you'll receive.
+
+The actual voting is in two steps. Click at '_vote_' right of '_Importance_' (for Mozilla) or right of '_Priority_' (for NetBeans). That takes you to a page with a checkbox next to '_Vote For This Bug_'. Activate the checkbox and submit by clicking at button '_Change My Votes_' near the bottom-left.
+
+You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) > button '_Disable All Mail_' and then button '<i>Submit Changes</i>' at the bottom. The same steps apply to <a href='https://netbeans.org/bugzilla/userprefs.cgi?tab=email'>NetBeans preferences</a>. (There are also lists of your <a href='https://bugzilla.mozilla.org/page.cgi?id=voting/user.html'>Mozilla votes</a> and <a href='https://netbeans.org/bugzilla/page.cgi?id=voting/user.html'>NetBeans votes</a>.)<br>
 <br>
 <h2>GitHub</h2>
 Registration and setting preferences with GitHub is easy. Just follow [Quick links](#quick_links).
+
+You won't get any notifications for issues that you star, unless you click at 'Subscribe' button.
 <br>
 <h1>Detailed list of issues</h1>
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. -->

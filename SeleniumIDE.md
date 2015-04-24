@@ -66,7 +66,7 @@ Selenese commands accept up to two parameters: Target and Value.
 * Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for _getEval_).
 * One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSyntax](EnhancedSyntax).
 * If Target is a locator, Value is usually an expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
-* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it also offline at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_ in Firefox).
+* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_ offline).
 
 ## XPath
 Full XPath locators start with _xpath=_ or with //. Usually an XPath expression starts with //, with which you don't need to use _xpath=_. However, some SeLite commands (like _clickRandom_ and _selectRandom_) only accept XPath as the locator, but they require it not to contain any leading _xpath=_ prefix (whether the XPath starts with // or not).
@@ -85,13 +85,14 @@ UI Mapping (or 'UI-Element mapping') defines a mapping between meaningful names 
 Find a basic example at Selenium Documentation > [Test Design Considerations](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp) > [UI Mapping](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp#ui-mapping) (which is written in Java, but SeLite frameworks define UI Mappings in Javascript.) See also a more [detailed example](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-map-sample.js) (or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/ui-map-sample.js_). Read its [detailed reference](http://htmlpreview.github.io/?https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, access the same reference offline through Selenium IDE menu > Help > UI-Element Documentation, or at _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
 
 # Variables
+
 ## Stored variables
 Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
 Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then the replacement won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <i>storedVars['name-of-the-variable']</i>. See also [EnhancedSyntax](EnhancedSyntax).
 
 ##Javascript variables
-Sometimes you want a 'global' variable that spreads across the functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: <i>variable1=valueOrExpression, variable2=valueOrExpression....</i>
+Sometimes you want a 'global' variable that spreads across the functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
 
 Don't use command _storeEval_ for that - it sets a stored variable, which is local.
 
