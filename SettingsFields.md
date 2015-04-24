@@ -20,6 +20,7 @@ They are stored in Firefox preferences (on top of values manifests). Therefore
   * Int and Decimal fields don't accept NaN (not-a-number) neither infinite values
 
 # Special values #
+
 ## Undefined ##
 A field of any type can be 'undefined' (unless it was instantiated with value of parameter requireAndPopulate other than false). If the module is associated with a folder, and the field is undefined in that associated set, it gets inherited from
   * a set associated with a higher folder (the nearest one that defines the value), or
