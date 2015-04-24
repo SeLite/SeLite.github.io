@@ -4,16 +4,16 @@ layout: default
 ---
 
 # Accessing the interface of SeLiteSettings #
-Two most frequent use cases are available in Selenium IDE menu > Options. They link to <i>tree.xul</i> and <i>tree.xul?selectFolder</i> (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
+Two most frequent use cases are available in Selenium IDE menu > Options. They link to _tree.xul_ and _tree.xul?selectFolder_ (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
 
-SeLiteSettings' configuration interface is within Firefox at a special urls starting with [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui). That way it's usable even without Selenium IDE. The URLs are
-| <i>chrome://selite-settings/content/tree.xul</i>                                   | to manage Firefox profile-based set(s) for all registered modules |
-|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------|
-| <i>chrome://selite-settings/content/tree.xul?module=full-module-name</i>           | to manage set(s) for a given module |
-| <i>chrome://selite-settings/content/tree.xul?prefix=prefix-of-full-module-name</i> | to manage set(s) of all modules whose name starts with given prefix |
-| <i>chrome://selite-settings/content/tree.xul?selectFolder</i>                      | to select a folder for which to review any fields |
-| <i>chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder</i>       | to review effective configuration for test suites in that folder, based on any applicable sets or manifests as per [SettingsScope](SettingsScope) |
-| <i>chrome://selite-settings/content/tree.xul?register</i><br><font color='FFFFFF'>thispreventsthecontenttobreakintomulltiplelinesxxxxxxxxxxxxxxxxxxxxxxxxxxx</font>                          <table><thead><th> to register a module manually (from its javascript file). You need this only if you design or import a custom configuration module that is not packaged as a Core extensions of Selenium IDE. Alternatively you may use your own Core extension and [SettingsAPI](SettingsAPI) to register your module automatically. </th></thead><tbody></tbody></table>
+SeLiteSettings' configuration interface is within Firefox at [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui URLs). That way it's usable even without Selenium IDE. The URLs are
+
+| _chrome://selite-settings/content/tree.xul_                                   | to manage Firefox profile-based set(s) for all registered modules |
+| _chrome://selite-settings/content/tree.xul?module=full-module-name_           | to manage set(s) for a given module |
+| _chrome://selite-settings/content/tree.xul?prefix=prefix-of-full-module-name_ | to manage set(s) of all modules whose name starts with given prefix |
+| _chrome://selite-settings/content/tree.xul?selectFolder_                      | to select a folder for which to review any fields |
+| _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_       | to review effective configuration for test suites in that folder, based on any applicable sets or manifests as per [SettingsScope](SettingsScope) |
+| _chrome://selite-settings/content/tree.xul?register_ | to register a module manually (from its javascript file). You need this only if you design or import a custom configuration module that is not packaged as a Core extensions of Selenium IDE. Alternatively you may use your own Core extension and [SettingsAPI](SettingsAPI) to register your module automatically. |
 
 Per-folder view colours fields based on where the value(s) come from:<br>
 <ul><li>module definition (field default)<br>

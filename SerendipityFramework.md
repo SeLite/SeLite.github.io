@@ -24,8 +24,8 @@ Therefore it should work with embedded configurations or various languages. It c
   * some element IDs (e.g. serendipity\_iframe)
 
 # Maintaining the framework #
-  * Keep it honour configuration of Serendipity installation - as per http://www.s9y.org/66.html > Paths, Permalinks, General settings, Appearance and options.
-  * If you need to target elements by text, see http://www.s9y.org/137.html > Internationalization
+  * Keep it honour configuration of Serendipity installation - as per [http://www.s9y.org/66.html](http://www.s9y.org/66.html) > Paths, Permalinks, General settings, Appearance and options.
+  * If you need to target elements by text, see [http://www.s9y.org/137.html](http://www.s9y.org/137.html) > Internationalization
 
 The framework honours Serendipity settings (global and user-specific - stored in serendipity\_config). @TODO: Make it update the test DB to reflect change of settings. Check whether the config pages can be customised via templates or not.
 
