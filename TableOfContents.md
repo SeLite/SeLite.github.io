@@ -31,7 +31,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Configure<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-child-urls="SettingsOverview SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SettingsOverview">SettingsOverview</a></li>
     <li><a href="SettingsManifests">SettingsManifests</a></li>

@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <!-- path {{ page.path }}, permalink {{page.permalink }}, relative_path {{ page.relative_path }}, url {{ page.url }} -->
     <title>{{ page.title }}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -35,10 +34,21 @@
             right: 9px;
         }
 
-        .navbar .nav>li>.dropdown-menu[data-placement="left"]:after {
+        .navbar .nav > li > .dropdown-menu[data-placement="left"]:after {
             left: auto;
             right: 10px;
         }
+        /* Highlight the current menu & current menu item in Bootstrap menu.
+           Match by prefix, so that this works with Jekyll fix (below), which changes local links to end with '.html'.
+           Use these specific selectors, so that they override bootstrap.min.css.
+         */
+         /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
+            .dropdown-menu > li > a[href^="{{ page.title }}"] ::before ul a {color: green;}
+         */
+         .navbar-default .navbar-nav > li a[data-child-urls~="{{ page.title }}"] {color: green;}
+
+         /* Highlight the menu item that is the current page: */
+        ul.dropdown-menu li a[href^="{{ page.title }}"] {color: green;}
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:

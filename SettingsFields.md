@@ -1,5 +1,5 @@
 ---
-title: Settings Fields
+title: SettingsFields
 layout: default
 ---
 
@@ -16,7 +16,7 @@ All fields can be single-valued or multi-valued, except for
 
 They are stored in Firefox preferences (on top of values manifests). Therefore
   * there are no custom composite field types
-  * decimal numbers are stored as strings (but the API works with them as numbers - so they may get rounded, depending on the CPU float precision)
+  * decimal numbers are stored as s trings (but the API works with them as numbers - so they may get rounded, depending on the CPU float precision)
   * Int and Decimal fields don't accept NaN (not-a-number) neither infinite values
 
 # Special values #
