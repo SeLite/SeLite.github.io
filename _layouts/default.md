@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>{{ page.title }}</title>
+    <title>SeLite > {{ page.title }}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -45,10 +45,11 @@
          /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
             .dropdown-menu > li > a[href^="{{ page.title }}"] ::before ul a {color: green;}
          */
-         .navbar-default .navbar-nav > li a[data-child-urls~="{{ page.title }}"] {color: green;}
+         .navbar-default .navbar-nav > li a[data-group-page-titles~="{{ page.title }}"] {color: green;}
 
          /* Highlight the menu item that is the current page: */
         ul.dropdown-menu li a[href^="{{ page.title }}"] {color: green;}
+        /* page.url: {{ page.url }} */
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
@@ -77,7 +78,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">{{ page.title }}</p>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">SeLite > {{ page.title }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
