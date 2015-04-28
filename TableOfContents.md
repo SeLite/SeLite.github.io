@@ -2,16 +2,16 @@
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 {% endcomment %}
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Automate<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="./">Home</a></li>
+    <li><a href="./">DB-driven browser automation - Overview</a></li>
     <li><a href="SeleniumIDE">Selenium IDE</a></li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Add-ons<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="">Add-ons<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AddOns">AddOns</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
@@ -20,7 +20,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Frameworks<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles>Frameworks<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AppsFrameworks">AppsFrameworks</a></li>
     <li><a href="InstallFramework">InstallFramework</a></li>
@@ -31,7 +31,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-child-urls="SettingsOverview SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="SettingsOverview SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SettingsOverview">SettingsOverview</a></li>
     <li><a href="SettingsManifests">SettingsManifests</a></li>
@@ -43,7 +43,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Selenese<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles>Selenese<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>

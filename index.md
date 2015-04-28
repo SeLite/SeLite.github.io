@@ -1,5 +1,6 @@
 ---
-title: SeLite - DB-driven browser automation
+title: DB-driven browser automation - Overview
+urlForDropdownHighlight: ./
 layout: default
 ---
 
