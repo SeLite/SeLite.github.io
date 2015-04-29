@@ -56,6 +56,12 @@
             right: 10px;
         }
 
+        #markdown-toc {
+            /* From bootstrap.min.css */
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+        }
+
          /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
             .dropdown-menu > li > a[href^="{{ pageName }}"] ::before ul a {color: green;}
          */
