@@ -7,14 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         {% comment %} For highlighting the current menu & current menu item in Bootstrap menu.
-           Match by prefix, so that this works with Jekyll fix (below), which changes local links to end with '.html'.
-           Use these specific selectors, so that they override bootstrap.min.css.
-           Pages that have titles consisting of multiple names need urlForDropdownHighlight in their Jekyll header.
-           page.url ends with .html on GitHub and in Jekyll, so I treat it.
+           page.url ends with .html (whether on GitHub and in Jekyll), so I treat it.
            The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
          {% endcomment %}
 {% assign pageNameParts = (page.url | split: '/') %}
 {% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
+
 {% assign pageName= pageNamePartsWithoutSlash[0] %}
 {% assign pageTitlePrefix= "SeLite > " %}
 
@@ -62,6 +60,7 @@
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
         }
 
+        /* Following rules use specific selectors, so that they override bootstrap.min.css. */
          /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
             .dropdown-menu > li > a[href^="{{ pageName }}"] ::before ul a {color: green;}
          */
@@ -136,6 +135,7 @@
         );
 
         // Following enables both GitHub page-like links (with no .md at the end) and running Jekyll locally. It's because for each page Abc.md Jekyll generates Abc.html. GitHub pages support both URLs Abc and Abc.html; however, we use Abc since it seems clearer and more Markdown-compatible.
+        // @TODO Remove once Jekyll 3 is common. See https://github.com/jekyll/jekyll/pull/3452.
         // A reverse of http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages/16389663#16389663. See also https://github.com/github/pages-gem/issues/69.
         if( location.host!=='selite.github.io' ) {
             $(function () {
