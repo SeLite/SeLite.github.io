@@ -2,7 +2,7 @@
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 {% endcomment %}
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">DB-driven browser automation - Overview</a></li>
     <li><a href="SeleniumIDE">Selenium IDE</a></li>
@@ -11,7 +11,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="">Add-ons<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AddOns AddOnsThirdParty AddOnsDependants PackagedTests">Add-ons<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AddOns">AddOns</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
@@ -20,7 +20,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles>Frameworks<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AppsFrameworks InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Frameworks<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AppsFrameworks">AppsFrameworks</a></li>
     <li><a href="InstallFramework">InstallFramework</a></li>
@@ -31,7 +31,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles="SettingsOverview SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SettingsOverview SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SettingsOverview">SettingsOverview</a></li>
     <li><a href="SettingsManifests">SettingsManifests</a></li>
@@ -43,7 +43,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-titles>Selenese<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese EnhancedSyntax ExtraCommands">Selenese<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
@@ -52,7 +52,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Design<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools JavascriptEssential BootstrapLoader TestFramework">Design<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
     <li><a href="JavascriptEssential">JavascriptEssential</a></li>
@@ -61,7 +61,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Develop<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="ExtensionSequencer JavascriptComplex InstallFromSource">Develop<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="ExtensionSequencer">ExtensionSequencer</a></li>
     <li><a href="JavascriptComplex">JavascriptComplex</a></li>
@@ -69,7 +69,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Details<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="TimeStamps AutoCheck ExitConfirmationChecker SQLiteSpecifics">Details<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="TimeStamps">TimeStamps</a></li>
     <li><a href="AutoCheck">AutoCheck</a></li>
@@ -78,7 +78,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Data<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="HandlingData DataImport SQLiteImport">Data<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="HandlingData">HandlingData</a></li>
     <li><a href="DataImport">DataImport</a></li>
@@ -86,7 +86,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard JavascriptOther ObjectDiagrams DataObjects SeleniumFlow">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>

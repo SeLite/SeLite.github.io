@@ -40,25 +40,27 @@
         }
         /* Highlight the current menu & current menu item in Bootstrap menu.
            Match by prefix, so that this works with Jekyll fix (below), which changes local links to end with '.html'.
-           I don't use page.url, because on GitHub it ends with .html.
            Use these specific selectors, so that they override bootstrap.min.css.
            Pages that have titles consisting of multiple names need urlForDropdownHighlight in their Jekyll header.
+           page.url ends with .html on GitHub and in Jekyll, so I treat it.
+           The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
          */
+{% assign pageNameParts = (page.url | split: '/') %}
+{% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
+{% assign pageName= pageNamePartsWithoutSlash[0] %}
+
+/* For some reason, pageName=="index" didn't evaluate to true. TODO report */
+{% if pageName contains "index" and "index" contains pageName %}
+    {% assign pageName = './' %}
+{% endif %}
+
          /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
-            .dropdown-menu > li > a[href^="{{ page.title }}"] ::before ul a {color: green;}
+            .dropdown-menu > li > a[href^="{{ pageName }}"] ::before ul a {color: green;}
          */
-         {% if page.urlForDropdownHighlight %}
-             .navbar-default .navbar-nav > li a[data-group-page-titles~="{{ page.urlForDropdownHighlight }}"] {color: green;}
-         {% else %}
-             .navbar-default .navbar-nav > li a[data-group-page-titles~="{{ page.title }}"] {color: green;}
-         {% endif %}
+         .navbar-default .navbar-nav > li a[data-group-page-names~="{{ pageName }}"] {color: green;}
 
          /* Highlight the menu item that is the current page: */
-         {% if page.urlForDropdownHighlight %}
-            ul.dropdown-menu li a[href^="{{ page.urlForDropdownHighlight }}"] {color: green;}
-         {% else %}
-            ul.dropdown-menu li a[href^="{{ page.title }}"] {color: green;}
-         {% endif %}
+         ul.dropdown-menu li a[href^="{{ pageName }}"] {color: green;}
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
