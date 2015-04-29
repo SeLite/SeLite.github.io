@@ -6,7 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>SeLite > {{ page.title }}</title>
+        {% comment %} For highlighting the current menu & current menu item in Bootstrap menu.
+           Match by prefix, so that this works with Jekyll fix (below), which changes local links to end with '.html'.
+           Use these specific selectors, so that they override bootstrap.min.css.
+           Pages that have titles consisting of multiple names need urlForDropdownHighlight in their Jekyll header.
+           page.url ends with .html on GitHub and in Jekyll, so I treat it.
+           The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
+         {% endcomment %}
+{% assign pageNameParts = (page.url | split: '/') %}
+{% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
+{% assign pageName= pageNamePartsWithoutSlash[0] %}
+{% assign pageTitlePrefix= "SeLite > " %}
+
+{% comment %} For some reason, pageName=="index" didn't evaluate to true. TODO report {% endcomment %}
+{% if pageName contains "index" and "index" contains pageName %}
+    {% assign pageName = './' %}
+    {% assign pageTitlePrefix= "SeLite = " %}
+{% endif %}
+    <title>{{ pageTitlePrefix }}{{ page.title }}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -38,21 +55,6 @@
             left: auto;
             right: 10px;
         }
-        /* Highlight the current menu & current menu item in Bootstrap menu.
-           Match by prefix, so that this works with Jekyll fix (below), which changes local links to end with '.html'.
-           Use these specific selectors, so that they override bootstrap.min.css.
-           Pages that have titles consisting of multiple names need urlForDropdownHighlight in their Jekyll header.
-           page.url ends with .html on GitHub and in Jekyll, so I treat it.
-           The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
-         */
-{% assign pageNameParts = (page.url | split: '/') %}
-{% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
-{% assign pageName= pageNamePartsWithoutSlash[0] %}
-
-/* For some reason, pageName=="index" didn't evaluate to true. TODO report */
-{% if pageName contains "index" and "index" contains pageName %}
-    {% assign pageName = './' %}
-{% endif %}
 
          /* Highlight the menu that contains a link to the current page. This has to use custom data-child-urls, since there's no way to make a CSS selector depend on the next element(s) - e.g. the following didn't work:
             .dropdown-menu > li > a[href^="{{ pageName }}"] ::before ul a {color: green;}
@@ -89,7 +91,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">SeLite > {{ page.title }}</p>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">{{ pageTitlePrefix }}{{ page.title }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
