@@ -95,7 +95,7 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/'>download</a>     </td>
     <td> <ul>
-        <li><a href='http://htmlpreview.github.io/?https://github.com/selite/main/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
+        <li><a href='http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
         <li><a href='https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests'>Shell tests (source)</a></li>
         <li>Apache License 2</li>
     </ul> </td>

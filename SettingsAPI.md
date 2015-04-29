@@ -18,7 +18,7 @@ The definition must be in a file available via
   * the filesystem (possibly a network drive), via either the path+name or via file:// url; or
   * a custom Firefox extension (at a [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or resource:// url)
 
-See a highlighted example of a schema definition [test\_settings\_module.js](https://github.com/selite/main/blob/master/settings/test_settings_module.js) (or download [its source](https://raw.githubusercontent.com/selite/main/master/settings/test_settings_module.js)).
+See a highlighted example of a schema definition [test\_settings\_module.js](https://github.com/selite/selite/blob/master/settings/test_settings_module.js) (or download [its source](https://raw.githubusercontent.com/selite/selite/master/settings/test_settings_module.js)).
 
 Whenever you update a module definition, you need to either
   * refresh it via url <i>chrome://selite-settings/content/tree.xul</i>, and restart any depending extensions (such as Selenium IDE); or

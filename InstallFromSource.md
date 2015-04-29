@@ -13,7 +13,7 @@ There are repositories for
 
 | **Purpose**                        | **Repository: files and details** | **Download ZIP** | **Clone from GIT** |
 |:--------------------------------------|:---------------------------------------|:-----------------------|:------|
-| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [selite/main](https://github.com/selite/main) | [Download ZIP](https://github.com/selite/main/archive/master.zip) | https://github.com/selite/main.git |
+| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [selite/selite](https://github.com/selite/selite) | [Download ZIP](https://github.com/selite/selite/archive/master.zip) | https://github.com/selite/selite.git |
 | [SelBlocksGlobal](SelBlocksGlobal) source                | TODO [browse or download](https://code.google.com/p/selite/source/browse?repo=sel-blocks-global) | [checkout](https://code.google.com/p/selite/source/checkout?repo=sel-blocks-global) |
 | Documentation                | [selite/selite.github.io](https://github.com/selite/selite.github.io) | [Download ZIP](https://github.com/selite/selite.github.io/archive/master.zip) | https://github.com/selite/selite.github.io.git |
 

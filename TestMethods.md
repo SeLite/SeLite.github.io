@@ -26,29 +26,29 @@ Referring to steps and their effects/side effects
   * a correct step can have  side effects/knock on effects that are not relevant to the feature/pattern in question
 
 # Legend #
-The following legend applies to all diagrams here ![Basic legend](https://raw.githubusercontent.com/selite/main/master/diagrams/legend_basic.png).
+The following legend applies to all diagrams here ![Basic legend](https://raw.githubusercontent.com/selite/selite/master/diagrams/legend_basic.png).
 
 # Test has no DB #
 
 ## Separate test runs don't account for previous actions ##
 Since the test has no DB, it 'loses the track' when a testing session ends. Successive separate test sessions will not know what will have been applied to the tested DB by earlier runs.
 
-![App with no bug fails on further runs](https://raw.githubusercontent.com/selite/main/master/diagrams/test_has_no_data/app_no_bug_fails_further_runs.png)
+![App with no bug fails on further runs](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_no_data/app_no_bug_fails_further_runs.png)
 
 ## A test failure confuses further tests ##
 If a test run fails, it may confuse successive test runs which would succeed otherwise (false negative).
 
-![App with a bug fails further tests](https://raw.githubusercontent.com/selite/main/master/diagrams/test_has_no_data/app_bug_fails_all_runs.png)
+![App with a bug fails further tests](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_no_data/app_bug_fails_all_runs.png)
 
 # Test has backdoor access to app DB #
 If a test doesn't detect a bug straight away, it may not be discovered even though it made app data incorrect. The test framework depends on the backdoor data from the app DB. That shared data fools it - the test can't detect the incorrect data, because it has no other dataset to compare against. This is the main reason for SeLite.
-![A bug goes undetected](https://raw.githubusercontent.com/selite/main/master/diagrams/test_backdoor_data/app_bug_goes_undetected.png)
+![A bug goes undetected](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_backdoor_data/app_bug_goes_undetected.png)
 
 # Test keeps a separate replica of app DB (SeLite) #
 Just as with other test frameworks, if a test fails, it may affect further tests (which would succeed otherwise).
 
-![App bug fails further tests](https://raw.githubusercontent.com/selite/main/master/diagrams/test_has_data/app_bug_fails_all_runs.png)
+![App bug fails further tests](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_data/app_bug_fails_all_runs.png)
 
 ## Knock-on effect of hidden errors ##
 This is a type of bugs that can't be generally and easily detected without test having its own DB. SeLite is beneficial here.
-![App bug fails further tests](https://raw.githubusercontent.com/selite/main/master/diagrams/test_has_data/app_bug_fails_further_runs.png)
+![App bug fails further tests](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_data/app_bug_fails_further_runs.png)

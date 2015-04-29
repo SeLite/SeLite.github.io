@@ -12,4 +12,4 @@ SeLite enables
 * automatic detection of webserver errors/warnings
 * custom fine-grain configuration schemas.
 
-See its extensive [documentation](http://selite.github.io/) for benefits and installation. See the [project](https://github.com/selite/main) for source etc.
+See its extensive [documentation](http://selite.github.io/) for benefits and installation. See the [project](https://github.com/selite/selite) for source etc.

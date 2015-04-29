@@ -126,7 +126,7 @@ But, it's difficult to creates tests to cover this. So it would involve human va
 
 Even worse, the data field (or fields) affected by the hidden bug may be not be verifiable by the rest of the data at all. That's usually when the DB schema doesn't cover the history of actions/transactions, or it removes old actions/transactions and it doesn't cover the intermediary steps. For example, a banking application could keep only the current amount and transaction amounts (credits/debits) for a fixed period, but it doesn't include amounts current at those transaction dates. If there's an error in applying a certain type of transaction and it results in an incorrect update of current amount, there's no way to detect this error - unless you have a separate copy of the data.
 
-See [simple online demo](http://htmlpreview.github.io/?https://github.com/selite/main/blob/master/demo/simple/web/index.html) as an example.
+See [simple online demo](http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/demo/simple/web/index.html) as an example.
 
 ## 3. Web app and its test have separate DBs ##
 This explains [Home](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). It's like #2, but the test
