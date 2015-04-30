@@ -1,6 +1,5 @@
 ---
-title: DB-driven browser automation - Overview
-urlForDropdownHighlight: ./
+title: DB-driven browser automation
 layout: default
 ---
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <!-- Based on http://stackoverflow.com/questions/2268204/favicon-dimensions -->
+    <!-- Based on http://stackoverflow.com/questions/2268204/favicon-dimensions. IE requires that I convert .bmp to .ico - it's not enough to rename it, otherwise it won't show up in IE tab. So I used http://image.online-convert.com/convert-to-ico -->
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
         {% comment %} For highlighting the current menu & current menu item in Bootstrap menu.
@@ -17,14 +17,12 @@
 {% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
 
 {% assign pageName= pageNamePartsWithoutSlash[0] %}
-{% assign pageTitlePrefix= "SeLite > " %}
 
 {% comment %} For some reason, pageName=="index" didn't evaluate to true. TODO report {% endcomment %}
 {% if pageName contains "index" and "index" contains pageName %}
     {% assign pageName = './' %}
-    {% assign pageTitlePrefix= "SeLite = " %}
 {% endif %}
-    <title>{{ pageTitlePrefix }}{{ page.title }}</title>
+    <title>SeLite > {{ page.title }}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -35,7 +33,7 @@
         }
         @media (min-width: 768px) {
             #toc-mobile-button {display: none;}
-            /* Mobiles browsers don't show title when scrolling down, so let's show it in BS menu even when vertically collapsed (where we have nothing else to show). Desktop browsers show title most of the time; also, we don't want the title in BS menu on desktops, since then there's less space for other menu items to show horizontally, which causes them to flow on further lines. */
+            /* Mobiles browsers don't show favicon and title when scrolling down, so let's show both in Bootstrap toolbar (i.e. shown even when Bootstrap menu is vertically collapsed). However, desktop browsers show favicon and title most of the time; also, we don't want favicon and the title in Bootstrap toolbar on desktops, since then there's less space for the menu to show horizontally, which causes the menu to be split across two lines. */
             #toc-mobile-title {display: none;}
         }
         ul.nav > li > a {
@@ -56,7 +54,7 @@
             left: auto;
             right: 10px;
         }
-
+        
         #markdown-toc {
             /* From bootstrap.min.css */
             border: 1px solid rgba(0, 0, 0, 0.15);
@@ -99,7 +97,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu">{{ pageTitlePrefix }}{{ page.title }}</p>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu"><img alt="SeLite logo" src="favicon-16x16.png" width="16" height="16"/> {{ page.title }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
