@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <!-- Based on http://stackoverflow.com/questions/2268204/favicon-dimensions -->
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
         {% comment %} For highlighting the current menu & current menu item in Bootstrap menu.
            page.url ends with .html (whether on GitHub and in Jekyll), so I treat it.
            The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
