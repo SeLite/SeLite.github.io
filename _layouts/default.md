@@ -55,7 +55,7 @@
             right: 10px;
         }
         
-        #markdown-toc {
+        #markdown-toc-mobile, #markdown-toc-desktop {
             /* From bootstrap.min.css */
             border: 1px solid rgba(0, 0, 0, 0.15);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
@@ -67,8 +67,8 @@
          */
          .navbar-default .navbar-nav > li a[data-group-page-names~="{{ pageName }}"] {color: green;}
 
-         /* Highlight the menu item that is the current page: */
-         ul.dropdown-menu li a[href^="{{ pageName }}"] {color: green;}
+         /* Highlight the menu item that is the current page. The selector is complex, so that it overrides a rule from bootstrap.min.css when in mobile mode */
+        .navbar-default .navbar-nav .open ul.dropdown-menu > li > a[href^="{{ pageName }}"] {color: green;}
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
@@ -105,7 +105,8 @@
       <ul class="nav navbar-nav">
         <li id="toc-mobile-button"><a data-toggle="collapse" href="#toc-mobile-div" class="dropdown-toggle" role="button">This page<span class="caret"></span></a>
             <div id="toc-mobile-div" class="collapse">
-                {{ toc }}
+                {% comment %}See the other toc below. Following replaces <ul> ID just to be consistent with markdown-toc-desktop. {% endcomment %}
+                {{ toc | replace: 'markdown-toc', 'markdown-toc-mobile' }}
             </div>
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button">This page<span class="caret"></span></a>
@@ -114,7 +115,8 @@
       </ul>
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">
-        {{ toc }}
+        {% comment %}Replace ID of the <ul>, otherwise CSS rules didn't apply to the following (because of a duplicate ID). I could have used Javascript to clone the above toc, change <ul> ID here, but it could complicate the client side. {% endcomment %}
+        {{ toc | replace: 'markdown-toc', 'markdown-toc-desktop' }}
     </div>
   </div><!-- /.container-fluid -->
 </nav>
