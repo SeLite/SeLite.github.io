@@ -12,6 +12,7 @@ layout: default
     * That can save you unnecessary work (immediately or later).
     * Complexity makes coding often slow and frustrating. By documenting first, once implemented you will be free to relax without a feeling of duty for 'paperwork'.
   * Create tests to be run from Selenium IDE - see [PackagedTests](PackagedTests).
+  * Don't use fixed line length - see [DocumentationStandard](DocumentationStandard). However, split complex expressions on multiple lines.
 
 # Differences from Javascript for web pages #
 If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of Selenium IDE Core extensions (including SeLite frameworks) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.

@@ -4,10 +4,12 @@ layout: default
 ---
 
 # Format
-Having documentation in one large piece would make its structure too rigid, and maintenance and online navigation impractical. Instead, it's split in small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
+Having documentation in one large piece would make its structure too rigid, and maintenance and online navigation would be impractical. Instead, it's split in small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
 * get [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
 * clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
-<!-- TODO * open local [TableOfContents](TableOfContents)-->
+* for navigation open [TableOfContents](TableOfContents)
+
+Alternatively, you may run [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/).
 
 We don't use GitHub Wiki, since it doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a wide mandatory part).
 

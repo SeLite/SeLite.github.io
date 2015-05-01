@@ -36,7 +36,7 @@ https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+autho
 | NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
 | Selblocks     | GitHub     | [GitHub registration](https://github.com/join) | [GitHub notifications](https://github.com/settings/notifications) | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93) | - |
 
-Please, vote even if an issue is marked as not to be resolved (e.g. with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/8850141255642605.xml) (via RSS) and star them/vote for them in future.
+Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/8850141255642605.xml) (via RSS) and star them/vote for them in future.
 
 ## Selenium
 It's very easy to vote for Selenium issues. You need a <a href='https://accounts.google.com/SignUp'>Google account</a>, but you don't need GMail (you can use your existing email address). Just visit a page of the issue and click at the star left of the issue's title (the star becomes yellow).

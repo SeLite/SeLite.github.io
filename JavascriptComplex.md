@@ -112,7 +112,7 @@ Another option (to facilitate the navigation in NetBeans) would be to have all c
 But that floods the namespace with no obvious benefit. See also [JavascriptEssential](JavascriptEssential) > [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
 ### Dependent Javascript code modules ###
-A Javascript code module can depend on one or more other code modules. If the dependent functionality is optional, wrap it and respective calls to Components.utils.import() in a try{..} statement, so that clients can still use the essential functionality.
+A Javascript code module can depend on one or more other code modules. If the dependent functionality is optional, wrap any respective code, e.g. calls to _Components.utils.import()_, in a try{..} statement, so that clients can still use the essential functionality even without the optional module.
 
 Also, two or more JS code modules can depend on each other cyclically. That can be 'permanent' (for essential functionality), each one requiring the other(s), or optional (for some functionality only). Make sure a code module defines EXPORTED\_SYMBOLS and any symbols required by its cyclic dependent code module(s) before it loads those dependants via Components.utils.import().
 

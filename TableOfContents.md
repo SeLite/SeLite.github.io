@@ -1,6 +1,7 @@
-{% comment %} This page doesn't have the header with layout and title. Otherwise, when included from _layouts/default.md, it would show that layout and title as text. As a side effect, you can't access this page at http://selite.github.io/TableOfContents. If need be, use http://selite.github.io/TableOfContents.md instead.
+<!-- This page doesn't have YAML Front Matter block (which would be between ---- and ----). Otherwise, such YAML would show up as page content this when file is included from _layouts/default.md.
+(As a side effect, you can't access this page at http://selite.github.io/TableOfContents. If need be, use http://selite.github.io/TableOfContents.md instead - but then code like {% comment %}...{% endcomment %}  doesn't work here, therefore use HTML comments here instead.)
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
-{% endcomment %}
+-->
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
