@@ -121,7 +121,7 @@ Steps
 2. Install [Hide Tab Bar With One Tab](https://addons.mozilla.org/en-US/firefox/addon/hide-tab-bar-with-one-tab/)
 3. Install [Hide Navigation Bar](https://addons.mozilla.org/en-us/firefox/addon/hide-navigation-bar/) (for usage see below)
 4. Install [per-tab coloured menu text](https://userstyles.org/styles/110010/selenium-ide-per-tab-coloured-menu-text):
-   <a href="https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110010_after.jpeg?r=1424730593"><img src="https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110010_after.jpeg?r=1424730593&extensionForGoogleCode=file.jpeg"/></a>
+   <a href="https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110010_after.jpeg?r=1424730593"><img src="https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110010_after.jpeg?r=1424730593"/></a>
 5. Restart Firefox
 6. Start standalone Selenium IDE (by Ctrl+Alt+S, or Firefox menu Tools > Selenium IDE)
 7. Display auxiliary Selenium IDEs. For each
@@ -159,10 +159,10 @@ To set up
    2. Restart Firefox
    3. Install styles for the second and further Selenium IDEs:
      * [green menu text](https://userstyles.org/styles/109886/selenium-ide-green-menu-text):
-       <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/109886_after.jpeg?r=1422833554'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/109886_after.jpeg?r=1422833554&extensionForGoogleCode=file.jpeg' /></a>
-     * <a href='https://userstyles.org/styles/110005/selenium-ide-blue-menu-text'>blue menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110005_after.jpeg?r=1422833463'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110005_after.jpeg?r=1422833463&extensionForGoogleCode=file.jpeg' /></a>
-     * <a href='https://userstyles.org/styles/110006/selenium-ide-red-menu-text'>red menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110620_after.jpeg?r=1424729821'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110620_after.jpeg?r=1424729821&extensionForGoogleCode=file.jpeg' /></a>
-     * <a href='https://userstyles.org/styles/110620/selenium-ide-white-menu-text'>white menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110620_after.jpeg?r=1424728011'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110620_after.jpeg?r=1424728011&extensionForGoogleCode=file.jpeg' /></a>
+       <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/109886_after.jpeg?r=1422833554'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/109886_after.jpeg?r=1422833554' /></a>
+     * <a href='https://userstyles.org/styles/110005/selenium-ide-blue-menu-text'>blue menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110005_after.jpeg?r=1422833463'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110005_after.jpeg?r=1422833463' /></a>
+     * <a href='https://userstyles.org/styles/110006/selenium-ide-red-menu-text'>red menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110006_after.png?r=1430731358'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110006_after.png?r=1430731358' /></a>
+     * <a href='https://userstyles.org/styles/110620/selenium-ide-white-menu-text'>white menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110620_after.png?r=1430730143'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110620_after.png?r=1430730143' /></a>
      * You can switch between styles in Firefox menu Tools > Add-ons > User Styles.
   * By language (this applies to the whole Firefox instance, rather than just Selenium IDE, which can make it difficult to use!)
     1. Install [Simple Locale Switcher](https://addons.mozilla.org/en-US/firefox/addon/simple-locale-switcher/)
