@@ -1,4 +1,5 @@
-gems: jekyll-sitemap
+gems:
+  -jekyll-sitemap
 markdown: kramdown
 highlighter: pygments
 kramdown:
