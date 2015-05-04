@@ -61,3 +61,9 @@ Also, you may call _getEval_ as _storeEval_, which stores the evaluated result o
 Without \`...\` you'd need either to
   * create more complex Javascript expressions and pass them through Selenese _javascript{...}_. They'd have to access stored variables via _storedVars_. Such expressions are more wordy and less intuitive.
   * pass the expression(s) through _storeEval_ to save the result into a temporary variable. Then pass that stored variable as _${xyz}_ to the further command(s). That makes your script longer. The unnecessary variables make it less clear and more fragile.
+
+# Accessing stored variables in Selenese
+ * Use _storedVars.variableName_ with _getEval_ and related commands.
+ * Only use _$variableName_ with commands from [SelBlocksGlobal](SelBlocksGlobal).
+ * Use _${variableName}_ or _\`$variableName\`_ with any other Selenese commands.
+ * Keep _javascript{...}_ for special purposes. See [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Parameter construction and Variables](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#parameter-construction-and-variables) or [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#parameter-construction-and-variables_. Use this notation with e.g. _window.opener.resizeTo()_ and _window.opener.innerWidth_.

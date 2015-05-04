@@ -15,8 +15,8 @@ If you vote for an issue, by default you will receive automated emails on change
 
 ## Quick links
 Use the following links to register with third parties, disable email notifications (unless you want them), list the issues/pull requests and vote for them:
-{% comment %} Side note: This comment shows up in Firefox with Wiki Viewer. 
 
+<!--
 Update the following links whenever you update the detailed list.
 How to get the links:
 
@@ -30,14 +30,14 @@ How to get the links:
 https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93. To edit that search, visit this link and then follow "Advanced search" link from that screen.
 
 Filter multiple GitHub pull requests by commit # and 'OR': https://github.com/Thiht/markdown-viewer/issues?utf8=%E2%9C%93&q=213d5645af8+OR++f6269e7a3+
-{% endcomment %}
+-->
 
 | **Third party**   | **Hosted at** | **Registration**                                                                     | **Email preferences**                                                                         | **Issues relevant to SeLite** | **My votes** |
 |:------------------|:--------------|:-------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:------------------------------|:-------------------|
 | _Projects on GitHub_ | _GitHub_ | [GitHub registration](https://github.com/join)                           | [GitHub notifications](https://github.com/settings/notifications) | (see below) | [https://github.com/search?type=Issues&utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/search?type=Issues&utf8=✓&q=commenter%3Ayour-github-user-name)
-| Selenium      | GitHub | (same as above)                           | (same as above)                                 | <!--https://code.google.com/p/selenium/issues/list?can=1&q=id%3A6903%2C3116%2C2706%2C5495%2C6697%2C1092%2C1816%2C5423%2C3028--> - | [https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=open+commenter%3Ayour-github-user-name) |
-| Markdown Viewer | GitHub   | (same as above) | (same as above) | [Markdown Viewer feature](https://github.com/Thiht/markdown-viewer/pull/39) | [https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3Ayour-github-user-name)
-| Selblocks     | GitHub     | (same as above) | (same as above) | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=✓) | [https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3Ayour-github-username) |
+| Selenium      | GitHub |                            |                                  | <!-- https://code.google.com/p/selenium/issues/list?can=1&q=id%3A6903%2C3116%2C2706%2C5495%2C6697%2C1092%2C1816%2C5423%2C3028 --> (not migrated yet) | [https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=open+commenter%3Ayour-github-user-name) |
+| Markdown Viewer | GitHub   |  |  | [Markdown Viewer feature](https://github.com/Thiht/markdown-viewer/pull/39) | [https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3Ayour-github-user-name)
+| Selblocks     | GitHub     |  |  | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=✓) | [https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3A**your-github-user-name**](https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3Ayour-github-username) |
 | Mozilla       | Mozilla     | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1094057%2C1051632%2C1003554%2C1108132%2C1096135%2C1071816&list_id=11740717&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Cvotes) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
 | _Projects outside of GitHub_ | | | | | | |
 | NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
@@ -62,6 +62,8 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. Keep them sorted in order of importance. -->
 <table>
 <thead><th> <b>Issue</b>                                                                                               </th><th> <b>Third party</b> </th><th> <b>Reason</b>                           </th></thead><tbody>
+
+<!--
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<br>(See a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#indentation">Indentation</a>.) </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=3116'>Base URL Should Allow Path</a>                  </td><td> Selenium    </td><td> Practical testing and integration </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
@@ -69,6 +71,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6697'>Core extensions are loaded 2x</a>               </td><td> Selenium    </td><td> Robust core extensions </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=1092'>verify* should show the diff</a>               </td><td> Selenium    </td><td> See <a href="ExitConfirmationChecker">ExitConfirmationChecker</a> > <a href='ExitConfirmationChecker#details'>Details</a> </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=1816'>[IDE] JS regex replace for line break does not work...</a> </td><td> Selenium </td><td> Robust and expressive scripts <a href='Hidden comment: Workaround: String.fromCharCode(10)'></a> </td></tr>
+-->
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=396966'>Support XPath 2.0</a>                               </td><td> Mozilla     </td><td> Robust tests.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) </td></tr>
 <tr><td><a href="https://github.com/Thiht/markdown-viewer/pull/39">Support for local .md links...</a></td> <td>Markdown Viewer</td><td>Offline access to documentation</td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1051632'>Breakpoint triggers on code that doesn't...</a>    </td><td> Mozilla     </td><td> Productive development </td></tr>
@@ -80,9 +83,12 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=852837'>ICU-based Intl.DateTimeFormat implementation...</a> </td><td> Mozilla     </td><td> Timestamps across timezones </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=837961'>Add support for IANA time zone names to internationalization API</a>   </td><td> Mozilla     </td><td> Timestamps across timezones </td></tr>
 <tr><td> <a href='https://github.com/refactoror/SelBlocks/issues/4'>Selblocks and SelBlocksGlobal </a>                     </td><td> Selblocks   </td><td> Joined effort </td></tr>
+
+<!--
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=5423'>Report user extension/plugin file name on error</a>             </td><td> Selenium    </td><td> Debugging </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=8428'>safe_alert() fails at UI element startup in Selenium IDE</a>  </td><td> Selenium    </td><td> Design of UI element locators </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=8429'>UI element test cases should be run even after Selenium IDE startup</a> </td><td> Selenium    </td><td> Design of UI element locators </td></tr>
+-->
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=226477'>const not recognized in JavaScript</a>             </td><td> NetBeans   </td><td> Simpler code </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=244329'>Allow search minidialog and highlighting for multiple tabs/windows...</a> </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=234888'>Code fold at indention level</a>                  </td><td> NetBeans   </td><td> Code navigation </td></tr>
@@ -100,4 +106,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=278536'>Tree documentation: setCellText and redrawing</a>                    </td><td> Mozilla     </td><td> Robust SeLite Settings </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1031985'>console reports syntax error for valid json fetched via jquery.ajax</a> </td><td> Mozilla </td><td> Cleaner log in Browser Console </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1071816'>Support loading BOMless UTF-8 text/plain files from file: URLs</a> </td><td> Mozilla    </td><td> Cleaner log in Browser Console </td></tr>
+
+<!--
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=3028'>Keyboard shortcut to Selenium IDE</a>                            </td><td> Selenium    </td><td> GUI usability </td></tr>
+-->

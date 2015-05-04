@@ -17,7 +17,7 @@ layout: default
 
 
 ### Drawn diagrams ###
-Make these nice. Draw them in LibreOffice/OpenOffice and save them as .odg. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In wiki use URLs to the .png images from git (https://code.google.com/p/selite/source/browse/diagrams > navigate to .png file > get the url of link 'View raw file').
+Make these nice. Draw them in LibreOffice/OpenOffice and save them as .odg. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git (https://github.com/selite/selite/tree/master/diagrams > navigate to .png file > get the url of 'Raw' link).
 
 #### Versions of LibreOffice ####
   * LibreOffice version that came with CentOS 6.4 didn't export as .png well - the quality was low.
