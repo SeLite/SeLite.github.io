@@ -129,7 +129,7 @@ Even worse, the data field (or fields) affected by the hidden bug may be not be 
 See [simple online demo](http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/demo/simple/web/index.html) as an example.
 
 ## 3. Web app and its test have separate DBs ##
-This explains [Home](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). It's like #2, but the test
+This explains [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). It's like #2, but the test
   * has its own DB
     * which is initially a copy of the app DB, with
       * schema

@@ -5,7 +5,7 @@ layout: default
 
 # Scope and downloads #
 [Edit or review through GUI](#edit-or-review-through-gui)
-This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Home](./) > [Install](./#install). However, if you haven't downloaded SeLite [AddOns](AddOns) yet, it may be faster to install them from source (which you'll need anyway) as per [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source) and [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
+This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [AddOns](AddOns) yet, it may be faster to install them from source (which you'll need anyway) as per [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source) and [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
 
 Regardless of how you've installed [AddOns](AddOns), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source).
 
@@ -64,7 +64,7 @@ If you'd like to review configuration, open [_chrome://_ URL](AboutDocumentation
 
 If you'd like to edit profile-based configuration set(s), open _chrome://selite-settings/content/tree.xul_. Then follow [SettingsInterface](SettingsInterface) and edit the following fields (if they apply to your framework):
   * Enter usernames for _roles_ that you need.
-  * Point the configuration set at your app/test/vanilla SQLite files. You need at least _testDB_ to get benefits of [Home](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). _appDB_ and _vanilla_ make sense only if the application data is in SQLite.
+  * Point the configuration set at your app/test/vanilla SQLite files. You need at least _testDB_ to get benefits of [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). _appDB_ and _vanilla_ make sense only if the application data is in SQLite.
     * For _appDB_ select the SQLite file which is used by your application instance. (The file often has extension other than .sqlite, e.g. .db or even .php.)
     * _testDB_ is for the test scripts. _vanillaDB_ will serve as a snapshot of _appDB_, so that you can revert _appDB_ and _testDB_ to it. Enter some new filenames (in a location where your account can create files).
     * If you haven't got existing _testDB_ and _vanillaDB_, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanillaDB and testDB from appDB. (See [SettingsInterface](SettingsInterface)).
