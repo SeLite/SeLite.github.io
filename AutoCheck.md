@@ -9,7 +9,7 @@ layout: default
 ## Negative checks ##
 Negative checks validate that given selector(s) don't match any elements on the page. That's useful if your web server, framework or programming language report errors/warnings/notices in some kind of fixed format.
 
-There is an standard negative validation for PHP.
+There is a standard negative validation for PHP.
 
 ### Ignored checks ###
 Ignored checks are a special type of negative checks. Once you (or someone else) notice a bug via a negative check, you don't want it to be reported again (until it gets fixed). You can mark such bug as ignored.
@@ -21,6 +21,7 @@ Positive checks validate that the page contains elements that match given select
 
 ## Configuration ##
 Configure these checks at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_. In order to use [AutoCheck](AutoCheck) you must select at least autoCheckDetector or autoCheckDetectorCustom. Other fields are optional.
+
   * autoCheckAssert - whether an occurrence should trigger an assert failure; by default it triggers a validation failure rather than an assert failure
   * autoCheckDetector - choose a standard detection class to use; or set it to null/undefined if you use a custom class
   * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into Selenium Core scope e.g. via [BootstrapLoader](BootstrapLoader)); used only if autoCheckDetector is null/undefined

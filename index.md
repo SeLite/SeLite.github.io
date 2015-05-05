@@ -78,15 +78,15 @@ When customising or creating frameworks or components for Selenium IDE, followin
  * it uses [strict Javascript](JavascriptEssential#strict-javascript)
  * it has a coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptOther](JavascriptOther))
  * see [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
- * it contains [PackagedTests](PackagedTests)
+ * it is validated by [PackagedTests](PackagedTests)
  * it gives clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
  * it's being moved from Google Code to be hosted on GitHub - see its repository [SeLite](https://github.com/selite/selite).<!--, with two code repositories: [SeLite](https://github.com/selite/selite) and [SelBlocksGlobal](https://github.com/selite/sel-blocks-global).-->
  * [AddOns](AddOns) are verified by Mozilla
 
 ## Compatibility
-SeLite is compatible with Firefox 37 and Selenium IDE 2.9.0. It's platform-independent (and therefore it doesn't support Flash/Silverlight/ActiveX). Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
+SeLite is compatible with Firefox 37 and Selenium IDE 2.9.0. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
-It doesn't operate with other browsers, nor with Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
+It doesn't operate with browsers other than Firefox, nor with Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
 ## License
 It's fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.
@@ -96,4 +96,4 @@ The best ways you can support SeLite:
 
  * vote for [ThirdPartyIssues](ThirdPartyIssues)
  * tell others
- * create and share test frameworks.
+ * create and share [TestFramework](TestFramework)s.

@@ -9,12 +9,12 @@ For straightforward use of SeLite, get all its add-ons. If you only want some of
 In addition to add-ons, see [SeleniumIDE](SeleniumIDE) for productivity tips.
 
 ## Quick download
-For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases delayed by about a week. If you depend on recent functionality, or if you'd like to run [PackagedTests](PackagedTests), see below.
+For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases delayed by about a week. If you depend on recent functionality (or if you'd like to run [PackagedTests](PackagedTests)), see [Latest releases](#latest-releases) below.
 
 Don't install SeLite together with SelBlocks (or Flow Control, GoTo or Sideflow) - for details see [SelBlocksGlobal](SelBlocksGlobal).
 
 ## Latest releases
-Background: After Mozilla screens an add-on's update for security, you can get it at 'download' links below. However, the update doesn't show at add-on's 'info' page (nor at the above collection), until someone from Mozilla reviews it. If you've installed an older version of the add-on, you won't get an automatic update until then either.
+Background: All updates of add-ons are screened by Mozilla for security. You can get them at _download_ links below. However, updates don't show up at add-ons' 'info' pages (nor at the above collection), until someone from Mozilla reviews them. And if you've installed older versions of the add-ons, you won't get an automatic update until then either.
 
 So, use the _download_ links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
@@ -49,7 +49,7 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td><a href="AutoCheck">AutoCheck</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
-    <td> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > autoCheck<code>*</code></td>
+    <td> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <i>autoCheck</i>...</td>
 </tr>
 <tr>
     <td> <a href='BootstrapLoader'>Bootstrap</a></td>
@@ -88,7 +88,7 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
     <td> <ul>
-        <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > exitConfirmationChecker<code>*</code></li>
+        <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <i>exitConfirmationChecker</i>...</li>
         <li><a href='https://code.google.com/p/selite/source/browse#git%2Fexit-confirmation-checker%2Fselenese-tests'>Selenese tests</a></li>
     </ul> </td>
 </tr>

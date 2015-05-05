@@ -56,6 +56,7 @@ These terms are not SeLite-specific. The goal here is to clarify possible/desira
 
 ## The goal ##
 SeLite is for thorough, yet practical testing of DB-driven apps. Your tests
+
   * can validate screens based on (a replica of) all data, rather than based on just recent actions that only modify a part of data
   * don't need to specifically track the history of actions from previous test sessions
   * have to update their own DB to reflect those actions
@@ -80,28 +81,34 @@ But you'll benefit from SeLite if you continually test the application, when you
 This is not Selenium IDE or SeLite-specific, but it only covers what can be done with Selenium. There are a few options, the easiest first:
 
 ## 1. Test uses no DB ##
-It's hard to make this thorough testing. The app DB
+This is hardly sufficient as thorough testing. The app DB
+
   * has initial state 'frozen' to make the test work
   * needs to be reset to that initial state (every time the test is run)
-The test
-    * has no own DB
-    * has no access to app DB (except for access to reset it - if needed and automated)
-    * depends on the initial app DB to be in the expected state
-    * enters/modifies the app data
-      * by navigating the app via its UI
-      * based on fixed/random/partially random data set
-      * stores the data in test session (if needed)
-      * validates the data presented by the app UI (against that session data or against the fixed data)
-    * doesn't know about any previously entered/modified data present in app DB, if (re)started
 
-This is probably how many initial/proof-of-concept tests work. Not feasible for long term.
+The test
+
+  * has no own DB
+  * has no access to app DB (except for access to reset it - if needed and automated)
+  * depends on the initial app DB to be in the expected state
+  * enters/modifies the app data
+    * by navigating the app via its UI
+    * based on fixed/random/partially random data set
+    * stores the data in test session (if needed)
+    * validates the data presented by the app UI (against that session data or against the fixed data)
+  * doesn't know about any previously entered/modified data present in app DB, if (re)started
+
+Maintenance cost makes this not feasible for long term. Its parts could be reused with SeLite. However, you may want to use different locators, depending on the data schema, page navigation, login functionality. That may be easier when starting from scratch.
 
 ## 2. Web app and its test use the same DB ##
 Like #1, but the test reads from the app DB.
 The app DB
+
   * has no 'frozen' initial state
   * may need resetting/partial resetting from time to time
+
 The test
+
   * has no own DB
   * has read-only access (back door) to app DB (and access to reset it - if needed and automated)
   * generates a fixed/random/controlled random data set, which it enters/modifies via the app UI
@@ -119,6 +126,7 @@ The test
 Single source of truth - i.e. same DB used by the app and by the test - causes hidden problems (false positives). The test may succeed, but the data flow has bugs.
 
 The hidden data error may be detected later, but only if
+
   * there is a way to determine (re-calculate...) the correct value from the rest of the data and
   * the application presents the rest of the data needed for this (it may include pagination over the records...) and
   * the tester thinks of comparing the actual value and the expected value.
@@ -130,6 +138,7 @@ See [simple online demo](http://htmlpreview.github.io/?https://github.com/selite
 
 ## 3. Web app and its test have separate DBs ##
 This explains [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). It's like #2, but the test
+
   * has its own DB
     * which is initially a copy of the app DB, with
       * schema
@@ -159,6 +168,7 @@ This explains [Overview](./) > [Advantages of test data separation](./#advantage
     * potential challenge: automate this DB reload/reset
 
 If the same error exists in both the app and the test, then it doesn't get detected automatically. That may be at various levels
+
   * DB schema
     * because the app and the test DB schema are same/equivalent
     * there's no big need to detect these errors by automated testing, since the schema

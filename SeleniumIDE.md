@@ -63,15 +63,17 @@ Selenium IDE shows the original reference for both the primary and auto-generate
 
 # Selenese parameters (Target and Value)
 Selenese commands accept up to two parameters: Target and Value.
+
 * Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for _getEval_).
 * One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSyntax](EnhancedSyntax).
-* If Target is a locator, Value is usually an expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
-* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_ offline).
+* If Target is a locator, Value is usually the expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
+* [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it offline in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_).
 
 ## XPath
 Full XPath locators start with _xpath=_ or with //. Usually an XPath expression starts with //, with which you don't need to use _xpath=_. However, some SeLite commands (like _clickRandom_ and _selectRandom_) only accept XPath as the locator, but they require it not to contain any leading _xpath=_ prefix (whether the XPath starts with // or not).
 
 See resources on XPath:
+
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/XPath)
 * [W3C](http://www.w3.org/TR/xpath/)
 * [XPath functions supported by Firefox](https://developer.mozilla.org/en-US/docs/XPath/Functions)
@@ -79,36 +81,40 @@ See resources on XPath:
 
 ## UI-Element mappings
 UI Mapping (or 'UI-Element mapping') defines a mapping between meaningful names of elements on webpages, and the elements themselves. Element locators are in forms
+
 * _ui=semanticPageName::semanticElementName(...)_ or
 * _ui=semanticPageName::semanticElementName(...)->xpathOffsetLocator_.
 
-Find a basic example at Selenium Documentation > [Test Design Considerations](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp) > [UI Mapping](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp#ui-mapping) (which is written in Java, but SeLite frameworks define UI Mappings in Javascript.) See also a more [detailed example](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-map-sample.js) (or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/ui-map-sample.js_). Read its [detailed reference](http://htmlpreview.github.io/?https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, access the same reference offline through Selenium IDE menu > Help > UI-Element Documentation, or at _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_.
+Find a basic example at Selenium Documentation > [Test Design Considerations](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp) > [UI Mapping](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp#ui-mapping) (which is written in Java, but SeLite frameworks define UI Mappings in Javascript.) See also a more [detailed example](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-map-sample.js) (or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/ui-map-sample.js_). Read its [detailed reference](http://htmlpreview.github.io/?https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, access the same reference offline through Selenium IDE menu > Help > UI-Element Documentation (or at _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_).
 
 # Variables
 
 ## Stored variables
 Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
-Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then the replacement won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <i>storedVars['name-of-the-variable']</i>. See also [EnhancedSyntax](EnhancedSyntax).
+Parameters of Selenese actions can access stored variables as _${name-of-the-variable}_. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of _${name-of-the-variable}_ won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <i>storedVars['name-of-the-variable']</i>. See also [EnhancedSyntax](EnhancedSyntax).
 
-##Javascript variables TODO FIX THIS - it doesnt show up
+## Javascript variables
 Sometimes you want a 'global' variable that spreads across the functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
 
 Don't use command _storeEval_ for that - it sets a stored variable, which is local.
 
 # Limitations of getEval, storeEval
-Command _getEval_ (and derived commands like _storeEval_ - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals _"\n"_ or _'\n'_ (or any string literals that contain them). Then they generate a confusing error 'unterminated string literal'. Use _String.fromCharCode(10)_ instead.
+Command _getEval_ (and derived commands like _storeEval_ - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals _"\n"_ or _'\n'_ (or any string literals that contain them). Then they generate a confusing error _'unterminated string literal'_. Use _String.fromCharCode(10)_ instead.
 
 # Tips on GUI usability
-When saving a test case or a test suite, Selenium IDE doesn't add _'.html'_ extension to the filename. So, add _.html_ yourself, so that later you can identify the file more easily.
+
+## Add .html extension to files
+When saving a test case or a test suite, Selenium IDE doesn't add _'.html'_ extension. So, add _.html_ yourself, which will let you identify the file more easily.
 
 ## Using multiple Selenium IDEs in parallel
-A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
+A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for test cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
 
-Modify all test cases and test suites only in one Selenium IDE window. Alternatively, edit different test cases in different Selenium IDEs; however, beware that sometimes other Selenium IDEs don't pick up the change when saved (even if you switch between test cases in those other Selenium IDEs) or they notice it only later.
+For robust access modify all test cases and test suites only in primary Selenium IDE window. Alternatively, edit different test cases (or sets of them) in different Selenium IDEs. Either way, beware that sometimes other Selenium IDEs don't pick up the change when saved (even if you switch between test cases in those other Selenium IDEs) or they notice it only later. So if you modify a test case in one chosen Selenium IDE and you use other Selenium IDEs as its read-only reference, it may be out of date.
 
 ### Auxiliary Selenium IDEs inside browser
 This shows one (standard) Selenium IDE detached from Firefox browser windows. Other Selenium IDEs are inside browser windows, but they may look standard, too. Compared to the next method, this
+
 * (+) is simpler to set up, to start and to maintain
 * (+) involves less maintenance: it runs only one Firefox instance (with one profile)
 * (+) is more convenient: shared bookmarks, window history, add-ons etc.
@@ -131,12 +137,13 @@ Steps
     * _chrome://selenium-ide/content/selenium-ide.xul#BLUE_
     * _chrome://selenium-ide/content/selenium-ide.xul#RED_
     * _chrome://selenium-ide/content/selenium-ide.xul#WHITE_
- 3. if you have already opened <i>chrome://selenium-ide/content/selenium-ide.xul</i> and later you add or change the hash part (<i>#GREEN, #BLUE</i>, <i>#RED</i> or <i>WHITE</i>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
+ 3. if you have already opened <i>chrome://selenium-ide/content/selenium-ide.xul</i> and later you add or change the hash part (<i>#GREEN, #BLUE</i>, <i>#RED</i> or <i>#WHITE</i>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
  4. hide Firefox navigation bar by pressing F2 (you may need to press it twice)
   * (+-) it applies to the current window and any new windows later, but not to other existing Firefox windows
   * (-) however, after a Firefox restart it applies to all windows; then press F2 to show navigation bar where you want it
 
 In auxiliary IDEs
+
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
 * (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows <i>testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox</i>) and then press Alt.
 * (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite. So it's the safest not to modify tests in auxiliary IDEs.
@@ -167,6 +174,3 @@ To set up
     1. Install [Simple Locale Switcher](https://addons.mozilla.org/en-US/firefox/addon/simple-locale-switcher/)
     2. Restart Firefox
     3. Install different language packs through Firefox toolbar > 'Simple Locale Switcher' green button > 'Get more language packs...'
-
-#### Custom styles for Stylish
-Use can create or adjust a style in Firefox menu Tools > Add-ons > User Styles > 'Write New Style' and 'Edit', respectively. However, it's not obvious what CSS to use. It's unclear how to change colour of e.g. window border or window grey background (which would be beneficial for intuitive visual identification).

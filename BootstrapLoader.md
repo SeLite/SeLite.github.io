@@ -20,8 +20,10 @@ Apply [JavascriptEssential](JavascriptEssential), especially [Strict Javascript]
 It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside_browser) (neither in Selenium IDE in browser sidebar).
 
 # Limitations #
+
 ## Intercepts ##
 Bootstrap reloads all registered extensions (whenever you modify any one of them). So, if you 'extend' an existing method through a head/tail intercept, then don't re-save the method each time the script is run. Otherwise it would increase the intercept chain. Instead, save the original method on the first load only. For example:
+
 ```js
 
 var originalMethod;
@@ -39,13 +41,11 @@ See also [JavascriptEssential](JavascriptEssential) > [Function intercepts](Java
 If you introduce or modify any Selenese command/getter - Selenium.prototype.doXXX, Selenium.prototype.getXXX or Selenium.prototype.isXXX, then those will be available to your test commands/case/test suite only **after** you run any Selenese command first. <!-- don't know why -->
 
 ## Switching between files ##
-If you add/remove filenames from _bootstrapCoreExtensions_ (or you switch to a different default set or a test suite with a different set associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change the options back later, it won't re-run the file, unless its timestamp has changed.
+If you remove a filename from _bootstrapCoreExtensions_ (or you switch to a different default set or a test suite with a different set associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.
 
 ## Dependencies between files ##
 Bootstrap initiates Core extensions after any Core extensions loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).
 
-If you have multiple files registered with Bootstrap through a 'values' manifest (as per [SettingsManifests](SettingsManifests)), they get loaded in that order.
+If you have multiple files registered with Bootstrap through a 'values' manifest (as per [SettingsManifests](SettingsManifests)), they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
 
-However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
-
-On change, Bootstrap re-loads all registered files, not just the one(s) updated. That allows dependant files to maintain their book keeping (if you used a 'values' manifest).
+On change, Bootstrap re-loads all registered files, not just the one(s) updated. That allows dependant files (that were registered with Bootstrap through a 'values' manifest) to inject any hooks in the expected order.

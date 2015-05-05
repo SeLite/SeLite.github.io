@@ -51,4 +51,4 @@ Displayed timestamps should be validated against timestamps\_sleepUntil..._comma
   * _selectTopFrameAnd_
 
 # Reference #
-For details see reference of those commands in Selenium IDE, [online](https://selite.googlecode.com/git/commands/src/chrome/content/reference.xml) or locally at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-commands/content/reference.xml_.
+For details see reference of those commands in Selenium IDE, [online](https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml) or locally at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml_.
