@@ -145,7 +145,7 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     </ul> </td>
 </tr>
 <tr>
-    <td> <a href='SettingsOverview'>Settings</a>                </td>
+    <td> <a href='Settings'>Settings</a>                </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
     <td> <ul>

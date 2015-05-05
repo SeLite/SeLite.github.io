@@ -23,7 +23,7 @@ See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/s
 A test framework is loaded as a Selenium Core extension. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an .xpi file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
 
 ## Configuring and loading the data ##
-You can manage configuration through [Settings](SettingsOverview). Configuration sets can associate with tests on per-test suite folder basis. A framework needs to know the test suite folder, so that it can resolve its configuration (which determines the test DB). A framework shouldn't pre-load any data when it's activated, because test suite folder may not be known yet. If you need pre-loading any data, do that from a test suite folder change handler, which gets triggered once you open (or save) a test suite.
+You can manage configuration through [Settings](Settings). Configuration sets can associate with tests on per-test suite folder basis. A framework needs to know the test suite folder, so that it can resolve its configuration (which determines the test DB). A framework shouldn't pre-load any data when it's activated, because test suite folder may not be known yet. If you need pre-loading any data, do that from a test suite folder change handler, which gets triggered once you open (or save) a test suite.
 
 # Extending a test framework #
 If you need to extend an existing framework, you may want to do it in a separate file. That makes it easy to receive updates from SeLite or within your team.

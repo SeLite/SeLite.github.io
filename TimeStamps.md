@@ -32,7 +32,7 @@ Will try to implement for Firefox 27 (Internationalisation API).
 TODO time/speed reporting by test - stop/pause clock, which excludes the timestamp robustness wait time
 
 # Configuration of time sync difference #
-[ExtraCommands](ExtraCommands) adds field _maxTimeDifference_ to [Settings](SettingsOverview) module _extensions.selite-settings.common_. It's  the max. time difference between the server and your test machine (in milliseconds).
+[ExtraCommands](ExtraCommands) adds field _maxTimeDifference_ to [Settings](Settings) module _extensions.selite-settings.common_. It's  the max. time difference between the server and your test machine (in milliseconds).
 
 Beware: If you run some test(s) that record timestamps, and then you decrease maxTimeDifference later below a threshold needed by the already recorded timestamps, the recorded timestamps may cause false positive errors later. To prevent that either
   * restart Selenium IDE, or

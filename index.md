@@ -38,7 +38,7 @@ SeLite enables the following in Selenium IDE
   * test database isolated from the application (see [TestMethods](TestMethods) and [HandlingData](HandlingData))
   * data access through high-level formulas (see [AddOns](AddOns) > DB Objects)
   * making and reverting database snapshots through [SettingsInterface](SettingsInterface) directly from Selenium IDE
-* configuration of scripts - see [SettingsOverview](SettingsOverview)
+* configuration of scripts - see [Settings](Settings)
   * having custom fields ([SettingsFields](SettingsFields))
   * managed through files ([SettingsManifests](SettingsManifests)) or via GUI ([SettingsInterface](SettingsInterface))
   * team-friendly: selectively shareable ([SettingsScope](SettingsScope))

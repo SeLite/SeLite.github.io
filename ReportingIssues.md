@@ -29,7 +29,7 @@ By submitting or commenting on a report, you agree that any part of it can be us
 '></a>
 
 ## Submit any failing the tests ##
-Save your test cases and test suites, along with any HTML forms/pages as per [PackagedTests](PackagedTests) > [Structure](PackagedTests#structure). If needed, include store any [SettingsOverview](SettingsOverview) as per [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). Put that in a .zip file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text
+Save your test cases and test suites, along with any HTML forms/pages as per [PackagedTests](PackagedTests) > [Structure](PackagedTests#structure). If needed, include store any [Settings](Settings) as per [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). Put that in a .zip file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text
 ```
 
 command | target | value

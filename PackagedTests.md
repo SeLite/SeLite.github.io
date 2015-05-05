@@ -15,7 +15,7 @@ Follow [InstallFromSource](InstallFromSource) for the easiest way to get Selenes
 
 Tests of add-ons and frameworks consist of test suites, test cases and related HTML forms/pages. To make navigation across files easy, here's a convention: filenames of test suites end with _'\_suite.html'_, and test cases are in files that have names ending with _'\_case.html'_. If there are several shared test cases, they can be in _shared\_test\_cases_ subfolder.
 
-If a test needs configuration (through [SettingsOverview](SettingsOverview)), it has [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). If the same add-on has multiple test suites that need different configuration, such test suites and their 'values' manifests are in subfolders.
+If a test needs configuration (through [Settings](Settings)), it has [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). If the same add-on has multiple test suites that need different configuration, such test suites and their 'values' manifests are in subfolders.
 
 Selenium IDE doesn't indicate the current test suite's folder in the GUI. Therefore make test suite file names clear. That helps especially when having similar test suites in different folders (because of different configurations). SeLite own test suites have file names in format <i>add-on-name_subfolder_suite.html</i> or <i>add-on-name_subfolder_subfolder_suite.html</i>.
 

@@ -8,7 +8,7 @@ layout: default
 It's more convenient than Selenium IDE's way of loading Core extensions (Selenium menu > Options > Options > General > 'Activate developer tools'), which requires you to check Selenium menu > Options > Options > General > 'Reload' button everytime you change your extension file.
 
 # Details #
-It adds field _bootstrapCoreExtensions_ to [Settings](SettingsOverview) module _extensions.selite-settings.common_, where you can choose file(s) containing your Core extension in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
+It adds field _bootstrapCoreExtensions_ to [Settings](Settings) module _extensions.selite-settings.common_, where you can choose file(s) containing your Core extension in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
 If you modify any one file that is registered with Bootstrap (while using Selenium IDE), all the registered files get re-loaded automatically next time you
   * run a single Selenese command (before that command)
