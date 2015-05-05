@@ -19,7 +19,7 @@ It replaces SelBlocks. You can't use SelBlocks Global together with SelBlocks (o
 # Documentation #
 Original documentation of SelBlocks applies to SelBlocks Global (except for incompatibility listed below). See summary of <a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks</a> extension itself and its full <a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>documentation</a>
 
-See [SelBlocksGlobal Selenese reference](http://sel-blocks-global.selite.googlecode.com/git/src/chrome/content/reference.xml). In addition to those commands, SelBlocks Global also provides [EnhancedSyntax](EnhancedSyntax).
+See [Selenese reference (online)](https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml) or (offline) _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml_. In addition to those commands, SelBlocks Global also provides [EnhancedSyntax](EnhancedSyntax).
 
 ## Clarification of term 'function' ##
 Word 'function' can refer to a Javascript function, or to a function defined by SelBlocks Global/SelBlocks construct _function...endFunction_. If it's unclear, let's call the later 'test case function'.

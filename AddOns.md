@@ -36,9 +36,9 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td><strong>More details</strong><br/>
         <ul>
             <li>Selenium IDE menu</li>
-            <li>Selenese reference (see also <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#auto-generated-selenese-commands">Auto-generated Selenese commands</a></li>
-            <li>tests (see also <a href="PackagedTests">PackagedTests</a>)</li>
-            <li>source, only if there is no other documentation</li>
+            <li><i>Selenese reference</i> (see also <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#auto-generated-selenese-commands">Auto-generated Selenese commands</a>)</li>
+            <li><i>Selenese tests</i> (see also <a href="PackagedTests">PackagedTests</a>)</li>
+            <li><i>source</i> (only if there is no other documentation)</li>
             <li>third party documentation</li>
             <li><a href="AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui"><em>chrome://</em> URL</a> to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
         </ul>
@@ -68,7 +68,8 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/versions/'>download</a>                </td>
     <td> <ul>
-        <li><a href='https://selite.googlecode.com/git/commands/src/chrome/content/reference.xml'>Selenese reference</a></li>
+        <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+        <li>Selenese reference (offline) <i>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</i></li>
         <li><a href='https://code.google.com/p/selite/source/browse/#git%2Fcommands%2Fselenese-tests'>Selenese tests</a></li>
     </ul> </td>
 </tr>
@@ -78,7 +79,8 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-db-objects/versions/'>download</a>              </td>
     <td> <ul>
         <li><a href='https://code.google.com/p/selite/source/browse/db-objects/src/chrome/content/'>source files</a></li>
-        <li><a href='https://selite.googlecode.com/git/db-objects/src/chrome/content/reference.xml'>Selenese reference</a></li>
+        <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/db-objects/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+        <li>Selenese reference (offline) <i>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-db-objects/content/reference.xml</i></li>
     </ul> </td>
 </tr>
 <tr>
@@ -111,10 +113,12 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/versions/'>download</a>           </td>
     <td> <ul>
+         <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/misc/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+         <li>Selenese reference (offline) <i>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-misc/content/reference.xml</i></li>
          <li><a href='https://code.google.com/p/selite/source/browse/misc/src/chrome/content/extensions/core-extension.js'>Source</a></li>
          <li>Source (offline): <em>chrome://selite-misc/content/extensions/core-extension.js</em></li>
          <li><a href='https://code.google.com/p/selite/source/browse/misc/#misc%2Fselenese-tests'>Selenese tests</a></li>
-         <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em></li>
+         <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em><!-- This link only works offline, because neither gitraw.com nor htmlpreview.github.io accept URL-based HTTP parameters passed to .html file.--></li>
      </ul>          </td>
 </tr>
 <tr>
@@ -134,7 +138,8 @@ So, use the _download_ links below for recent releases. **Ignore** the text: 'Yo
     <td> <ul>
         <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
         <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
-        <li><a href='http://sel-blocks-global.selite.googlecode.com/git/src/chrome/content/reference.xml'>Selenese reference</a></li>
+        <li><a href='https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+        <li>Selenese reference (offline) <i>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</i></li>
         <li><a href='https://code.google.com/p/selite/source/browse?repo=sel-blocks-global#git%2Fselenese-tests'>Selenese tests</a></li>
         <li>MPL License 1.1</li>
     </ul> </td>

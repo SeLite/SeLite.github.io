@@ -18,6 +18,10 @@ We describe the mainstream use cases, handled in the most common ways. For more 
 
 SeLite doesn't cover general functionality of related technologies (see also [ReportingIssues](ReportingIssues) > [Support scope](ReportingIssues#support-scope)). If we elaborate on those topics, it's only if they are not clear or obvious from their original documentation source, or where SeLite modifies their features. Such notes and some references to third party documentation are at [SeleniumIDE](SeleniumIDE), [DevelopmentTools](DevelopmentTools), [JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex), [InstallFromSource](InstallFromSource).
 
+Implementation is mostly documented by source comments. Detailed descriptions of Selenese commands are in reference files. You can find them
+  * online - see [AddOns](AddOns)
+  * in Selenium IDE reference pane (once you type a chosen command in IDE).
+
 # 'scripts'
 Since Selenium and SeLite are not test-specific, documentation calls test cases or suites _scripts_. They're called <i>Selenese scripts</i> only when there's a need to differentiate them from Javascript or other scripts. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
@@ -33,8 +37,4 @@ By submitting a comment you agree that project administrator(s) can, without not
   * remove your comment.
 
 # Details #
-Implementation is mostly documented by source comments. Detailed descriptions of Selenese commands are in reference files. You can find them
-  * online - see [AddOns](AddOns)
-  * in Selenium IDE reference pane (once you type a chosen command in IDE).
-
 If you read TODO subfolder, or a separate listing page [Object Diagrams](https://code.google.com/p/selite/w/list?q=label:ObjectDiagram), you may want to see [DocumentationStandard](DocumentationStandard) > [Textual object diagrams](DocumentationStandard#textual-object-diagrams).

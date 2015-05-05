@@ -133,15 +133,15 @@ Steps
     * _chrome://selenium-ide/content/selenium-ide.xul#WHITE_
  3. if you have already opened <i>chrome://selenium-ide/content/selenium-ide.xul</i> and later you add or change the hash part (<i>#GREEN, #BLUE</i>, <i>#RED</i> or <i>WHITE</i>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
  4. hide Firefox navigation bar by pressing F2 (you may need to press it twice)
-  * (+) it applies to the current window and any new windows later, but not to other existing Firefox windows
+  * (+-) it applies to the current window and any new windows later, but not to other existing Firefox windows
   * (-) however, after a Firefox restart it applies to all windows; then press F2 to show navigation bar where you want it
 
 In auxiliary IDEs
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
 * (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows <i>testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox</i>) and then press Alt.
-* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite.
+* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite. So it's the safest not to modify tests in auxiliary IDEs.
 
-There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests) neither any [SettingsOverview](SettingsOverview) sets. Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
+Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [SettingsOverview](SettingsOverview) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
 
 ### Multiple standard Selenium IDEs
 This shows multiple Selenium IDEs, detached from Firefox browser windows. Compared to the previous method, this
@@ -154,16 +154,15 @@ To set up
 2. Start multiple Firefox instances, one per profile, with command line parameters <i>-no-remote</i> and (<i>-P ProfileName</i>).
 3. Install Selenium IDE in each profile. Install SeLite [AddOns](AddOns) any other extensions in profiles where you will run scripts.
 4. Mark the second and successive profiles to identify Selenium IDEs:
-  * Visually by colour
-   1. Install [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish)
-   2. Restart Firefox
-   3. Install styles for the second and further Selenium IDEs:
-     * [green menu text](https://userstyles.org/styles/109886/selenium-ide-green-menu-text):
-       <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/109886_after.jpeg?r=1422833554'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/109886_after.jpeg?r=1422833554' /></a>
-     * <a href='https://userstyles.org/styles/110005/selenium-ide-blue-menu-text'>blue menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110005_after.jpeg?r=1422833463'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110005_after.jpeg?r=1422833463' /></a>
-     * <a href='https://userstyles.org/styles/110006/selenium-ide-red-menu-text'>red menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110006_after.png?r=1430731358'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110006_after.png?r=1430731358' /></a>
-     * <a href='https://userstyles.org/styles/110620/selenium-ide-white-menu-text'>white menu text</a>:<br> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110620_after.png?r=1430730143'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110620_after.png?r=1430730143' /></a>
-     * You can switch between styles in Firefox menu Tools > Add-ons > User Styles.
+  * Visually by menu text colour
+    1. Install [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish)
+    2. Restart Firefox
+    3. Install styles for the second and further Selenium IDEs:
+       * [green](https://userstyles.org/styles/109886/selenium-ide-green-menu-text){:style="color: green;"}:<br/><a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/109886_after.jpeg?r=1422833554'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/109886_after.jpeg?r=1422833554' /></a>
+       * [blue](https://userstyles.org/styles/110005/selenium-ide-blue-menu-text){:style="color: blue;"}':<br/> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110005_after.jpeg?r=1422833463'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110005_after.jpeg?r=1422833463' /></a>
+       * [red](https://userstyles.org/styles/110006/selenium-ide-red-menu-text){:style="color: red;"}:<br/> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110006_after.png?r=1430731358'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110006_after.png?r=1430731358' /></a>
+       * [white](https://userstyles.org/styles/110620/selenium-ide-white-menu-text){:style="color: white; background: grey;"}:<br/> <a href='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshots/110620_after.png?r=1430730143'><img src='https://df6a.https.cdn.softlayer.net/80DF6A/static.userstyles.org/style_screenshot_thumbnails/110620_after.png?r=1430730143' /></a>
+    4. You can switch between styles in Firefox menu Tools > Add-ons > User Styles.
   * By language (this applies to the whole Firefox instance, rather than just Selenium IDE, which can make it difficult to use!)
     1. Install [Simple Locale Switcher](https://addons.mozilla.org/en-US/firefox/addon/simple-locale-switcher/)
     2. Restart Firefox
