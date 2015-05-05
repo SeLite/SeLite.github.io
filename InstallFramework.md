@@ -4,12 +4,11 @@ layout: default
 ---
 
 # Scope and downloads #
-[Edit or review through GUI](#edit-or-review-through-gui)
-This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [AddOns](AddOns) yet, it may be faster to install them from source (which you'll need anyway) as per [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source) and [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
+This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [AddOns](AddOns) yet, getting them from source (which you'll need anyway) may be faster.
 
-Regardless of how you've installed [AddOns](AddOns), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source).
+Regardless of how you install [AddOns](AddOns), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source). If you're installing add-ons from source, follow [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
 
-If your web application uses SQLite, you'll get full functionality and smoother test data life cycle. You'll be able to copy/restore _appDB_, _testDB_ and _vanillaDB_ from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
+If your web application uses SQLite, you'll get full SeLite functionality and smoother test data life cycle. You'll be able to copy/restore _appDB_, _testDB_ and _vanillaDB_ from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
 
 The following instructions are generic. For any application-specific steps see documentation of the respective framework.
 
@@ -17,6 +16,7 @@ The following instructions are generic. For any application-specific steps see d
 
 ## Areas, methods and stages of configuration ##
 You need to configure two main areas
+
   * what framework (or any other bootstrapped extensions) to load
   * common and framework/extension-specific settings
 
@@ -32,10 +32,11 @@ This is already done for the tests that come with SeLite frameworks. If you're c
 ### Through GUI ###
 <!-- @TODO eliminate or Move to SettingsInterface? -->
 You can configure that via GUI as per [SettingsInterface](SettingsInterface):
+
   1. Visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
-  1. create a new set
-  1. if you're using just one test configuration, make it default (click at 'Default' next to its name)
-  1. select 'Add a new value' next to _bootstrapCoreExtensions_. Point it to where you downloaded the framework JS file.
+  2. create a new set
+  3. if you're using just one test configuration, make it default (click at 'Default' next to its name)
+  4. select 'Add a new value' next to _bootstrapCoreExtensions_. Point it to where you downloaded the framework JS file.
 
 If you're going to use several test configurations, then create one set for each configuration, but don't make any of them default. Then connect the sets with folders of your test suite(s) through 'associations' manifest as per [SettingsManifests](SettingsManifests) > ['Associations' manifests](SettingsManifests#associations-manifests).
 
@@ -43,7 +44,8 @@ If you're going to use several test configurations, then create one set for each
 
 ### Edit through 'values' manifests ###
 Add values for applicable following fields and for any custom fields/keys to _SeLiteSettingsValues.txt_ from above
-```TODO
+
+```
 extensions.selite-settings.common.testDB
 extensions.selite-settings.common.appDB
 extensions.selite-settings.common.vanillaDB
@@ -63,12 +65,13 @@ Before you use GUI, you need to load the bootstrapped framework. Start Selenium 
 If you'd like to review configuration, open [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?selectFolder_ (or _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_).
 
 If you'd like to edit profile-based configuration set(s), open _chrome://selite-settings/content/tree.xul_. Then follow [SettingsInterface](SettingsInterface) and edit the following fields (if they apply to your framework):
+
   * Enter usernames for _roles_ that you need.
   * Point the configuration set at your app/test/vanilla SQLite files. You need at least _testDB_ to get benefits of [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). _appDB_ and _vanilla_ make sense only if the application data is in SQLite.
     * For _appDB_ select the SQLite file which is used by your application instance. (The file often has extension other than .sqlite, e.g. .db or even .php.)
     * _testDB_ is for the test scripts. _vanillaDB_ will serve as a snapshot of _appDB_, so that you can revert _appDB_ and _testDB_ to it. Enter some new filenames (in a location where your account can create files).
     * If you haven't got existing _testDB_ and _vanillaDB_, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanillaDB and testDB from appDB. (See [SettingsInterface](SettingsInterface)).
-  * Fill in _webRoot_ (it may end with a slash or not). Your tests can access it via _SeLiteSettings.webRoot()_. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
+  * Fill in _webRoot_ (it doesn't matter whether it ends with a slash or not). Your tests can access it via _SeLiteSettings.webRoot()_. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
   * Fill in _tablePrefix_.
   * Open the URL of the installation, log in with account(s) that you entered for role(s) above and make Firefox save your password(s). (That's for [SettingsLogins](SettingsLogins).)
   * You may want to activate [AutoCheck](AutoCheck) to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
@@ -80,6 +83,7 @@ Locate, open and run a test suite as per [PackagedTests](PackagedTests).
 
 ## No hot switching between frameworks ##
 If you have two or more frameworks, don't switch between them during the same Firefox run. You need to restart Firefox (not just Selenium IDE). Reasons:
+
   * Frameworks can remove configuration fields that are not relevant to them, or they add new ones. Such fields stay removed/added during the rest of Firefox run, even after you switch to a different framework.
   * If you start with one framework, switch to another one and then back to the first one (all within the same Firefox run), the first framework won't be re-applied unless its file was modified (as per [BootstrapLoader](BootstrapLoader) > [Switching between files](BootstrapLoader#switching-between-files)).
   * Frameworks usually benefit from _setTestDbKeeper()_, but only one framework (or extension) can invoke it. See [TestFrameworks](TestFrameworks) > [Preserving special values in test DB](TestFrameworks#preserving-special-values-in-test-DB).

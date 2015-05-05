@@ -43,6 +43,7 @@ setfacl -m u:testersUserName:rw data.sqlite<br>
 '></a>
 
 Notes
+
   * If you have DB filename starting with '.ht' and if (accidentally) the folder is accessible online, the file won’t be served. However, that makes it hidden on Linux/Mac OS, and therefore hard to list it or to pick up the file via [SettingsInterface](SettingsInterface).
   * If you use Advanced > DB prefix, then DB prefix becomes a postfix of the DB file name, e.g. prefix ‘drupal\_’ makes the DB file name /etc/drupal7/default/files/data.sqlite-drupal`_`. But Drupal also creates a file without the postfix, which can be confusing.
 
@@ -69,8 +70,8 @@ chmod chmod a+rwx *sqlite*<br>
 </pre>
 
 # Install SeLite Drupal test framework #
-Apply [InstallFramework](InstallFramework). The framework and tests are in [drupal](https://code.google.com/p/selite/source/browse/drupal) folder. The above installation had _appDB_ filename _/etc/drupal7/default/files/data.sqlite_
-.
+Apply [InstallFramework](InstallFramework). The framework and tests are in [drupal](https://code.google.com/p/selite/source/browse/drupal) folder. The above installation had _appDB_ filename _/etc/drupal7/default/files/data.sqlite_.
+
 When using Drupal as a non-admin user, it needs a front page, but that doesn't exist by default. Do that before you run other tests: Open Firefox menu > Tools > Selenium IDE. Selenium menu > File > Open Test Suite... > locate _drupal/test\_suites\_and\_cases/setup\_content\_suite.html_. Then run the test suite (menu > Actions > Play entire test suite).
 
 # Limitation #

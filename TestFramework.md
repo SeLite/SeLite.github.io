@@ -8,6 +8,7 @@ layout: default
 A test framework is on optional layer, that encapsulates low-level application-specific test components. Those can be Javascript structures and Selenese functions.
 
 Javascript structures are Selenium Core extensions that define custom functionality for the tests. They can be optionally packaged as Firefox extensions (public or proprietary). They can contain:
+
   * Object-oriented descriptions of DB schema. Those define DB tables and their relationships.
   * Definitions of DB formulas. Those let you select data without writing SQL queries.
   * functions and object shorthands
@@ -32,6 +33,7 @@ However, standard frameworks get loaded by [BootstrapLoader](BootstrapLoader), w
 All files that define parts of the same framework declare the same namespace object near their top. If the object doesn't exist yet, they also create it, with any essential fields (using the same code in all those files).
 
 For many frameworks the only essential field of the namespace object is _db_. Then all files of such framework start with a block like:
+
 ```javascript
 
 "use strict";
@@ -48,6 +50,7 @@ db: new SeLiteData.Db( SeLiteData.getStorageFromSettings() )
 
 ## Adding custom roles ##
 If you'd like to add custom roles, use e.g.
+
 ```javascript
 
 var commonSettings= SeLiteSettings.loadFromJavascript( 'extensions.selite-settings.common' );
@@ -72,4 +75,4 @@ The reason for those limitations is in code of _SeLiteSettings.setTestDbKeeper()
 ### One stage GUI configuration ###
 <a href='Hidden comment: @TODO move to a page on its own: CreateExtensions '></a>This is only enabled for Selenium Core extensions that come with SeLite, but not for test frameworks. It enables the extension to add custom configuration fields, or to add custom options for existing configuration fields. Those new fields or new options (_keys_) are available in [SettingsInterface](SettingsInterface) immediately after start of Firefox. That is different to fields or options added by test frameworks, loaded through [BootstrapLoader](BootstrapLoader), which have effect only after running the first Selenese command.
 
-It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have _SeLiteExtensionSequencerManifest.js_ with _preActivate_ handler, where it adds any custom fields. See source of e.g. _selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js_.
+It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have _SeLiteExtensionSequencerManifest.js_ with _preActivate_ handler, where it adds any custom fields. See source of e.g. _selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js_<!-- TODO links -->.

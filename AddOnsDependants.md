@@ -27,6 +27,7 @@ Following shows direct dependencies between Firefox [AddOns](AddOns) that form S
 </tbody></table>
 
 Notes
+
 * [ExitConfirmationChecker](ExitConfirmationChecker) can be used either with or without [ExtraCommands](ExtraCommands). If used together, then it applies to Selenese defined in [ExtraCommands](ExtraCommands).
 * Miscellaneous, [Settings](SettingsOverview) and SQLite Connnection Manager can be used without Selenium IDE (as Javascript code modules). Then they don't require [ExtensionSequencer](ExtensionSequencer). However, if you want to use them within Selenium IDE, you need [ExtensionSequencer](ExtensionSequencer), too.
 * Run All Favorites also requires [Favorites (Selenium IDE)](https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/).

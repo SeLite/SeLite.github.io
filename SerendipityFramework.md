@@ -3,7 +3,7 @@ title: Serendipity framework
 layout: default
 ---
 
-The test example logs in as an admin and creates a user with random credentials and settings. It logs in as that user and posts and validates random content. It stores user settings preferences (e.g. preference for wysiwyg) in the test DB. It validates that the application honours those settings.
+The test example logs in as an admin and creates a user with random credentials and settings. It logs in as that user and posts and validates random content. It stores user settings preferences (e.g. preference for WYSIWYG) in the test DB. It validates that the application honours those settings.
 
 # Install Serendipity #
 This worked on Fedora 20. I've cloned the github repository up to commit e12b998bf7 into _/var/www/html/serendipity_ (git clone https://github.com/s9y/Serendipity.git). Install Serendipity as per its [documentation](http://www.s9y.org/36.html).
@@ -15,6 +15,7 @@ Apply [InstallFramework](InstallFramework). The framework and tests are in [sere
 
 ## Scope ##
 The test framework tries not to rely on
+
   * text constants,
   * CSS classes or
   * exact HTML structure.
@@ -33,7 +34,7 @@ The framework honours Serendipity settings (global and user-specific - stored in
 Serendipity uses string literals 'true', 'false' for some fields which have SQLite column type _boolean_ (e.g. _allow\_comments_ and _moderate\_comments_ in _serendipity\_entries_. Do not use Javascript boolean literals true or false, because they get transformed to SQLite integer 1 or 0, respectively.
 
 ## webRoot ##
-The framework doesn't use SeLite Settings configuration field _extensions.selite-settings.common.webRoot_ (and it removes this field). It uses Serendipity field 'URL to blog' (stored in serendipity\_config with name='defaultBaseURL') as well as configuration for name='serendipityPath' and name='indexFile'.
+The framework doesn't use SeLite Settings configuration field _extensions.selite-settings.common.webRoot_ (and it removes this field). It uses Serendipity field 'URL to blog' stored in _serendipity\_config_ with _name='defaultBaseURL'_, as well as configuration for _name='serendipityPath'_ and _name='indexFile'_.
 
 ## multihosting ##
-The framework doesn't autodetect the paths based on HTTP host - it would be complicated, because it would also need to pick a test DB relevant to the host etc. If you'd like to test with autodetected multiple hosts, probably the easiest way is to have one test suite per host. Have the test suites in separate folders and associate each folder with a separate [Settings](SettingsOverview) configuration via [SettingsManifests](SettingsManifests). Those test suites can share same test cases. Or have same test suites symlinked from multiple directories (at the same depth), each folder having a separate configuration.
+The framework doesn't autodetect the paths based on HTTP host (it would be complicated, because it would also need to pick a test DB relevant to the host etc.). If you'd like to test with autodetected multiple hosts, probably the easiest way is to have one test suite per host. Have the test suites in separate folders and associate each folder with a separate [Settings](SettingsOverview) configuration via [SettingsManifests](SettingsManifests). Those test suites can share same test cases. Or have same test suites symlinked from multiple directories (at the same depth), each folder having a separate configuration.
