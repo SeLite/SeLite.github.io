@@ -69,7 +69,7 @@ chmod chmod a+rwx .<br>
 chmod chmod a+rwx *sqlite*<br>
 </pre>
 
-# Install SeLite Drupal test framework #
+# Install SeLite Drupal framework #
 Apply [InstallFramework](InstallFramework). The framework and tests are in [drupal](https://code.google.com/p/selite/source/browse/drupal) folder. The above installation had _appDB_ filename _/etc/drupal7/default/files/data.sqlite_.
 
 When using Drupal as a non-admin user, it needs a front page, but that doesn't exist by default. Do that before you run other tests: Open Firefox menu > Tools > Selenium IDE. Selenium menu > File > Open Test Suite... > locate _drupal/test\_suites\_and\_cases/setup\_content\_suite.html_. Then run the test suite (menu > Actions > Play entire test suite).

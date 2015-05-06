@@ -27,7 +27,7 @@ This uses _SeLiteSettings.Field.FixedMap_, which provides multivalued freetype f
 Frameworks can add keys to fields of class _SeLiteSettings.Field.FixedMap_. One such field is 'extensions.selite-settings.common.roles'. Then they benefit from common functionality like _SeLiteSettings.roleToUser()_. See [InstallFramework](InstallFramework) > [Load and configure the framework](InstallFramework#load-and-configure-the-framework).
 
 ## Creating/updating passwords by tests ##
-If your tests create/update user passwords, see [TestFrameworks](TestFrameworks) > [Preserving special values in test DB](TestFrameworks#preserving-special-values-in-test-db).
+If your tests create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in test DB](GeneralFramework#preserving-special-values-in-test-db).
 
 # Out of scope: More flexible or complex fields #
 The test scripts contain rolenames or username placeholders - thus you don't want to change them frequently. So there is no need to have the roles or username placeholders editable via GUI interface; it's enough to have them hardcoded in the config field definition.

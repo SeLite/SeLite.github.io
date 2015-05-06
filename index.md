@@ -69,7 +69,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
 
 * [JavascriptEssential](JavascriptEssential)
 * [CustomisingSelenese](CustomisingSelenese)
-* [TestFramework](TestFramework)
+* [GeneralFramework](GeneralFramework)
 * [JavascriptComplex](JavascriptComplex).
 
 # Project details
@@ -84,16 +84,16 @@ When customising or creating frameworks or components for Selenium IDE, followin
  * [AddOns](AddOns) are verified by Mozilla
 
 ## Compatibility
-SeLite is compatible with Firefox 37 and Selenium IDE 2.9.0. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
+SeLite is compatible with Firefox 38 and Selenium IDE 2.9.0. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
 It doesn't operate with browsers other than Firefox, nor with Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
 ## License
-It's fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.
+SeLite is fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.
 
 ## Moral support
 The best ways you can support SeLite:
 
  * vote for [ThirdPartyIssues](ThirdPartyIssues)
  * tell others
- * create and share [TestFramework](TestFramework)s.
+ * create and share frameworks.

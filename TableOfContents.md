@@ -27,10 +27,10 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AppsFrameworks TestFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Frameworks<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AppsFrameworks GeneralFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Frameworks<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AppsFrameworks">AppsFrameworks</a></li>
-    <li><a href="TestFramework">TestFramework</a></li>
+    <li><a href="GeneralFramework">GeneralFramework</a></li>
     <li><a href="InstallFramework">InstallFramework</a></li>
     <li><a href="DotclearFramework">DotclearFramework</a></li>
     <li><a href="DrupalFramework">DrupalFramework</a></li>

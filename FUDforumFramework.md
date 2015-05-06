@@ -13,7 +13,7 @@ SeLite can't solve the captcha (it would be a weak captcha otherwise). Therefore
 # Install SeLite #
 Install recent [Firefox](http://www.mozilla.org), [Selenium IDE](http://docs.seleniumhq.org/download/) and all SeLite [AddOns](AddOns).
 
-# Install SeLite FUDforum test framework #
+# Install SeLite FUDforum framework #
 Apply [InstallFramework](InstallFramework). The framework and tests are in [fudforum](https://code.google.com/p/selite/source/browse/fudforum) folder. Note that _appDB_ filename ends with _.db.php_ (e.g. _/var/www/fudforum-data/forum.db.php_).
 
 # DB schema #

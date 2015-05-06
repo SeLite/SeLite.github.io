@@ -10,11 +10,11 @@ This worked on Fedora 20. I've cloned the github repository up to commit e12b998
 
 The easiest way is using Serendipity with SQLite. If you choose SQLite and you don't provide any db-related fields, the installer creates a .db file under webroot (e.g. _`serendipity_a2a42d7580267f6dcf1a3fd779040498.db`_) and puts that filename (excluding .db extension) in field dbName in _serendipity\_config\_local.inc.php_. The default _dbPrefix_ is 'serendipity_'._
 
-# Install SeLite Serendipity test framework #
+# Install SeLite Serendipity framework #
 Apply [InstallFramework](InstallFramework). The framework and tests are in [serendipity](https://code.google.com/p/selite/source/browse/serendipity) folder.
 
 ## Scope ##
-The test framework tries not to rely on
+The framework tries not to rely on
 
   * text constants,
   * CSS classes or

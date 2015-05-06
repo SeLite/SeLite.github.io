@@ -123,7 +123,7 @@ Non-trivial references are based on
 If you want to validate them, you need to make the test capture those values and store them in the test DB whenever they get created/updated in the app.
 
 # Reloading databases and creating/updating user passwords #
-See [SettingsInterface](SettingsInterface) > [Reloading databases](SettingsInterface#reloading-databases). If your tests create/update user passwords, see [TestFrameworks](TestFrameworks) > [Preserving special values in test DB](TestFrameworks#preserving-special-values-in-test-db).
+See [SettingsInterface](SettingsInterface) > [Reloading databases](SettingsInterface#reloading-databases). If your tests create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in test DB](GeneralFramework#preserving-special-values-in-test-db).
 
 # External data #
 Applications often use data sources outside of their DB (e.g. web services). If

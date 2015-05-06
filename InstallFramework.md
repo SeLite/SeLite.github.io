@@ -86,4 +86,4 @@ If you have two or more frameworks, don't switch between them during the same Fi
 
   * Frameworks can remove configuration fields that are not relevant to them, or they add new ones. Such fields stay removed/added during the rest of Firefox run, even after you switch to a different framework.
   * If you start with one framework, switch to another one and then back to the first one (all within the same Firefox run), the first framework won't be re-applied unless its file was modified (as per [BootstrapLoader](BootstrapLoader) > [Switching between files](BootstrapLoader#switching-between-files)).
-  * Frameworks usually benefit from _setTestDbKeeper()_, but only one framework (or extension) can invoke it. See [TestFrameworks](TestFrameworks) > [Preserving special values in test DB](TestFrameworks#preserving-special-values-in-test-DB).
+  * Frameworks usually benefit from _setTestDbKeeper()_, but only one framework (or extension) can invoke it. See [GeneralFramework](GeneralFramework) > [Preserving special values in test DB](GeneralFramework#preserving-special-values-in-test-DB).
