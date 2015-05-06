@@ -7,7 +7,7 @@ layout: default
   * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
   * Write and organise it clearly.
   * Provide examples.
-  * Don't have any content before the first heading (<i># Heading... #</i>)
+  * Don't have any content before the first heading (<em># Heading... #</em>)
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
   * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a 'PHP' project.
   * Don't use fixed line length, especially not in documentation source. A good IDE/editor should be capable of wrapping lines, so you can benefit from all your available screen area and not worry about line lengths. Also, having longer lines is better when you search for something, as seeing the matches in the search results may give you enough information (e.g. you know you don't need to change that occurrence), which saves you opening that line in editor.

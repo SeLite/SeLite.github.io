@@ -78,7 +78,7 @@ If the source file hasn't been loaded yet and you want to set the breakpoint bef
 
 Then (re)start Firefox, open Browser Toolbox/Debugger and only after that open Selenium IDE. The debugger will pause on that line.
 
-You can also start Firefox with debugger from shell, i.e. <i>firefox -jsdebugger</i>. However, it seems that you can't use keyword _debugger_ to investigate the very first loading stage of extensions (e.g. when [ExtensionSequencer](ExtensionSequencer) loads an extension's _SeLiteExtensionSequencerManifest.js_). The debugger doesn't stop there. Instead, see above how to print messages with _console_.
+You can also start Firefox with debugger from shell, i.e. <em>firefox -jsdebugger</em>. However, it seems that you can't use keyword _debugger_ to investigate the very first loading stage of extensions (e.g. when [ExtensionSequencer](ExtensionSequencer) loads an extension's _SeLiteExtensionSequencerManifest.js_). The debugger doesn't stop there. Instead, see above how to print messages with _console_.
 
 #### Breakpoints in Core extensions ####
 Selenium IDE loads custom Core parts twice (reported in [ThirdPartyIssues](ThirdPartyIssues) > [Selenium IDE issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697)). That applies regardless of whether you use Selenium IDE menu Options > Options > General > Selenium Core extensions, or whether you use [ExtensionSequencer](ExtensionSequencer).
