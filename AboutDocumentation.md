@@ -30,6 +30,9 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 ## scripts
 Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites _scripts_. They're called _Selenese scripts_ only when there's a need to differentiate them from Javascript or other scripts. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
+## function
+Word 'function' can refer to a Javascript _function_ (whether in Selenium Core scope or not), or to a 'function' defined by SelBlocks Global/SelBlocks construct _function...endFunction_. If it's unclear, let's call the later _Selenese function_ or _script function_.
+
 # Firefox chrome URLs for documentation and GUI
 Selenium and SeLite GUI, some of their documentation and all their source, are accessible via special Firefox URLs that start with _chrome://_. (Those addresses don't work in other browsers).
 

@@ -12,7 +12,7 @@ If we could call functions across test cases, we could organise them better than
   * more compact tests
   * higher productivity.
 
-SelBlocks Global allows you to do that. It can call functions from other test cases (within the same test suite). Since a test suite can contain any test cases (from anywhere on the filesystem), you can share test cases with functions between any test suites.
+SelBlocks Global allows you to do that. It can call functions from other test cases (within the same test suite). Since a test suite can contain any test cases (from anywhere on the filesystem), you can share test cases with functions between any test suites. See also [AboutDocumentation](AboutDocumentation) > [Terminology](AboutDocumentation#terminology) > [function](AboutDocumentation#function).
 
 It replaces SelBlocks. You can't use SelBlocks Global together with SelBlocks (neither with FlowControl, GoTo nor Sideflow).
 
@@ -20,9 +20,6 @@ It replaces SelBlocks. You can't use SelBlocks Global together with SelBlocks (n
 Original documentation of SelBlocks applies to SelBlocks Global (except for incompatibility listed below). See summary of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/) extension itself and its full [documentation](http://refactoror.wikia.com/wiki/Selblocks_Reference).
 
 See [Selenese reference (online)](https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml) or (offline) at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml_. In addition to those commands, SelBlocks Global also provides [EnhancedSyntax](EnhancedSyntax).
-
-## Clarification of term 'function' ##
-Word 'function' can refer to a Javascript function, or to a function defined by SelBlocks Global/SelBlocks construct _function...endFunction_. If it's unclear, let's call the later 'test case function'.
 
 # Differences to SelBlocks #
 

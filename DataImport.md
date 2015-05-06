@@ -23,4 +23,4 @@ Does your app use RDBMS other than SQLite and would you like your tests to have 
   * you may want to get [NetBeans IDE](http://www.netbeans.org)
     * get NetBeans for Java SE
     * Menu File > Open Project... > choose src/filter/pom.xml. That will open a Maven-based project and it will get dependencies automatically. Otherwise you need Argparse4j and Reflections as above.
-    * if you also want to develop Javascript code modules/Core extensions, you can add PHP support to your NetBeans via menu Tools > Plugins.
+    * if you also want to develop Javascript code modules or Selenium Core extensions, add PHP support to your NetBeans via menu Tools > Plugins.
