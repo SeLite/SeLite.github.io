@@ -6,7 +6,7 @@ layout: default
 # Your vote is significant #
 Below is a list of issues (or pull requests) in Selenium IDE, Firefox and third party software that complicate maintenance and progress of SeLite. They also restrict usability of Selenium IDE. Many of them were reported by other people, but they affect SeLite, too. Some of those defects and requests even have fixes proposed, but not accepted by the third party.
 
-Those issues need your vote in order to get attention from those third parties. Please, make the difference: Vote for them.
+Only your vote will help to get attention of those third parties. Please, make the difference: Vote for these issues.
 
 ## Your privacy is essential ##
 If you vote for an issue, by default you will receive automated emails on changes to that issue. However, you can deactivate those notifications. Indeed, voting for an issue doesn't add your email address to any forums.
@@ -56,7 +56,7 @@ Mozilla and NetBeans also require you to register in order to vote. It takes a f
 
 The actual voting is in two steps. Click at '_vote_' right of '_Importance_' (for Mozilla) or right of '_Priority_' (for NetBeans). That takes you to a page with a checkbox next to '_Vote For This Bug_'. Activate the checkbox and submit by clicking at button '_Change My Votes_' near the bottom-left.
 
-You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) > button '_Disable All Mail_' and then button '<i>Submit Changes</i>' at the bottom. The same steps apply to <a href='https://netbeans.org/bugzilla/userprefs.cgi?tab=email'>NetBeans preferences</a>.
+You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button '_Disable All Mail_' and then button _Submit Changes_ at the bottom.
 
 # Detailed list of issues/pull requests
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. Keep them sorted in order of importance. -->

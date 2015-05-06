@@ -17,12 +17,14 @@ Value(s) of a multi-valued field come from a maximum of one source (set or manif
 
 # Granularity and overriding through sets and manifests #
 The rules of applying values from manifests and configuration sets are, in order of priority:
+
   * the default set (if any) or any associated configuration sets override 'values' manifests
   * associated sets override the default set
   * more local manifests override less local manifests of the same type (either 'values' or 'associations')
   * all those override default value of the field (from definition of its module)
 
 So, a field will have value(s) based on its topmost occurrence within:
+
   * most locally associated set
   * less locally associated set
   * ...
@@ -33,10 +35,11 @@ So, a field will have value(s) based on its topmost occurrence within:
   * ...
   * least local 'values' manifest
   * field default value(s) from module definition (only if the module associates with folders)
-> > <a href='Hidden comment: TODO Check "(only if the module associates with folders)"'></a>
+<a href='Hidden comment: TODO Check "(only if the module associates with folders)"'></a>
 
 # Caching #
 Manifests are cached
+
   * temporarily when edited through GUI. You just need to refresh the screen in order for a change to apply.
   * fully when used by Selenium tests (via _SeLiteData.getStorageFromSettings_). You need to restart Firefox in order for a change to apply.
   * optionally when used by other extensions (the developer can choose whether to cache or not)
@@ -44,4 +47,4 @@ Manifests are cached
 # Symlinks (on Mac OS/Unix) #
 Symlinks are another way to have variety/separation of configuration sets. If you access a test suite via a file path which has symlinked non-leaf folder(s), it can be  associated to partially/fully different configuration sets.
 
-<a href='Hidden comment: Comment: TODO Test how Selenium IDE treats a test suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolved it first? If it resolves the path first, then change this paragraph.'></a>
+<a href='Hidden comment: Comment: TODO Test how Selenium IDE treats a test suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolve it first? If it resolves the path first, then change this paragraph.'></a>

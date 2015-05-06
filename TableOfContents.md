@@ -5,7 +5,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="./">DB-driven browser automation - Overview</a></li>
+    <li><a href="./">Overview</a></li>
     <li><a href="SeleniumIDE">Selenium IDE</a></li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>

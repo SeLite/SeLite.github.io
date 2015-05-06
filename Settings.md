@@ -8,18 +8,21 @@ layout: default
 
 # Background #
 Selenium IDE can be extensively customised via Core extensions (written in Javascript). This way you add new Selenese commands and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
+
   * list of users or credentials
   * location of XML files (which an extension can pass to loadXmlVars and forXml from [SelBlocksGlobal](SelBlocksGlobal))
   * location of SQLite data files
 
 # Configuration interface #
 There was no convenient tool to
+
   * edit
   * validate
   * share and manage
 such configurations.
 
 Most Core extensions can work with
+
   * just a few basic field types
   * an option for custom validation of fields
   * simple user interface
@@ -34,6 +37,7 @@ Most Core extensions can work with
 
 # Why not make your own #
 You could create custom GUI as an IDE extension of Selenium IDE through XUL overlays (in XML). But
+
   * you shouldn't need to learn all that, especially because XUL is
     * different to HTML, and not of much use (unless you create visual extensions of Firefox)
     * difficult to debug
@@ -42,6 +46,7 @@ You could create custom GUI as an IDE extension of Selenium IDE through XUL over
 
 # Functionality #
 It adds API and GUI which
+
   * simplify management and sharing of custom configurations. They
     * organise fields in modules and sets
     * use both Firefox preferences and manifest files
@@ -52,6 +57,7 @@ It adds API and GUI which
 
 # API #
 You can
+
   * define configuration schemas (called 'modules') and their fields
   * store any number of configuration sets (or their parts) per module in
     * plain text files (values manifests), and/or
@@ -66,19 +72,24 @@ Values manifests and associated sets work only in standalone Selenium IDE, but n
 
 # Modules and sets #
 Modules are schemas/templates of user's configuration(s). They define each field and
+
   * its  name
   * its type
   * whether single-valued or multi-valued
   * default value(s)
   * custom validation (optional)
+
 A field can be either
-    * free-type - a string, an integer, a decimal
-    * choice from a fixed list
-    * boolean checkbox
-    * file/folder picker
+
+  * free-type - a string, an integer, a decimal
+  * choice from a fixed list
+  * boolean checkbox
+  * file/folder picker
+
 User's configuration(s) - values of the fields - are stored in 'sets'. A module can have either
-    * exactly one set, or
-    * any number of sets; one of them can be selected as default
+
+  * exactly one set, or
+  * any number of sets; one of them can be selected as default
 
 It also works without Selenium IDE and without manifests. So you can use it in any Firefox extension.
 
@@ -86,6 +97,7 @@ Test developers define configuration modules (schemas) in Javascript. See [Setti
 
 # Granularity #
 Users can configure and override settings granularly via
+
   * profile-based configuration sets
     * through user interface
     * not shared with other team members

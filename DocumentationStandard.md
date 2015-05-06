@@ -9,12 +9,13 @@ layout: default
   * Provide examples.
   * Don't have any content before the first heading (<i># Heading... #</i>)
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
+  * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a 'PHP' project.
   * Don't use fixed line length, especially not in documentation source. A good IDE/editor should be capable of wrapping lines, so you can benefit from all your available screen area and not worry about line lengths. Also, having longer lines is better when you search for something, as seeing the matches in the search results may give you enough information (e.g. you know you don't need to change that occurrence), which saves you opening that line in editor.
-    * Try NetBeans. There choose menu Tools > Options > Editor > Formatting > Line Wraps: After words.
-    * If you need Eclipse, try http://dev.cdhq.de/eclipse/word-wrap/ (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
-  * format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
-  * Don't have blank lines in HTML comments in .md files. Such comments work well online, but not with Markup Viewer in Firefox (which displays them as content).
-
+    * In NetBeans choose menu Tools > Options > Editor > Formatting > Line Wraps: After words.
+    * If you need Eclipse, try <http://dev.cdhq.de/eclipse/word-wrap/> (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
+ * format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
+ * Don't have blank lines in HTML comments in .md files. Such comments work well online, but not with Markdown Viewer in Firefox (which displays them as content).
+ * Don't fully rely on Markdown Viewer (see [AboutDocumentation](AboutDocumentation)).
 
 ## Drawn diagrams
 Make these nice. Draw them in LibreOffice/OpenOffice and save them as .odg. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git (https://github.com/selite/selite/tree/master/diagrams > navigate to .png file > get the url of 'Raw' link).

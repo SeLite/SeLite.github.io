@@ -9,6 +9,7 @@ This technology works with third party components and many variables. You can re
 
 ## Got stuck? ##
 When you read documentation, and things don't work:
+
   * stop, switch to doing something else (the less related the better), get back to it later or some other day
   * read or check 'backwards' - from the last parts to the earlier ones
   * print it
@@ -22,7 +23,7 @@ Do the same when you write a report about a potential issue.
 Have Firefox and Selenium IDE that are supported by current SeLite. See [Overview](./) > [Compatibility](./#compatibility). Get current versions of all SeLite add-ons - as per [AddOns](AddOns) > [Latest releases](AddOns#latest-releases). (If you only get add-ons that you need, you may not be able to [run packaged tests](#run-packaged-tests)). For unreleased functionality use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge).
 
 # Loading Selenium plugins #
-Check whether packaged Selenium extensions start correctly: Open Selenium IDE > menu Options > Options... > Plugins. Verify that each plugin is enabled and with no error message (in red). If there is an error, inspect [Browser Console](#browser-console). (That screen doesn't show error details in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser).
+Check whether packaged Selenium extensions start correctly: Open Selenium IDE > menu Options > Options... > Plugins. Verify that each plugin is enabled and with no error message (in red). If there is an error, inspect [Browser Console](#browser-console). (That screen doesn't show error details in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser).) TODO centralise with DevelopmentTools.
 
 By default, Selenium IDE disables plugins that fail on start, and it keeps them disabled on subsequent restarts of Selenium IDE. That's even if the problems get resolved - Selenium IDE won't load such plugins, until you enable them. So you may want to disable that in the options above. See also [DevelopmentTools](DevelopmentTools) > [Selenium IDE settings](DevelopmentTools#selenium-ide-settings).
 
