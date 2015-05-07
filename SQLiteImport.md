@@ -4,10 +4,9 @@ layout: default
 ---
 
 ## Overview ##
-This converts a backup of your database to SQLite. It does not and it will not connect to your DB.
+This converts a backup of your database to SQLite. It does not (and it will not) connect to your DB. For now
 
-For now
-  * the JAR is not distributed. Compile yourself or contact me.
+  * the JAR is not distributed. Compile it yourself.
   * the imports only work from Postgres
   * only some schema and insert SQL of Postgres was tested
   * TODO autoincrement primary keys
@@ -16,7 +15,7 @@ You can develop application-specific filters that only import data relevant to t
 
 Following steps are in Unix. They're quite trivial, so there's no version for Windows here.
 
-You need 2 plain text backups of Postgres - one with schema, the other one with data. Data backup must be created by pg\_dump tool, with one insert per record and including column names (as is the default).
+You need two plain text backups of Postgres - one with schema, the other one with data. Data backup must be created by pg\_dump tool, with one insert per record and including column names (as is the default).
 
 MySQL (future): --no-data, --no-create-info
 

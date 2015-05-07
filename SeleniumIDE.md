@@ -7,7 +7,7 @@ layout: default
 These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top of its [standard documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Auto-generated Selenese commands #
-Selenese commands are defined in these primary forms: <em>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</em> and <em><strong>is</strong>Xyz<strong>Present</strong></em>. Selenium auto-generates their variations (listed below).
+Selenese commands are defined in these primary forms: _xyz, **get**Xyz, **is**Xyz_ and _**is**Xyz**Present**_. Selenium auto-generates their variations (listed below).
 
 Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also _loadSeleniumCommands()_ in Selenium IDE's _treeView.js_.)
 

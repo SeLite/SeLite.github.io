@@ -11,15 +11,19 @@ In SQLite, operator LIKE matches case-insensitively. By default that applies to 
 
 Sorting of DB results varies between database systems, or even between various configurations. For example, PostgreSQL can use various collation types. Most (or all) UTF8-based ones sort strings case-insensitively. 'C' collaction sorts case-sensitively, but it doesn't support Unicode.
 
-If you need to sort case-insensitively in SQLite, that works only for ASCII characters by default. You can do it at
+If you need to sort case-insensitively in SQLite, that works only for ASCII characters by default. You can do it at either
+
   * table definition level
+
 ```
 CREATE TABLE items( item VARCHAR(255) COLLATE NOCASE);
 INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');
 
 SELECT * FROM items ORDER BY item;
 ```
+
   * query level
+
 ```
 CREATE TABLE items( item VARCHAR(255) );
 INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');

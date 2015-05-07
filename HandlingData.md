@@ -100,7 +100,7 @@ When the test creates a new record in its DB, it needs to set its ID to reflect 
           * differences between RDBMS may apply. See [TestMethodsTheory](TestMethodsTheory) > [SQLite side effects of SeLite](TestMethodsTheory#sqlite-side-effects-of-SeLite) and [SQLiteSpecifics](SQLiteSpecifics).
       * other types of DB may need to reset their sequences
   * **Capture**
-    * after submitting it shows a view page of the new submission. Its url contains the new ID. Selenium IDE can extract it and save it in the test DB.
+    * after submitting it shows a view page of the new submission. Its URL contains the new ID. Selenium IDE can extract it and save it in the test DB.
     * otherwise (if the application/module doesn't present the view page after submission) the test
       * navigates the application to a page that lists the records
       * navigates the application to sort those submissions so that the latest is shown first
@@ -111,7 +111,7 @@ When the test creates a new record in its DB, it needs to set its ID to reflect 
         * navigate to the linked page to show the submission
         * extract the ID somehow
       * otherwise: use timestamp-based and list item position-based navigation and comparison
-    * useful for testing security: the test logs on to the tested application as the other user (security victim), gets a listing of the forbidden records, captures id/link of the record(s) and stores it (in the test session or its DB). Then it logs out, logs in as the other user (security intruder) and tries to access the stolen url(s).
+    * useful for testing security: the test logs on to the tested application as the other user (security victim), gets a listing of the forbidden records, captures id/link of the record(s) and stores it (in the test session or its DB). Then it logs out, logs in as the other user (security intruder) and tries to access the stolen URL(s).
 
 ## Non-trivial references ##
 Non-trivial references are based on

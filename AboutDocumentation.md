@@ -6,7 +6,7 @@ layout: default
 # Format
 Having documentation in one large piece would make its structure too rigid. Maintenance and online navigation would be impractical. Instead, it's split into small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
 
-* get [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
+* install [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
 * clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
 * for navigation open [TableOfContents](TableOfContents)
 * note that Markdown Viewer is not 100% proof
