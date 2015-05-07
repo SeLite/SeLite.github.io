@@ -9,7 +9,6 @@ layout: default
   * Provide examples.
   * Don't have any content before the first heading (<em># Heading... #</em>).
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
-  * Use pairs of underscores or stars for inline code, filenames etc. Don't use pairs of simple backticks for that, because GitHub renders it intrusively red.
   * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a 'PHP' project.
   * Don't use fixed line length, especially not in documentation source.
     * A good IDE/editor should be capable of wrapping lines. Take benefit from all your available screen area and don't worry about line lengths.
@@ -63,7 +62,7 @@ Don't use [Kramdown-specific header IDs](http://kramdown.gettalong.org/syntax.ht
 ## Generating 'raw' links
 GitHub doesn't serve 'Raw' versions of most file types with their MIME, except for images (because of security). So we use [htmlpreview.github.io](http://htmlpreview.github.io) for .html files. For any other files, e.g. .xml, .xsl or .js, use [rawgit.com](http://rawgit.com).
 
-In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for .html, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. So we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. So if you change e.g. _\<add-on's-name\>/src/chrome/content/reference.xml_ or _extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl_, then update all _cdn.rawgit.com_ URLs to use the new commit hash or tag.
+In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. So we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. So if you change e.g. _\<add-on's-name\>/src/chrome/content/reference.xml_ or _extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl_, then update all _cdn.rawgit.com_ URLs to use the new commit hash or tag.
 
 ### Updating links to cdn.rawgit.com
 Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button. The URL will start with _https://raw.githubusercontent.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._

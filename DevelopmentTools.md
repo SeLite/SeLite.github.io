@@ -18,27 +18,27 @@ Read this in parallel to
 
 Visit Firefox URL _about:config_ and set the following preferences:
 
-  * _browser.dom.window.dump.enabled_ to boolean true
-  * _devtools.chrome.enabled to boolean_ true
-  * _devtools.debugger.remote-enabled_ to boolean true
-  * _devtools.debugger.prompt-connection_ to boolean false: Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
+  * `browser.dom.window.dump.enabled` to boolean `true`
+  * `devtools.chrome.enabled` to boolean `true`
+  * `devtools.debugger.remote-enabled` to boolean `true`
+  * `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
   * The following is for developing XUL GUI or its javascript. These preferences don't exist by default
-    * _nglayout.debug.disable\_xul\_cache_ to boolean true
-    * _dom.allow\_XUL\_XBL\_for\_file_ to boolean true (for accessing .xul files via _file://_ URLs in addition to using [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui)). Beware that such files are limited, with less access than .xul files under _chrome://_ URLs (e.g. no access to _Components.utils.import_()).
+    * `nglayout.debug.disable_xul_cache` to boolean `true`
+    * `dom.allow_XUL_XBL_for_file` to boolean `true` (for accessing `.xul` files via _file://_ URLs in addition to using [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui)). Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
 
 Install plugins listed at [AddOnsThirdParty](AddOnsThirdParty). Restart Firefox, so that the above configuration takes effect.
 
 ## Browser Console and Toolbox ##
 These are for development of SeLite frameworks, Selenium IDE and its extensions. For debugging your web application use Firefox menu Tools > Web Developer > Toggle Tools instead.
 
-Find these in Firefox menu Tools > Web Developer > Browser Console (shortcut _Ctrl+Shift+J_) and Browser Toolbox (formerly Browser Debugger; since Firefox 39 it has a shortcut _Ctrl+Alt+Shift+I_). If you start _firefox_ binary from a shell on Linux, messages from Browser Console also show up in that shell. You can also start _firefox.exe_ or _firefox_ binary with Browser Console and/or Browser Toolbox by passing parameters _-jsconsole_ or _-jsdebugger_ (as per [command line options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)).
+Find these in Firefox menu Tools > Web Developer > Browser Console (shortcut `Ctrl+Shift+J`) and Browser Toolbox (formerly Browser Debugger; since Firefox 39 it has a shortcut `Ctrl+Alt+Shift+I`). If you start `firefox` binary from a shell on Linux, messages from Browser Console also show up in that shell. You can also start `firefox.exe` or `firefox` binary with Browser Console and/or Browser Toolbox by passing parameters `-jsconsole` or `-jsdebugger` (as per [command line options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)).
 
 In Browser Console, 'JS' tab/dropdown has level 'Warnings'. Name of that level is confusing. Undefined variables in strict mode and some syntax errors generate messages at visible only 'Warnings' level (or more detailed), but they halt execution of the script anyway. So if things don't add up, include 'Warnings' level.
 
 ### Logging ###
-Don't use _alert(message)_ since it's disruptive. Also, it's not available in Javascript code modules.
+Don't use `alert(message)` since it's disruptive. Also, it's not available in Javascript code modules.
 
-In Selenium Core scope (i.e. in files listed for 'coreUrl' in _SeLiteExtensionSequencer.js_) you can generate messages for Selenium IDE 'Log' with
+In Selenium Core scope (i.e. in files listed for `coreUrl` in `SeLiteExtensionSequencer.js`) you can generate messages for Selenium IDE Log tab with
 
 ```javascript
 
@@ -48,9 +48,9 @@ LOG.warn(...);
 LOG.error(...);
 ```
 
-Beware that even though there is _LOG_ object also in Selenium IDE scope (i.e. in files listed for 'ideURL' in _SeLiteExtensionSequencer.js_), it doesn't work (the messages don't show up in Selenium IDE log). Use _editor.getUserLog()_ instead.
+Beware that even though there is `LOG` object also in Selenium IDE scope (i.e. in files listed for 'ideURL' in `SeLiteExtensionSequencer.js`), it doesn't work (the messages don't show up in Selenium IDE log). Use `editor.getUserLog()` instead.
 
-In Javascript code modules call _SeLiteMisc.log()_, which gives you Selenium Core _LOG_ object. Alternatively, use _console_ object, which logs to Firefox menu > Tools > Web Developer > Browser Console:
+In Javascript code modules call `SeLiteMisc.log()`, which gives you Selenium Core `LOG` object. Alternatively, use `console` object, which logs to Firefox menu > Tools > Web Developer > Browser Console:
 
 ```javascript
 
@@ -62,39 +62,39 @@ console.error(...);
 ```
 
 ### Browser Toolbox ###
-  * it catches **some** events from Javascript code modules - ones loaded via _Components.utils.import()_
+  * it catches **some** events from Javascript code modules - ones loaded via `Components.utils.import()`
   * don't let it catch all exceptions - it reports too many annoyances from Firefox itself
-  * it doesn't show stack trace of exceptions in its watch pane. So just add _expressionVariableName.stack_ as a watched expression.
-  * you can locate a Javascript file by its name in 'Sources' list on the left, or 'Search scripts' field at the top-right. However, they only list files that were used already, so some Selenium IDE files get loaded only after you run a Selenese command (e.g. _getEval | true_).
-  * if you update a Javascript file (other than a code module) used by XUL and you enabled _nglayout.debug.disable\_xul\_cache_, then Firefox can refresh such Javascript, but browser debugger doesn't (as of Firefox 32).
+  * it doesn't show stack trace of exceptions in its watch pane. So just add `expressionVariableName.stack` as a watched expression.
+  * you can locate a Javascript file by its name in 'Sources' list on the left, or 'Search scripts' field at the top-right. However, they only list files that were used already, so some Selenium IDE files get loaded only after you run a Selenese command (e.g. `getEval | true`).
+  * if you update a Javascript file (other than a code module) used by XUL and you enabled `nglayout.debug.disable_xul_cache`, then Firefox can refresh such Javascript, but browser debugger doesn't (as of Firefox 32).
 
-Don't use [Javascript debugger](https://addons.mozilla.org/en-US/firefox/addon/javascript-debugger) (Venkman) (because as of Firefox 22 it couldn't locate Javascript code modules). Neither use [Tiny Javascript Debugger](http://sourceforge.net/u/pbrunschwig/tinyjsd/wiki/Home/) (as it doesn't catch _debugger_ keyword).
+Don't use [Javascript debugger](https://addons.mozilla.org/en-US/firefox/addon/javascript-debugger) (Venkman) (because as of Firefox 22 it couldn't locate Javascript code modules). Neither use [Tiny Javascript Debugger](http://sourceforge.net/u/pbrunschwig/tinyjsd/wiki/Home/) (as it doesn't catch `debugger` keyword).
 
 #### Setting up breakpoints ####
 If you can locate the source file in Firefox Browser Toolbox/Debugger, you can set up breakpoints by clicking at the left margin (at the line numbers).
 
-#### _debugger_ keyword ####
-If the source file hasn't been loaded yet and you want to set the breakpoint beforehand, you need to modify the source. Follow [InstallFromSource](InstallFromSource) and set up proxy file(s). Then edit the source and add a line containing: _debugger;_ When Firefox reaches such a line, it pauses there (but it doesn’t switch to Browser Toolbox automatically - you need to do that.)
+#### `debugger` keyword ####
+If the source file hasn't been loaded yet and you want to set the breakpoint beforehand, you need to modify the source. Follow [InstallFromSource](InstallFromSource) and set up proxy file(s). Then edit the source and add a line containing: `debugger;` When Firefox reaches such a line, it pauses there (but it doesn’t switch to Browser Toolbox automatically - you need to do that.)
 
 Then (re)start Firefox, open Browser Toolbox/Debugger and only after that open Selenium IDE. The debugger will pause on that line.
 
-You can also start Firefox with debugger from shell, i.e. <em>firefox -jsdebugger</em>. However, it seems that you can't use keyword _debugger_ to investigate the very first loading stage of extensions (e.g. when [ExtensionSequencer](ExtensionSequencer) loads an extension's _SeLiteExtensionSequencerManifest.js_). The debugger doesn't stop there. Instead, see above how to print messages with _console_.
+You can also start Firefox with debugger from shell, i.e. <em>firefox -jsdebugger</em>. However, it seems that you can't use keyword `debugger` to investigate the very first loading stage of extensions (e.g. when [ExtensionSequencer](ExtensionSequencer) loads an extension's `SeLiteExtensionSequencerManifest.js`). The debugger doesn't stop there. Instead, see above how to print messages with `console`.
 
 #### Breakpoints in Core extensions ####
 Selenium IDE loads custom Core parts twice (reported in [ThirdPartyIssues](ThirdPartyIssues) > [Selenium IDE issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697)). That applies regardless of whether you use Selenium IDE menu Options > Options > General > Selenium Core extensions, or whether you use [ExtensionSequencer](ExtensionSequencer).
 
-Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole test case or test suite) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with _?numericTimeStamp_ appended to their file names. For each Core extension pick the one that has the highest timestamp.
+Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole test case or test suite) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with `?numericTimeStamp` appended to their file names. For each Core extension pick the one that has the highest timestamp.
 
-This doesn't affect Javascript code modules (accessed via _Components.utils.import( 'chrome://...', optionalScope )_) - those get loaded once only. If you use [BootstrapLoader](BootstrapLoader) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
+This doesn't affect Javascript code modules (accessed via `Components.utils.import( 'chrome://...', optionalScope )`) - those get loaded once only. If you use [BootstrapLoader](BootstrapLoader) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
 
 #### Source of functions ####
-If you inspect a variable that refers to a function (including a function field of an object/prototype), browser debugger doesn't list _toSource()_ on the function object by default. You have to add it to Watch pane. But you shouldn't need this if you apply [JavascriptEssential](JavascriptEssential) > [Avoid nameless functions](JavascriptEssential#avoid-nameless-functions).
+If you inspect a variable that refers to a function (including a function field of an object/prototype), browser debugger doesn't list `toSource()` on the function object by default. You have to add it to Watch pane. But you shouldn't need this if you apply [JavascriptEssential](JavascriptEssential) > [Avoid nameless functions](JavascriptEssential#avoid-nameless-functions).
 
 ### Selenium IDE settings
 When developing Selenium extensions, you'll most likely benefit from unchecking the following two options in Selenium IDE > Options > Options... > Plugins (as per [TroubleShooting](TroubleShooting) > [Loading Selenium plugins](TroubleShooting#loading_selenium_plugins)):
 
-  * _Disabling plugin should completely disable the addon in Firefox_
-  * _Automatically disable plugin provided code on plugin errors_. This speeds up the development process. However, if your plugin partially fails when it's loaded (i.e. because of a runtime error but not a syntax error), then Selenium doesn't report the problem! It will only list the error in in Selenium IDE menu > Options > Options... > Plugins > _pluginName_. That can be confusing. So if things don't add up, check the plugin there.
+  * 'Disabling plugin should completely disable the addon in Firefox'
+  * 'Automatically disable plugin provided code on plugin errors'. Disabling this speeds up the development process. However, if your plugin partially fails when it's loaded (i.e. because of a runtime error but not a syntax error), then Selenium doesn't report the problem! It will only list the error in in Selenium IDE menu > Options > Options... > Plugins > _pluginName_. That can be confusing. So if things don't add up, check the plugin there.
 
 ### Debugging and extending Selenium IDE GUI
 Say you'd like to debug or extend Selenium IDE GUI or Selenium IDE add-ons (rather than Selenium Core add-ons). If you want to match the GUI parts to its source, open [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-ide.xul_ and inspect it with Firebug. It's not as easy as inspecting an HTML page. If you use the inspect pointer button, that won't expand down to all elements. Then you may need to open HTML tab and navigate in its breadcrumb, or alternate between using the inspector pointer and HTML tab. Then search in the relevant source for XML elements that you've identified.
@@ -131,7 +131,7 @@ Get NetBeans 8.0.1+ for HTML5 & PHP and
 ## Plugins ##
 If you also want to write custom SQLite filters/importers, you can add Java SE support to your NetBeans via menu Tools > Plugins. Then you'll also need Java SE JDK.
 
-Don't install [Foxbeans](http://www.teesoft.info/content/view/36/36/#Foxbeans), a plugin to develop Mozilla addons in NetBeans. Otherwise, _install.rdf_ files wouldn’t save on Ctrl+S (even when using a PHP Project, not an Addons project).
+Don't install [Foxbeans](http://www.teesoft.info/content/view/36/36/#Foxbeans), a plugin to develop Mozilla addons in NetBeans. Otherwise, `install.rdf` files wouldn’t save on Ctrl+S (even when using a PHP Project, not an Addons project).
 
 ## Custom code folding ##
 If you repeat a pattern of code or similar sections of code, consider applying [How to quickly create editor fold](http://stackoverflow.com/questions/11251770/how-to-quickly-create-editor-fold) (which uses [SurroundWithCodeFolding](http://wiki.netbeans.org/SurroundWithCodeFolding)).

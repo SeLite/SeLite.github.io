@@ -28,12 +28,12 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 # Terminology
 
 ## function
-Word 'function' can refer to a Javascript _function_ (whether in Selenium Core scope or not), or to a 'function' defined by SelBlocks Global/SelBlocks construct _function...endFunction_. If it's unclear, let's call the later _Selenese function, script function_ or _[SelBlocksGlobal](SelBlocksGlobal) function_.
+Word 'function' can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a 'function' defined by SelBlocks Global/SelBlocks construct `function...endFunction`. If it's unclear, let's call the later `Selenese function, script function` or `SelBlocksGlobal function`.
 
 ## scripts
-Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites _scripts_. They're called _Selenese scripts_ only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
+Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites `scripts`. They're called `Selenese scripts` only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-Side note: [SelBlocksGlobal](SelBlocksGlobal) used to call Selenese functions (defined by _function...endFunction_) 'scripts'. (Originally they were defined by _script...endScript_). However, SeLite doesn't refer to Selenese functions as 'scripts'.
+Side note: [SelBlocksGlobal](SelBlocksGlobal) used to call Selenese functions (defined by `function...endFunction`) 'scripts'. (Originally they were defined by `script...endScript`). However, SeLite doesn't refer to Selenese functions as 'scripts'.
 
 # Firefox chrome URLs for documentation and GUI
 Selenium and SeLite GUI, some of their documentation and all their source, are accessible via special Firefox URLs that start with _chrome://_. (Those addresses don't work in other browsers).

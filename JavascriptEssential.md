@@ -43,7 +43,7 @@ That adds extra checks that help to prevent errors and some bad practice code. S
 See also [> MDN > Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
 
 ## The classic way ##
-This is a definition by _function_ statement. When using [strict Javascript](#strict-javascript), have such definitions at file level only and not within other functions or conditional/loop blocks (see [MDN > Strict mode > Paving the way for future ECMAScript versions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Paving_the_way_for_future_ECMAScript_versions)).
+This is a definition by `function` statement. When using [strict Javascript](#strict-javascript), have such definitions at file level only and not within other functions or conditional/loop blocks (see [MDN > Strict mode > Paving the way for future ECMAScript versions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Paving_the_way_for_future_ECMAScript_versions)).
 
 ```javascript
 "use strict";
@@ -53,7 +53,7 @@ function myFunction( param, anotherParam... ) {
 ```
 
 ## By function expression ##
-This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates ['closures'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that _function_ expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and [Function intercepts](#function-intercepts).
+This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates ['closures'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and [Function intercepts](#function-intercepts).
 
 ### Avoid nameless functions ###
 This only applies to definitions by [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). That's useful for adding/defining functions
@@ -82,7 +82,7 @@ Such functions don't have a name. That doesn't affect the functionality, but:
   * It makes debugging (as per [DevelopmentTools](DevelopmentTools) > [Browser Toolbox](DevelopmentTools#browser_toolbox)) more difficult. In debugger's call stack, it shows these names. If you don't give a function a name, then you or others need to locate it by the source line.
   * For nameless constructors (i.e. functions that define classes):
     * If you inspect their instances, you need to add their _.constructor.toSource()_ to the Watch pane (as per [DevelopmentTools](DevelopmentTools) > [Source of functions](DevelopmentTools#source-of-functions)).
-    * Their instances don't work with _SeLiteMisc.isInstance()_.
+    * Their instances don't work with `SeLiteMisc.isInstance()`.
 
 Prevent that by creating a named function (with the desired name) via [Named function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function#Named_function_expression) and assign it to the target symbol. E.g.
 
@@ -198,7 +198,7 @@ use localVariable here...
 ```
 
 ## Passing the global scope
-If you want a function (anonymous or not) to define global symbols, you can pass the global scope (i.e. ['global object'](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)) to it. It's accessible via _this_ keyword at global scope (similar to _$GLOBALS_ in PHP).
+If you want a function (anonymous or not) to define global symbols, you can pass the global scope (i.e. ['global object'](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)) to it. It's accessible via `this` keyword at global scope (similar to `$GLOBALS` in PHP).
 
 So then the above example would be
 
@@ -215,10 +215,10 @@ use localVariable here...
 )( this );
 ```
 
-## Passing _this_
-When you define a function [the classic way](#the-classic-way) (whether named or anonymous), _this_ keyword refers to the instance that the function will be invoked on (if any). But often you want that code to refer to _this_ as it were during execution of code that defined that function (i.e. _this_ from the scope that creates the new Function object by that _function_ statement).
+## Passing `this`
+When you define a function [the classic way](#the-classic-way) (whether named or anonymous), `this` keyword refers to the instance that the function will be invoked on (if any). But often you want that code to refer to `this` as it were during execution of code that defined that function (i.e. `this` from the scope that creates the new Function object by that `function` statement).
 
-You need to save that outer _this_ into a variable (usually called _self_) local in the scope outside of the new function (one being created by _function_ statement). Then use that variable (e.g. _self_) instead of _this_ where needed. See also [MDN > Operator this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) and [MDN > Functions > Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures).
+You need to save that outer `this` into a variable (usually called `self`) local in the scope outside of the new function (one being created by `function` statement). Then use that variable (e.g. `self`) instead of `this` where needed. See also [MDN > Operator this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this) and [MDN > Functions > Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures).
 
 ```javascript
 "use strict";
@@ -262,7 +262,7 @@ If you intercept or extend Selenium, or if you figure out any non-trivial, non-o
 # Other #
 
 ## No extra third party libraries
-There's no need and no benefit from Google Closure with Selenium. Do not use JSLint, since it refuses iteration variables defined in _for_ loop to be used after the loop.
+There's no need and no benefit from Google Closure with Selenium. Do not use JSLint, since it refuses iteration variables defined in `for` loop to be used after the loop.
 
 ## Iterating over arrays ##
 Firefox allows easy iteration over arrays, if you don't need to keep track of the index:

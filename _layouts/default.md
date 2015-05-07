@@ -72,6 +72,9 @@
         .navbar-default .navbar-nav .open ul.dropdown-menu > li > a[href="{{ pageName }}"] {color: green;}
         /* Only until Jekyll 3 is common. TODO remove then: */
         .navbar-default .navbar-nav .open ul.dropdown-menu > li > a[href="{{ pageName }}.html"] {color: green;}
+
+        /* Override bootstrap.min.css: */
+        * code { color: black; }
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:

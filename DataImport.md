@@ -19,9 +19,9 @@ Does your app use RDBMS other than SQLite and would you like your tests to have 
   * you don't need full JDK neither a Java editor/IDE, unless you want to create custom filters.
 
 # Development of custom filters #
-  * get _src/filter_ from [Source](https://code.google.com/p/selite/source/checkout)
+  * get `src/filter` from [Source](https://code.google.com/p/selite/source/checkout)
   * get Java SE JDK 7+
   * you may want to get [NetBeans IDE](http://www.netbeans.org)
     * get NetBeans for Java SE
-    * Menu File > Open Project... > choose _src/filter/pom.xml_. That will open a Maven-based project and it will get dependencies automatically. Otherwise you need Argparse4j and Reflections as above.
+    * Menu File > Open Project... > choose `src/filter/pom.xml`. That will open a Maven-based project and it will get dependencies automatically. Otherwise you need Argparse4j and Reflections as above.
     * if you also want to develop Javascript code modules or Selenium Core extensions, add PHP support to your NetBeans via menu Tools > Plugins.

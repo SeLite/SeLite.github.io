@@ -73,7 +73,7 @@ When the test creates a new record in its DB, it needs to set its ID to reflect 
         * it won't generate a new ID once there has been an ID reaching 64bit signed limit (OK in real world)
         * it doesn't re-use IDs of deleted rows
         * see SQLite documentation of [Autoincrement](http://www.sqlite.org/autoinc.html)
-        * the import filter can set set next values of SQLite INTEGER PRIMARY KEY AUTOINCREMENT columns in special table [_sqlite_sequence_](http://www.sqlite.org/fileformat2.html#seqtab) (which is present only after there is at least one table with INTEGER PRIMARY KEY AUTOINCREMENT column).
+        * the import filter can set set next values of SQLite INTEGER PRIMARY KEY AUTOINCREMENT columns in special table [sqlite_sequence](http://www.sqlite.org/fileformat2.html#seqtab) (which is present only after there is at least one table with INTEGER PRIMARY KEY AUTOINCREMENT column).
       * both options reuse IDs from rolled back transaction
       * (both options require the key to be INTEGER, not INT)
     * app DB-specific
