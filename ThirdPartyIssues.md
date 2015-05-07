@@ -61,7 +61,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 # Detailed list of issues/pull requests
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. Keep them sorted in order of importance. -->
 <table>
-<thead><th> <b>Issue</b>                                                                                               </th><th> <b>Third party</b> </th><th> <b>Reason</b>                           </th></thead><tbody>
+<thead><th> <strong>Issue</strong>                                                                                               </th><th> <strong>Third party</strong> </th><th> <strong>Reason</strong>                           </th></thead><tbody>
 
 <!--
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<br>(See a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#indentation">Indentation</a>.) </td></tr>

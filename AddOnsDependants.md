@@ -7,7 +7,7 @@ Following shows direct dependencies between Firefox [AddOns](AddOns) that form S
 
 <!-- Keep the following table sorted alphabetically.-->
 <table><thead>
-<tr><td><b>Providers</b> &gt;<hr/>Dependents \/</td><td>&#160;</td><td>&#160;</td><td> <a href="BootstrapLoader">Bootstrap</a></td><td> Clipboard And Indent</td><td><a href="ExtraCommands">Commands</a></td><td>DB Objects</td><td><a href="ExtensionSequencer">ExtensionSequencer</a></td><td>Miscellaneous</td><td><a href="SelBlocksGlobal">SelBlocksGlobal</a></td><td><a href="Settings">Settings</a></td><td>SQLite<br/>Connection<br/>Manager</td><td>TestCase<br>Debug<br>Context</td></tr>
+<tr><td><strong>Providers</strong> &gt;<hr/>Dependents \/</td><td>&#160;</td><td>&#160;</td><td> <a href="BootstrapLoader">Bootstrap</a></td><td> Clipboard And Indent</td><td><a href="ExtraCommands">Commands</a></td><td>DB Objects</td><td><a href="ExtensionSequencer">ExtensionSequencer</a></td><td>Miscellaneous</td><td><a href="SelBlocksGlobal">SelBlocksGlobal</a></td><td><a href="Settings">Settings</a></td><td>SQLite<br/>Connection<br/>Manager</td><td>TestCase<br>Debug<br>Context</td></tr>
 </thead>
 <tbody>
 <tr><td> <a href="AutoCheck">AutoCheck</a> </td><td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td><td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a>                        </td><td>  X        </td><td>            </td><td>            </td><td>            </td><td> X                      </td><td> X             </td><td>                  </td><td> X               </td><td>                                 </td><td> X                             </td></tr>

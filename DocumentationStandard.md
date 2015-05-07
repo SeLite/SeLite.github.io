@@ -39,7 +39,7 @@ Please
 ## Textual object diagrams
 [Object Diagrams](https://code.google.com/p/selite/w/list?q=label:ObjectDiagram) draw ownership/reference relationships between objects, fields and functions. They usually don't necessarily describe class inheritance (which is clear from the source<!--TODO: and from Javadoc -->).
 
-Text diagrams don't need to be esthetic, but clear and easy to edit - so you can quickly update them whenever you change the relevant code. They are in plain text, with <b><, >, ^, v</b> for connections. The diagrams look like this:
+Text diagrams don't need to be esthetic, but clear and easy to edit - so you can quickly update them whenever you change the relevant code. They are in plain text, with <strong><, >, ^, v</strong> for connections. The diagrams look like this:
 
 ~~~
 Example                                     Description

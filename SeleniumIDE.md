@@ -7,57 +7,57 @@ layout: default
 These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top of its [standard documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Auto-generated Selenese commands #
-Selenese commands are defined in these primary forms: <em>xyz, <b>get</b>Xyz, <b>is</b>Xyz</em> and <em><b>is</b>Xyz<b>Present</b></em>. Selenium auto-generates their variations (listed below).
+Selenese commands are defined in these primary forms: <em>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</em> and <em><strong>is</strong>Xyz<strong>Present</strong></em>. Selenium auto-generates their variations (listed below).
 
 Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions/functions. So if you'd like to locate them online (or in the source), use the following. (See also <em>loadSeleniumCommands()</em> in Selenium IDE's treeView.js.)
 
 <table>
 <thead>
 <tr>
-    <td><b>Primary commands</b><br/> (as listed both online and in Reference tab)</td>
-    <td><b>Auto-generated commands</b><br/>(listed in Reference tab only, but not online)</td>
+    <td><strong>Primary commands</strong><br/> (as listed both online and in Reference tab)</td>
+    <td><strong>Auto-generated commands</strong><br/>(listed in Reference tab only, but not online)</td>
 </tr>
 </thead>
 <tbody>
 <tr>
-    <td> xyz<br>(implemented by function <b>do</b>Xyz)</td>
-    <td> xyz<b>AndWait</b>                       </td>
+    <td> xyz<br>(implemented by function <strong>do</strong>Xyz)</td>
+    <td> xyz<strong>AndWait</strong>                       </td>
 </tr>
 <tr>
-    <td><b>assert</b>Xyz</td>
-    <td><b>verify</b>Xyz</td>
+    <td><strong>assert</strong>Xyz</td>
+    <td><strong>verify</strong>Xyz</td>
 </tr>
 <tr>
-    <td><b>get</b>Xyz<br><b>is</b>Xyz (other than <b>is</b>Xyz<b>Present</b>)<br> (rarely useful on their own,<br> use generated commands instead)</td>
-    <td> <b>assert</b>Xyz<br><b>assertNot</b>Xyz</td>
-</tr>
-<tr>
-    <td>&#160;</td>
-    <td> <b>verify</b>Xyz<br><b>verifyNot</b>Xyz</td>
+    <td><strong>get</strong>Xyz<br><strong>is</strong>Xyz (other than <strong>is</strong>Xyz<strong>Present</strong>)<br> (rarely useful on their own,<br> use generated commands instead)</td>
+    <td> <strong>assert</strong>Xyz<br><strong>assertNot</strong>Xyz</td>
 </tr>
 <tr>
     <td>&#160;</td>
-    <td> <b>store</b>Xyz</td>
+    <td> <strong>verify</strong>Xyz<br><strong>verifyNot</strong>Xyz</td>
 </tr>
 <tr>
     <td>&#160;</td>
-    <td> <b>waitFor</b>Xyz<br><b>waitForNot</b>Xyz</td>
-</tr>
-<tr>
-    <td> <b>is</b>Xyz<b>Present</b><br>(rarely useful on its own,<br> use generated commands instead) </td>
-    <td> <b>assert</b>Xyz<b>Present</b> <br><b>assert</b>Xyz<b>NotPresent</b> </td>
+    <td> <strong>store</strong>Xyz</td>
 </tr>
 <tr>
     <td>&#160;</td>
-    <td> <b>verify</b>Xyz<b>Present</b> <br><b>verify</b>Xyz<b>NotPresent</b> </td>
+    <td> <strong>waitFor</strong>Xyz<br><strong>waitForNot</strong>Xyz</td>
+</tr>
+<tr>
+    <td> <strong>is</strong>Xyz<strong>Present</strong><br>(rarely useful on its own,<br> use generated commands instead) </td>
+    <td> <strong>assert</strong>Xyz<strong>Present</strong> <br><strong>assert</strong>Xyz<strong>NotPresent</strong> </td>
 </tr>
 <tr>
     <td>&#160;</td>
-    <td> <b>store</b>Xyz<b>Present</b> </td>
+    <td> <strong>verify</strong>Xyz<strong>Present</strong> <br><strong>verify</strong>Xyz<strong>NotPresent</strong> </td>
 </tr>
 <tr>
     <td>&#160;</td>
-    <td> <b>waitFor</b>Xyz<b>Present</b> <br><b>waitFor</b>Xyz<b>NotPresent</b>  </td>
+    <td> <strong>store</strong>Xyz<strong>Present</strong> </td>
+</tr>
+<tr>
+    <td>&#160;</td>
+    <td> <strong>waitFor</strong>Xyz<strong>Present</strong> <br><strong>waitFor</strong>Xyz<strong>NotPresent</strong>  </td>
 </tr>
 </tbody></table>
 
