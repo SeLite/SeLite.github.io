@@ -7,11 +7,12 @@ layout: default
   * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
   * Write and organise it clearly.
   * Provide examples.
-  * Don't have any content before the first heading (<em># Heading... #</em>)
+  * Don't have any content before the first heading (<em># Heading... #</em>).
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
+  * Use pairs of underscores or stars for inline code, filenames etc. Don't use pairs of simple backticks for that, because GitHub renders it intrusively red.
   * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a 'PHP' project.
   * Don't use fixed line length, especially not in documentation source.
-    * A good IDE/editor should be capable of wrapping lines. Take benefit from all your available screen area and not worry about line lengths.
+    * A good IDE/editor should be capable of wrapping lines. Take benefit from all your available screen area and don't worry about line lengths.
     * Reasonably long lines make source search and narrowing down easier. Search results preview containing long enough lines may be enough for you to know that you can skip the occurrence, without opening that line in editor.
     * You need long lines for pre-formatted text, such as code blocks and [Drawn diagrams](#drawn-diagrams).
     * In NetBeans choose menu Tools > Options > Editor > Formatting > Line Wraps: After words.

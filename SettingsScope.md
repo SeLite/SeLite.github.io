@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Level of applying configurations and manifests #
-Configurations have effect on test suites, rather than to specific test cases. That's because a test case can call a function from another test case (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those test cases were associated with different configurations.
+Configurations have effect on test suites, rather than to specific test cases. That's because an automation case can call Selenese function from another case (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those test cases were associated with different configurations.
 
 A manifest affects to any test suite under its folder subtree, unless overridden by manifest(s) at a more specific (lower) level or by a set (at any level). Set(s) override 'values' manifest(s), so that teams can share default values via 'values' manifests, yet the team members can override them in their own set(s), serving as preferences, without changing any shared manifest(s).
 

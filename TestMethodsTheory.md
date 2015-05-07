@@ -20,7 +20,7 @@ These terms are not SeLite-specific. The goal here is to clarify possible/desira
     * all your test scripts (cases and suites) that are run by the test system. They are grouped in test cases, where
       * a test case consists of steps
       * a test suite contains one or more test cases
-      * one test case can belong to multiple test suites (and it can be re-used by cross-test case 'function' calls via [SelBlocksGlobal](https://addons.mozilla.org/en-US/firefox/addon/SeLite-SelBlocks-Global/versions/))
+      * one automation case can belong to multiple suites (and if it defines any [SelBlocksGlobal](SelBlocksGlobal) functions, other cases in the same suite can reuse them)
   * **data**
     * **'app data', 'app DB'** or just **'data'** - the application data (or its subset) relevant to testing
       * usually it means SQLite export of the application's DB

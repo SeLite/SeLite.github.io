@@ -102,12 +102,12 @@ Find a basic example at Selenium Documentation > [Test Design Considerations](ht
 # Variables
 
 ## Stored variables
-Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
+Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a Selenese function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
 Parameters of Selenese actions can access stored variables as _${name-of-the-variable}_. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of _${name-of-the-variable}_ won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <em>storedVars['name-of-the-variable']</em>. See also [EnhancedSyntax](EnhancedSyntax).
 
 ## Javascript variables
-Sometimes you want a 'global' variable that spreads across the functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
+Sometimes you want a 'global' variable that spreads across Selenese functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
 
 Don't use command _storeEval_ for that - it sets a stored variable, which is local.
 
