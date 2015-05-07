@@ -5,9 +5,9 @@ layout: default
 
 
 # What an SeLite framework is
-An SeLite framework is on optional layer, that encapsulates low-level application-specific test components. Those can be Javascript structures and Selenese functions.
+An SeLite framework is on optional layer, that encapsulates low-level application-specific components. Those are mostly Javascript structures and Selenese functions.
 
-Javascript structures are Selenium Core extensions that define custom functionality for the tests. They can be optionally packaged as Firefox extensions (public or proprietary). They can contain:
+Javascript structures are Selenium Core extensions that define custom functionality for the Selenese scripts. They can be optionally packaged as Firefox extensions (public or proprietary). They can contain:
 
   * Object-oriented descriptions of DB schema. Those define DB tables and their relationships.
   * Definitions of DB formulas. Those let you select data without writing SQL queries.
@@ -15,7 +15,7 @@ Javascript structures are Selenium Core extensions that define custom functional
   * Selenese commands
 
 
-Selenese functions (blocks of Selenese commands) can be shared between test cases and test suites (via [SelBlocksGlobal](SelBlocksGlobal)). The framework consists of library-like test cases, which only contain Selenese functions and no commands outside those functions. Those test cases are shared by all test suites, which run the actual tests.
+Selenese functions (blocks of Selenese commands) can be shared between test cases and test suites (via [SelBlocksGlobal](SelBlocksGlobal)). The framework consists of library-like automation cases, which contain Selenese functions. Automation suites include those framework cases and 'action' cases that utilise those functions.
 
 See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/selite/source/browse/drupal) and other [AppsFrameworks](AppsFrameworks).
 
@@ -28,14 +28,13 @@ You can manage configuration through [Settings](Settings). Configuration sets ca
 # Extending a framework
 If you need to extend an existing framework, you may want to do it in a separate file. That makes it easy to receive updates from SeLite or within your team.
 
-However, standard frameworks get loaded by [BootstrapLoader](BootstrapLoader), which doesn't guarantee order of loading multiple files. So one framework file can't robustly and easily intercept/replace functions defined in another file of the same framework (since the order of loading multiple files may work in one Firefox profile, but not in another). If you need that, replace the existing framework rather than extend it.
+However, standard frameworks get loaded by [BootstrapLoader](BootstrapLoader), which doesn't guarantee order of loading multiple files. So one framework file can't robustly and easily intercept/replace functions defined in another file of the same framework (since the order of loading multiple files may work in one Firefox profile, but not in another). If you need that, replace the existing framework rather than extend it.<!-- TODO or load the dependency files yourself -->
 
 All files that define parts of the same framework declare the same namespace object near their top. If the object doesn't exist yet, they also create it, with any essential fields (using the same code in all those files).
 
 For many frameworks the only essential field of the namespace object is _db_. Then all files of such framework start with a block like:
 
 ```javascript
-
 "use strict";
 
 /** @type{object} A namespace-like object in the global scope.*/

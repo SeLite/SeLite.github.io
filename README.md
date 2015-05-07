@@ -6,9 +6,9 @@
 * improves productivity of Selenium.
 
 SeLite enables
-* high reuse by sharing functions across scripts
+* high reuse by sharing Selenese functions across scripts
 * enhanced expressive syntax
-* test database (isolated from the application data)
+* isolated database used by scripts
 * automatic detection of webserver errors/warnings
 * custom fine-grain configuration schemas.
 

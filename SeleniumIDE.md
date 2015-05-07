@@ -9,12 +9,12 @@ These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top 
 # Auto-generated Selenese commands #
 Selenese commands are defined in these primary forms: <em>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</em> and <em><strong>is</strong>Xyz<strong>Present</strong></em>. Selenium auto-generates their variations (listed below).
 
-Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions/functions. So if you'd like to locate them online (or in the source), use the following. (See also <em>loadSeleniumCommands()</em> in Selenium IDE's treeView.js.)
+Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also _loadSeleniumCommands()_ in Selenium IDE's _treeView.js_.)
 
 <table>
 <thead>
 <tr>
-    <td><strong>Primary commands</strong><br/> (as listed both online and in Reference tab)</td>
+    <td><strong>Primary command</strong><br/> (as listed both online and in Reference tab; same as Javascript implementation function, unless mentioned otherwise)</td>
     <td><strong>Auto-generated commands</strong><br/>(listed in Reference tab only, but not online)</td>
 </tr>
 </thead>
@@ -24,11 +24,19 @@ Selenium IDE shows the original reference for both the primary and auto-generate
     <td> xyz<strong>AndWait</strong>                       </td>
 </tr>
 <tr>
+    <td>&#160;</td>
+    <td>&#160;</td>
+</tr>
+<tr>
     <td><strong>assert</strong>Xyz</td>
     <td><strong>verify</strong>Xyz</td>
 </tr>
 <tr>
-    <td><strong>get</strong>Xyz<br><strong>is</strong>Xyz (other than <strong>is</strong>Xyz<strong>Present</strong>)<br> (rarely useful on their own,<br> use generated commands instead)</td>
+    <td>&#160;</td>
+    <td>&#160;</td>
+</tr>
+<tr>
+    <td><strong>get</strong>Xyz<br><strong>is</strong>Xyz (other than <strong>is</strong>Xyz<strong>Present</strong>)<br> (both are rarely useful on their own<br> - use generated commands instead)</td>
     <td> <strong>assert</strong>Xyz<br><strong>assertNot</strong>Xyz</td>
 </tr>
 <tr>
@@ -44,7 +52,11 @@ Selenium IDE shows the original reference for both the primary and auto-generate
     <td> <strong>waitFor</strong>Xyz<br><strong>waitForNot</strong>Xyz</td>
 </tr>
 <tr>
-    <td> <strong>is</strong>Xyz<strong>Present</strong><br>(rarely useful on its own,<br> use generated commands instead) </td>
+    <td>&#160;</td>
+    <td>&#160;</td>
+</tr>
+<tr>
+    <td> <strong>is</strong>Xyz<strong>Present</strong><br>(rarely useful on its own<br> - use generated commands instead) </td>
     <td> <strong>assert</strong>Xyz<strong>Present</strong> <br><strong>assert</strong>Xyz<strong>NotPresent</strong> </td>
 </tr>
 <tr>

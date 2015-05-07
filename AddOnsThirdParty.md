@@ -29,5 +29,5 @@ See also [DevelopmentTools](DevelopmentTools).
 # Incompatible add-ons #
 Don't use
 
-  * original SelBlocks - it doesn't call functions across test cases. Use [SelBlocksGlobal](SelBlocksGlobal) instead
+  * original SelBlocks - it doesn't call Selenese functions across cases. Use [SelBlocksGlobal](SelBlocksGlobal) instead
   * Flow Control, Sideflow, GoTo - they are incompatible with [SelBlocksGlobal](SelBlocksGlobal) (and also with SelBlocks)
