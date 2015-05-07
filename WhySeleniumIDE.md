@@ -6,6 +6,7 @@ layout: default
 
 # Similarities between Selenium IDE and WebDriver #
 [Selenium](http://seleniumhq.org) - both [Selenium IDE](http://docs.seleniumhq.org/projects/ide/) and [WebDriver](http://seleniumhq.org/projects/webdriver) - automates operation of web browser. It usually doesn't need any modification of the web application. Both alternatives run automation scripts that control the browser (as if it were operated by a human). They
+
   * navigate through web application in the browser, e.g. they
     * open URLs
     * enter values: type into inputs, choose checkboxes, radio buttons or dropdown lists
@@ -63,7 +64,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
 
 ## WebDriver ##
   * (+) supporting various browsers
-  * (-) missing some functionality (screenshots) that is only supported in Firefox (see [Selenium Core Reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Selenium Actions](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#actions) > _captureEntirePageScreenshot()_ or [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#actions_ > _captureEntirePageScreenshot()_)
+  * (-) missing some functionality (screenshots) that is only supported in Firefox (see online [Selenium Core Reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Selenium Actions](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#actions) > _captureEntirePageScreenshot()_ or offline [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#actions_ > _captureEntirePageScreenshot()_)
   * (-) less practical for developing, running and distributing the scripts
     * you can import the scripts back from their language to Selenium IDE. However, if you re-edit them, you can't save them in the target language (see [changing formats](http://blog.reallysimplethoughts.com/2011/06/10/does-selenium-ide-v1-0-11-support-changing-formats)). You'd have to maintain both the Selenium IDE scripts (.html) and the generated server-side scripts, and to track any customization, so that you could re-generate them from Selenium IDE.
     * it involves packaging into jar files and restarting Tomcat (or similar)

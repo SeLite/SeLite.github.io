@@ -47,8 +47,8 @@ If you develop Selenese commands that may be used with _=\`...\`_ or _@\`...\`_ 
 1. Do not compare the values of standard Selenese parameters (_target_ and _value_) using strict comparison operators === and !==. Also, don't depend on their _typeof_, which will be 'object' rather than 'string' if the passed parameter contains =\`...\` with no prefix and no suffix or if it contains @\`...\`. If you'd like to use strict comparison or _typeof_ with such a parameter, transform it to a string (see the next rule).
 2. If the command doesn't need @\`...\` syntax, and the user passes =\`...\` with no prefix and no suffix, you may want the command to show an error, asking the user to put space(s) as a prefix or suffix, to indicate that the result of =\`...\` should be cast to a string. See also [selblocks.js](https://code.google.com/p/selite/source/browse/src/chrome/content/extensions/selblocks.js?repo=sel-blocks-global) > _Selenium.prototype.preprocessParameter_ and _Selenium.prototype.getEval_.
 3. If you implement a Selenese command that evaluates any of its parameters (_target_ or _value_) as Javascript and you also want it to work with @\`...\`, then in the definition of the command
-  * get field _seLiteExtra_ from the parameter and store it for later use (if needed), e.g. <i>var seLiteExtra=target.seLiteExtra;</i>
-  * transform the parameter to a primitive string, e.g. <i>target=''+target;</i> and only then pass it to _eval()_.
+  * get field _seLiteExtra_ from the parameter and store it for later use (if needed), e.g. <em>var seLiteExtra=target.seLiteExtra;</em>
+  * transform the parameter to a primitive string, e.g. <em>target=''+target;</em> and only then pass it to _eval()_.
 (See also Mozilla's documentation of [String object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) > Distinction between string primitives and String objects.)
 
 # Alternatives in classic Selenese

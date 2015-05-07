@@ -30,7 +30,7 @@ Most Core extensions can work with
     * done once for benefit of many
     * easier to use, share and manage than
       * editing Javascript files (possible typos..), or
-      * using Firefox' special URL <i>about:config</i>, which would
+      * using Firefox' special URL <em>about:config</em>, which would
         * hard-code preference names
         * allow only one configuration per Firefox profile. That is counter productive if you need to switch between configurations, since the profile contains the installed extensions, history etc. Copying the profile folders can lead to a mess.
   * an API to access the configured values
@@ -53,7 +53,7 @@ It adds API and GUI which
     * allow to add new fields to existing configurations
   * populate default values
   * validate free-type values
-  * give a visual interface to end users (testers), which is nicer than <i>about:config</i>
+  * give a visual interface to end users (testers), which is nicer than <em>about:config</em>
 
 # API #
 You can
@@ -65,7 +65,7 @@ You can
       * edit them through a generic interface in a browser
       * choose one that is default (if the module allows multiple sets)
       * associate them to folders containing the tests (if the module allows to be associated with folders)
-      * alternatively edit them access via url <i>about:config</i>
+      * alternatively edit them access via url <em>about:config</em>
   * have your Core extension access the preferences via a Javascript code module (API)
 
 Values manifests and associated sets work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium_ides-inside-browser) (neither in Selenium IDE in browser sidebar).

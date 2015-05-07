@@ -7,9 +7,9 @@ layout: default
 These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top of its [standard documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Auto-generated Selenese commands #
-Selenese commands are defined in these primary forms: <i>xyz, <b>get</b>Xyz, <b>is</b>Xyz</i> and <i><b>is</b>Xyz<b>Present</b></i>. Selenium auto-generates their variations (listed below).
+Selenese commands are defined in these primary forms: <em>xyz, <b>get</b>Xyz, <b>is</b>Xyz</em> and <em><b>is</b>Xyz<b>Present</b></em>. Selenium auto-generates their variations (listed below).
 
-Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions/functions. So if you'd like to locate them online (or in the source), use the following. (See also <i>loadSeleniumCommands()</i> in Selenium IDE's treeView.js.)
+Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions/functions. So if you'd like to locate them online (or in the source), use the following. (See also <em>loadSeleniumCommands()</em> in Selenium IDE's treeView.js.)
 
 <table>
 <thead>
@@ -92,7 +92,7 @@ Find a basic example at Selenium Documentation > [Test Design Considerations](ht
 ## Stored variables
 Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
-Parameters of Selenese actions can access stored variables as _${name-of-the-variable}_. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of _${name-of-the-variable}_ won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <i>storedVars['name-of-the-variable']</i>. See also [EnhancedSyntax](EnhancedSyntax).
+Parameters of Selenese actions can access stored variables as _${name-of-the-variable}_. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of _${name-of-the-variable}_ won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <em>storedVars['name-of-the-variable']</em>. See also [EnhancedSyntax](EnhancedSyntax).
 
 ## Javascript variables
 Sometimes you want a 'global' variable that spreads across the functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
@@ -137,7 +137,7 @@ Steps
     * _chrome://selenium-ide/content/selenium-ide.xul#BLUE_
     * _chrome://selenium-ide/content/selenium-ide.xul#RED_
     * _chrome://selenium-ide/content/selenium-ide.xul#WHITE_
- 3. if you have already opened <i>chrome://selenium-ide/content/selenium-ide.xul</i> and later you add or change the hash part (<i>#GREEN, #BLUE</i>, <i>#RED</i> or <i>#WHITE</i>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
+ 3. if you have already opened <em>chrome://selenium-ide/content/selenium-ide.xul</em> and later you add or change the hash part (<em>#GREEN, #BLUE</em>, <em>#RED</em> or <em>#WHITE</em>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
  4. hide Firefox navigation bar by pressing F2 (you may need to press it twice)
   * (+-) it applies to the current window and any new windows later, but not to other existing Firefox windows
   * (-) however, after a Firefox restart it applies to all windows; then press F2 to show navigation bar where you want it
@@ -145,7 +145,7 @@ Steps
 In auxiliary IDEs
 
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
-* (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows <i>testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox</i>) and then press Alt.
+* (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows <em>testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox</em>) and then press Alt.
 * (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite. So it's the safest not to modify tests in auxiliary IDEs.
 
 Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
@@ -158,7 +158,7 @@ This shows multiple Selenium IDEs, detached from Firefox browser windows. Compar
 To set up
 
 1. Create Firefox profiles, one per Selenium IDE: Follow [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment) > [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile).
-2. Start multiple Firefox instances, one per profile, with command line parameters <i>-no-remote</i> and (<i>-P ProfileName</i>).
+2. Start multiple Firefox instances, one per profile, with command line parameters <em>-no-remote</em> and (<em>-P ProfileName</em>).
 3. Install Selenium IDE in each profile. Install SeLite [AddOns](AddOns) any other extensions in profiles where you will run scripts.
 4. Mark the second and successive profiles to identify Selenium IDEs:
   * Visually by menu text colour

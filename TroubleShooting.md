@@ -11,7 +11,7 @@ This technology works with third party components and many variables. You can re
 When you read documentation, and things don't work:
 
   * stop, switch to doing something else (the less related the better), get back to it later or some other day
-  * read or check 'backwards' - from the last parts to the earlier ones
+  * read or check 'backwards': from the last parts to the earlier ones
   * print it
   * read a print out at a different place
   * discuss it with someone in person
@@ -29,6 +29,7 @@ By default, Selenium IDE disables plugins that fail on start, and it keeps them 
 
 # Narrow down the problem #
 This may help you to figure out the issue yourself. Even if you don't solve it, you'll have collected information that will assist others to help you. In order to locate the issue you need to (as applicable)
+
   * reload your test DB from the app DB and re-run the test
   * eliminate extras
     * disable all other Firefox extensions and plugins (including  well-known ones like Firebug). Only leave extensions required to run your test.
@@ -38,10 +39,10 @@ This may help you to figure out the issue yourself. Even if you don't solve it, 
     * replace SeLite-specific commands (e.g. _typeRandom_) with their Selenium alternatives and see whether your locators work.
 
 ## Browser Console ##
-If Selenium IDE log doesn't give much information about the problem, you need a log from Firefox itself. Visit Firefox URL _about:config_. Set preference _devtools.chrome.enabled_ to true (by double-clicking). Restart Firefox and go to its menu > Tools > Web Developer > Browser Console. Does it show any errors or warnings? Re-check the console after you start Selenium IDE and when you run scripts.
+If Selenium IDE log doesn't give much information about the problem, you need a log from Firefox itself. Visit Firefox URL _about:config_. Set preference _devtools.chrome.enabled_ to _true_ (by double-clicking). Restart Firefox and go to its menu > Tools > Web Developer > Browser Console. Does it show any errors or warnings? Re-check the console after you start Selenium IDE and when you run scripts.
 
 ## Separate Firefox profile ##
-If you don't want to modify your existing Firefox profile, [create a new one](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) (with no spaces in its name). Enable [Browser Console](#browser-console). Add any necessary non-SeLite extensions, until the problem appears. Alternatively, you could also [duplicate the existing profile](http://kb.mozillazine.org/Moving_your_profile_folder) (which is stored as a folder) and narrow down the problem there.
+If you don't want to modify your existing Firefox profile, [create a new one](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) (with no spaces in its name). Enable [Browser Console](#browser-console). Add any necessary non-SeLite extensions, until the problem appears. Alternatively, you could also [duplicate the existing profile](http://kb.mozillazine.org/Moving_your_profile_folder) (which is stored as a folder) and narrow down the problem in that copy.
 
 # Run packaged tests #
 If you use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge), it also gives you [PackagedTests](PackagedTests). Otherwise get the tests from SeLite source as per [InstallFromSource](InstallFromSource).

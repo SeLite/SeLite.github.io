@@ -17,7 +17,7 @@ Tests of add-ons and frameworks consist of test suites, test cases and related H
 
 If a test needs configuration (through [Settings](Settings)), it has [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). If the same add-on has multiple test suites that need different configuration, such test suites and their 'values' manifests are in subfolders.
 
-Selenium IDE doesn't indicate the current test suite's folder in the GUI. Therefore make test suite file names clear. That helps especially when having similar test suites in different folders (because of different configurations). SeLite own test suites have file names in format <i>add-on-name_subfolder_suite.html</i> or <i>add-on-name_subfolder_subfolder_suite.html</i>.
+Selenium IDE doesn't indicate the current test suite's folder in the GUI. Therefore make test suite file names clear. That helps especially when having similar test suites in different folders (because of different configurations). SeLite own test suites have file names in format <em>add-on-name_subfolder_suite.html</em> or <em>add-on-name_subfolder_subfolder_suite.html</em>.
 
 ### Navigating to local forms/pages ###
 Tests can contain files (HTML, Javascript etc.) and can refer to them no matter where on your filesystem you have them. That works through _file://_-based URLs relative to location of the test suite. Such URLs should not be relative to the test case, because the same test case can be shared by multiple test suites.
@@ -25,15 +25,15 @@ Tests can contain files (HTML, Javascript etc.) and can refer to them no matter 
 Reasoning: A test case can open local pages relative to its location, or to location of the current test suite (the one loaded). Either choice has some positives, and can also be confusing. However, using URLs relative to the current test suite allows flexible re-use of test cases and their functions, with customised versions of local pages for each test suite. If all such test suites can use same version of a local page, such a file can be in a common parent folder. This results in similar test suites having the same folder structure and same names for local pages, which simplifies navigation.
 
 Test suites that share test cases from parent folder(s) should be at the same directory depth, so that they can access any local .html files in higher folders through same relative URLs (e.g. _../page.html_). Tests open local forms/pages by e.g.
-```
 
+```
 TODO FIX open | file://SeLiteSettings.getTestSuiteFolder()/form.html
 ```
 
 ### Negative tests ###
-If you need to test that something fails, use <i>try..catch..endTry</i> as per [SelBlocksGlobal](SelBlocksGlobal). Use <i>catch..endTry</i> to set a stored variable. Check that variable after _endTry_ (e.g. with _getEval_) and throw an error on failure. Remember to clear that stored variable _before_ that block of steps, so that it can run multiple times.
+If you need to test that something fails, use <em>try..catch..endTry</em> as per [SelBlocksGlobal](SelBlocksGlobal). Use <em>catch..endTry</em> to set a stored variable of your choice. Check that variable after _endTry_ (e.g. with _getEval_) and throw an error on failure. Remember to clear that stored variable _before_ that block of steps, so that it can run multiple times.
 
-There are also 'real' negative tests in _selite.sel-blocks-global/selenese-tests-negative/_. Those are supposed to fail, since they validate cases when <i>try..catch..endTry</i> doesn't catch an error.
+There are also 'real' negative tests in _selite.sel-blocks-global/selenese-tests-negative/_. Those are supposed to fail, since they validate cases when <em>try..catch..endTry</em> doesn't catch an error.
 
 ## Invoking tests ##
 
@@ -47,10 +47,11 @@ In order to run the whole set of SeLite test suites (except for _selite.sel-bloc
 
 # Javascript tests #
 These validate functionality
+
   * at lower level than Selenese tests, or
   * which would be awkward to test in Selenese, or
   * which is not Selenese-specific, and while it can (and should) be tested from Selenese, it should be tested without Selenium IDE, too.
 There's no extra installation - they are a part of their add-ons (in folders _javascript-tests_). You can invoke them directly (without Selenium IDE) through [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese tests.
 
 # Shell tests #
-These are invoked from (i.e. command line on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).
+These are invoked from shell (i.e. _cmd_ on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).

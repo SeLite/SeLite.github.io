@@ -6,10 +6,11 @@ layout: default
 # Support scope #
 SeLite doesn't support functionality of related components and technologies (Selenium IDE, SelBlocks, SQLite, Firefox, Selenium selectors, XPath, Javascript...). See also [AboutDocumentation](AboutDocumentation) > [Documentation scope](AboutDocumentation#documentation-scope).
 
-Search in current [issues](https://code.google.com/p/selite/issues/list?can=1&q=status%3ANew+OR+status%3AAccepted+OR+status%3AStarted+OR+status%3AWontFix). If an existing issue covers your problem, vote for it.
+Search in current [issues](https://github.com/selite/selite/issues). If an existing issue covers your problem, vote for it. See also [ThirdPartyIssues](ThirdPartyIssues) > [Where to vote](ThirdPartyIssues#where-to-vote).
 
 # Report an issue #
 First, follow [TroubleShooting](TroubleShooting). Before you [report an issue](https://code.google.com/p/selite/issues/entry), note details and versions of
+
   * any SeLite extensions
   * Selenium IDE
   * any other Firefox extensions
@@ -29,17 +30,18 @@ By submitting or commenting on a report, you agree that any part of it can be us
 '></a>
 
 ## Submit any failing the tests ##
-Save your test cases and test suites, along with any HTML forms/pages as per [PackagedTests](PackagedTests) > [Structure](PackagedTests#structure). If needed, include store any [Settings](Settings) as per [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). Put that in a .zip file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text
+Save your test cases and test suites, along with any HTML forms/pages as per [PackagedTests](PackagedTests) > [Structure](PackagedTests#structure). If needed, include store any [Settings](Settings) as per [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). Put that in a .zip file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:
+
+```
+command | target | value
+command | target | value
 ```
 
-command | target | value
-command | target | value
-```
-However, that allows for mistakes on both sides. Also, the system for tracking issues may modify text content (e.g. it auto-links URLs and #12 issue numbers).
+However, that allows for mistakes on both sides. Also, the system for tracking issues may modify text content (it formats it as Markdown, it auto-links #123.. to issue numbers and it auto-links URLs).
 
 Do not just attach screenshots that just show messages or your command(s). Also copy and paste those messages as text.
 
 ## Submit your Firefox profile ##
 If the problem only happens with third party or custom extensions, or if it involves a complex situation, you may need to attach your Firefox profile. See also [TroubleShooting](TroubleShooting) > [Separate Firefox profile](TroubleShooting#separate-firefox-profile). [Locate the Firefox profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile) folder. Turn Firefox off, remove any [private data](https://support.mozilla.org/en-US/kb/recovering-important-data-from-an-old-profile#w_your-important-data-and-their-files) and _places.sqlite_.
 
-However, GitHub doesn't allow issue attachments other than images. So, zip up the folder, upload it to somewhere on the internet and add a link to it to the issue. Alternatively, and only if the zip file is under 10MB, email it to the maintainer.
+However, GitHub doesn't allow issue attachments other than images. So, zip up the folder, upload it to somewhere on the internet and add a link to it to the issue. Alternatively, and only if the .zip file is under 10MB, email it to the maintainer.
