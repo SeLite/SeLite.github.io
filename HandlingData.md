@@ -65,34 +65,34 @@ When the test creates a new record in its DB, it needs to set its ID to reflect 
     * the last used values are the same between the test DB (SQLite) and the app DB, and the test DB (SQLite) uses same method to generate the new IDs as the app DB
     * this is optimistic - it breaks if one side gets broken temporarily and the last used values get out of sync
     * test SQLite tables can use following options (as relevant to SeLite)
-      * INTEGER PRIMARY KEY, which
+      * `INTEGER PRIMARY KEY`, which
         * generates  an ID one larger than the largest ID currently present (unless the IDs reach 64bit signed limit)
         * reuses IDs of deleted rows (but only if they had the highest IDs, i.e. there are no existing rows with a higher ID)
-      * INTEGER PRIMARY KEY AUTOINCREMENT
+      * `INTEGER PRIMARY KEY AUTOINCREMENT`
         * it generates an ID one larger than any ID ever present
         * it won't generate a new ID once there has been an ID reaching 64bit signed limit (OK in real world)
         * it doesn't re-use IDs of deleted rows
         * see SQLite documentation of [Autoincrement](http://www.sqlite.org/autoinc.html)
-        * the import filter can set set next values of SQLite INTEGER PRIMARY KEY AUTOINCREMENT columns in special table [sqlite_sequence](http://www.sqlite.org/fileformat2.html#seqtab) (which is present only after there is at least one table with INTEGER PRIMARY KEY AUTOINCREMENT column).
+        * the import filter can set set next values of SQLite `INTEGER PRIMARY KEY AUTOINCREMENT` columns in special table [sqlite_sequence](http://www.sqlite.org/fileformat2.html#seqtab) (which is present only after there is at least one table with `INTEGER PRIMARY KEY AUTOINCREMENT` column).
       * both options reuse IDs from rolled back transaction
-      * (both options require the key to be INTEGER, not INT)
+      * (both options require the key to be `INTEGER`, not `INT`)
     * app DB-specific
       * **PostgreSQL sequences**
-        * if a transaction dies/is rolled back, it increases the sequence anyway, and any next transaction will use the next value. That's incompatible with SQLite INTEGER PRIMARY KEY and SQLite INTEGER PRIMARY KEY AUTOINCREMENT
+        * if a transaction dies/is rolled back, it increases the sequence anyway, and any next transaction will use the next value. That's incompatible with SQLite `INTEGER PRIMARY KEY` and SQLite `INTEGER PRIMARY KEY AUTOINCREMENT`
         * in the initial app DB, last values of all (relevant) ID sequences must reflect the highest IDs in the respective tables. I.e. either
           * the last created record in each table still exists and it didn't get deleted. Otherwise Postgres sequence would use a subsequent ID for the next new record, while SQLite would use the ID of the deleted record (since the data dump doesn't contain the deleted record, and SQLite doesn't know that it has existed in past), or
-          * when/just after the data dump from Postgres to SQLite, reset Postgres sequences to return the next available id for each relevant table. E.g. SELECT setval('your\_table\_id\_seq', (SELECT MAX(id) FROM your\_table)+1);
+          * when/just after the data dump from Postgres to SQLite, reset Postgres sequences to return the next available id for each relevant table. E.g. `SELECT setval('your_table_id_seq', (SELECT MAX(id) FROM your_table)+1)`
         * **simplified approach**
           * on app success:The test creates new SQLite record(s) and commits transaction(s), only after it detects that the web app processed the request successfully.
-          * on app failure: If the web app failed and it didn't commit the INSERT transaction, it would increase the sequence. The test doesn't know that, its next available ID in that table will get out of sync, and next time the app & test insert a new record to the same table (in their respective DBs) the test will have knock on errors
+          * on app failure: If the web app failed and it didn't commit the `INSERT `transaction, it would increase the sequence. The test doesn't know that, its next available ID in that table will get out of sync, and next time the app & test insert a new record to the same table (in their respective DBs) the test will have knock on errors
         * **ideal approach (not easy)**
           * **on app success**
             * test creates a new record (commiting the transaction)
-          * **on failure where the app starts an INSERT within a transaction, but it doesn't commit**
+          * **on failure where the app starts an `INSERT` within a transaction, but it doesn't commit**
             * test could mark the affected table as 'unsure'; then the next time there is a successful insert by the app, it captures its ID and compares it
             * test creates a new record (commiting the transaction), then it deletes the new record
             * this app failure is not easy to differentiate from the following one
-          * **on app failure without an INSERT**
+          * **on app failure without an `INSERT`**
             * detected e.g. as a session/single-sign out timeout, app DB down etc.
             * test doesn't create a new record
         * if the web app is not tied to Postgres, an alternative is to export the app data into a different DB that doesn't increase sequences by uncommitted transactions and run the app against that different DB

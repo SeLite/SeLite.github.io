@@ -44,8 +44,8 @@ setfacl -m u:testersUserName:rw data.sqlite<br>
 
 Notes
 
-  * If you have DB filename starting with '.ht' and if (accidentally) the folder is accessible online, the file won’t be served. However, that makes it hidden on Linux/Mac OS, and therefore hard to list it or to pick up the file via [SettingsInterface](SettingsInterface).
-  * If you use Advanced > DB prefix, then DB prefix becomes a suffix of the DB file name, e.g. prefix ‘drupal\_’ makes the DB file name /etc/drupal7/default/files/data.sqlite-drupal`_`. But Drupal also creates a file without the suffix, which can be confusing.
+  * If you have DB filename starting with `.ht` and if (accidentally) the folder is accessible online, the file won’t be served. However, that makes it hidden on Linux/Mac OS, and therefore hard to list it or to pick up the file via [SettingsInterface](SettingsInterface).
+  * If you use Advanced > DB prefix, then DB prefix becomes a suffix of the DB file name, e.g. prefix `drupal_` makes the DB file name `/etc/drupal7/default/files/data.sqlite-drupal_`. But Drupal also creates a file without the suffix, which can be confusing.
 
 ## Install Drupal 7.26 on CentOS 6.5 ##
 Use System > Administration > Add/Remove Software to install Apache (httpd), PHP and mbstring. Then System > Administration > Services > enable and start service httpd.

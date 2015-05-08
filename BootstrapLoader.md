@@ -19,12 +19,12 @@ If you modify any one file that is registered with Bootstrap (while using Seleni
 
 Apply [JavascriptEssential](JavascriptEssential), especially [Strict Javascript](JavascriptEssential#strict-javascript) and [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
-It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside_browser) (neither in Selenium IDE in browser sidebar).
+It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
 # Limitations #
 
 ## Intercepts ##
-Bootstrap reloads all registered extensions (whenever you modify any one of them). So, if you 'extend' an existing method as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts), then don't re-extend the __current__ method each time the script is run. Otherwise it would increase the intercept chain. Instead, save the original method on the first load only, and then re-extend it on every load. For example:
+Bootstrap reloads all registered extensions (whenever you modify any one of them). So, if you 'extend' an existing method as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts), then don't re-extend the **current** method each time the script is run. Otherwise it would increase the intercept chain. Instead, save the original method on the first load only, and then re-extend it on every load. For example:
 
 ```js
 var originalMethod;

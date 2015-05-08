@@ -37,4 +37,4 @@ If you need case-insensitive sorting and Unicode, see [SQLite FAQ on Unicode](ht
 Another way around is to reconfigure DB of the web application being tested, so that DB performs same sorting as SQLite. Since that modified DB configuration is not what you use in production, this is not 100% testing, but nothing is anyway.
 
 # No literals `true` and `false` #
-SQLite allows `boolean` column type, but it doesn't have constants `true` and `false`. If you use prepared statements in Firefox Javascript, those seem to convert Javascript boolean true and false to 1 and 0, respectively. However, using literals true and false (without apostrophes) in SQLite queries fails.
+SQLite allows `boolean` column type, but it doesn't have constants `true` and `false`. Using literals `true` and `false` (without apostrophes) in SQLite queries fails. However, if you use prepared statements in Firefox Javascript, those convert Javascript boolean `true` and `false` to 1 and 0, respectively.

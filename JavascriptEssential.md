@@ -18,7 +18,7 @@ layout: default
 If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of Selenium IDE Core extensions (including SeLite frameworks) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.
 
 ## Privileged Javascript files ##
-Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's _chrome.manifest_ (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
+Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
 
 ## Scope ##
 Javascript for web applications has only two levels of scope: global and local (within functions). On the other hand, Firefox avoids conflicts between extensions by running them with separate global scopes. However, they can share Javascript files, and when they load them, they can specify global scope used in those files. (The code from such files is shared, even though global scope of its usages is different. See [JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files).)
@@ -81,7 +81,7 @@ Such functions don't have a name. That doesn't affect the functionality, but:
 
   * It makes debugging (as per [DevelopmentTools](DevelopmentTools) > [Browser Toolbox](DevelopmentTools#browser_toolbox)) more difficult. In debugger's call stack, it shows these names. If you don't give a function a name, then you or others need to locate it by the source line.
   * For nameless constructors (i.e. functions that define classes):
-    * If you inspect their instances, you need to add their _.constructor.toSource()_ to the Watch pane (as per [DevelopmentTools](DevelopmentTools) > [Source of functions](DevelopmentTools#source-of-functions)).
+    * If you inspect their instances, you need to add their `.constructor.toSource()` to the Watch pane (as per [DevelopmentTools](DevelopmentTools) > [Source of functions](DevelopmentTools#source-of-functions)).
     * Their instances don't work with `SeLiteMisc.isInstance()`.
 
 Prevent that by creating a named function (with the desired name) via [Named function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function#Named_function_expression) and assign it to the target symbol. E.g.

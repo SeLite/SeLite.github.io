@@ -8,7 +8,7 @@ The test example logs in as an admin and creates a user with random credentials 
 # Install Serendipity #
 This worked on Fedora 20. I've cloned the github repository up to commit e12b998bf7 into `/var/www/html/serendipity` (git clone https://github.com/s9y/Serendipity.git). Install Serendipity as per its [documentation](http://www.s9y.org/36.html).
 
-The easiest way is using Serendipity with SQLite. If you choose SQLite and you don't provide any db-related fields, the installer creates a .db file under webroot (e.g. _`serendipity_a2a42d7580267f6dcf1a3fd779040498.db`_) and puts that filename (excluding .db extension) in field dbName in `serendipity_config_local.inc.php`. The default `dbPrefix` is 'serendipity_'.
+The easiest way is using Serendipity with SQLite. If you choose SQLite and you don't provide any db-related fields, the installer creates a .db file under webroot (e.g. _`serendipity_a2a42d7580267f6dcf1a3fd779040498.db`_) and puts that filename (excluding .db extension) in field dbName in `serendipity_config_local.inc.php`. The default `dbPrefix` is `serendipity_`.
 
 # Install SeLite Serendipity framework #
 Apply [InstallFramework](InstallFramework). The framework and tests are in [serendipity](https://code.google.com/p/selite/source/browse/serendipity) folder.
@@ -20,18 +20,18 @@ The framework tries not to rely on
   * CSS classes or
   * exact HTML structure.
 Therefore it should work with embedded configurations or various languages. It could be used with custom templates (unless they differ a lot). It uses
-  * 'name' attribute of inputs
+  * `name` attribute of inputs
   * URLs of links
-  * some element IDs (e.g. serendipity\_iframe)
+  * some element IDs (e.g. `serendipity_iframe`)
 
 # Maintaining the framework #
   * Keep it honour configuration of Serendipity installation - as per [http://www.s9y.org/66.html](http://www.s9y.org/66.html) > Paths, Permalinks, General settings, Appearance and options.
   * If you need to target elements by text, see [http://www.s9y.org/137.html](http://www.s9y.org/137.html) > Internationalization
 
-The framework honours Serendipity settings (global and user-specific - stored in serendipity\_config). @TODO: Make it update the test DB to reflect change of settings. Check whether the config pages can be customised via templates or not.
+The framework honours Serendipity settings (global and user-specific - stored in `serendipity_config`). @TODO: Make it update the test DB to reflect change of settings. Check whether the config pages can be customised via templates or not.
 
 ## Boolean fields ##
-Serendipity uses string literals 'true', 'false' for some fields which have SQLite column type `boolean` (e.g. `allow_comments` and `moderate_comments` in `serendipity_entries`. Do not use Javascript boolean literals true or false, because they get transformed to SQLite integer 1 or 0, respectively.
+Serendipity uses string literals `'true'` and `'false'` for some fields which have SQLite column type `boolean` (e.g. `allow_comments` and `moderate_comments` in `serendipity_entries`. However, do not use Javascript boolean literals `true` or `false`: see [SQLiteSpecifics](SQLiteSpecifics) > [No literals true and false](SQLiteSpecifics#no-literals-true-and-false).
 
 ## webRoot ##
 The framework doesn't use SeLite Settings configuration field `extensions.selite-settings.common.webRoot` (and it removes this field). It uses Serendipity field 'URL to blog' stored in `serendipity_config` with `name='defaultBaseURL'`, as well as configuration for `name='serendipityPath'` and `name='indexFile'`.

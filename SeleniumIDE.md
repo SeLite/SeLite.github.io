@@ -112,7 +112,7 @@ Sometimes you want a 'global' variable that spreads across Selenese functions (w
 Don't use command `storeEval` for that - it sets a stored variable, which is local.
 
 # Limitations of getEval, storeEval
-Command `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error _'unterminated string literal'_. Use `String.fromCharCode(10)` instead.
+Command `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error `unterminated string literal`. Use `String.fromCharCode(10)` instead.
 
 # Tips on GUI usability
 

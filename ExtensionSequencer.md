@@ -66,16 +66,16 @@ See [browser.js](https://code.google.com/p/selite/source/browse/db-objects/src/c
 ExtensionSequencer is tested against a list of variations of `SeLiteExtensionSequencerManifest.js` in several plain [extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). You can browse their source code at [extension-sequencer/shell-tests](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests). See [a list of those tests](http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html) with test descriptions and expected outputs.
 
 ### Installing shell tests ###
-The tests use a separate Firefox profile called SeLiteExtensionSequencerTest, with some [extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). To set up that profile and its add-ons, download source of [Extension Sequencer](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer) (or whole SeLite as per [InstallFromSource](InstallFromSource)) and run extension-sequencer/setup\_proxies.bat or setup\_proxies.sh. It will start create and set up that profile in Firefox.
+The tests use a separate Firefox profile called SeLiteExtensionSequencerTest, with some [extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). To set up that profile and its add-ons, download source of [Extension Sequencer](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer) (or whole SeLite as per [InstallFromSource](InstallFromSource)) and run `extension-sequencer\setup_proxies.bat` or `extension-sequencer/setup_proxies.sh`. It will start Firefox and create and set up that profile.
 
 On Windows (and probably on Mac OS, too) you'll need to install [Selenium IDE](http://docs.seleniumhq.org/download/) and apply Windows/Mac OS-specific steps from [InstallFromSource](InstallFromSource).
 
 (You don't need any other SeLite [AddOns](AddOns) for these tests.)
 
 ### Running and modifying shell tests ###
-Invoke `run_tests.ps1`, `run_tests_mac.sh` or `run_tests.sh`.
+Invoke `run_tests.ps1` (on Windows), `run_tests_mac.sh` (on Mac OS) or `run_tests.sh`.
 
-When changing or re-using those tests, follow the existing special format of their `SeLiteExtensionSequencerManifest.js` files. For `oldestCompatibleVersion`, `minVersion` and `compatibleVersion`, enclose the version numbers within quotes `".."`. Otherwise they do not get compared well when the versions end with 0's. Have any commas separating the fields at the beginning of lines rather than at the end, and have `preActivate` entry (including the whole function) on one line only. That enables `run_tests.sh` and `run_tests.ps1` to comment or uncomment those lines.
+When modifying or re-using those tests, follow the existing special format of their `SeLiteExtensionSequencerManifest.js` files. For `oldestCompatibleVersion`, `minVersion` and `compatibleVersion`, enclose the version numbers within quotes `".."`. Otherwise they do not get compared well when the versions end with 0's. Have any commas separating the fields at the beginning of lines rather than at the end, and have `preActivate` entry (including the whole function) on one line only. That enables `run_tests.ps1, run_tests_mac.sh` and `run_tests.sh` to comment or uncomment those lines.
 
 To debug Extension Sequencer itself with Firefox Browser Toolbox, visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/extensions/invoke.xul_.
 

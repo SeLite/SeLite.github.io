@@ -68,7 +68,7 @@ You can
       * alternatively edit them access via url <em>about:config</em>
   * have your Core extension access the preferences via a Javascript code module (API)
 
-Values manifests and associated sets work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium_ides-inside-browser) (neither in Selenium IDE in browser sidebar).
+Values manifests and associated sets work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
 # Modules and sets #
 Modules are schemas/templates of user's configuration(s). They define each field and

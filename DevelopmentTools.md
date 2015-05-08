@@ -10,7 +10,7 @@ Read this in parallel to
   * [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment). Following are the relevant sections (in order of general importance):
     * see [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) on how to run separate profiles of Firefox at the same time
     * skip 'Development preferences', see below instead
-    * if you develop your own packaged extensions (without [BootstrapLoader](BootstrapLoader)), then read [Firefox extension proxy file](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file). See also <a href='https://code.google.com/p/selite/source/browse/setup_proxies.bat'>setup_proxies.bat</a> or <a href='https://code.google.com/p/selite/source/browse/setup_proxies.sh'>setup_proxies.sh</a>.
+    * if you develop your own packaged extensions (without [BootstrapLoader](BootstrapLoader)), then read [Firefox extension proxy file](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file). See also [setup_proxies.bat](https://github.com/selite/selite/blob/master/setup_proxies.bat) or [setup_proxies.sh](https://github.com/selite/selite/blob/master/setup_proxies.sh).
     * if you start Firefox from automated scripts, read 'Preventing the first launch extension selector'
   * [Debugging JavaScript (MDN)](https://developer.mozilla.org/en/docs/Debugging_JavaScript)
   * [Debugging Extensions (MDN)](https://developer.mozilla.org/en-US/docs/Building_an_Extension#Debugging_Extensions)
