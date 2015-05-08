@@ -20,14 +20,14 @@ You need to configure two main areas
   * what framework (or any other bootstrapped extensions) to load
   * common and framework/extension-specific settings
 
-There are two methods for this. The simpler one manages it through text file(s), as per [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#values-manifests). Such configuration is easier to share and replicate than one administered through GUI. It also involves less steps and only one stage. You can still use GUI to review effect of 'values' manifests (though it involves some extra steps).
+There are two methods for this. The simpler one manages it through text file(s), as per [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#values-manifests). Such configuration is easier to share and replicate than one administered through GUI. It also involves less steps and only one stage. You can still use GUI to review effect of _values_ manifests (though it involves some extra steps).
 
-An alternative method is Firefox profile-based configuration set(s), controlled through GUI. It can also override any 'values' manifests. It's done through [SettingsManifests](SettingsManifests) > ['Associations' manifests](SettingsManifests#associations-manifests). However, using GUI (for any part of configuration) usually requires the whole configuration to be in two stages.
+An alternative method is Firefox profile-based configuration set(s), controlled through GUI. It can also override any _values_ manifests. It's done through [SettingsManifests](SettingsManifests) > [_Associations_ manifests](SettingsManifests#associations-manifests). However, using GUI (for any part of configuration) usually requires the whole configuration to be in two stages.
 
 ## Configure SeLite to load the framework ##
 
-### Through 'values' manifests ###
-This is already done for the tests that come with SeLite frameworks. If you're creating tests with any of those frameworks, you can copy its 'values' manifest `SeLiteSettingsValues.txt`. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field `extensions.selite-settings.common.bootstrappedCoreExtensions`, so it points to location of the framework Javascript file. See also [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#values-manifests) and [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
+### Through _values_ manifests ###
+This is already done for the tests that come with SeLite frameworks. If you're creating tests with any of those frameworks, you can copy its _values_ manifest `SeLiteSettingsValues.txt`. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field `extensions.selite-settings.common.bootstrappedCoreExtensions`, so it points to location of the framework Javascript file. See also [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#values-manifests) and [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
 ### Through GUI ###
 <!-- @TODO eliminate or Move to SettingsInterface? -->
@@ -35,14 +35,14 @@ You can configure that via GUI as per [SettingsInterface](SettingsInterface):
 
   1. Visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
   2. create a new set
-  3. if you're using just one test configuration, make it default (click at 'Default' next to its name)
+  3. if you're using just one test configuration, make it default (click at Default next to its name)
   4. select 'Add a new value' next to `bootstrapCoreExtensions`. Point it to where you downloaded the framework JS file.
 
-If you're going to use several test configurations, then create one set for each configuration, but don't make any of them default. Then connect the sets with folders of your test suite(s) through 'associations' manifest as per [SettingsManifests](SettingsManifests) > ['Associations' manifests](SettingsManifests#associations-manifests).
+If you're going to use several test configurations, then create one set for each configuration, but don't make any of them default. Then connect the sets with folders of your test suite(s) through _associations_ manifest as per [SettingsManifests](SettingsManifests) > [_Associations_ manifests](SettingsManifests#associations-manifests).
 
 ## Edit or review configuration of the framework ##
 
-### Edit through 'values' manifests ###
+### Edit through _values_ manifests ###
 Add values for applicable following fields and for any custom fields/keys to `SeLiteSettingsValues.txt` from the above
 
 ```
@@ -58,7 +58,7 @@ extensions.selite-settings.common.roles:def ijkl
 See descriptions below.
 
 ### Edit or review through GUI ###
-This has a dual purpose: to maintain profile-based configuration set(s), and to review effect of configuration set(s) or 'values' manifest(s). If you want to use configuration set(s), create them if you haven't done so (see above).
+This has a dual purpose: to maintain profile-based configuration set(s), and to review effect of configuration set(s) or _values_ manifest(s). If you want to use configuration set(s), create them if you haven't done so (see above).
 
 Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single test command, e.g. `getEval | true`. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
 

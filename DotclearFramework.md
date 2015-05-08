@@ -21,4 +21,4 @@ sudo chmod -R a+rwx cache<br>
 Configure it at e.g. [http://localhost/dotclear/admin/install/](http://localhost/dotclear/admin/install/).
 
 # Install SeLite Dotclear framework #
-Apply [InstallFramework](InstallFramework). The framework and tests are in [dotclear](https://code.google.com/p/selite/source/browse/dotclear) folder - e.g. /var/www/html/dotclear/inc/db.sqlite. The default DB prefix is 'dc'.
+Apply [InstallFramework](InstallFramework). The framework and tests are in [dotclear](https://code.google.com/p/selite/source/browse/dotclear) folder - e.g. /var/www/html/dotclear/inc/db.sqlite. The default DB prefix is `dc`.

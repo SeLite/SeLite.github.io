@@ -32,7 +32,7 @@ SELECT * FROM items ORDER BY item COLLATE NOCASE; --for ASCII only
 SELECT * FROM items ORDER BY UPPER(item); -- for UTF, too - but only if you enable Unicode - read below
 ```
 
-If you need case-insensitive sorting and Unicode, see [SQLite FAQ on Unicode](http://www.sqlite.org/faq.html#q18), [SQLITE\_ENABLE\_ICU compilation option](http://www.sqlite.org/compile.html#enable_icu) and [SQLite ICU README](http://www.sqlite.org/src/artifact?ci=trunk&filename=ext/icu/README.txt). On CentOS 6.4 I've installed 'icu' using Add/Remove Software, but I couldn't get it to work. If you figure it out, please let me know.
+If you need case-insensitive sorting and Unicode, see [SQLite FAQ on Unicode](http://www.sqlite.org/faq.html#q18), [SQLITE\_ENABLE\_ICU compilation option](http://www.sqlite.org/compile.html#enable_icu) and [SQLite ICU README](http://www.sqlite.org/src/artifact?ci=trunk&filename=ext/icu/README.txt). On CentOS 6.4 I've installed `icu` using Add/Remove Software, but I couldn't get it to work. If you figure it out, please let me know.
 
 Another way around is to reconfigure DB of the web application being tested, so that DB performs same sorting as SQLite. Since that modified DB configuration is not what you use in production, this is not 100% testing, but nothing is anyway.
 

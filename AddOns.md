@@ -14,7 +14,7 @@ For the easiest download get all add-ons of [SeLite collection](https://addons.m
 Don't install SeLite together with SelBlocks (or Flow Control, GoTo or Sideflow) - for details see [SelBlocksGlobal](SelBlocksGlobal).
 
 ## Latest releases
-Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up at add-ons' 'info' pages (nor at the above collection), until someone from Mozilla reviews them. And if you've installed older versions of the add-ons, you won't get an automatic update until then either.
+Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up at add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. And if you've installed older versions of the add-ons, you won't get an automatic update until then either.
 
 So, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 

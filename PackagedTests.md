@@ -15,7 +15,7 @@ Follow [InstallFromSource](InstallFromSource) for the easiest way to get Selenes
 
 Tests of add-ons and frameworks consist of test suites, test cases and related HTML forms/pages. To make navigation across files easy, here's a convention: filenames of test suites end with `_suite.html`, and test cases are in files that have names ending with `_case.html`. If there are several shared test cases, they can be in `shared_test_cases/` subfolder.
 
-If a test needs configuration (through [Settings](Settings)), it has [SettingsManifests](SettingsManifests) > ['Values' manifests](SettingsManifests#-values-manifests). If the same add-on has multiple test suites that need different configuration, such test suites and their 'values' manifests are in subfolders.
+If a test needs configuration (through [Settings](Settings)), it has [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#-values-manifests). If the same add-on has multiple test suites that need different configuration, such test suites and their _values_ manifests are in subfolders.
 
 Selenium IDE doesn't indicate the current test suite's folder in the GUI. Therefore make test suite file names clear. That helps especially when having similar test suites in different folders (because of different configurations). SeLite own test suites have file names in format `add-on-name_subfolder_suite.html` or `add-on-name_subfolder_subfolder_suite.html`.
 
@@ -30,10 +30,11 @@ Test suites that share test cases from parent folder(s) should be at the same di
 TODO FIX open | file://SeLiteSettings.getTestSuiteFolder()/form.html
 ```
 
-### Negative tests ###
-If you need to test that something fails, use `try..catch..endTry` as per [SelBlocksGlobal](SelBlocksGlobal). Use `catch..endTry` to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and throw an error on failure. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
+### Negative tests that succeed
+If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocksGlobal](SelBlocksGlobal). Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
 
-There are also 'real' negative tests in `selite.sel-blocks-global/selenese-tests-negative/`. Those are supposed to fail, since they validate cases when `try..catch..endTry` doesn't catch an error.
+### Negative tests that fail
+There are real negative tests in e.g. `selite.sel-blocks-global/selenese-tests-negative/`. Those tests themselves are supposed to fail (e.g. they validate situations when `try..catch..endTry` is supposed not to catch an error). If these tests don't fail, then there's a problem.
 
 ## Invoking tests ##
 

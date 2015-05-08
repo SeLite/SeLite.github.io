@@ -9,7 +9,7 @@ layout: default
   * Provide examples.
   * Don't have any content before the first heading (`# Heading... #`).
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
-  * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a 'PHP' project.
+  * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a PHP project.
   * Don't use fixed line length, especially not in documentation source.
     * A good IDE/editor should be capable of wrapping lines. Take benefit from all your available screen area and don't worry about line lengths.
     * Reasonably long lines make source search and narrowing down easier. Search results preview containing long enough lines may be enough for you to know that you can skip the occurrence, without opening that line in editor.
@@ -24,10 +24,10 @@ layout: default
 ## Drawn diagrams
 Don't use UML tools, as they are more restrictive and less efficient. <a href='Hidden comment: That"s why I didn"t consider using e.g. http://plantuml.sourceforge.net and http://sourceforge.net/projects/plantumlnb'></a>
 
-Draw diagrams in LibreOffice/OpenOffice and save them as .odg. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git ([selite/diagrams/](https://github.com/selite/selite/tree/master/diagrams) > navigate to .png file > get the URL of 'Raw' link).
+Draw diagrams in LibreOffice/OpenOffice and save them as `.odg`. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git ([selite/diagrams/](https://github.com/selite/selite/tree/master/diagrams) > navigate to `.png` file > get URL of 'Raw' button).
 
 ### Versions of LibreOffice
-  * LibreOffice version that came with CentOS 6.4 didn't export as .png well - the quality was low.
+  * LibreOffice version that came with CentOS 6.4 didn't export as `.png` well - the quality was low.
   * CentOS 6.5 has LibreOffice 4.0.4.2, which is better than one from CentOS 6.4, but it still doesn't export very well.
   * LibreOffice 4.1.3.2 that came with Fedora 19 KDE worked well.
   * Fedora 20 KDE has LibreOffice 4.1.4.2, which renders well.
@@ -45,7 +45,7 @@ Text diagrams don't need to be esthetic, but clear and easy to edit - so you can
 ~~~
 Example                                     Description
 
-ObjectConstructorName                       Full name of the 'class' - the constructor function of the object.
+ObjectConstructorName                       Full name of the class - i.e. the constructor function of the object.
 Below the object constructor name are object fields. Indent them with two spaces.
 
 .fieldName                                  Field with a fixed (known) name. Prefix it with a dot.
@@ -59,8 +59,8 @@ but rather as a value of a defined constant.
 ## Headers IDs must be the same as their text
 Don't use [Kramdown-specific header IDs](http://kramdown.gettalong.org/syntax.html#specifying-a-header-id), since they don't work in Markdown Viewer in Firefox..
 
-## Generating 'raw' links
-GitHub doesn't serve 'Raw' versions of most file types with their MIME, except for images (because of security). So we use [htmlpreview.github.io](http://htmlpreview.github.io) for .html files. For any other files, e.g. `.xml, .xsl` or `.js`, use [rawgit.com](http://rawgit.com).
+## Generating raw links
+GitHub doesn't serve raw versions of most file types with their MIME, except for images. So we use [htmlpreview.github.io](http://htmlpreview.github.io) for `.html` files. For any other files, e.g. `.xml, .xsl` or `.js`, use [rawgit.com](http://rawgit.com).
 
 In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. So we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. So if you change e.g. `add-on's-name/src/chrome/content/reference.xml` or `extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl`, then update its _cdn.rawgit.com_ URLs to use the new commit hash or tag.
 

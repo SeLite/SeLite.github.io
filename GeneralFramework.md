@@ -15,7 +15,7 @@ Javascript structures are Selenium Core extensions that define custom functional
   * Selenese commands
 
 
-Selenese functions (blocks of Selenese commands) can be shared between test cases and test suites (via [SelBlocksGlobal](SelBlocksGlobal)). The framework consists of library-like automation cases, which contain Selenese functions. Automation suites include those framework cases and 'action' cases that utilise those functions.
+Selenese functions (blocks of Selenese commands) can be shared between test cases and test suites (via [SelBlocksGlobal](SelBlocksGlobal)). The framework consists of library-like automation cases, which contain Selenese functions. Automation suites include those framework cases and _action_ cases that utilise those functions.
 
 See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/selite/source/browse/drupal) and other [AppsFrameworks](AppsFrameworks).
 

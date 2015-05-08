@@ -58,7 +58,7 @@ It adds API and GUI which
 # API #
 You can
 
-  * define configuration schemas (called 'modules') and their fields
+  * define configuration schemas (called _modules_) and their fields
   * store any number of configuration sets (or their parts) per module in
     * plain text files (values manifests), and/or
     * Firefox profile and
@@ -86,7 +86,7 @@ A field can be either
   * boolean checkbox
   * file/folder picker
 
-User's configuration(s) - values of the fields - are stored in 'sets'. A module can have either
+User's configuration(s) - values of the fields - are stored in _sets_. A module can have either
 
   * exactly one set, or
   * any number of sets; one of them can be selected as default
@@ -101,13 +101,13 @@ Users can configure and override settings granularly via
   * profile-based configuration sets
     * through user interface
     * not shared with other team members
-    * applied to test suites through 'associations' manifest file(s)
+    * applied to test suites through _associations_ manifest file(s)
   * manifest file(s)
     * in plain text
     * in folder(s) on the test suite file path
     * exist in two types
-      * 'values' manifests
-      * 'associations' manifests
+      * _values_ manifests
+      * _associations_ manifests
     * can be shared, distributed and updated within a team via
       * a shared drive, or
       * source versioning system

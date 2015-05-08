@@ -107,7 +107,7 @@ Some Selenese actions store variables, to be used by further actions. [SelBlocks
 Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. `storeEval, getEval` or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of `${name-of-the-variable}` won't work robustly. For those cases use `storedVars.name-of-the-variable` or `storedVars['name-of-the-variable']`. See also [EnhancedSyntax](EnhancedSyntax).
 
 ## Javascript variables
-Sometimes you want a 'global' variable that spreads across Selenese functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action `getEval` with the target being: `variable1=valueOrExpression, variable2=valueOrExpression....`
+Sometimes you want a _global_ variable that spreads across Selenese functions (which stored variables can't). Use _native_ Javascript variables for it. Set them using command/action `getEval` with the target being: `variable1=valueOrExpression, variable2=valueOrExpression....`
 
 Don't use command `storeEval` for that - it sets a stored variable, which is local.
 

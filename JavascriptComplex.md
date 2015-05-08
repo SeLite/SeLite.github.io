@@ -17,21 +17,21 @@ return ['running', 'soccer', 'basketball'][id];
 }
 ```
 
-However, it gets complicated if you choose a 'special' default value - i.e. other than `0/false/null/""`, or other than something clearly default for the purpose of the function. A programmer may notice/remember that id is optional, but they skip or forget what the default value means. They would expect the behaviour to be similar or same as if they passed 0 (or `false` or `null` or ""). E.g.
+However, it gets complicated if you choose a special default value - i.e. other than `0/false/null/""`, or other than something clearly default for the purpose of the function. Programmers may remember that a parameter is optional, but it's easy to forget what the default value means. They would expect the behaviour to be similar or the same as if they passed 0 (or `false` or `null` or ""). E.g.
 
 ```javascript
 /** @param id integer, 0-based ID of the sport. Optional; 2 by default (for which it returns 'basketball')
 */
 function sport( id ) {
-id= id!==undefined
-? id
-: 2;
-return ['running', 'soccer', 'basketball'][id];
+  id= id!==undefined
+    ? id
+    : 2;
+  return ['running', 'soccer', 'basketball'][id];
 }
 
 sport(0); // this returns 'running'
-sport(); // since id is optional and integer, the most obvious default value would be 0
-// or the lowest ID available, but not a fixed ID (i.e. 2)!
+sport();  // since id is optional and integer, the most obvious default value would be 0
+          // or the lowest ID available, but not a fixed ID (i.e. 2)!
 ```
 
 It becomes especially confusing if the parameter is a boolean, and you choose true as the default value. E.g.
@@ -119,12 +119,12 @@ Another option (that facilitates NetBeans navigation) would be to have all class
    Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js" );
 ```
 
-However, that would flood the client's namespace with no obvious benefit. It would also goe against [JavascriptEssential](JavascriptEssential) > [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
+However, that would flood the client's namespace with no obvious benefit. It would also go against [JavascriptEssential](JavascriptEssential) > [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
 ### Dependent Javascript code modules ###
 A Javascript code module can depend on one or more other code modules. If the dependent functionality is optional, wrap any respective code, e.g. calls to `Components.utils.import()`, in a `try{..}` statement, so that clients can still use the essential functionality even without the optional module.
 
-Also, two or more Javascript code modules can depend on each other cyclically. That can be 'permanent' (for essential functionality), each one requiring the other(s), or optional (for some functionality only). Make sure a code module defines `EXPORTED_SYMBOLS` and any symbols required by its cyclic dependent code module(s) before it loads those dependants via `Components.utils.import()`. See sources of `SeLiteSettings` and `SeLiteData.Storage`. TODO links.
+Also, two or more Javascript code modules can depend on each other cyclically. That can be required (for essential functionality), each one requiring the other(s), or optional (for some functionality only). Make sure a code module defines `EXPORTED_SYMBOLS` and any symbols required by its cyclic dependent code module(s) before it loads those dependants via `Components.utils.import()`. See sources of `SeLiteSettings` and `SeLiteData.Storage`. TODO links.
 
 ## CommonJS modules in the future ##
 This is a new approach to Javascript modules - [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1). Firefox offers it for add-ons, but it documented it only in December 2013 (at [Module structure of the SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK)).

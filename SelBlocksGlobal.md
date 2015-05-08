@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Overview #
-SelBlocks Global is one of SeLite AddOns. It's an enhancement of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/). SelBlocks allows reusing blocks of steps grouped into functions (formerly called 'scripts'). However, it only lets you call the functions from within the same test case.
+SelBlocks Global is one of SeLite AddOns. It's an enhancement of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/). SelBlocks allows reusing blocks of steps grouped into _functions_ (formerly called _scripts_). However, it only lets you call the functions from within the same test case.
 
 If we could call functions across test cases, we could organise them better than in one long file. A test case can be a part of multiple test suites. So we could share functions between test suites, too. That means less copy and paste code. If you structure your functions well, you'll have
 

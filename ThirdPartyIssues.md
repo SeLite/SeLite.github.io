@@ -47,16 +47,16 @@ Please, vote even if an issue is closed (with comments like _doesn't meet a 'fea
 ## Selenium, Markdown Viewer and SelBlocks (on GitHub)
 [Registration with GitHub](https://github.com/join) is easy.
 
-There is currently no voting for issues/pull requests on GitHub. Instead, add comments like '+1'. (Do not use 'Star' button at the top right corner for voting: It doesn't star the issue/pull request itself, but it only stars the repository).
+There is currently no voting for issues/pull requests on GitHub. Instead, add comments like '+1'. (Do not use Star button at the top right corner for voting: It doesn't star the issue/pull request itself, but it only stars the repository).
 
 By default, you will get notifications for issues that you comment on. You can disable that at [GitHub notifications](https://github.com/settings/notifications).
 
 ## Mozilla and NetBeans
 Mozilla and NetBeans also require you to register in order to vote. It takes a few steps, but it's important: those products have many more other issues and voters (when compared to Selenium), so we need many votes to expedite the issues. Register yourself at [NetBeans registration](https://netbeans.org/people/new) and [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi). Submit those forms, then check your email inbox and confirm your registration by following a link that you'll receive.
 
-The actual voting is in two steps. Click at '_vote_' right of '_Importance_' (for Mozilla) or right of '_Priority_' (for NetBeans). That takes you to a page with a checkbox next to '_Vote For This Bug_'. Activate the checkbox and submit by clicking at button '_Change My Votes_' near the bottom-left.
+The actual voting is in two steps. Click at 'vote' right of Importance (for Mozilla) or right of Priority (for NetBeans). That takes you to a page with a checkbox next to Vote For This Bug. Activate the checkbox and submit by clicking at button Change My Votes near the bottom-left.
 
-You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button `Disable All Mail` and then button `Submit Changes` at the bottom.
+You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button Disable All Mail and then button Submit Changes at the bottom.
 
 # Detailed list of issues/pull requests
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. Keep them sorted in order of importance. -->

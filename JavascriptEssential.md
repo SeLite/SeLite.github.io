@@ -10,7 +10,8 @@ layout: default
   * Write documentation before implementation. You will benefit from it yourself:
     * This extra time enables you to reflect on what you want to achieve at higher level.
     * Reflecting on what you intend to implement can save you unnecessary work (immediately or later).
-    * Complexity makes coding often slow and frustrating. By documenting first, once implemented you will be free to relax without a feeling of duty for 'paperwork'.
+    * Complexity makes coding often slow and frustrating. By documenting first, you will be free to relax with no paperwork duty once implemented.
+    * If you can't finish implementation or you need assistance, it's easier for someone else to pick it up if there's some documentation.
   * Create tests to be run from Selenium IDE - see [PackagedTests](PackagedTests).
   * Don't use fixed line length - see [DocumentationStandard](DocumentationStandard). However, split complex expressions on multiple lines.
 
@@ -53,7 +54,7 @@ function myFunction( param, anotherParam... ) {
 ```
 
 ## By function expression ##
-This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates ['closures'](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and [Function intercepts](#function-intercepts).
+This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and [Function intercepts](#function-intercepts).
 
 ### Avoid nameless functions ###
 This only applies to definitions by [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). That's useful for adding/defining functions
@@ -132,8 +133,8 @@ This is for extending or completely replacing behaviour of existing functions th
   * the class prototype (which is more transparent, simpler and preferable, where possible), or
   * an instance, which is more complex (you may also need to intercept the class constructor, and make it set up intercept of the actual function that you intend to modify). It's needed when there's no robust access to the prototype.
 
-## Head/tail intercepts
-Extending (rather than replacing) is useful for small changes, and it's more likely to stay compatible with future updates from Selenium or third party. The original function is stored. The new function adds steps before and/or after calling the original function (with the same or different parameters). Hence this approach is called 'head' or 'tail' intercept. If it's supposed to return a value, it can return the result of the original function, or something different.
+## _Head/tail_ intercepts
+Extending (rather than replacing) is useful for small changes, and it's more likely to stay compatible with future updates from Selenium or third party. The original function is stored. The new function adds steps before and/or after calling the original function (with the same or different parameters). This approach is called _head_ or _tail_ intercept. If it's supposed to return a value, it can return the result of the original function, or something different.
 
 Head intercept with a modification of the parameter passed to the original function:
 
@@ -142,17 +143,18 @@ Head intercept with a modification of the parameter passed to the original funct
 // The original function (it would come from Selenium or third party)
 function greeting( name ) {return "Hello " +name;}
 
-// Anonymous closure to keep 'originalGreeting' local
+// Anonymous closure to keep 'originalGreeting' variable local
 ( function() {
-var originalGreeting= greeting;
+    var originalGreeting= greeting;
 
-greeting= function greeting( name ) {
-if( !name ) {
-name= "guest";
-}
-return originalGreeting.call( null/*'this' object*/, name );
-};
-} ) ();
+    greeting= function greeting( name ) {
+        if( !name ) {
+            name= "guest";
+        }
+        return originalGreeting.call( null/*'this' object*/, name );
+    };
+  }
+) ();
 ```
 
 Tail intercept:
@@ -162,7 +164,7 @@ Tail intercept:
 // The original function (it would come from Selenium or third party)
 function greeting() {return "Hello";}
 
-// Anonymous closure to keep 'originalGreeting' local
+// Anonymous closure to keep 'originalGreeting' variable local
 ( function() {
 var originalGreeting= greeting;
 

@@ -33,7 +33,7 @@ These are for development of SeLite frameworks, Selenium IDE and its extensions.
 
 Find these in Firefox menu Tools > Web Developer > Browser Console (shortcut `Ctrl+Shift+J`) and Browser Toolbox (formerly Browser Debugger; since Firefox 39 it has a shortcut `Ctrl+Alt+Shift+I`). If you start `firefox` binary from a shell on Linux, messages from Browser Console also show up in that shell. You can also start `firefox.exe` or `firefox` binary with Browser Console and/or Browser Toolbox by passing parameters `-jsconsole` or `-jsdebugger` (as per [command line options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)).
 
-In Browser Console, 'JS' tab/dropdown has level 'Warnings'. Name of that level is confusing. Undefined variables in strict mode and some syntax errors generate messages at visible only 'Warnings' level (or more detailed), but they halt execution of the script anyway. So if things don't add up, include 'Warnings' level.
+In Browser Console, JS tab/dropdown has level Warnings. Name of that level is confusing. Undefined variables in strict mode and some syntax errors generate messages at visible only Warnings level (or more detailed), but they halt execution of the script anyway. So if things don't add up, include Warnings level.
 
 ### Logging ###
 Don't use `alert(message)` since it's disruptive. Also, it's not available in Javascript code modules.
@@ -48,7 +48,7 @@ LOG.warn(...);
 LOG.error(...);
 ```
 
-Beware that even though there is `LOG` object also in Selenium IDE scope (i.e. in files listed for 'ideURL' in `SeLiteExtensionSequencer.js`), it doesn't work (the messages don't show up in Selenium IDE log). Use `editor.getUserLog()` instead.
+Beware that even though there is `LOG` object also in Selenium IDE scope (i.e. in files listed for `ideURL` in `SeLiteExtensionSequencer.js`), it doesn't work (the messages don't show up in Selenium IDE log). Use `editor.getUserLog()` instead.
 
 In Javascript code modules call `SeLiteMisc.log()`, which gives you Selenium Core `LOG` object. Alternatively, use `console` object, which logs to Firefox menu > Tools > Web Developer > Browser Console:
 
@@ -65,7 +65,7 @@ console.error(...);
   * it catches **some** events from Javascript code modules - ones loaded via `Components.utils.import()`
   * don't let it catch all exceptions - it reports too many annoyances from Firefox itself
   * it doesn't show stack trace of exceptions in its watch pane. So just add `expressionVariableName.stack` as a watched expression.
-  * you can locate a Javascript file by its name in 'Sources' list on the left, or 'Search scripts' field at the top-right. However, they only list files that were used already, so some Selenium IDE files get loaded only after you run a Selenese command (e.g. `getEval | true`).
+  * locate a Javascript file by its name in Sources list on the left, or by 'Search scripts' field at the top-right. However, they only list files that were used already, so some Selenium IDE files get loaded only after you run a Selenese command (e.g. `getEval | true`).
   * if you update a Javascript file (other than a code module) used by XUL and you enabled `nglayout.debug.disable_xul_cache`, then Firefox can refresh such Javascript, but browser debugger doesn't (as of Firefox 32).
 
 Don't use [Javascript debugger](https://addons.mozilla.org/en-US/firefox/addon/javascript-debugger) (Venkman) (because as of Firefox 22 it couldn't locate Javascript code modules). Neither use [Tiny Javascript Debugger](http://sourceforge.net/u/pbrunschwig/tinyjsd/wiki/Home/) (as it doesn't catch `debugger` keyword).

@@ -89,7 +89,7 @@ When the test creates a new record in its DB, it needs to set its ID to reflect 
           * **on app success**
             * test creates a new record (commiting the transaction)
           * **on failure where the app starts an `INSERT` within a transaction, but it doesn't commit**
-            * test could mark the affected table as 'unsure'; then the next time there is a successful insert by the app, it captures its ID and compares it
+            * test could mark the affected table as _unsure_; then the next time there is a successful insert by the app, it captures its ID and compares it
             * test creates a new record (commiting the transaction), then it deletes the new record
             * this app failure is not easy to differentiate from the following one
           * **on app failure without an `INSERT`**
@@ -139,3 +139,6 @@ then have the test use that data (via a back door). That's fairly easy between S
   * custom-compiled Firefox with a target data source client and a Core extension of Selenium IDE in Javascript
 
 If the app writes to the external data source (directly or indirectly), then treat it like another app DB. Have your test use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
+
+# No column name _toString_ #
+You must not have a DB column with name `toString`. That's because Javascript objects representing DB records have method `toString()` for convenience.

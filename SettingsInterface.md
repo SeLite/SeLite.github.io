@@ -36,7 +36,7 @@ You should pause tests while using these buttons, otherwise the test script or a
 ## Permissions
 Reloading databases requires your local account (which runs Firefox) to have access to delete the web app DB file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux `setfacl` - see [DrupalFramework](DrupalFramework)).
 
-# Typing strings 'null' or 'undefined'
-This is unlikely, but possible. If a freetype field has a non-null defined value (possibly empty string), then you can type in strings 'null' or 'undefined' and they will be accepted as those strings. They won't get converted to Javascript null or undefined. Use a special column 'Null/Undefine' for that.
+# Typing strings `'null'` or `'undefined'`
+This is unlikely, but possible. If a freetype field has a non-null defined value (possibly empty string), then you can type in string literals `'null'` or `'undefined'` (within apostrophes or quotes) and they will be accepted as those strings. They won't get converted to Javascript null or undefined. Use a special column 'Null/Undefine' for that.
 
-If a freetype field is Javascript null or undefined, you can click at its cell and change it. If you you don't change it and you hit Enter, that leaves the field as Javascript null or undefined, rather than a string 'null' or 'undefined'. So, if  you'd like to enter a string literal 'null' or 'undefined', enter something else first and then change it to 'null' or 'undefined' again.
+If a freetype field is Javascript `null` or `undefined`, you can click at its cell and change it. If you you don't change it and you hit Enter, that leaves the field as Javascript `null` or `undefined`, rather than a string literal `'null'` or `'undefined'`. So, if  you'd like to enter a string literal `'null'` or `'undefined'`, enter something else first and then change it to `'null'` or `'undefined'` again.

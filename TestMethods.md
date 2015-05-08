@@ -7,11 +7,11 @@ layout: default
 # About the diagrams and descriptions #
 Time axis is vertical, from up downwards. Steps are grouped in runs, which are separated by a vertical dotted line.
 
-A 'step' is an operation, either
+A _step_ is an operation, either
 
-  * data flow
-  * logic (decision - can be random-based)
-  * control (including generating contents, input values, page navigation)
+  * data-based
+  * decision (can be random-based)
+  * GUI control-based (including generating contents, input values, page navigation)
   * comparison (of the actual and expected contents)
 
 The focus is on problems and complications in the testing process. Therefore diagrams omit any successful steps that are not relevant to demonstrating a problem.

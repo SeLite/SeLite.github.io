@@ -6,7 +6,7 @@ layout: default
 # Summary #
 [SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [AddOns](AddOns), allows smoother development of Selenium Core extensions (just plain javascript files, not .xpi). It reloads them automatically on change.
 
-It's more convenient than Selenium IDE's way of loading Core extensions (Selenium menu > Options > Options > General > 'Activate developer tools'), which requires you to apply Selenium menu > Options > Options > General > 'Reload' button everytime you change your extension file.
+It's more convenient than Selenium IDE's way of loading Core extensions (Selenium menu > _Options > Options > General > Activate developer tools_), which requires you to apply Selenium menu > _Options > Options > General > Reload_ button everytime you change your extension file.
 
 # Details #
 It adds field `bootstrapCoreExtensions` to [Settings](Settings) module `extensions.selite-settings.common`, where you can choose file(s) containing your Core extension in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
@@ -24,7 +24,7 @@ It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs in
 # Limitations #
 
 ## Intercepts ##
-Bootstrap reloads all registered extensions (whenever you modify any one of them). So, if you 'extend' an existing method as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts), then don't re-extend the **current** method each time the script is run. Otherwise it would increase the intercept chain. Instead, save the original method on the first load only, and then re-extend it on every load. For example:
+Bootstrap reloads all registered extensions (whenever you modify any one of them). You can 'extend' existing Javascript functions as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts). However, don't re-save and re-extend the current function each time the script is run. Otherwise it would increase the intercept chain every time Bootrstrap reloads it. Instead, save the original function on the first load only, but re-extend it on every load. For example:
 
 ```js
 var originalMethod;
@@ -47,6 +47,6 @@ If you remove a filename from `bootstrapCoreExtensions` (or you switch to a diff
 ## Dependencies between files ##
 Bootstrap initiates extensions after any Selenium Core extensions loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).
 
-If you have multiple files registered with Bootstrap through a 'values' manifest (as per [SettingsManifests](SettingsManifests)), they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
+If you have multiple files registered with Bootstrap through a _values_ manifest (as per [SettingsManifests](SettingsManifests)), they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
 
-On change, Bootstrap re-loads all registered files, not just the one(s) updated. That allows dependant files (that were registered with Bootstrap through a 'values' manifest) to inject any hooks in the expected order.
+On change, Bootstrap re-loads all registered files, not just the one(s) updated. That allows dependant files (that were registered with Bootstrap through a _values_ manifest) to inject any hooks in the expected order.

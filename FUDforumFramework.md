@@ -17,4 +17,4 @@ Install recent [Firefox](http://www.mozilla.org), [Selenium IDE](http://docs.sel
 Apply [InstallFramework](InstallFramework). The framework and tests are in [fudforum](https://code.google.com/p/selite/source/browse/fudforum) folder. Note that `appDB` filename ends with `.db.php` (e.g. `/var/www/fudforum-data/forum.db.php`).
 
 # DB schema #
-When extending DB table definitions in `fudforum/fudforum-framework.js` see e.g. [http://localhost/fudforum](http://localhost/fudforum) > 'Administration' (near top right) > SQL (near top left) > inspect the schema.
+When extending DB table definitions in `fudforum/fudforum-framework.js` see e.g. [http://localhost/fudforum](http://localhost/fudforum) > Administration (near top right) > SQL (near top left) > inspect the schema.
