@@ -31,7 +31,7 @@ TODO FIX open | file://SeLiteSettings.getTestSuiteFolder()/form.html
 ```
 
 ### Negative tests ###
-If you need to test that something fails, use <em>try..catch..endTry</em> as per [SelBlocksGlobal](SelBlocksGlobal). Use <em>catch..endTry</em> to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and throw an error on failure. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
+If you need to test that something fails, use `try..catch..endTry` as per [SelBlocksGlobal](SelBlocksGlobal). Use `catch..endTry` to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and throw an error on failure. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
 
 There are also 'real' negative tests in `selite.sel-blocks-global/selenese-tests-negative/`. Those are supposed to fail, since they validate cases when `try..catch..endTry` doesn't catch an error.
 

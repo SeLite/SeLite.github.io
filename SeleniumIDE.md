@@ -149,7 +149,7 @@ Steps
     * _chrome://selenium-ide/content/selenium-ide.xul#BLUE_
     * _chrome://selenium-ide/content/selenium-ide.xul#RED_
     * _chrome://selenium-ide/content/selenium-ide.xul#WHITE_
- 3. if you have already opened <em>chrome://selenium-ide/content/selenium-ide.xul</em> and later you add or change the hash part (<em>#GREEN, #BLUE</em>, <em>#RED</em> or <em>#WHITE</em>), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
+ 3. if you have already opened _chrome://selenium-ide/content/selenium-ide.xul_ and later you add or change the hash part (_#GREEN, #BLUE, #RED_ or _#WHITE_), it won't take effect (even after you hit Enter) until you refresh the URL e.g. by F5 key (which will lose any modifications)
  4. hide Firefox navigation bar by pressing F2 (you may need to press it twice)
   * (+-) it applies to the current window and any new windows later, but not to other existing Firefox windows
   * (-) however, after a Firefox restart it applies to all windows; then press F2 to show navigation bar where you want it
@@ -157,7 +157,7 @@ Steps
 In auxiliary IDEs
 
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
-* (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows <em>testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox</em>) and then press Alt.
+* (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press Alt.
 * (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite. So it's the safest not to modify tests in auxiliary IDEs.
 
 Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
@@ -170,7 +170,7 @@ This shows multiple Selenium IDEs, detached from Firefox browser windows. Compar
 To set up
 
 1. Create Firefox profiles, one per Selenium IDE: Follow [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment) > [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile).
-2. Start multiple Firefox instances, one per profile, with command line parameters <em>-no-remote</em> and (<em>-P ProfileName</em>).
+2. Start multiple Firefox instances, one per profile, with command line parameters `-no-remote` and (`-P ProfileName`).
 3. Install Selenium IDE in each profile. Install SeLite [AddOns](AddOns) any other extensions in profiles where you will run scripts.
 4. Mark the second and successive profiles to identify Selenium IDEs:
   * Visually by menu text colour

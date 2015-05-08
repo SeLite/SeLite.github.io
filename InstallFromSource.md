@@ -19,7 +19,7 @@ There are repositories for
 | Documentation                | [selite/selite.github.io](https://github.com/selite/selite.github.io) | [Download ZIP](https://github.com/selite/selite.github.io/archive/master.zip) | https://github.com/selite/selite.github.io.git |
 
 # Install add-ons from source #
-(If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `selite\setup_proxies.bat` and TODO change after GitHub migration: `selite.sel-blocks-global\setup_proxy.bat` (or `selite/setup_proxies.sh` and `selite.sel-blocks-global/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses 'default' profile. After setting up proxy files, start Firefox (with that profile).
+(If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `selite\setup_proxies.bat` and TODO change after GitHub migration: `selite.sel-blocks-global\setup_proxy.bat` (or `selite/setup_proxies.sh` and `selite.sel-blocks-global/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
 
 On Windows (and probably on Mac OS, too):
 
@@ -28,12 +28,12 @@ On Windows (and probably on Mac OS, too):
 
 Restart Firefox.
 
-Add-ons set up this way won't receive any updates. You'll need to run <em>GIT pull</em> (or download a new .zip file and extract it at the same location).
+Add-ons set up this way won't receive any updates. You'll need to run `GIT pull` (or download a new `.zip` file and extract it at the same location).
 
 # Install Selenium IDE from source #
 You'd need this only for debugging Selenium IDE, or custom add-ons that override it.
 
-[Download Selenium IDE](http://docs.seleniumhq.org/download/) as an .xpi file, but don't install it (right click at the link to an .xpi file >  'Save Link As...'). Then unzip the .xpi file (you may have to rename it to end with .zip). It contains several .xpi files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
+[Download Selenium IDE](http://docs.seleniumhq.org/download/) as an `.xpi` file, but don't install it (right click at the link to an `.xpi` file >  'Save Link As...'). Then unzip the `.xpi` file (you may have to rename it to end with .zip). It contains several `.xpi` files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
 
 ```
 cd ~/.mozilla/firefox/*.default/extensions
@@ -49,4 +49,4 @@ pwd > `echo ~/.mozilla/firefox/*.default`/extensions/\{a6fd85ed-e919-4a43-a5af-8
 
 Restart Firefox.
 
-For debugging Selenium IDE, apply [DevelopmentTools](DevelopmentTools) > [Debugging](DevelopmentTools#debugging). Then use Firefox > Tools > Web Developer > Browser Toolbox. You need to know a file name; locate it in that unzipped folder using `grep` or some other text search tool. Try to create a NetBeans project from the unzipped folder: it eases the navigation.
+For debugging Selenium IDE, apply [DevelopmentTools](DevelopmentTools) > [Debugging](DevelopmentTools#debugging). Then use Firefox > Tools > Web Developer > Browser Toolbox. You need to know a file name; locate it in that unzipped folder using `grep` or some other text search tool. For easier code navigation create a NetBeans project from the unzipped folder. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide).

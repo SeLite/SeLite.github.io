@@ -60,7 +60,7 @@ See descriptions below.
 ### Edit or review through GUI ###
 This has a dual purpose: to maintain profile-based configuration set(s), and to review effect of configuration set(s) or 'values' manifest(s). If you want to use configuration set(s), create them if you haven't done so (see above).
 
-Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single test command, e.g. <em>getEval | true</em>. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
+Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single test command, e.g. `getEval | true`. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
 
 If you'd like to review configuration, open [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?selectFolder_ (or _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_).
 
