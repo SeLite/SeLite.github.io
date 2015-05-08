@@ -4,7 +4,7 @@ layout: default
 ---
 
 # Accessing the interface of SeLiteSettings #
-Two most frequent use cases are available in Selenium IDE menu > Options. They link to _tree.xul_ and _tree.xul?selectFolder_ (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
+Two most frequent use cases are available in Selenium IDE menu > Options. They link to `tree.xul` and `tree.xul?selectFolder` (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
 
 SeLiteSettings' configuration interface is within Firefox at [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui URLs). The URLs are
 
@@ -34,7 +34,7 @@ See [TestMethodsTheory](TestMethodsTheory) for definition of test and app DB. Va
 You should pause tests while using these buttons, otherwise the test script or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.
 
 ## Permissions
-Reloading databases requires your local account (which runs Firefox) to have access to delete the web app DB file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux _setfacl_ - see [DrupalFramework](DrupalFramework)).
+Reloading databases requires your local account (which runs Firefox) to have access to delete the web app DB file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux `setfacl` - see [DrupalFramework](DrupalFramework)).
 
 # Typing strings 'null' or 'undefined'
 This is unlikely, but possible. If a freetype field has a non-null defined value (possibly empty string), then you can type in strings 'null' or 'undefined' and they will be accepted as those strings. They won't get converted to Javascript null or undefined. Use a special column 'Null/Undefine' for that.

@@ -56,7 +56,7 @@ Mozilla and NetBeans also require you to register in order to vote. It takes a f
 
 The actual voting is in two steps. Click at '_vote_' right of '_Importance_' (for Mozilla) or right of '_Priority_' (for NetBeans). That takes you to a page with a checkbox next to '_Vote For This Bug_'. Activate the checkbox and submit by clicking at button '_Change My Votes_' near the bottom-left.
 
-You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button '_Disable All Mail_' and then button _Submit Changes_ at the bottom.
+You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button `Disable All Mail` and then button `Submit Changes` at the bottom.
 
 # Detailed list of issues/pull requests
 <!-- Use exact issue names, or shorten them with "..." but only at the end. That eases the navigation. Keep them sorted in order of importance. -->

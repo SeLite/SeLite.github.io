@@ -7,9 +7,9 @@ layout: default
 These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top of its [standard documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Auto-generated Selenese commands #
-Selenese commands are defined in these primary forms: _xyz, **get**Xyz, **is**Xyz_ and _**is**Xyz**Present**_. Selenium auto-generates their variations (listed below).
+Selenese commands are defined in these primary forms: <code>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</code> and <code><strong>is</strong>Xyz<strong>Present</strong></code>. Selenium auto-generates their variations (listed below).
 
-Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also _loadSeleniumCommands()_ in Selenium IDE's _treeView.js_.)
+Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also `loadSeleniumCommands()` in Selenium IDE's `treeView.js`.)
 
 <table>
 <thead>
@@ -76,13 +76,13 @@ Selenium IDE shows the original reference for both the primary and auto-generate
 # Selenese parameters (Target and Value)
 Selenese commands accept up to two parameters: Target and Value.
 
-* Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for _getEval_).
+* Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for `getEval`).
 * One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSyntax](EnhancedSyntax).
 * If Target is a locator, Value is usually the expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
 * [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it offline in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_).
 
 ## XPath
-Full XPath locators start with _xpath=_ or with //. Usually an XPath expression starts with //, with which you don't need to use _xpath=_. However, some SeLite commands (like _clickRandom_ and _selectRandom_) only accept XPath as the locator, but they require it not to contain any leading _xpath=_ prefix (whether the XPath starts with // or not).
+Full XPath locators start with `xpath=` or with //. Usually an XPath expression starts with //, with which you don't need to use `xpath=`. However, some SeLite commands (like `clickRandom` and `selectRandom`) only accept XPath as the locator, but they require it not to contain any leading `xpath=` prefix (whether the XPath starts with // or not).
 
 See resources on XPath:
 
@@ -94,8 +94,8 @@ See resources on XPath:
 ## UI-Element mappings
 UI Mapping (or 'UI-Element mapping') defines a mapping between meaningful names of elements on webpages, and the elements themselves. Element locators are in forms
 
-* _ui=semanticPageName::semanticElementName(...)_ or
-* _ui=semanticPageName::semanticElementName(...)->xpathOffsetLocator_.
+* `ui=semanticPageName::semanticElementName(...)` or
+* `ui=semanticPageName::semanticElementName(...)->xpathOffsetLocator`.
 
 Find a basic example at Selenium Documentation > [Test Design Considerations](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp) > [UI Mapping](http://www.seleniumhq.org/docs/06_test_design_considerations.jsp#ui-mapping) (which is written in Java, but SeLite frameworks define UI Mappings in Javascript.) See also a more [detailed example](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-map-sample.js) (or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/ui-map-sample.js_). Read its [detailed reference](http://htmlpreview.github.io/?https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/ui-doc.html). If you've installed Selenium IDE, access the same reference offline through Selenium IDE menu > Help > UI-Element Documentation (or at _chrome://selenium-ide/content/selenium-core/scripts/ui-doc.html_).
 
@@ -104,20 +104,20 @@ Find a basic example at Selenium Documentation > [Test Design Considerations](ht
 ## Stored variables
 Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a Selenese function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
-Parameters of Selenese actions can access stored variables as _${name-of-the-variable}_. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. _storeEval_, _getEval_ or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of _${name-of-the-variable}_ won't work robustly. For those cases use _storedVars.name-of-the-variable_ or <em>storedVars['name-of-the-variable']</em>. See also [EnhancedSyntax](EnhancedSyntax).
+Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. `storeEval, getEval` or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of `${name-of-the-variable}` won't work robustly. For those cases use `storedVars.name-of-the-variable` or `storedVars['name-of-the-variable']`. See also [EnhancedSyntax](EnhancedSyntax).
 
 ## Javascript variables
-Sometimes you want a 'global' variable that spreads across Selenese functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action _getEval_ with the target being: _variable1=valueOrExpression, variable2=valueOrExpression...._
+Sometimes you want a 'global' variable that spreads across Selenese functions (which stored variables can't). Use 'direct' Javascript variables for it. Set them using command/action `getEval` with the target being: `variable1=valueOrExpression, variable2=valueOrExpression....`
 
-Don't use command _storeEval_ for that - it sets a stored variable, which is local.
+Don't use command `storeEval` for that - it sets a stored variable, which is local.
 
 # Limitations of getEval, storeEval
-Command _getEval_ (and derived commands like _storeEval_ - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals _"\n"_ or _'\n'_ (or any string literals that contain them). Then they generate a confusing error _'unterminated string literal'_. Use _String.fromCharCode(10)_ instead.
+Command `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error _'unterminated string literal'_. Use `String.fromCharCode(10)` instead.
 
 # Tips on GUI usability
 
 ## Add .html extension to files
-When saving a test case or a test suite, Selenium IDE doesn't add _'.html'_ extension. So, add _.html_ yourself, which will let you identify the file more easily.
+When saving a test case or a test suite, Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
 ## Using multiple Selenium IDEs in parallel
 A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for test cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.

@@ -41,7 +41,7 @@ So, a field will have value(s) based on its topmost occurrence within:
 Manifests are cached
 
   * temporarily when edited through GUI. You just need to refresh the screen in order for a change to apply.
-  * fully when used by Selenium tests (via _SeLiteData.getStorageFromSettings_). You need to restart Firefox in order for a change to apply.
+  * fully when used by Selenium tests (via `SeLiteData.getStorageFromSettings`). You need to restart Firefox in order for a change to apply.
   * optionally when used by other extensions (the developer can choose whether to cache or not)
 
 # Symlinks (on Mac OS/Unix) #

@@ -36,10 +36,10 @@ This may help you to figure out the issue yourself. Even if you don't solve it, 
     * minimise any custom Selenium extensions
     * cut down your test
     * replicate the issue against local .html page(s), simplified as much as possible
-    * replace SeLite-specific commands (e.g. _typeRandom_) with their Selenium alternatives and see whether your locators work.
+    * replace SeLite-specific commands (e.g. `typeRandom`) with their Selenium alternatives and see whether your locators work.
 
 ## Browser Console ##
-If Selenium IDE log doesn't give much information about the problem, you need a log from Firefox itself. Visit Firefox URL _about:config_. Set preference _devtools.chrome.enabled_ to _true_ (by double-clicking). Restart Firefox and go to its menu > Tools > Web Developer > Browser Console. Does it show any errors or warnings? Re-check the console after you start Selenium IDE and when you run scripts.
+If Selenium IDE log doesn't give much information about the problem, you need a log from Firefox itself. Visit Firefox URL _about:config_. Set preference `devtools.chrome.enabled` to `true` (by double-clicking). Restart Firefox and go to its menu > Tools > Web Developer > Browser Console. Does it show any errors or warnings? Re-check the console after you start Selenium IDE and when you run scripts.
 
 ## Separate Firefox profile ##
 If you don't want to modify your existing Firefox profile, [create a new one](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) (with no spaces in its name). Enable [Browser Console](#browser-console). Add any necessary non-SeLite extensions, until the problem appears. Alternatively, you could also [duplicate the existing profile](http://kb.mozillazine.org/Moving_your_profile_folder) (which is stored as a folder) and narrow down the problem in that copy.

@@ -2,7 +2,7 @@
 title: Enhanced Selenese syntax
 layout: default
 ---
-[SelBlocksGlobal](SelBlocksGlobal) provides an enhancement to syntax of parameters `target` and `value` passed to Selenese commands. It allows those expressions to conveniently access stored variables through `$storedVariableName` notation. That makes tests shorter and clearer.
+[SelBlocksGlobal](SelBlocksGlobal) enhances syntax of parameters `target` and `value` passed to commands in [SeleniumIDE](SeleniumIDE). It allows those expressions to conveniently access stored variables through `$storedVariableName` notation. That makes tests shorter and clearer.
 
 # Javascript within \`...\` without special prefix (cast to a string) #
 This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of back ticks \`...\`) to Selenese commands in their parameter (`target` or `value`). It evaluates any Javascript code in `target` or `value` that is between a pair of \`...\`. Then it converts the result to a string (excluding back apostrophes \` themselves).

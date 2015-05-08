@@ -4,7 +4,7 @@ layout: default
 ---
 
 # SeLite Settings API #
-Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In Selenium Core extensions access it through object _SeLiteSettings_. In other scopes (e.g. Selenium IDE extensions or Javascript code modules) call
+Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In Selenium Core extensions access it through object `SeLiteSettings`. In other scopes (e.g. Selenium IDE extensions or Javascript code modules) call
 
 ```
 Components.utils.import("chrome://selite-settings/content/SeLiteSettings.js");
@@ -13,8 +13,8 @@ Components.utils.import("chrome://selite-settings/content/SeLiteSettings.js");
 # Defining a configuration module
 Define a configuration module (schema) in a Javascript file (in UTF-8). See [test\_settings\_module.js](https://github.com/selite/selite/blob/master/settings/test_settings_module.js) as an example. Instantiate
 
-  * subclasses of _SeLiteSettings.Field_, one instance per field
-  * class _SeLiteSettings.Module_, one instance per module
+  * subclasses of `SeLiteSettings.Field`, one instance per field
+  * class `SeLiteSettings.Module`, one instance per module
 
 The definition must be
 
@@ -27,13 +27,13 @@ Whenever you update a module definition, you need to either
   * restart Firefox.
 
 # Registering and loading a module programatically #
-Use _SeLiteSettings.loadFromJavascript()_ to load or register & load a module programatically. You don't need this if you register the configuration file via [SettingsInterface](SettingsInterface).
+Use `SeLiteSettings.loadFromJavascript()` to load or register & load a module programatically. You don't need this if you register the configuration file via [SettingsInterface](SettingsInterface).
 
 # Reading values #
 See class SeLiteSettings.Module and its methods
 
-  * _getFieldsOfSet()_ - primarily for modules that have _associatesWithFolders==false_
-  * _getFieldsDownToFolder()_ - only for modules that have _associatesWithFolders==true_
+  * `getFieldsOfSet()` - primarily for modules that have `associatesWithFolders==false`
+  * `getFieldsDownToFolder()` - only for modules that have `associatesWithFolders==true`
 
 # Updating preferences #
-See class _SeLiteSettings.Field_ and its methods _setValue()_, _addValue()_ and _removeValue()_.
+See class `SeLiteSettings.Field` and its methods `setValue(), addValue()` and `removeValue()`.
