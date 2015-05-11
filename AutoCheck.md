@@ -2,6 +2,7 @@
 title: Third party Firefox extensions
 layout: default
 ---
+{% include links %}
 
 # Automatic checks #
 [AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [AddOns](AddOns), validates the current page after every successful Selenese command. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.
@@ -24,7 +25,7 @@ Configure these checks at [_chrome://_ URL](AboutDocumentation#firefox-chrome-ur
 
   * autoCheckAssert - whether an occurrence should trigger an assert failure; by default it triggers a validation failure rather than an assert failure
   * autoCheckDetector - choose a standard detection class to use; or set it to null/undefined if you use a custom class
-  * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into Selenium Core scope e.g. via [BootstrapLoader](BootstrapLoader)); used only if autoCheckDetector is null/undefined
+  * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into [Core scope] e.g. via [BootstrapLoader](BootstrapLoader)); used only if autoCheckDetector is null/undefined
   * autoCheckIgnored - the format of entries depends on the detection class. [AutoCheck](AutoCheck) reports failures unless they match an autoCheckIgnored entry. Use autoCheckIgnored to match already reported bugs (so that they don't get reported again).
     * for PHP enter XPath logical conditions (not whole XPath expressions). Those would match either PHP warning/notice/error message (description) or a leaf file path (where the failure occurred). The conditions can refer to that text node by '.' (and they must not refer to parent/sibling nodes). Examples are
       * contains(., 'Undefined variable')

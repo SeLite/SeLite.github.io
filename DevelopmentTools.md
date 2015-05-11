@@ -39,7 +39,7 @@ In Browser Console, JS tab/dropdown has level Warnings. Name of that level is co
 ### Logging ###
 Don't use `alert(message)` since it's disruptive. Also, it's not available in Javascript code modules.
 
-In Selenium Core scope (i.e. in files listed for `coreUrl` in `SeLiteExtensionSequencer.js`) you can generate messages for Selenium IDE Log tab with
+In [Core scope] (i.e. in files listed for `coreUrl` in `SeLiteExtensionSequencer.js`) you can generate messages for Selenium IDE Log tab with
 
 ```javascript
 

@@ -29,7 +29,7 @@ This shows one (standard) Selenium IDE detached from Firefox browser windows. Ot
 * (+) involves less maintenance: it runs only one Firefox instance (with one profile)
 * (+) is more convenient: shared bookmarks, window history, add-ons etc.
 * (+-) shares history of recent files in Selenium IDE; however, it gets overwritten by the instance closed as the last one
-* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with test suites. (That prevents potential conflicts due to the fact that any auxiliary Selenium IDEs share Selenium Core scope along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [BootstrapLoader](BootstrapLoader), either.
+* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with test suites. (That prevents potential conflicts due to the fact that all auxiliary Selenium IDEs share [Core scope] along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [BootstrapLoader](BootstrapLoader), either.
 
 Steps
 

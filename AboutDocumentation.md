@@ -35,6 +35,14 @@ Since Selenium and SeLite are not test-specific, SeLite documentation calls test
 
 Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, SeLite refers to them as _functions_ and not _scripts_.
 
+## Core scope
+_Selenium Core scope_, or just _Core scope_, is global scope (as in [JavascriptEssential](JavascriptEssential) > [Scope](JavascriptEssential#scope)) in _Core extensions_ and in Selenese _scripts_.
+
+Implementation notes:
+
+* _Core scope_ is the same as `selenium` object.
+* See also [ExtensionSequencer](ExtensionSequencer) > [Global symbols and strict mode](ExtensionSequencer#global-symbols-and-strict-mode).
+
 ## Core extension
 _Selenium Core extension_, or just _Core extension_, extends functionality available to Selenese scripts. It doesn't provide any visual interface. Generally it can be loaded from Selenium IDE or Webdriver. But even if a Core extension is for Selenium IDE only, it's called a _Core extension_ rather than _IDE extension_. Core extensions from SeLite are like that: they are Selenium IDE-specific and they don't work with Webdriver.
 

@@ -2,6 +2,7 @@
 title: Customising Selenese
 layout: default
 ---
+{% include links %}
 
 # Locating Javascript implementation of Selenese 'doer' commands #
 Selenese primary 'doer' commands (i.e. ones with primary forms that don't start with **`get`** nor **`is`** and that are not like <code><strong>is</strong>Xyz<strong>Present</strong></code> - as per table in [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)) are defined in Javascript functions whose names start with **`do`**. E.g. command `xyz` is implemented in function <code><strong>do</strong>Xyz</code>. Therefore do not search for their implementation functions by their Selenese names case sensitively.
@@ -24,9 +25,9 @@ egrep -r "function\s+FUNCTIONNAME[^a-zA-Z0-9_]|[^a-zA-Z0-9_]FUNCTIONNAME\s*[:=]\
 This is especially useful with Selenium which uses same name functions in various classes/components. There may be various versions of the same class/component, depending on how the code is executed - via Selenium IDE or via webdriver (but only Selenium Core and IDE is relevant to SeLite).
 
 # Defining functions in Selenium Core #
-This is for files normally loaded into Selenium Core/Selenese scope (via [BootstrapLoader](BootstrapLoader) or [ExtensionSequencer](ExtensionSequencer), which use [JavascriptComplex](JavascriptComplex) > [mozIJSSubScriptLoader](JavascriptComplex#mozIJSSubScriptLoader)). (Those are not [Javascript code modules](JavascriptComplex#javascript-code-modules).)
+This is for files normally loaded into [Core scope] (via [BootstrapLoader](BootstrapLoader) or [ExtensionSequencer](ExtensionSequencer), which use [JavascriptComplex](JavascriptComplex) > [mozIJSSubScriptLoader](JavascriptComplex#mozIJSSubScriptLoader)). (Those are not [Javascript code modules](JavascriptComplex#javascript-code-modules).)
 
-You can define functions for Selenese scope in either way mentioned at [JavascriptEssential](JavascriptEssential) > [Defining Javascript functions](JavascriptEssential#defining-javascript-functions). However, if you use [the classic way](JavascriptEssential#the-classic-way), do that only in `strict` mode. Otherwise the function will be in the Selenium global scope (i.e. outside of Selenium Core/Selenese scope) - then you need to see [ExtensionSequencer](ExtensionSequencer) > [Core extensions loaded twice](ExtensionSequencer#core-extensions-loaded-twice).
+You can define functions for [Core scope] in either way mentioned at [JavascriptEssential](JavascriptEssential) > [Defining Javascript functions](JavascriptEssential#defining-javascript-functions). However, if you use [the classic way](JavascriptEssential#the-classic-way), do that only in `strict` mode. Otherwise the function will be in the Selenium global scope (i.e. outside of [Core scope]) - then you need to see [ExtensionSequencer](ExtensionSequencer) > [Core extensions loaded twice](ExtensionSequencer#core-extensions-loaded-twice).
 
 # Special rules for custom Selenese commands #
 

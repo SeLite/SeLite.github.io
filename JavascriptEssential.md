@@ -23,10 +23,10 @@ If you've used Javascript only for web pages, you’ll find out some new terms a
 Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
 
 ## Scope ##
-Javascript for web applications has only two levels of scope: global and local (within functions). On the other hand, Firefox avoids conflicts between extensions by running them with separate global scopes. However, they can share Javascript files, and when they load them, they can specify global scope used in those files. (The code from such files is shared, even though global scope of its usages is different. See [JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files).)
+Javascript for web applications has only two levels of scope: _global_ and _local_ (within functions). On the other hand, Firefox avoids conflicts between add-ons by running them with separate global scopes. However, extensions can share Javascript files without mixing their scopes: they can specify global scope used in those files. (The code from such files is still shared, even though global scope for each of its usages may be different. See [JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files).) See also [Core scope].
 
 ## Prevent name conflicts ##
-If you add custom functionality at Selenium Core scope, do it only for new Selenese commands or for use in parameters of Selenese commands. The later should be grouped in an object with a name unlikely to cause conflicts. Such an object serves as a namespace. You can have multi-level namespace objects, or group classes and functions in a Java package-like notation.
+If you add custom functionality at [Core scope], do it only for new Selenese commands or for use in parameters of Selenese commands. The later should be grouped in an object with a name unlikely to cause conflicts. Such an object serves as a namespace. You can have multi-level namespace objects, or group classes and functions in a Java package-like notation.
 
 When adding functionality that doesn't need to be directly available to Selenese expressions, use [JavascriptComplex](JavascriptComplex) > [Javascript code modules](JavascriptComplex#javascript-code-modules).
 
@@ -179,7 +179,7 @@ return originalResult+ ", my friend.";
 If you use SeLite Bootstrap, see also [BootstrapLoader](BootstrapLoader) > [Intercepts](BootstrapLoader#intercepts).
 
 # Isolate the local scope
-Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the Selenese scope), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
+Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the [Core scope]), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
 
 You could have all your code defined within one long function, and then call it at the end of the file. However, if you name such a function, that name itself becomes part of the global scope.
 
