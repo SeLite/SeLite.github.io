@@ -2,12 +2,14 @@
 title: Settings Overview
 layout: default
 ---
+{% include links %}
 
 # Summary #
-[SeLite Settings](https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/) allows easy custom configurations of tests and Selenium IDE Core extensions See also [AddOns](AddOns).
+[SeLite Settings](https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/) allows easy custom configurations of Selenese scripts and [Core extensions][core extension]. See also [AddOns](AddOns).
 
 # Background #
-Selenium IDE can be extensively customised via Core extensions (written in Javascript). This way you add new Selenese commands and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
+<!-- TODO Extract out: to AboutDocumentation? -->
+Selenium IDE can be extensively customised via [Core extensions][core extension] (written in Javascript). This way you add new Selenese commands and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
 
   * list of users or credentials
   * location of XML files (which an extension can pass to loadXmlVars and forXml from [SelBlocksGlobal](SelBlocksGlobal))
@@ -21,7 +23,7 @@ There was no convenient tool to
   * share and manage
 such configurations.
 
-Most Core extensions can work with
+Most [Core extensions][core extension] can work with
 
   * just a few basic field types
   * an option for custom validation of fields
@@ -36,7 +38,7 @@ Most Core extensions can work with
   * an API to access the configured values
 
 # Why not make your own #
-You could create custom GUI as an IDE extension of Selenium IDE through XUL overlays (in XML). But
+You could create custom GUI as an IDE [extension of Selenium IDE] through XUL overlays (in XML). But
 
   * you shouldn't need to learn all that, especially because XUL is
     * different to HTML, and not of much use (unless you create visual extensions of Firefox)
@@ -66,7 +68,7 @@ You can
       * choose one that is default (if the module allows multiple sets)
       * associate them to folders containing the tests (if the module allows to be associated with folders)
       * alternatively edit them access via url _about:config_
-  * have your Core extension access the preferences via a Javascript code module (API)
+  * have your [Core extension] access the preferences via a Javascript code module (API)
 
 Values manifests and associated sets work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
@@ -112,4 +114,4 @@ Users can configure and override settings granularly via
       * a shared drive, or
       * source versioning system
 
-For an example see [SettingsInterface](SettingsInterface). If accessing configuration from Core extensions, see [SettingsAPI](SettingsAPI).
+For an example see [SettingsInterface](SettingsInterface). If accessing configuration from [Core extensions][core extension], see [SettingsAPI](SettingsAPI).

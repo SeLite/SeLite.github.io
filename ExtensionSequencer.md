@@ -2,9 +2,10 @@
 title: Extension Sequencer
 layout: default
 ---
+{% include links %}
 
 # Summary #
-[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [AddOns](AddOns), allows Core and IDE extensions of Selenium IDE to declare dependencies. Then it ensures that they are loaded in a correct order.
+[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [AddOns](AddOns), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
 
 It only works for extensions packaged as Firefox add-ons (as .xpi files, or through [proxy files](https://developer.mozilla.org/en/Setting_up_extension_development_environment)). It doesn't cover extensions loaded from single Javascript files via Selenium IDE menu Options > Options > General, neither through [BootstrapLoader](BootstrapLoader).
 
@@ -50,7 +51,7 @@ preActivate: function(api) { // optional
 } );
 ```
 
-Sequencer will find and process this file. Then it will initiate the plugin after all its sequenced dependencies. If it depends on any add-ons that don't use ExtensionSequencer, then this doesn't guarantee their respective activation order. You can use `window.setTimeout()` in your Core extension to delay the parts of its activation that depend on any non-sequenced add-ons. Alternatively, encourage the third party to use ExtensionSequencer, too.
+Sequencer will find and process this file. Then it will initiate the plugin after all its sequenced dependencies. If it depends on any add-ons that don't use ExtensionSequencer, then this doesn't guarantee their respective activation order. You can use `window.setTimeout()` in your extension to delay the parts of its activation that depend on any non-sequenced add-ons. Alternatively, encourage the third party to use ExtensionSequencer, too.
 
 ## Examples of SeLiteExtensionSequencerManifest.js ##
 See `SeLiteExtensionSequencerManifest.js` files in source of various SeLite [AddOns](AddOns). For full API, see function `SeLiteExtensionSequencer.registerPlugin(prototype)` in [SeLiteExtensionSequencer.js](https://code.google.com/p/selite/source/browse/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
@@ -80,11 +81,11 @@ When modifying or re-using those tests, follow the existing special format of th
 To debug Extension Sequencer itself with Firefox Browser Toolbox, visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/extensions/invoke.xul_.
 
 # Core extensions loaded twice #
-Because of [ThirdPartyIssues](ThirdPartyIssues) > [Selenium issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697), Core extensions get loaded 2x (whether loaded via Selenium IE menu > Options > Options... > Core extension, from an .xpi file or through a proxy file - regardless of ExtensionSequencer - but not when loaded via [BootstrapLoader](BootstrapLoader)). That's OK if the extension just adds new Selenese commands. But it can be a problem if it tail/head intercepts Selenese or Selenium Core. You don't want to intercept Selenese or Selenium Core twice.
+Because of [ThirdPartyIssues](ThirdPartyIssues) > [Selenium issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697), [Core extensions][core extension] get loaded 2x (whether loaded via Selenium IE menu > Options > Options... > Core extension, from an .xpi file or through a proxy file - regardless of ExtensionSequencer, but not when loaded via [BootstrapLoader](BootstrapLoader)). That's OK if the extension just adds new Selenese commands. But it can be a problem if it tail/head intercepts Selenese or Selenium Core. You don't want to intercept Selenese or Selenium Core twice.
 
 In extensions loaded via ExtensionSequencer you can use `SeLiteExtensionSequencer.coreExtensionsLoadedTimes` to keep track of whether the extension is loaded for the first time or the second one. See [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/SeLiteExtensionSequencer.js_ or [online](https://code.google.com/p/selite/source/browse/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
 
 ## Global symbols and strict mode ##
-That Selenium issue also causes problems when adding new global symbols to Selenese scope and using [JavascriptEssential](JavascriptEssential) > [Strict Javascript](JavascriptEssential#strict-javascript). When Selenium IDE loads a Core extension for the first and second time, it uses different scope and a different `Selenium` class! If the extension in strict mode defines any global symbols, they are thrown away after the first load: only the second load stays in Selenium scope.
+That Selenium issue also causes problems when adding new global symbols to Selenese scope and using [JavascriptEssential](JavascriptEssential) > [Strict Javascript](JavascriptEssential#strict-javascript). When Selenium IDE loads a [Core extension] for the first and second time, it uses different Selenese scope and a different `Selenium` class! If the extension in strict mode defines any global symbols, they are thrown away after the first load: only the second load stays in Selenium scope.
 
 That may tempt you not to use strict mode and set the global symbols as undeclared (without `var` statement). This would create them in Selenium global scope (bypassing the local scope, which will be thrown away - see [MDN mozIJSSubScriptLoader.loadSubScript](https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29)). However, there's a way to do it in strict mode. When setting the new global symbols, also set them as fields on an existing object accessible from global scope (e.g. a class constructor). At the beginning of your extension, check whether those fields are set on that (existing) object; if not, then set them there and also in the global scope, otherwise retrieve them from that global object and set them in the global scope. See [se-testcase-debug-context.js](https://code.google.com/p/selite/source/browse/testcase-debug-context/src/chrome/content/extensions/se-testcase-debug-context.js).

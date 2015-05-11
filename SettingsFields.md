@@ -6,16 +6,16 @@ layout: default
 # Summary #
 Fields can be
 
-  * free-type: String, Int, Decimal
-  * Bool
-  * choices: String, Int, Decimal
-  * File (including Folder or SQLite)
-  * FixedMap (a freetype map with fixed keys), which serves for [SettingsLogins](SettingsLogins) > [Roles hard coded in Settings module configuration](SettingsLogins#roles-hard-coded-in-settings-module-configuration)
+  * free-type: `String, Int, Decimal`
+  * `Bool`
+  * choices: `String, Int, Decimal`
+  * `File` (including `Folder` and `SQLite`)
+  * `FixedMap` (a freetype map with fixed keys), which serves for [SettingsLogins](SettingsLogins) > [Roles hard coded in Settings module configuration](SettingsLogins#roles-hard-coded-in-settings-module-configuration)
 
 All fields can be single-valued or multi-valued, except for
 
-  * Bool and SQLite, which are always single-valued and
-  * FixedMap, which is always multi-valued
+  * `Bool` and `SQLite`, which are always single-valued and
+  * `FixedMap`, which is always multi-valued
 
 They are stored in Firefox preferences (on top of values manifests). Therefore
 
@@ -39,20 +39,22 @@ See also [SettingsScope](SettingsScope).
 'Present and empty' is only allowed for multivalued fields (choice or non-choice). It means that a multi-valued field has no entry, and it should be stored and presented as such (rather than inheriting values from other applicable sets or manifests). It can be present in values manifests or preferences. In values manifests it's represented by string `SELITE_VALUE_PRESENT`.
 
 ## Null ##
-Most `Field` types can be configured to allow null. It's possible only for single-valued fields (boolean/int/string, file, choice).  Single-valued choice field itself can have value `null` when no choice is selected, but none of its choices can have `null` value. Use literal `SELITE_NULL` to represent null in _values_ manifests (as per [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values)). You can specify Javascript's `null` as a field default value in the module definition.
+Most `Field` types can be configured to allow null. It's possible only for single-valued fields (`Boolean/Int/String, File` (including `Folder` and `SQLite`) and single-valued `Choice`). However, while single-valued `Choice` itself can have value `null` when no choice is selected, its selectable choices cannot have `null` value.
 
-Values of multi-valued fields can't be `null` (see below); but they can be _undefined_ or _empty but present_. The whole multi-valued field can't be `null`, either. (Explanation: `null` will never be supported for items of multi-valued/choice fields. For practicality the API presents and stores both values of multi-valued fields and keys of choice fields as names of Javascript object properties (i.e. object keys). That can't handle `null` well. Javascript transforms it into string `'null'`, which then couldn't be distinguished from proper `null`. E.g. `var o={}; o[null]= 1; Object.keys(o)[0]==='null'` evaluates to true.)
+Values of multi-valued fields can't be `null` (see below); but they can be _undefined_ or _empty but present_. The whole multi-valued field can't be `null`, either. (Explanation: `null` will never be supported for items of multi-valued/choice fields. For practicality the API presents and stores both values of multi-valued fields and keys of choice fields as names of Javascript object properties (i.e. object keys). That can't handle `null` well. Javascript transforms it into string `'null'`, which then couldn't be distinguished from proper `null`. E.g. `var o={}; o[null]= 1; Object.keys(o)[0]==='null'` evaluates to `true`.)
+
+Use literal `SELITE_NULL` to represent `null` in _values_ manifests (as per [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values)). You can specify Javascript's `null` as a field default value in the module definition.
 
 # Default values #
 SeLite Settings populates default values for some fields. It happens when
 
   * you create a new set (or when a module, which doesn't allow multiple sets, gets registered - then it creates its only set), or
   * when there is a new definition of the module, that adds new field(s)
-  * and module.associatesWithFolders==false and field.requireAndPopulate==true
+  * and `module.associatesWithFolders==false` and `field.requireAndPopulate==true`
 
-If module.associatesWithFolders==true, we want the ability to inherit values from sets/values manifests from higher folders. Therefore it doesn't populate default value for any fields of such modules.
+If `module.associatesWithFolders==true`, we want the ability to inherit values from sets/values manifests from higher folders. Therefore it doesn't populate default value for any fields of such modules.
 
-If the schema defines a field with defaultValue===undefined, then it's not populated in the set(s).
+If the schema defines a field with `defaultValue===undefined`, then it's not populated in the set(s).
 
 # File fields #
 Values of `Field.File` fields stored in configuration sets are full (absolute) paths to files (or folders). So they may not work for other users. Also, if you copy your Firefox profile folder to a system that uses a different folder separator (between Windows and Max OS/Linux), these fields won't work.

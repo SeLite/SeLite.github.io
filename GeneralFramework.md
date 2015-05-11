@@ -2,12 +2,12 @@
 title: General Framework
 layout: default
 ---
-
+{% include links %}
 
 # What an SeLite framework is
 An SeLite framework is on optional layer, that encapsulates low-level application-specific components. Those are mostly Javascript structures and Selenese functions.
 
-Javascript structures are Selenium Core extensions that define custom functionality for the Selenese scripts. They can be optionally packaged as Firefox extensions (public or proprietary). They can contain:
+Javascript structures are Selenium [Core extensions][core extension] that define custom functionality for the Selenese scripts. They can be optionally packaged as Firefox extensions (public or proprietary). They can contain:
 
   * Object-oriented descriptions of DB schema. Those define DB tables and their relationships.
   * Definitions of DB formulas. Those let you select data without writing SQL queries.
@@ -20,7 +20,7 @@ Selenese functions (blocks of Selenese commands) can be shared between test case
 See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/selite/source/browse/drupal) and other [AppsFrameworks](AppsFrameworks).
 
 ## Loading a framework ##
-A framework is loaded as a Selenium Core extension. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an .xpi file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
+A framework is loaded as a [Core extension]. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an .xpi file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
 
 ## Configuring and loading the data ##
 You can manage configuration through [Settings](Settings). Configuration sets can associate with tests on per-test suite folder basis. A framework needs to know the test suite folder, so that it can resolve its configuration (which determines the test DB). A framework shouldn't pre-load any data when it's activated, because test suite folder may not be known yet. If you need pre-loading any data, do that from a test suite folder change handler, which gets triggered once you open (or save) a test suite.
@@ -74,6 +74,6 @@ When reloading test DB (via either button), you don't want to override such spec
 The reason for those limitations is in code of `SeLiteSettings.setTestDbKeeper()`.
 
 ### One stage GUI configuration ###
-<a href='Hidden comment: @TODO move to a page on its own: CreateExtensions '></a>This is only enabled for Selenium Core extensions that come with SeLite, but not for frameworks. It enables the extension to add custom configuration fields, or to add custom options for existing configuration fields. Those new fields or new options (keys) are available in [SettingsInterface](SettingsInterface) immediately after start of Firefox. That is different to fields or options added by frameworks, loaded through [BootstrapLoader](BootstrapLoader), which have effect only after running the first Selenese command.
+<a href='Hidden comment: @TODO move to a page on its own: CreateExtensions '></a>This is only enabled for [Core extensions][core extension] that come with SeLite, but not for frameworks. It enables the extension to add custom configuration fields, or to add custom options for existing configuration fields. Those new fields or new options (keys) are available in [SettingsInterface](SettingsInterface) immediately after start of Firefox. That is different to fields or options added by frameworks, loaded through [BootstrapLoader](BootstrapLoader), which have effect only after running the first Selenese command.
 
 It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have `SeLiteExtensionSequencerManifest.js` with `preActivate` handler, where it adds any custom fields. See its source in e.g. [AutoCheck](AutoCheck) online [selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js](https://github.com/selite/selite/blob/master/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js) or offline at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_.

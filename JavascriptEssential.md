@@ -2,6 +2,7 @@
 title: Javascript essentials
 layout: default
 ---
+{% include links %}
 
 # General notes #
   * Design and code for clarity, simplicity and robustness (but within reason). Don't optimise minor parts or if optimisation adds much complexity.
@@ -16,7 +17,7 @@ layout: default
   * Don't use fixed line length - see [DocumentationStandard](DocumentationStandard). However, split complex expressions on multiple lines.
 
 # Differences from Javascript for web pages #
-If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of Selenium IDE Core extensions (including SeLite frameworks) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.
+If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of [extensions of Selenium IDE][Extension of Selenium IDE] (including SeLite frameworks as in [GeneralFramework](GeneralFramework)) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.
 
 ## Privileged Javascript files ##
 Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
@@ -178,7 +179,7 @@ return originalResult+ ", my friend.";
 If you use SeLite Bootstrap, see also [BootstrapLoader](BootstrapLoader) > [Intercepts](BootstrapLoader#intercepts).
 
 # Isolate the local scope
-Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope (which is the Selenese scope scope for Selenium Core extensions). This applies mostly to Selenium Core extensions and SeLite frameworks. (Javascript code modules have separate scopes, so they don't need this.)
+Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the Selenese scope), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
 
 You could have all your code defined within one long function, and then call it at the end of the file. However, if you name such a function, that name itself becomes part of the global scope.
 

@@ -2,9 +2,10 @@
 title: Settings API
 layout: default
 ---
+{% include links %}
 
 # SeLite Settings API #
-Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In Selenium Core extensions access it through object `SeLiteSettings`. In other scopes (e.g. Selenium IDE extensions or Javascript code modules) call
+Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In [Core extensions][core extension] access it through object `SeLiteSettings`. In other scopes, e.g. Selenium [IDE extensions][ide extension] or Javascript code modules (as per [JavascriptComplex](JavascriptComplex) > [Javascript code modules](JavascriptComplex#javascript-code-modules)), call
 
 ```
 Components.utils.import("chrome://selite-settings/content/SeLiteSettings.js");

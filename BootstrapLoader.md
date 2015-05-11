@@ -2,14 +2,15 @@
 title: Automated reloading of custom Selenium Core extensions
 layout: default
 ---
+{% include links %}
 
 # Summary #
-[SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [AddOns](AddOns), allows smoother development of Selenium Core extensions (just plain javascript files, not .xpi). It reloads them automatically on change.
+[SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [AddOns](AddOns), allows smoother development of Selenium [Core extensions][Core extension] (just in plain Javascript files, not packaged as `.xpi`). It reloads them automatically on change.
 
-It's more convenient than Selenium IDE's way of loading Core extensions (Selenium menu > _Options > Options > General > Activate developer tools_), which requires you to apply Selenium menu > _Options > Options > General > Reload_ button everytime you change your extension file.
+It's more convenient than Selenium IDE's way of loading [Core extensions][core extension] (Selenium menu > _Options > Options > General > Activate developer tools_), which requires you to apply Selenium menu > _Options > Options > General > Reload_ button every time you change your extension file.
 
 # Details #
-It adds field `bootstrapCoreExtensions` to [Settings](Settings) module `extensions.selite-settings.common`, where you can choose file(s) containing your Core extension in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
+It adds field `bootstrapCoreExtensions` to [Settings](Settings) module `extensions.selite-settings.common`, where you can choose file(s) containing your [Core extension] in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
 If you modify any one file that is registered with Bootstrap (while using Selenium IDE), all the registered files get re-loaded automatically next time you
 
@@ -45,7 +46,7 @@ If you introduce or modify any Selenese commands/getters - i.e. <code>Selenium.p
 If you remove a filename from `bootstrapCoreExtensions` (or you switch to a different default set or a test suite with a different set associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.
 
 ## Dependencies between files ##
-Bootstrap initiates extensions after any Selenium Core extensions loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).
+Bootstrap initiates extensions after any [Core extensions][core extension] loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).
 
 If you have multiple files registered with Bootstrap through a _values_ manifest (as per [SettingsManifests](SettingsManifests)), they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
 

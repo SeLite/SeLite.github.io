@@ -2,6 +2,7 @@
 title: Test methods theory
 layout: default
 ---
+{% include links %}
 
 # Summary #
 This describes and compares ways of test automation - from the data point of view. See also  pictures at [TestMethods](TestMethods).
@@ -16,7 +17,7 @@ These terms are not SeLite-specific. The goal here is to clarify possible/desira
     * source, libraries, webserver, single sign on etc.
     * application data ('test app DB' or just 'app DB')
   * **test** - depending on the context, either
-    * the system that tests (invokes) the application, i.e. Firefox + Selenium IDE + SeLite + optional custom Core extensions + test scripts
+    * the system that tests (invokes) the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + test scripts
     * all your test scripts (cases and suites) that are run by the test system. They are grouped in test cases, where
       * a test case consists of steps
       * a test suite contains one or more test cases

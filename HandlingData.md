@@ -2,6 +2,7 @@
 title: Handling data
 layout: default
 ---
+{% include links %}
 
 # Summary #
 This explains how a web app and its test can operate with separate databases ([TestMethodsTheory](TestMethodsTheory) > [Web app and its test have separate DBs](TestMethodsTheory#3-web-app-and-its-test-have-separate-dbs)).
@@ -136,7 +137,7 @@ then have the test use that data (via a back door). That's fairly easy between S
 
   * a webservice adapter on the server-side, or
   * a plugin/extension for Firefox (possibly a binary XPCOM component), or
-  * custom-compiled Firefox with a target data source client and a Core extension of Selenium IDE in Javascript
+  * custom-compiled Firefox with a target data source client and a [Core extension] of Selenium IDE in Javascript
 
 If the app writes to the external data source (directly or indirectly), then treat it like another app DB. Have your test use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
 

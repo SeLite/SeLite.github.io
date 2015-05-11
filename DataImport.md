@@ -2,6 +2,7 @@
 title: Data import
 layout: default
 ---
+{% include links %}
 
 # Using DB filters #
 Does your app use RDBMS other than SQLite and would you like your tests to have a copy of it? Then you want to export the data from your app DB to SQLite. For that you need
@@ -24,4 +25,4 @@ Does your app use RDBMS other than SQLite and would you like your tests to have 
   * you may want to get [NetBeans IDE](http://www.netbeans.org)
     * get NetBeans for Java SE
     * Menu File > Open Project... > choose `src/filter/pom.xml`. That will open a Maven-based project and it will get dependencies automatically. Otherwise you need Argparse4j and Reflections as above.
-    * if you also want to develop Javascript code modules or Selenium Core extensions, add PHP support to your NetBeans via menu Tools > Plugins.
+    * if you also want to develop Javascript code modules or Selenium [Core extensions][core extension], add PHP support to your NetBeans via menu Tools > Plugins.

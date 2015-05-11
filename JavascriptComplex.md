@@ -2,6 +2,7 @@
 title: Javascript complexities
 layout: default
 ---
+{% include links %}
 
 # Optional parameters of functions #
 Javascript doesn't allow a function to specify a default value for a parameter. When calling a function and not specifying one or several parameters, they are `undefined`. Use strict comparison operator === to compare with `undefined`. Do not compare for that by non-strict operator == (since `undefined` non-strictly equals to `false, null, 0` and "", i.e. `undefined==true`).
@@ -136,7 +137,7 @@ In order to move towards CommonJS we'd need to:
   * migrate the documentation to use JSDoc 3 [@module tag](http://usejsdoc.org/tags-module.html) (more at [JSDoc CommonJS support](http://usejsdoc.org/howto-commonjs-modules.html)). However, JSDoc 3 is not supported by [NetBeans 7.3](https://netbeans.org/kb/73/ide/javascript-editor.html#jsdoc_support) (not sure about newer versions). Until then the JSDoc documentation would not show up in NetBeans.
   * have NetBeans code navigation to recognise CommonJS notation.
 
-The migration may not change [ExtensionSequencer](ExtensionSequencer) mechanism, since that resolves the order of activating Selenium IDE extensions, and not the order of loading Javascript code modules.
+The migration may not change [ExtensionSequencer](ExtensionSequencer) mechanism, since that resolves the order of activating [extensions of Selenium IDE][extension of Selenium IDE], and not the order of loading Javascript code modules.
 
 # Inheritance #
 There are many ways of class inheritance in Javascript. Follow [Mozilla way](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance) with `Object.create()`. E.g.:

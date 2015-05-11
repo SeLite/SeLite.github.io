@@ -30,10 +30,19 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 ## function
 Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a 'function' defined by SelBlocks Global/SelBlocks construct `function...endFunction`. If it's unclear, let's call the later _Selenese function, script function_ or _SelBlocksGlobal function_.
 
-## scripts
+## script
 Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites `scripts`. They're called `Selenese scripts` only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-Side note: [SelBlocksGlobal](SelBlocksGlobal) used to call Selenese _functions_ (defined by `function...endFunction`) scripts_. (Since they were defined by `script...endScript` originally.) However, SeLite doesn't refer to Selenese functions as _scripts_.
+Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, SeLite refers to them as _functions_ and not _scripts_.
+
+## Core extension
+_Selenium Core extension_, or just _Core extension_, extends functionality available to Selenese scripts. It doesn't provide any visual interface. Generally it can be loaded from Selenium IDE or Webdriver. But even if a Core extension is for Selenium IDE only, it's called a _Core extension_ rather than _IDE extension_. Core extensions from SeLite are like that: they are Selenium IDE-specific and they don't work with Webdriver.
+
+## IDE extension
+_Selenium IDE extension_, or just _IDE extension_, extends GUI of Selenium IDE. It doesn't interfere with Selenese scripts. However, it may provide configuration or other interface used by a _Core extension_, and those can be packaged together in a Firefox add-on.
+
+## Extension of Selenium IDE
+This is either a _Core extension_ but for Selenium IDE only, or an _IDE extension_.
 
 # Firefox chrome URLs for documentation and GUI
 Selenium and SeLite GUI, some of their documentation and all their source, are accessible via special Firefox URLs that start with _chrome://_. (Those addresses don't work in other browsers).
