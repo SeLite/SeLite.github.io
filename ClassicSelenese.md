@@ -4,12 +4,12 @@ layout: default
 ---
 
 # Summary and scope
-These notes are on top of [Selenium documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
+These notes on Selenese syntax are on top of [Selenium documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). See [EnhancedSelenese](EnhancedSelenese) on how SeLite improves it.
 
 # Auto-generated Selenese commands #
 Selenese commands are defined in these primary forms: <code>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</code> or <code><strong>is</strong>Xyz<strong>Present</strong></code>. Selenium auto-generates their variations (listed below).
 
-Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also `loadSeleniumCommands()` in Selenium IDE's `treeView.js`.)
+Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also `loadSeleniumCommands()` in Selenium IDE's `treeView.js`.<!-- TODO link to chrome & SE IDE Github-->)
 
 <table>
 <thead>
@@ -73,13 +73,14 @@ Selenium IDE shows the original reference for both the primary and auto-generate
 </tr>
 </tbody></table>
 
-# Selenese parameters (Target and Value)
-Selenese commands accept up to two parameters: Target and Value.
+# Selenese parameters (`target` and `value`)
+Selenese commands accept up to two parameters: `target` and `value`.
 
-* Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for `getEval`).
-* One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSelenese](EnhancedSelenese).
-* If Target is a locator, Value is usually the expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
+* `target` is often a locator (an expression that identifies an element). It can also be a Javascript expression (for `getEval`).
+* One or multiple parts of `target` or `value` can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSelenese](EnhancedSelenese).
+* If `target` is a locator, `value` is usually the expected or new value, which is compared or entered into element identified by `target`. `value` can also be a name of a stored variable, or something else.
 * [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it offline in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_).
+* Command references can call these parameters something more relevant/specific. Then the first one stands for `target` and the second one (if used) for `value`.
 
 ## XPath
 Full XPath locators start with `xpath=` or with //. Usually an XPath expression starts with //, with which you don't need to use `xpath=`. However, some SeLite commands (like `clickRandom` and `selectRandom`) only accept XPath as the locator, but they require it not to contain any leading `xpath=` prefix (whether the XPath starts with // or not).
@@ -107,7 +108,7 @@ Some Selenese actions store variables, to be used by further actions. [SelBlocks
 Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. `storeEval, getEval` or when using [EnhancedSelenese](EnhancedSelenese)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of `${name-of-the-variable}` won't work robustly. For those cases use `storedVars.name-of-the-variable` or `storedVars['name-of-the-variable']`. See also [EnhancedSelenese](EnhancedSelenese).
 
 ## Javascript variables
-Sometimes you want a _global_ variable that spreads across Selenese functions (which stored variables can't). Use _native_ Javascript variables for it. Set them using command/action `getEval` with the target being: `variable1=valueOrExpression, variable2=valueOrExpression....`
+Sometimes you want a _global_ variable that spreads across Selenese functions (which stored variables can't). Use _native_ Javascript variables for it. Set them using command/action `getEval` with `target` being: `variable1=valueOrExpression, variable2=valueOrExpression....`
 
 Don't use command `storeEval` for that - it sets a stored variable, which is local.
 

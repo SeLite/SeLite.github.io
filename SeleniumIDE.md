@@ -4,10 +4,18 @@ layout: default
 ---
 
 # Summary and scope
-These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax.
+These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Add .html extension to files
 When saving a test case or a test suite, Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
+
+# Hands-on GUI and Clipboard And Indent
+[AddOns](AddOns) > 'Hands-on GUI' and 'Clipboard And Indent' enable
+
+* in-place editing of Selenese commands and their parameters (`target` and `value`), right in the commands list
+* indentation of commands (suitable especially for [SelBlocksGlobal](SelBlocksGlobal) functions and structured commands)
+* productivity keyboard shortcuts
+* clipboard sharing between Selenium IDE and other applications
 
 # Using multiple Selenium IDEs in parallel
 A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for test cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.

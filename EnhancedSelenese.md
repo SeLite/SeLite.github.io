@@ -10,6 +10,20 @@ When compared to [ClassicSelenese](ClassicSelenese), automation scripts with SeL
 * conveniently access stored variables through `$storedVariableName` notation and
 * use Javascript within \`...\`
 
+# `$storedVariableName` notation
+This syntax enables Selenese commands and structures that evaluate their parameter(s) as Javascript to access stored variables as `$storedVariableName`. It's for
+
+* `getEval` (and its auto-generated variations as per [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)),
+* Javascript within \`...\` (and its variations) and
+* [SelBlocksGlobal](SelBlocksGlobal) structured commands that evaluate one or both of their parameters as Javascript. The commands and their parameters that support this are
+<!-- this lists commands that invoke expandStoredVars|evalWithExpandedStoredVars|cascadeElseIf|isMatchingCatch|handleCommandError|loadVars|dropToLoop -->
+  * `target` parameter of: `skipNext, gotoIf, if, elseIf, throw, catch, while, for, continue, break, return`
+  * `value` parameter of:
+    * `forEach, loadJsonVars, loadXmlVars`
+    * `call` - only on right side of function parameter assignments
+
+See also [SelBlocksGlobal](SelBlocksGlobal) > [Accessing stored variables](SelBlocksGlobal#accessing-stored-variables). 
+
 # Javascript within \`...\` without special prefix (cast to a string) #
 This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of back ticks \`...\`) to Selenese commands in their parameter (`target` or `value`). It evaluates any Javascript code in `target` or `value` that is between a pair of \`...\`. Then it converts the result to a string (excluding back apostrophes \` themselves).
 

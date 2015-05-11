@@ -5,6 +5,7 @@ layout: default
 
 # Overview #
 SelBlocks Global (one of SeLite [AddOns](AddOns)) is an enhancement of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/). It enables 
+
 * calling Selenese _functions_ (blocks of steps, formerly called _scripts_) across cases and
 * [EnhancedSelenese](EnhancedSelenese)
 
@@ -35,7 +36,7 @@ When calling a Selenese `function`, it doesn't inherit variables from the higher
 SelBlocks Global is in [JavascriptEssential](JavascriptEssential) > [Strict Javascript](JavascriptEssential#strict-javascript), which prevents some bad practice code. That also applies to Javascript expressions passed to SelBlocks Global Selenese commands, or passed through [EnhancedSelenese](EnhancedSelenese) notation \`...\` and #\`...\`. This implies the following incompatibilities with SelBlocks.
 
 ### Accessing stored variables ###
-When accessing stored variables, use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks that gave some commands access to stored variables without using $ prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) The affected Selenese commands are `for` and `call`.
+When accessing stored variables with `getEval` and special SelBlockGlobal commands, use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks, which let its special commands access stored variables without using `$` prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) See [EnhancedSelenese](EnhancedSelenese) > [`$storedVariableName` notation](EnhancedSelenese#storedvariablename-notation) for the affected commands.
 
 ### Loop `for` ###
 `for` loop now must use `$xyz` notation for all stored parameters (loop iterator or any other), whether on the left side or right side of the assignment operator =. So, instead of
@@ -51,7 +52,7 @@ for|$i=1; $i<=10; $i++
 ```
 
 ### Passing parameters to functions via `call` ###
-`call` must use `$xyz`, but only in expressions on the right side of parameter assignments `parameterName=expression`. The formal parameter names on the left (ones being passed to the function) must not start with $. So, instead of
+`call` can use `$xyz`, but only in expressions on the right side of parameter assignments `parameterName=expression`. The formal parameter names on the left (ones being passed to the function) must not start with $. So, instead of
 
 ```
 call|myFunction|myParam=storedVariableInCallingScope
