@@ -4,10 +4,10 @@ layout: default
 ---
 
 # Summary and scope
-These notes about [Selenium IDE](http://seleniumhq.org/projects/ide) are on top of its [standard documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
+These notes are on top of [Selenium documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). This assumes that you have installed all SeLite [AddOns](AddOns). If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Auto-generated Selenese commands #
-Selenese commands are defined in these primary forms: <code>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</code> and <code><strong>is</strong>Xyz<strong>Present</strong></code>. Selenium auto-generates their variations (listed below).
+Selenese commands are defined in these primary forms: <code>xyz, <strong>get</strong>Xyz, <strong>is</strong>Xyz</code> or <code><strong>is</strong>Xyz<strong>Present</strong></code>. Selenium auto-generates their variations (listed below).
 
 Selenium IDE shows the original reference for both the primary and auto-generated actions. However, the online reference contains only the primary actions. So if you'd like to locate them online (or in the source), use the following. (See also `loadSeleniumCommands()` in Selenium IDE's `treeView.js`.)
 

@@ -2,14 +2,21 @@
 title: Enhanced Selenese syntax
 layout: default
 ---
-[SelBlocksGlobal](SelBlocksGlobal) enhances syntax of parameters `target` and `value` passed to commands in [SeleniumIDE](SeleniumIDE). It allows those expressions to conveniently access stored variables through `$storedVariableName` notation. When compared to [ClassicSelenese](ClassicSelenese), the tests are shorter and clearer.
+
+# Overview
+When compared to [ClassicSelenese](ClassicSelenese), automation scripts with SeLite are shorter and clearer.
+ [SelBlocksGlobal](SelBlocksGlobal) enhances [SeleniumIDE](SeleniumIDE) syntax of command parameters `target` and `value`. It allows those expressions to
+
+* conveniently access stored variables through `$storedVariableName` notation and
+* use Javascript within \`...\`
 
 # Javascript within \`...\` without special prefix (cast to a string) #
 This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of back ticks \`...\`) to Selenese commands in their parameter (`target` or `value`). It evaluates any Javascript code in `target` or `value` that is between a pair of \`...\`. Then it converts the result to a string (excluding back apostrophes \` themselves).
 
 You can have any prefix or suffix around \`...\`. The whole Selenese parameter is treated as a string and results of Javascript codes from \`...\` are concatenated together with any prefix, suffix and any interlacing strings.
 
-<code>`... $storedVariableName ...`</code> works. However, <code>`...${storedVariableName}...`</code> doesn't work. Side note: We don't want this combination anyway, because `${storedVariableName}` works through string substitution. It would cause unexpected Javascript errors if `${variableName}` were a number but later it would become a non-numeric string and if there were no quotes/apostrophes around it. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in prefix/suffix of <code>`...`</code> (as per standard Selenese).
+## Compatibility with [ClassicSelenese](ClassicSelenese)
+<code>`... $storedVariableName ...`</code> works. However, <code>`...${storedVariableName}...`</code> (as per [ClassicSelenese](ClassicSelenese) > [Stored variables](ClassicSelenese#stored-variables)) doesn't work. Side note: We don't want this combination anyway, because `${storedVariableName}` works through string substitution. It would cause unexpected Javascript errors if `${variableName}` were a number but later it would become a non-numeric string and if there were no quotes/apostrophes around it. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in prefix/suffix of <code>`...`</code> (as per standard Selenese).
 
 ## Passing back apostrophe \` itself
 To pass back apostrophe \` itself, double it to \`\`. This applies to any `target` or `value`, whether they contain <code>`...`</code> or not. (Double \` also in prefix or suffix of <code>`...`</code> or in Javascript within <code>`...`</code>). That includes contents of Javascript string literals (within `'...'` or `"..."`) passed to classic `getEval` (and actions generated from it, as per [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)). So, with [SelBlocksGlobal](SelBlocksGlobal), any valid Selenese parameter can't contain an odd number of back apostrophes.
@@ -25,7 +32,7 @@ If a Selenese parameter contains only one <code>=`...`</code> with no prefix and
 ## \\\`...\` (a string literal/constant in XPath)
 <code>\`...`</code> is like <code>`...`</code>, but it quotes and escapes its result as string literal/constant for XPath expression. You can have multiple occurrences of <code>\`...`</code> in the same Selenese parameter, with any prefix/suffix and interlacing strings, and you can mix them with basic <code>`...`</code>.
 
-<code>\`...`</code> evaluates the javascript expression. The result is treated as content of a string literal/constant for XPath. Then this escapes both apostrophes and/or quotation marks in it. It generates an XPath string sub-expression that may use XPath function `concat()` (for details see `quoteForXPath()` in Selenium Core's [htmlutils.js](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/htmlutils.js) or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/htmlutils.js_).
+Like <code>`...`</code> without prefix, <code>\`...`</code> evaluates the enclosed part as Javascript expression. The result is treated as content of a string literal/constant for XPath. Then this escapes both apostrophes and/or quotation marks in it. It generates an XPath string sub-expression that may use XPath function `concat()` (for details see `quoteForXPath()` in Selenium Core's [htmlutils.js](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/htmlutils.js) or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/htmlutils.js_).
 
 ## @\`...\` (an extra Selenese parameter)
 By default, Selenium IDE allows to pass only two parameters to commands: `target` (usually a locator) and `value`. However, some SeLite commands (e.g. in [ExitConfirmationChecker](ExitConfirmationChecker)) need to receive extra one or two parameters. [SelBlocksGlobal](SelBlocksGlobal) enhances syntax by allowing value of each standard Selenese parameter (`target` or `value`) to include one occurrence of <code>@`...`</code> containing a Javascript expression.
@@ -68,4 +75,4 @@ Without <code>`...`</code> you'd need either to
  * Use `storedVars.variableName` with `getEval` and related commands.
  * Only use `$variableName` with commands from [SelBlocksGlobal](SelBlocksGlobal).
  * Use `${variableName}` or \``$variableName`\` with any other Selenese commands.
- * Keep `javascript{...}` for special purposes. See [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Parameter construction and Variables](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#parameter-construction-and-variables) or [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#parameter-construction-and-variables_. Use this notation with e.g. `window.opener.resizeTo()` and `window.opener.innerWidth`.
+ * Keep `javascript{...}` for special purposes. See online [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Parameter construction and Variables](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#parameter-construction-and-variables) or offline at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#parameter-construction-and-variables_. Use this notation with e.g. `window.opener.resizeTo()` and `window.opener.innerWidth`.

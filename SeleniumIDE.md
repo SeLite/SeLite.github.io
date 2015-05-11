@@ -1,7 +1,10 @@
 ---
-title: Selenium IDE usability notes/tips
+title: Selenium IDE GUI notes/tips
 layout: default
 ---
+
+# Summary and scope
+These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax.
 
 # Add .html extension to files
 When saving a test case or a test suite, Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
