@@ -5,7 +5,7 @@ layout: default
 
 # Overview
 When compared to [ClassicSelenese](ClassicSelenese), automation scripts with SeLite are shorter and clearer.
- [SelBlocksGlobal](SelBlocksGlobal) enhances [SeleniumIDE](SeleniumIDE) syntax of command parameters `target` and `value`. It allows those expressions to
+ [SelBlocksGlobal](SelBlocksGlobal) enhances syntax of [ClassicSelenese](ClassicSelenese) > [Selenese parameters target and value](ClassicSelenese#selenese-parameters-target-and-value). It allows those expressions to
 
 * conveniently access stored variables through `$storedVariableName` notation and
 * use Javascript within \`...\`
@@ -33,7 +33,7 @@ You can have any prefix or suffix around \`...\`. The whole Selenese parameter i
 <code>`... $storedVariableName ...`</code> works. However, <code>`...${storedVariableName}...`</code> (as per [ClassicSelenese](ClassicSelenese) > [Stored variables](ClassicSelenese#stored-variables)) doesn't work. Side note: We don't want this combination anyway, because `${storedVariableName}` works through string substitution. It would cause unexpected Javascript errors if `${variableName}` were a number but later it would become a non-numeric string and if there were no quotes/apostrophes around it. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in prefix/suffix of <code>`...`</code> (as per standard Selenese).
 
 ## Passing back apostrophe \` itself
-To pass back apostrophe \` itself, double it to \`\`. This applies to any `target` or `value`, whether they contain <code>`...`</code> or not. (Double \` also in prefix or suffix of <code>`...`</code> or in Javascript within <code>`...`</code>). That includes contents of Javascript string literals (within `'...'` or `"..."`) passed to classic `getEval` (and actions generated from it, as per [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)). So, with [SelBlocksGlobal](SelBlocksGlobal), any valid Selenese parameter can't contain an odd number of back apostrophes.
+To pass back apostrophe \` itself, double it to \`\`. This applies to any `target` or `value`, whether they contain <code>`...`</code> or not. (Double \` also in prefix or suffix of <code>`...`</code> or in Javascript within <code>`...`</code>). That includes contents of Javascript string literals (within `'...'` or `"..."`) passed to classic `getEval` (and actions generated from it, as per [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)). So, with [SelBlocksGlobal](SelBlocksGlobal), any valid Selenese parameter can't contain an odd number of back apostrophes.
 
 # Variations of Javascript within \`...\` with special prefixes
 Following are variations of <code>`...`</code> syntax. They all treat the string between the pair of <code>`...`</code> as a Javascript expression. However, they treat the result in a special way, or they apply extra transformation to it.
@@ -58,7 +58,7 @@ The Selenese command (i.e. a custom command or a custom override/intercept of st
 ## Special rules on using =\`...\` or @\`...\`
 
 ### For script maintainers and framework developers
-A simple rule is: Don't pass <code>=`...`</code> or <code>@`...`</code> to `getEval` or to custom commands that evaluate values of their Selenese parameters (`target` or `value`) as Javascript expression(s), unless those commands are designed for it. The same applies to derivative commands like `storeEval` (as per  [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)).
+A simple rule is: Don't pass <code>=`...`</code> or <code>@`...`</code> to `getEval` or to custom commands that evaluate values of their Selenese parameters (`target` or `value`) as Javascript expression(s), unless those commands are designed for it. The same applies to derivative commands like `storeEval` (as per  [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)).
 
 Alternatively, if you'd really like to pass the string value of this object as a parameter to command `getEval` (or `storeEval`...), which would then evaluate it as a Javascript expression (again), use <code>`...`</code> instead.
 

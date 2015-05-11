@@ -64,7 +64,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <thead><th> <strong>Issue</strong>                                                                                               </th><th> <strong>Third party</strong> </th><th> <strong>Reason</strong>                           </th></thead><tbody>
 
 <!--
-<tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<br>(See a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#indentation">Indentation</a>.) </td></tr>
+<tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<br>(See a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#hands-on-gui-and-clipboard-and-indent">Hands-on GUI and Clipboard And Indent</a>.) </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=3116'>Base URL Should Allow Path</a>                  </td><td> Selenium    </td><td> Practical testing and integration </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=5495'>Refactor TestCase.debugContext to have a class on its own</a>             </td><td> Selenium    </td><td> Stable API of <a href="SelBlocksGlobal">SelBlocksGlobal</a> </td></tr>

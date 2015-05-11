@@ -3,10 +3,8 @@ title: Customising Selenese
 layout: default
 ---
 
-See also [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands).
-
 # Locating Javascript implementation of Selenese 'doer' commands #
-Selenese primary 'doer' commands (i.e. ones with primary forms that don't start with **`get`** nor **`is`** and that are not like <code><strong>is</strong>Xyz<strong>Present</strong></code> - as per table in [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)) are defined in Javascript functions whose names start with **`do`**. E.g. command `xyz` is implemented in function <code><strong>do</strong>Xyz</code>. Therefore do not search for their implementation functions by their Selenese names case sensitively.
+Selenese primary 'doer' commands (i.e. ones with primary forms that don't start with **`get`** nor **`is`** and that are not like <code><strong>is</strong>Xyz<strong>Present</strong></code> - as per table in [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)) are defined in Javascript functions whose names start with **`do`**. E.g. command `xyz` is implemented in function <code><strong>do</strong>Xyz</code>. Therefore do not search for their implementation functions by their Selenese names case sensitively.
 
 # Locating a Javascript function in sources #
 There are various ways of how to define/set/override a function in Javascript (usually through setting it as if it were a field on the class prototype object). So if you need to debug/modify/extend a function, it may not be easy to locate. You can use the following regular expressions to find definition(s) of a function (if implemented in one of the common ways). Replace `FUNCTION` with the name of the function.
@@ -33,7 +31,7 @@ You can define functions for Selenese scope in either way mentioned at [Javascri
 # Special rules for custom Selenese commands #
 
 ## Names of _doer_ commands ##
-Primary Selenese _doer_ actions are implemented by Javascript functions whose names start with **`do`**. (E.g. action `abcDef` is implemented by function <code><strong>do</strong>AbcDef</code>.) Don't have primary Selenese _doer_ action names themselves in form <code><strong>get</strong>Xyz, <strong>is</strong>Xyz</code> or <code><strong>is</strong>Xyz<strong>Present</strong></code>  (i.e. implemented by functions <code><strong>doGet</strong>Xyz, <strong>doIs</strong>Xyz</code> or <code><strong>doIs</strong>Xyz<strong>Present</strong></code>, respectively), unless you have a very good reason. Such names would imply that the command is a _getter_ or _checker_ rather than a _doer_. They would suggest that there are other auto-generated Selenese commands for them (<code><strong>assert</strong>Xyz</code> etc., as per [SeleniumIDE](SeleniumIDE) > [Auto-generated Selenese commands](SeleniumIDE#auto-generated-selenese-commands)), but those wouldn't exist.
+Primary Selenese _doer_ actions are implemented by Javascript functions whose names start with **`do`**. (E.g. action `abcDef` is implemented by function <code><strong>do</strong>AbcDef</code>.) Don't have primary Selenese _doer_ action names themselves in form <code><strong>get</strong>Xyz, <strong>is</strong>Xyz</code> or <code><strong>is</strong>Xyz<strong>Present</strong></code>  (i.e. implemented by functions <code><strong>doGet</strong>Xyz, <strong>doIs</strong>Xyz</code> or <code><strong>doIs</strong>Xyz<strong>Present</strong></code>, respectively), unless you have a very good reason. Such names would imply that the command is a _getter_ or _checker_ rather than a _doer_. They would suggest that there are other auto-generated Selenese commands for them (<code><strong>assert</strong>Xyz</code> etc., as per [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands)), but those wouldn't exist.
 
 ## Getter commands ##
 Don't define the second parameter (usually called `value`) for Selenese _getter_ commands. See <https://code.google.com/p/selenium/issues/detail?id=3202>.
