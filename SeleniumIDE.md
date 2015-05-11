@@ -77,7 +77,7 @@ Selenium IDE shows the original reference for both the primary and auto-generate
 Selenese commands accept up to two parameters: Target and Value.
 
 * Target is often a locator (an expression that identifies an element). The whole target can also be a Javascript expression (for `getEval`).
-* One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSyntax](EnhancedSyntax).
+* One or multiple parts of Target or Value can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSelenese](EnhancedSelenese).
 * If Target is a locator, Value is usually the expected or new value, which is compared or entered into element identified by Target. Value can also be a name of a stored variable, or something else.
 * [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it offline in Firefox at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#locators_).
 
@@ -104,7 +104,7 @@ Find a basic example at Selenium Documentation > [Test Design Considerations](ht
 ## Stored variables
 Some Selenese actions store variables, to be used by further actions. [SelBlocksGlobal](SelBlocksGlobal) manages scope of such variables. When inside a [SelBlocksGlobal](SelBlocksGlobal) function, you can only use stored variables set in that function (or passed as parameters to it). The local scope also means: if you set a stored variable within a Selenese function and the same stored variable exists in the caller scope (that invoked the current function), the variable in the caller scope won't be affected.
 
-Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. `storeEval, getEval` or when using [EnhancedSyntax](EnhancedSyntax)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of `${name-of-the-variable}` won't work robustly. For those cases use `storedVars.name-of-the-variable` or `storedVars['name-of-the-variable']`. See also [EnhancedSyntax](EnhancedSyntax).
+Parameters of Selenese actions can access stored variables as `${name-of-the-variable}`. Those get replaced by the value of the variable. However, if the action processes the parameter as a Javascript expression (e.g. `storeEval, getEval` or when using [EnhancedSelenese](EnhancedSelenese)), and if the variable contains an array/object or a non-numeric string (possibly with an apostrophe or quotation mark), then replacement of `${name-of-the-variable}` won't work robustly. For those cases use `storedVars.name-of-the-variable` or `storedVars['name-of-the-variable']`. See also [EnhancedSelenese](EnhancedSelenese).
 
 ## Javascript variables
 Sometimes you want a _global_ variable that spreads across Selenese functions (which stored variables can't). Use _native_ Javascript variables for it. Set them using command/action `getEval` with the target being: `variable1=valueOrExpression, variable2=valueOrExpression....`

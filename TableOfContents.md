@@ -6,7 +6,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">Overview</a></li>
-    <li><a href="SeleniumIDE">Selenium IDE</a></li>
+    <li><a href="SeleniumIDE">SeleniumIDE</a></li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
   </ul>
@@ -51,11 +51,11 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese EnhancedSyntax ExtraCommands">Selenese<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese EnhancedSelenese ExtraCommands">Selenese<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
-    <li><a href="EnhancedSyntax">EnhancedSyntax</a></li>
+    <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
     <li><a href="ExtraCommands">ExtraCommands</a></li>
   </ul>
 </li>
