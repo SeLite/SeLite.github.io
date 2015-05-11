@@ -51,10 +51,11 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese EnhancedSelenese ExtraCommands">Selenese<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese ExtraCommands">Selenese<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
+    <li><a href="ClassicSelenese">ClassicSelenese</a></li>
     <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
     <li><a href="ExtraCommands">ExtraCommands</a></li>
   </ul>
