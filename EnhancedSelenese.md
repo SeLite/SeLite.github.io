@@ -45,6 +45,7 @@ If a Selenese parameter contains only one <code>=`...`</code> with no prefix and
 
 ## \\<span></span>\`...\` (a string literal/constant in XPath)
 {:#a-string-literalconstant-in-xpath}
+<!-- Header ID needed until release of https://github.com/gettalong/kramdown/issues/251 -->
 <code>\`...`</code> is like <code>`...`</code>, but it quotes and escapes its result as string literal/constant for XPath expression. You can have multiple occurrences of <code>\`...`</code> in the same Selenese parameter, with any prefix/suffix and interlacing strings, and you can mix them with basic <code>`...`</code>.
 
 Like <code>`...`</code> without prefix, <code>\`...`</code> evaluates the enclosed part as Javascript expression. The result is treated as content of a string literal/constant for XPath. Then this escapes both apostrophes and/or quotation marks in it. It generates an XPath string sub-expression that may use XPath function `concat()` (for details see `quoteForXPath()` in Selenium Core's [htmlutils.js](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/htmlutils.js) or at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/scripts/htmlutils.js_).

@@ -28,12 +28,12 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 # Terminology
 
 ## function
-Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a 'function' defined by SelBlocks Global/SelBlocks construct `function...endFunction`. If it's unclear, let's call the later _Selenese function, script function_ or _SelBlocksGlobal function_.
+Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocksGlobal](SelBlocksGlobal)/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.
 
 ## script
-Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites `scripts`. They're called `Selenese scripts` only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
+Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites _scripts_. They're called _Selenese scripts_ only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, SeLite refers to them as _functions_ and not _scripts_.
+Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocksGlobal](SelBlocksGlobal)/SeLite refer to them as _functions_ rather than _scripts_.
 
 ## Core scope
 _Selenium Core scope_, or just _Core scope_, is global scope (as in [JavascriptEssential](JavascriptEssential) > [Scope](JavascriptEssential#scope)) in _Core extensions_ and in Selenese _scripts_.

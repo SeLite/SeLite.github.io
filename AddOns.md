@@ -149,7 +149,7 @@ So, use the `download` links below for recent releases. **Ignore** the text: 'Yo
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
     <td> <ul>
-        <li>Options > SeLite Settings for this test suite</li>
+        <li>Options > SeLite Settings for this suite</li>
         <li>Configuration: <em>chrome://selite-settings/content/tree.xul</em></li>
         <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
         <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>

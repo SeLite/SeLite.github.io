@@ -59,7 +59,7 @@ SeLite is easy to install, with no server side (apart from the controlled web ap
 When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedTests](PackagedTests) on how to run demos. See also [Customisation](index#customisation) below.
 
 ## Database
-Scripts (whether for testing or not) can stores their data in [SQLite](http://www.sqlite.org/) database. When used for testing, test DB is initialised to a copy (or an export) of the web application's DB.
+Scripts (whether for testing or not) can store their data in [SQLite](http://www.sqlite.org/) database. When used for testing, test DB is initialised to a copy (or an export) of the web application's DB.
 
  * If the web application stores its data in [SQLite](http://www.sqlite.org/), test data lifecycle is streamlined. You can then use all buttons of [SettingsInterface](SettingsInterface). They snapshot application DB (into 'vanilla' DB). They (re)load test DB and/or application DB from that snapshot.
  * Otherwise import the app DB (from Postgres, MySQL and potentially other types) via customisable filters. Apply [DataImport](DataImport).
