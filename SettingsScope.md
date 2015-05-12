@@ -2,15 +2,16 @@
 title: Settings Scope
 layout: default
 ---
+{% include links %}
 
 # Level of applying configurations and manifests #
-Configurations have effect on test suites, rather than to specific test cases. That's because an automation case can call Selenese function from another case (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those test cases were associated with different configurations.
+Configurations have effect on [suites][suite], rather than to specific [cases][case]. That's because an automation case can call Selenese function from another [case] (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those [cases][case] were associated with different configurations.
 
-A manifest affects to any test suite under its folder subtree, unless overridden by manifest(s) at a more specific (lower) level or by a set (at any level). Set(s) override _values_ manifest(s), so that teams can share default values via _values_ manifests, yet the team members can override them in their own set(s), serving as preferences, without changing any shared manifest(s).
+A manifest affects to any [suite] under its folder subtree, unless overridden by manifest(s) at a more specific (lower) level or by a set (at any level). Set(s) override _values_ manifest(s), so that teams can share default values via _values_ manifests, yet the team members can override them in their own set(s), serving as preferences, without changing any shared manifest(s).
 
-The actual location of test case(s) doesn't matter. They can even be outside of the test suite folder. So you could run same test case(s) through different test suite(s), each with different combination of manifest(s) and set(s).
+The actual location of [case(s)][case] doesn't matter. They can even be outside of the [suite] folder. So you could run same [case(s)][case] through different suite(s), each with different combination of manifest(s) and set(s).
 
-Manifests work only if the module associates with folders. Otherwise the test uses the default set (if the module allows sets) or the only existing set (if the module doesn't allow multiple sets), or a set with a given name (if requested by an explicit API call). See [SettingsAPI](SettingsAPI).
+Manifests work only if the module associates with folders. Otherwise the [script] uses the default set (if the module allows sets) or the only existing set (if the module doesn't allow multiple sets), or a set with a given name (if requested by an explicit API call). See [SettingsAPI](SettingsAPI).
 
 ## Multi-valued fields ##
 Value(s) of a multi-valued field come from a maximum of one source (set or manifest) - the topmost applicable from the list above. Multi-valued fields don't have the values merged from various sets neither from manifests. It would make them more flexible, but also more confusing and fragile. This also applies to FixedMap fields (see [SettingsFields](SettingsFields)).
@@ -41,10 +42,10 @@ So, a field will have value(s) based on its topmost occurrence within:
 Manifests are cached
 
   * temporarily when edited through GUI. You just need to refresh the screen in order for a change to apply.
-  * fully when used by Selenium tests (via `SeLiteData.getStorageFromSettings`). You need to restart Firefox in order for a change to apply.
+  * fully when used by Selenium [scripts][script] (via `SeLiteData.getStorageFromSettings`). You need to restart Firefox in order for a change to apply.
   * optionally when used by other extensions (the developer can choose whether to cache or not)
 
 # Symlinks (on Mac OS/Unix) #
-Symlinks are another way to have variety/separation of configuration sets. If you access a test suite via a file path which has symlinked non-leaf folder(s), it can be  associated to partially/fully different configuration sets.
+Symlinks are another way to have variety/separation of configuration sets. If you access a [suite] via a file path which has symlinked non-leaf folder(s), it can be  associated to partially/fully different configuration sets.
 
-<a href='Hidden comment: Comment: TODO Test how Selenium IDE treats a test suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolve it first? If it resolves the path first, then change this paragraph.'></a>
+<a href='Hidden comment: Comment: TODO Test how Selenium IDE treats a suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolve it first? If it resolves the path first, then change this paragraph.'></a>

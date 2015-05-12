@@ -2,6 +2,7 @@
 title: Exit Confirmation Checker
 layout: default
 ---
+{% include links %}
 
 # Status #
 This add-on is a work in progress. Currently it works only for Selenese commands `type` and `typeRandom`.
@@ -28,13 +29,13 @@ Out-of-the-box ExitConfirmationChecker only handles
   * any inputs as relevant for confirmation. You may have inputs that don't need confirmation when leaving the page (e.g. search-like fields), but by default ExitConfirmationChecker expects the confirmation if there was a change to any input. You can override that.<!-- TODO: how to override? Provide functions and/or filters.-->
 
 ### Reverted changes (or zero changes) ###
-A test may select a new value for a field and then change it back to its original value, or type content in a free-type field same as its original content (or type something else and then type the original content back). The application may keep a list of original values of the fields and then treat such a field as unchanged. Otherwise it treats such a field as unchanged. ExitConfirmationChecker can validate both behaviours. You can configure which behaviour your application uses.
+A [script] may select a new value for a field and then change it back to its original value, or type content in a free-type field same as its original content (or type something else and then type the original content back). The application may keep a list of original values of the fields and then treat such a field as unchanged. Otherwise it treats such a field as unchanged. ExitConfirmationChecker can validate both behaviours. You can configure which behaviour your application uses.
 
 # Configuration #
 This uses [Settings](Settings) with standard module `extensions.selite-settings.common` and fields `exitConfirmationCheckerAssert` and `exitConfirmationCheckerMode`. `exitConfirmationCheckerAssert` indicates whether the defects in showing (or not showing) the confirmation should result in Selenese assertion failure (like failing any `assertXyz` command). Otherwise such defects only result in verification failure (like failing any `verifyXyz` command). `exitConfirmationCheckerMode` can be
 
-  * `inactive`: no effect, confirmation popups show up as application drives them (and they will stop Selenium IDE from running the rest of the test)
-  * `ignored`: no validation, but hide any confirmation popups. Good if you want your test to run without validating the popups.
+  * `inactive`: no effect, confirmation popups show up as application drives them (and they will stop Selenium IDE from running the rest of the [script])
+  * `ignored`: no validation, but hide any confirmation popups. Good if you want your [script] to run without validating the popups.
   * `includeRevertedChanges`: validate confirmation, expect confirmation for reverted changes, don't show any confirmation popups
   * `skipRevertedChanges`: validate confirmation, expect no confirmation for reverted changes, don't show any confirmation popups
 
@@ -42,13 +43,13 @@ This uses [Settings](Settings) with standard module `extensions.selite-settings.
 Here are a few rules of thumb:
 
   * If you run Selenese commands one by one, beware that the validation is delayed by one command.
-  * Don't have any commands that modify inputs or (re)load the page at the end of a test suite (or a test case, if you run a test case on its own).
+  * Don't have any commands that modify inputs or (re)load the page at the end of a [suite] (or a [case], if you run the case on its own).
   * If you don't use `exitConfirmationCheckerAssert`, ignore error logs unless they increase the error count.
 
 ### Details ###
-This validates effect of a command only just before running the next command. However, it uses configuration present for that next command. This can get highly confusing when running multiple test suites via SeLite Run All Favorites, if they have different configuration and the last command of a suite (other than the last suite) modifies an input or (re)loads the page.
+This validates effect of a command only just before running the next command. However, it uses configuration present for that next command. This can get highly confusing when running multiple [suites][suite] via SeLite Run All Favorites, if they have different configuration and the last command of a suite (other than the last suite) modifies an input or (re)loads the page.
 
-If you run  a whole test case (or test suite), you don't set `exitConfirmationCheckerAssert`, and the previous command fails ExitConfirmationChecker validation, then ExitConfirmationChecker logs an extra error. That's because of a workaround for [ThirdPartyIssues](ThirdPartyIssues) > [verify\* should show the diff](https://code.google.com/p/selenium/issues/detail?id=1092). Otherwise, when you run a single Selenese command (by double-clicking) and the command fails ExitConfirmationChecker validation, there would be no message in the log at all. Please vote for that issue and for other [ThirdPartyIssues](ThirdPartyIssues).
+If you run  a whole [case] (or [suite]), you don't set `exitConfirmationCheckerAssert`, and the previous command fails ExitConfirmationChecker validation, then ExitConfirmationChecker logs an extra error. That's because of a workaround for [ThirdPartyIssues](ThirdPartyIssues) > [verify\* should show the diff](https://code.google.com/p/selenium/issues/detail?id=1092). Otherwise, when you run a single Selenese command (by double-clicking) and the command fails ExitConfirmationChecker validation, there would be no message in the log at all. Please vote for that issue and for other [ThirdPartyIssues](ThirdPartyIssues).
 
 <!--If your page is a result of a redirect, then you need to call `getEval | _SeLiteExitConfirmationChecker.overrideOnBeforeUnload()` before the commmand that causes the redirect. TODO implement: Have an optional parameter to indicate number of Selenese commands before the redirect; this is useful if there are structural commands in between, e.g. if/else, for/while...'>-->
 

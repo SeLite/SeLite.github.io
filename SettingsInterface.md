@@ -13,7 +13,7 @@ SeLiteSettings' configuration interface is within Firefox at [_chrome://_ URLs](
 | _chrome://selite-settings/content/tree.xul?module=full-module-name_           | to manage set(s) for a given module |
 | _chrome://selite-settings/content/tree.xul?prefix=prefix-of-full-module-name_ | to manage set(s) of all modules whose name starts with given prefix |
 | _chrome://selite-settings/content/tree.xul?selectFolder_                      | to select a folder for which to review any fields |
-| _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_       | to review effective configuration for test suites in that folder, based on any applicable sets or manifests as per [SettingsScope](SettingsScope) |
+| _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_       | to review effective configuration for [suites][suite] in that folder, based on any applicable sets or manifests as per [SettingsScope](SettingsScope) |
 | _chrome://selite-settings/content/tree.xul?register_ | to register a module manually (from its javascript file). You need this only if you design or import a custom configuration module that is not packaged as an [extension of Selenium IDE]. Alternatively you may use your own [Core extension] and [SettingsAPI](SettingsAPI) to register your module automatically. |
 
 Per-folder view colours fields based on where the value(s) come from:
@@ -23,16 +23,16 @@ Per-folder view colours fields based on where the value(s) come from:
  * values manifest
 
 # Reloading databases
-SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of test DB, app DB or vanilla DB (as per the table below). These buttons do the full job on their own only if your web app uses SQLite as its DB. Otherwise apply [DataImport](DataImport).
+SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of [script] DB, app DB or vanilla DB (as per the table below). These buttons do the full job on their own only if your web app uses SQLite as its DB. Otherwise apply [DataImport](DataImport).
 
-See [TestMethodsTheory](TestMethodsTheory) for definition of test and app DB. Vanilla DB serves as a snapshot of app DB, which you can revert to when the test got out of sync with the app, because of a bug in your test, timeout etc.
+See [TestMethodsTheory](TestMethodsTheory) for definition of script and app DB. Vanilla DB serves as a snapshot of app DB, which you can revert to after the script gets out of sync with the app, because of timeout, a bug in the script etc.
 
 | **Selenium IDE button** | **Source DB** | **Target DB** | **Extra target DB** |
 | ![reload test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_test.png) | App | Test | |
 | ![reload vanilla and test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png) | App | Test | Vanilla |
 | ![reload app and test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_app_and_test.png) | Vanilla | Test | App |
 
-You should pause tests while using these buttons, otherwise the test script or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.
+You should pause [scripts][script] while using these buttons, otherwise the [script] or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.
 
 ## Permissions
 Reloading databases requires your local account (which runs Firefox) to have access to delete the web app DB file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux `setfacl` - see [DrupalFramework](DrupalFramework)).

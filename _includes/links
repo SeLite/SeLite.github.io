@@ -1,3 +1,6 @@
+[case]: AboutDocumentation#case
+[suite]: AboutDocumentation#suite
+[script]: AboutDocumentation#script
 [Core scope]: AboutDocumentation#core-scope
 [Core extension]: AboutDocumentation#core-extension
 [IDE extension]: AboutDocumentation#ide-extension

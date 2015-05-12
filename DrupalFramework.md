@@ -2,8 +2,9 @@
 title: Drupal 7 framework
 layout: default
 ---
+{% include links %}
 
-The test example logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
+The example [script] logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
 
 # Install Drupal 7 #
 
@@ -72,7 +73,7 @@ chmod chmod a+rwx *sqlite*<br>
 # Install SeLite Drupal framework #
 Apply [InstallFramework](InstallFramework). The framework and tests are in [drupal](https://code.google.com/p/selite/source/browse/drupal) folder. The above installation had `appDB` filename `/etc/drupal7/default/files/data.sqlite`.
 
-When using Drupal as a non-admin user, it needs a front page, but that doesn't exist by default. Do that before you run other tests: Open Firefox menu > Tools > Selenium IDE. Selenium menu > File > Open Test Suite... > locate `drupal/test_suites_and_cases/setup_content_suite.html`. Then run the test suite (menu > Actions > Play entire test suite).
+When using Drupal as a non-admin user, it needs a front page, but that doesn't exist by default. Do that before you run other tests: Open Firefox menu > Tools > Selenium IDE. Selenium menu > File > Open Test Suite... > locate `drupal/test_suites_and_cases/setup_content_suite.html`. Then run the [suite] (in Selenium IDE menu > Actions > Play entire test suite).
 
 # Limitation #
 Example `create_user_suite.html` only works with English installation.

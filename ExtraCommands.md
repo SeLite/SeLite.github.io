@@ -2,6 +2,7 @@
 title: Extra Commands
 layout: default
 ---
+{% include links %}
 
 [SeLite Commands](https://addons.mozilla.org/en-US/firefox/addon/selite-commands/), one of SeLite [AddOns](AddOns), provides several Selenese commands and related functionality.
 
@@ -9,7 +10,7 @@ layout: default
 Commands with name in form `xxxRobust: typeRobust, clickRobust, selectRobust` action the same as original commands `xxx`, but if the target doesn't exist, then they skip and they don't fail.
 
 # Random data #
-Commands with name in form `xxxRandom: clickRandom, selectRandom, typeRandom, typeRandomEmail` generate controlled random data. The commands enter (or select or click) a random value(or an option or a radio button) for a given field (of a specified type). Optionally, they can also store the entered/selected/clicked text/choice in a given Selenese variable, so that the test can use it later (e.g. to store it in test DB).
+Commands with name in form `xxxRandom: clickRandom, selectRandom, typeRandom, typeRandomEmail` generate controlled random data. The commands enter (or select or click) a random value(or an option or a radio button) for a given field (of a specified type). Optionally, they can also store the entered/selected/clicked text/choice in a given Selenese variable, so that the [script] can use it later (e.g. to store it in [script] DB).
 
 Those commands perform two functions
 

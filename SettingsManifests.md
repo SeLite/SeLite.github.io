@@ -2,18 +2,18 @@
 title: Settings Manifests
 layout: default
 ---
-
+{% include links %}
 
 # Purpose of manifests #
-Manifests connect test suites to configuration sets, or they define configuration values. They let you define
+Manifests connect [suites][suite] to configuration sets, or they define configuration values. They let you define
 
-  * default configuration (or its parts) specific to a folder of test suite(s)
+  * default configuration (or its parts) specific to a folder of [suite(s)][suite]
   * associations between tests and profile-based configuration sets
   * overrides at various levels.
 
 Manifests are optional. A configuration module (schema) can opt out of using them. Such a module then only uses module default values, and the default set (if any and if the it allows multiple sets) or the only one set (if it doesn't allow multiple sets).
 
-There are two types of manifests: containing _values_ or _associations_. They both apply to any test suites under their folder tree. See [SettingsScope](SettingsScope).
+There are two types of manifests: containing _values_ or _associations_. They both apply to any suites under their folder tree. See [SettingsScope](SettingsScope).
 
 Manifests are plain text files, so you can share and manage them through source control. Empty lines are skipped, and so are lines starting with a hash # (which serve for comments).
 

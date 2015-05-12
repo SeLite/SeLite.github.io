@@ -2,12 +2,13 @@
 title: Selenium IDE GUI notes/tips
 layout: default
 ---
+{% include links %}
 
 # Summary and scope
-These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop test scripts, frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
+These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop [scripts][script], frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Add .html extension to files
-When saving a test case or a test suite, Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
+When saving a [case] or a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
 # Hands-on GUI and Clipboard And Indent
 [AddOns](AddOns) > 'Hands-on GUI' and 'Clipboard And Indent' enable
@@ -18,9 +19,9 @@ When saving a test case or a test suite, Selenium IDE doesn't add `'.html'` exte
 * clipboard sharing between Selenium IDE and other applications
 
 # Using multiple Selenium IDEs in parallel
-A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different test cases in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for test cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
+A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different [cases][case] in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
 
-For robust access modify all test cases and test suites only in primary Selenium IDE window. Alternatively, edit different test cases (or sets of them) in different Selenium IDEs. Either way, beware that sometimes other Selenium IDEs don't pick up the change when saved (even if you switch between test cases in those other Selenium IDEs) or they notice it only later. So if you modify a test case in one chosen Selenium IDE and you use other Selenium IDEs as its read-only reference, it may be out of date.
+For robust access modify all cases and [suites][suite] only in primary Selenium IDE window. Alternatively, edit different cases (or sets of them) in different Selenium IDEs. Either way, beware that sometimes other Selenium IDEs don't pick up the change when saved (even if you switch between cases in those other Selenium IDEs) or they notice it only later. So if you modify a [case] in one chosen Selenium IDE and you use other Selenium IDEs as its read-only reference, it may be out of date.
 
 ## Auxiliary Selenium IDEs inside browser
 This shows one (standard) Selenium IDE detached from Firefox browser windows. Other Selenium IDEs are inside browser windows, but they may look standard, too. Compared to the next method, this
@@ -29,7 +30,7 @@ This shows one (standard) Selenium IDE detached from Firefox browser windows. Ot
 * (+) involves less maintenance: it runs only one Firefox instance (with one profile)
 * (+) is more convenient: shared bookmarks, window history, add-ons etc.
 * (+-) shares history of recent files in Selenium IDE; however, it gets overwritten by the instance closed as the last one
-* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with test suites. (That prevents potential conflicts due to the fact that all auxiliary Selenium IDEs share [Core scope] along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [BootstrapLoader](BootstrapLoader), either.
+* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with [suites][suite]. (That prevents potential conflicts due to the fact that all auxiliary Selenium IDEs share [Core scope] along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [BootstrapLoader](BootstrapLoader), either.
 
 Steps
 
@@ -56,7 +57,7 @@ In auxiliary IDEs
 
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
 * (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press Alt.
-* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved test cases/test suite. So it's the safest not to modify tests in auxiliary IDEs.
+* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite. So it's the safest not to modify tests in auxiliary IDEs.
 
 Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
 

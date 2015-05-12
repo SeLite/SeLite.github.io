@@ -2,13 +2,13 @@
 title: Settings Logins
 layout: default
 ---
-
+{% include links %}
 
 # Summary #
-It's a bad practice to hard-code test logins in your test scripts or components. SeLite helps you to make it flexible, but it can't do all the work for you.
+It's a bad practice to hard-code [script] logins in your [scripts][script] or components. SeLite helps you to make it flexible, but it can't do all the work for you.
 
 # Firefox password store #
-If you use Firefox password store and you've saved the passwords (for the tested website), your test can access those passwords via `SeLiteMisc.loginManagerPassword()`. You just need to configure/store the username(s) - see options below.
+If you use Firefox password store and you've saved the web application passwords, the script can access them via `SeLiteMisc.loginManagerPassword()`. You just need to configure/store the username(s) - see options below.
 
 Beware that Firefox recovers the passwords as plain text. So they are only as safe as your home folder (which contains your Firefox profile).
 
@@ -26,11 +26,13 @@ This uses `SeLiteSettings.Field.FixedMap`, which provides multivalued freetype f
 ## Adding custom keys ##
 Frameworks can add keys to fields of class `SeLiteSettings.Field.FixedMap`. One such field is 'extensions.selite-settings.common.roles'. Then they benefit from common functionality like `SeLiteSettings.roleToUser()`. See [InstallFramework](InstallFramework) > [Load and configure the framework](InstallFramework#load-and-configure-the-framework).
 
-## Creating/updating passwords by tests ##
-If your tests create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in test DB](GeneralFramework#preserving-special-values-in-test-db).
+## Creating/updating passwords by [scripts][script]
+{:#creatingupdating-passwords-by-scripts}
+
+If your [scripts][script] create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in script DB](GeneralFramework#preserving-special-values-in-script-db).
 
 # Out of scope: More flexible or complex fields #
-The test scripts contain rolenames or username placeholders - thus you don't want to change them frequently. So there is no need to have the roles or username placeholders editable via GUI interface; it's enough to have them hardcoded in the config field definition.
+The [scripts][script] contain rolenames or username placeholders - thus you don't want to change them frequently. So there is no need to have the roles or username placeholders editable via GUI interface; it's enough to have them hardcoded in the config field definition.
 
 ## Ordered multi-valued freetype fields ##
 A more flexible option could be to use two or three multi-valued instances of `SeLiteSettings.Field.String`. The first one would list the role names or username placeholders and the second would contain the actual respective usernames (in the respective order). The third would be for passwords (again, in the respected order) - unless you use Firefox password store. Such paired lists would be flexible, but quite fragile to manage.

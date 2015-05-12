@@ -2,6 +2,7 @@
 title: DB-driven browser automation - Overview
 layout: default
 ---
+{% include links %}
 
 # Database-driven browser automation
 
@@ -31,7 +32,7 @@ See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheor
 SeLite enables the following in Selenium IDE
 
 * reusable, structured and expressive scripts
-  * [SelBlocksGlobal](SelBlocksGlobal): flow structures, blocks of Selenese commands (functions) re-used across test cases
+  * [SelBlocksGlobal](SelBlocksGlobal): flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
   * [EnhancedSelenese](EnhancedSelenese) for shorter and cleaner scripts
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
@@ -45,7 +46,7 @@ SeLite enables the following in Selenium IDE
 * extra automation
   * [ExitConfirmationChecker](ExitConfirmationChecker) validates presence of confirmation when leaving unsubmitted forms
   * [AutoCheck](AutoCheck) detects webserver errors/warnings
-  * [Run All Favorites](https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/) executes multiple test suites
+  * [Run All Favorites](https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/) executes multiple Selenese [suites][suite]
 * productive environment
   * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves clibpoard usage and it supports indentation of commands
   * fast development cycle for custom Javascript functionality (via [BootstrapLoader](BootstrapLoader))

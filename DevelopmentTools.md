@@ -6,13 +6,14 @@ layout: default
 
 # Development and debugging #
 
-Read this in parallel to
+This is for developing [Core extensions][core extension] and SeLite frameworks (as per [GeneralFramework](GeneralFramework)). Apply this in parallel to
 
+  * [AddOnsThirdParty](AddOnsThirdParty)
   * [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment). Following are the relevant sections (in order of general importance):
     * see [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) on how to run separate profiles of Firefox at the same time
     * skip 'Development preferences', see below instead
     * if you develop your own packaged extensions (without [BootstrapLoader](BootstrapLoader)), then read [Firefox extension proxy file](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file). See also [setup_proxies.bat](https://github.com/selite/selite/blob/master/setup_proxies.bat) or [setup_proxies.sh](https://github.com/selite/selite/blob/master/setup_proxies.sh).
-    * if you start Firefox from automated scripts, read 'Preventing the first launch extension selector'
+    * if you start Firefox from automated commandline/shell scripts, read 'Preventing the first launch extension selector'
   * [Debugging JavaScript (MDN)](https://developer.mozilla.org/en/docs/Debugging_JavaScript)
   * [Debugging Extensions (MDN)](https://developer.mozilla.org/en-US/docs/Building_an_Extension#Debugging_Extensions)
   * [TroubleShooting](TroubleShooting)
@@ -23,11 +24,11 @@ Visit Firefox URL _about:config_ and set the following preferences:
   * `devtools.chrome.enabled` to boolean `true`
   * `devtools.debugger.remote-enabled` to boolean `true`
   * `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
-  * The following is for developing XUL GUI or its javascript. These preferences don't exist by default
+  * The following is for developing XUL GUI or its Javascript. Add (since these preferences don't exist by default)
     * `nglayout.debug.disable_xul_cache` to boolean `true`
     * `dom.allow_XUL_XBL_for_file` to boolean `true` (for accessing `.xul` files via _file://_ URLs in addition to using [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui)). Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
 
-Install plugins listed at [AddOnsThirdParty](AddOnsThirdParty). Restart Firefox, so that the above configuration takes effect.
+Restart Firefox, so that the above configuration takes effect.
 
 ## Browser Console and Toolbox ##
 These are for development of SeLite frameworks, Selenium IDE and its extensions. For debugging your web application use Firefox menu Tools > Web Developer > Toggle Tools instead.
@@ -84,7 +85,7 @@ You can also start Firefox with debugger from shell, i.e. `firefox -jsdebugger`.
 #### Breakpoints in Core extensions ####
 Selenium IDE loads custom [Core extensions][core extension] twice (reported in [ThirdPartyIssues](ThirdPartyIssues) > [Selenium IDE issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697)). That applies regardless of whether you use Selenium IDE menu Options > Options > General > Selenium Core extensions, or whether you use [ExtensionSequencer](ExtensionSequencer).
 
-Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole test case or test suite) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with `?numericTimeStamp` appended to their file names. For each [Core extension] pick the one that has the highest timestamp.
+Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole [case] or [suite]) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with `?numericTimeStamp` appended to their file names. For each [Core extension] pick the one that has the highest timestamp.
 
 This doesn't affect Javascript code modules (accessed via `Components.utils.import( 'chrome://...', optionalScope )`) - those get loaded once only. If you use [BootstrapLoader](BootstrapLoader) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
 

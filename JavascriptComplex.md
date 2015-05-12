@@ -58,7 +58,7 @@ process(); // Since cached is optional and boolean, the most obvious default val
 
 Sometimes you want some functionality to be used by default, and to turn it off by specifying an optional parameter. Then you need to pick a name for such parameter that represents negation of the default behaviour. It may complicate documentation wording a tiny bit, but it makes the API clearer and more error-proof. See [SeLiteSettings source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js) and its function `getFieldsDownToFolder( folderPath, dontCache )` in class `SeLiteSettings.Module`. It demonstrates two approaches for optional parameters
 
-  * `folderPath` defaults to the folder of test suite currently open in Selenium IDE
+  * `folderPath` defaults to the folder of [suite] currently open in Selenium IDE
   * `dontCache` defaults to false, i.e. the function caches the results by default. (Note that the meaning of `dontCache` is not exactly reverse of `cached` parameter of function `process(cached)` above, because `process(false)` returns a new result every time, but it still updates it in `cachedResult`, which will be returned by `process(true)`).
 
 So, use default parameter values that are 'logically equivalent' to one of 0, `false_`, ``null` or "". Deviate from this only if a different default value (possibly dynamic: based on other parameters) really makes sense for the use of the function. Then document it clearly. ('Logically equivalent' also means that a function performs type checks. E.g. it may refuse `null` if it expects a boolean.)

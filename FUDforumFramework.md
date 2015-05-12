@@ -2,8 +2,9 @@
 title: FUDforum 3 framework
 layout: default
 ---
+{% include links %}
 
-The test example logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
+The example script logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
 
 # Install FUDforum 3 #
 I had some sessions issues with `FUDforum_3.0.6RC2.zip`. Therefore I've installed it from SVN, trunk [revision 5765](https://code.google.com/p/selite/source/detail?r=5765). See [Installation > Create your own install script](http://cvs.prohost.org/index.php/Installation#Create_your_own_install_script). In addition to that, you can try [Installation > Command line installation](http://cvs.prohost.org/index.php/Installation#Command_line_installation).

@@ -2,6 +2,7 @@
 title: About SeLite documentation
 layout: default
 ---
+{% include links %}
 
 # Format
 Having documentation in one large piece would make its structure too rigid. Maintenance and online navigation would be impractical. Instead, it's split into small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
@@ -27,13 +28,27 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 
 # Terminology
 
+## Making terms not test-specific
+Selenium and SeLite are not test-specific. However, Selenium IDE GUI and its documentation refers to some features with word _test_. The following terms make it more general.
+
+### case
+_Case_ stands for _test case_. It consists of Selenese steps (commands) and comments. It's an `.html` file with a special format.
+
+### suite
+_Suite_ stands for _test suite_. It refers to (_contains_) one or more [cases][case]. It's an `.html` file with a special format.
+
+A suite and any of its cases don't have to be in the same folder. Therefore a case can belong to multiple suites. If a case defines any [functions][function], other cases in the same suite can reuse them.
+
+### script
+When something applies to either [cases][case] or [suites][suite], SeLite calls them _scripts_. To differentiate them from Javascript (or other scripts), they are sometimes called _Selenese scripts_. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
+
+Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocksGlobal](SelBlocksGlobal)/SeLite refer to them as _functions_ rather than _scripts_.
+
 ## function
 Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocksGlobal](SelBlocksGlobal)/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.
 
-## script
-Since Selenium and SeLite are not test-specific, SeLite documentation calls test cases or suites _scripts_. They're called _Selenese scripts_ only when there's a need to differentiate them from Javascript (or other scripts). Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
-
-Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocksGlobal](SelBlocksGlobal)/SeLite refer to them as _functions_ rather than _scripts_.
+## set
+_Set_ is a configuration set as per [Settings](Settings) > [Modules and sets](Settings#modules-and-sets).
 
 ## Core scope
 _Selenium Core scope_, or just _Core scope_, is global scope (as in [JavascriptEssential](JavascriptEssential) > [Scope](JavascriptEssential#scope)) in _Core extensions_ and in Selenese _scripts_.

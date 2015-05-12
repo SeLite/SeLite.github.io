@@ -12,11 +12,12 @@ It's more convenient than Selenium IDE's way of loading [Core extensions][core e
 # Details #
 It adds field `bootstrapCoreExtensions` to [Settings](Settings) module `extensions.selite-settings.common`, where you can choose file(s) containing your [Core extension] in Javascript (saved in UTF-8). If you're sharing your tests, you may want to configure that through [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
-If you modify any one file that is registered with Bootstrap (while using Selenium IDE), all the registered files get re-loaded automatically next time you
+If you modify any one file that is registered with Bootstrap (while using Selenium IDE), all the registered files get re-loaded automatically
 
-  * run a single Selenese command (before that command)
-  * run a test case/test suite (before the case/suite)
-  * pause and subsequently resume a test case/test suite (before it is resumed)
+  * before you run a single Selenese command,
+  * before you run a [case]/[suite] or
+  * after you pause a currently case/suite run and before you subsequently resume it,
+  * but not during an active case/suite run that started before you changed the file(s).
 
 Apply [JavascriptEssential](JavascriptEssential), especially [Strict Javascript](JavascriptEssential#strict-javascript) and [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
@@ -25,7 +26,7 @@ It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs in
 # Limitations #
 
 ## Intercepts ##
-Bootstrap reloads all registered extensions (whenever you modify any one of them). You can 'extend' existing Javascript functions as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts). However, don't re-save and re-extend the current function each time the script is run. Otherwise it would increase the intercept chain every time Bootrstrap reloads it. Instead, save the original function on the first load only, but re-extend it on every load. For example:
+Bootstrap reloads all registered extensions (whenever you modify any one of them). You can 'extend' existing Javascript functions as per [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts). However, don't re-save and re-extend the current function each time the Javascript is run. Otherwise it would increase the intercept chain every time Bootstrap reloads it. Instead, save the original function on the first load only, but re-extend it on every load. For example:
 
 ```js
 var originalMethod;
@@ -40,10 +41,10 @@ originalMethod.call(this);
 See also [JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts).
 
 ## Adding/modifying the Selenese (commands/getters etc.) ##
-If you introduce or modify any Selenese commands/getters - i.e. <code>Selenium.prototype.do<em>Xyz</em>, Selenium.prototype.get<em>Xyz</em></code> or <code>Selenium.prototype.is<em>Xyz</em></code> - then those will be available to your test commands/case/test suite only **after** you run any Selenese command first. <!-- TODO don't know why -->
+If you introduce or modify any Selenese commands/getters - i.e. <code>Selenium.prototype.do<em>Xyz</em>, Selenium.prototype.get<em>Xyz</em></code> or <code>Selenium.prototype.is<em>Xyz</em></code> - then those will be available to your [case]/[suite] only **after** you run any Selenese command first. <!-- TODO don't know why -->
 
 ## Switching between files ##
-If you remove a filename from `bootstrapCoreExtensions` (or you switch to a different default set or a test suite with a different set associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.
+If you remove a filename from `bootstrapCoreExtensions` (or you switch to a different default [set] or a [suite] with a different [set] associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.
 
 ## Dependencies between files ##
 Bootstrap initiates extensions after any [Core extensions][core extension] loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).

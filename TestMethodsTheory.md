@@ -10,18 +10,15 @@ This describes and compares ways of test automation - from the data point of vie
 # SeLite testing of DB-driven web apps #
 It is testing of DB-driven applications, where the tests keep and update a copy of the application's DB. The tests themselves (the steps, conditional logic etc.) are not necessarily in a DB. The test-specific input data doesn't have to be in a DB (but it may be).
 
-## Terms ##
-These terms are not SeLite-specific. The goal here is to clarify possible/desirable features and connections between tests and tested systems. This mentions benefits and shortcomings of various approaches and of SeLite.
+## Terminology
+These terms are not SeLite-specific. The goal here is to clarify possible/desirable features and connections between tests and tested systems. This mentions benefits and shortcomings of various possible approaches. See also [AboutDocumentation](AboutDocumentation) > [Terminology](AboutDocumentation#terminology).
 
   * **application** - what is being tested, with
     * source, libraries, webserver, single sign on etc.
     * application data ('test app DB' or just 'app DB')
   * **test** - depending on the context, either
-    * the system that tests (invokes) the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + test scripts
-    * all your test scripts (cases and suites) that are run by the test system. They are grouped in test cases, where
-      * a test case consists of steps
-      * a test suite contains one or more test cases
-      * one automation case can belong to multiple suites (and if it defines any [SelBlocksGlobal](SelBlocksGlobal) functions, other cases in the same suite can reuse them)
+    * the system that invokes the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + [scripts][script]
+    * [scripts][script]
   * **data**
     * **'app data', 'app DB'** or just **'data'** - the application data (or its subset) relevant to testing
       * usually it means SQLite export of the application's DB

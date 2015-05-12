@@ -2,13 +2,14 @@
 title: Install a framework
 layout: default
 ---
+{% include links %}
 
 # Scope and downloads #
 This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [AddOns](AddOns) yet, getting them from source (which you'll need anyway) may be faster.
 
 Regardless of how you install [AddOns](AddOns), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source). If you're installing add-ons from source, follow [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
 
-If your web application uses SQLite, you'll get full SeLite functionality and smoother test data life cycle. You'll be able to copy/restore `appDB`, `testDB` and `vanillaDB` from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
+If your web application uses SQLite, you'll get full SeLite functionality and smoother script data life cycle. You'll be able to copy/restore `appDB`, `testDB` and `vanillaDB` from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
 
 The following instructions are generic. For any application-specific steps see documentation of the respective framework.
 
@@ -34,11 +35,11 @@ This is already done for the tests that come with SeLite frameworks. If you're c
 You can configure that via GUI as per [SettingsInterface](SettingsInterface):
 
   1. Visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
-  2. create a new set
-  3. if you're using just one test configuration, make it default (click at Default next to its name)
+  2. create a new [set]
+  3. if you're using just one script configuration, make the set default (click at Default next to its name)
   4. select 'Add a new value' next to `bootstrapCoreExtensions`. Point it to where you downloaded the framework JS file.
 
-If you're going to use several test configurations, then create one set for each configuration, but don't make any of them default. Then connect the sets with folders of your test suite(s) through _associations_ manifest as per [SettingsManifests](SettingsManifests) > [_Associations_ manifests](SettingsManifests#associations-manifests).
+However, if you're going to use several script configurations, then create a [set] for each, but don't make any of those sets default. Then connect the sets with folders of your [suite(s)][suite] through _associations_ manifest as per [SettingsManifests](SettingsManifests) > [_Associations_ manifests](SettingsManifests#associations-manifests).
 
 ## Edit or review configuration of the framework ##
 
@@ -60,26 +61,27 @@ See descriptions below.
 ### Edit or review through GUI ###
 This has a dual purpose: to maintain profile-based configuration set(s), and to review effect of configuration set(s) or _values_ manifest(s). If you want to use configuration set(s), create them if you haven't done so (see above).
 
-Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single test command, e.g. `getEval | true`. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
+Before you use GUI, you need to load the bootstrapped framework. Start Selenium IDE and run any single command, e.g. `getEval | true`. That has effect only for the current run of Firefox (so next time you start the browser you'll need to repeat it in order to use GUI). Then you can configure roles and any framework-specific fields.
 
 If you'd like to review configuration, open [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?selectFolder_ (or _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_).
 
 If you'd like to edit profile-based configuration set(s), open _chrome://selite-settings/content/tree.xul_. Then follow [SettingsInterface](SettingsInterface) and edit the following fields (if they apply to your framework):
 
   * Enter usernames for roles that you need.
-  * Point the configuration set at your app/test/vanilla SQLite files. You need at least `testDB` to get benefits of [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). `appDB` and `vanilla` make sense only if the application data is in SQLite.
+  * Point the configuration [set] at your app/script/vanilla SQLite files. You need at least `testDB` to get benefits of [Overview](./) > [Data separation (in testing)](./#data-separation-in-testing). `appDB` and `vanilla` make sense only if the application data is in SQLite.
     * For `appDB` select the SQLite file which is used by your application instance. (The file often has extension other than .sqlite, e.g. .db or even .php.)
-    * `testDB` is for the test scripts. `vanillaDB` will serve as a snapshot of `appDB`, so that you can revert `appDB` and `testDB` to it. Enter some new filenames (in a location where your account can create files).
-    * If you haven't got existing `testDB` and `vanillaDB`, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanillaDB and testDB from appDB. (See [SettingsInterface](SettingsInterface)).
+    * `testDB` is for [scripts][script]. `vanillaDB` will serve as a snapshot of `appDB`, so that you can revert `appDB` and `testDB` to it. Enter some new filenames (in a location where your account can create files).
+    * If you haven't got existing `testDB` and `vanillaDB`, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanilla DB and script DB from app DB. (See [SettingsInterface](SettingsInterface)).
   * Fill in `webRoot` (it doesn't matter whether it ends with a slash or not). Your tests can access it via `SeLiteSettings.webRoot()`. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
   * Fill in `tablePrefix`.
   * Open the URL of the installation, log in with account(s) that you entered for role(s) above and make Firefox save your password(s). (That's for [SettingsLogins](SettingsLogins).)
   * You may want to activate [AutoCheck](AutoCheck) to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
 
-# Run tests #
-Unless you are using GUI to maintain or review configuration, you can run test cases or suites right after you start Selenium IDE. You don't need to run any single Selenese command first.
+# Run [scripts][script]
+{:#run-scripts}
+Unless you are using GUI to maintain or review configuration, you can run [cases][case] or suites right after you start Selenium IDE. You don't need to run any single Selenese command first.
 
-Locate, open and run a test suite as per [PackagedTests](PackagedTests).
+Locate, open and run a [suite] as per [PackagedTests](PackagedTests).
 
 ## No hot switching between frameworks ##
 If you have two or more frameworks, don't switch between them during the same Firefox run. You need to restart Firefox (not just Selenium IDE). Reasons:

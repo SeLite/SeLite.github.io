@@ -44,7 +44,7 @@ You could create custom GUI as an IDE [extension of Selenium IDE] through XUL ov
     * different to HTML, and not of much use (unless you create visual extensions of Firefox)
     * difficult to debug
     * not well documented (some features)
-  * from test developer's perspective, making extension(s) configurable is a not as productive/motivating as creating extensions themselves
+  * from [script] developer's perspective, making extension(s) configurable is a not as productive/motivating as creating extensions themselves
 
 # Functionality #
 It adds API and GUI which
@@ -103,10 +103,10 @@ Users can configure and override settings granularly via
   * profile-based configuration sets
     * through user interface
     * not shared with other team members
-    * applied to test suites through _associations_ manifest file(s)
+    * applied to [suites][suite] through _associations_ manifest file(s)
   * manifest file(s)
     * in plain text
-    * in folder(s) on the test suite file path
+    * in folder(s) on the [suite] file path
     * exist in two types
       * _values_ manifests
       * _associations_ manifests

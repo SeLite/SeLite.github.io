@@ -2,6 +2,7 @@
 title: SelBlocksGlobal
 layout: default
 ---
+{% include links %}
 
 # Overview #
 SelBlocks Global (one of SeLite [AddOns](AddOns)) is an enhancement of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/). It enables 
@@ -65,7 +66,7 @@ call|myFunction|myParam=$storedVariableInCallingScope
 ```
 
 ## Try/catch suppresses error counts ##
-`try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits scripts that test Selenese commands themselves (e.g. ones provided by SeLite or any custom commands).
+`try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that test Selenese commands themselves (e.g. ones provided by SeLite or any custom commands).
 
 # Flow control with Selenese boolean accessors
 Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. Indeed, you may combine the accessor calls in more complex boolean expressions. For example:
