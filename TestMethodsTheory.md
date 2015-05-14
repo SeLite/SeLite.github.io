@@ -5,13 +5,13 @@ layout: default
 {% include links %}
 
 # Summary #
-This describes and compares ways of test automation - from the data point of view. See also  pictures at [TestMethods](TestMethods).
+This describes and compares ways of test automation and its data. See also  pictures at [TestMethods](TestMethods).
 
 # SeLite testing of DB-driven web apps #
-It is testing of DB-driven applications, where the tests keep and update a copy of the application's DB. The tests themselves (the steps, conditional logic etc.) are not necessarily in a DB. The test-specific input data doesn't have to be in a DB (but it may be).
+It is testing of DB-driven applications, where [scripts][script] keep and update a copy of the application's DB. The scripts themselves (the steps, conditional logic etc.) are not necessarily in a DB. The script-specific input data doesn't have to be in a DB (but it may be).
 
 ## Terminology
-These terms are not SeLite-specific. The goal here is to clarify possible/desirable features and connections between tests and tested systems. This mentions benefits and shortcomings of various possible approaches. See also [AboutDocumentation](AboutDocumentation) > [Terminology](AboutDocumentation#terminology).
+These terms are not SeLite-specific. The goal here is to clarify possible/desirable features and connections between scripts and the tested application. This mentions benefits and shortcomings of various possible approaches. See also [AboutDocumentation](AboutDocumentation) > [Terminology](AboutDocumentation#terminology).
 
   * **application** - what is being tested, with
     * source, libraries, webserver, single sign on etc.

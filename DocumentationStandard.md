@@ -2,8 +2,6 @@
 title: Documentation standard
 layout: default
 ---
-[Dev](Dev)
-
 # Maintaining the documentation
   * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
   * Write and organise it clearly.
@@ -18,13 +16,14 @@ layout: default
     * In NetBeans choose menu Tools > Options > Editor > Formatting > Line Wraps: After words.
     * If you need Eclipse, try <http://dev.cdhq.de/eclipse/word-wrap/> (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
  * Format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
- * Don't have blank lines in HTML comments in .md files. Such comments work well online, but not with [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) in Firefox.
+ * Don't have blank lines in HTML comments in `.md` files. Such comments work well online, but not with [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) in Firefox.
  * Don't blindly rely on Markdown support for NetBeans, neither on Markdown Viewer for Firefox.
  * Preview by running [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/).
- * `gem install link-checker` and `check-links _site`. Don't use `html-proofer` gem and its `htmlproof` command (since it doesn't like relative links).
+ * `gem install link-checker` and `check-links _site` (not maintained since v. 0.7.2, Oct 2012; it reports broken external links but not broken local links). Don't use `html-proofer` gem and its `htmlproof` command (since it doesn't like GitHub-based relative links).
+ * Use online [W3 Link Checker](https://validator.w3.org/checklink). A faster way: run it locally with Jekyll 3.0 (or with `gem install jekyll --pre`):<br/> `wget http://search.cpan.org/CPAN/authors/id/S/SC/SCOP/W3C-LinkChecker-4.81.tar.gz`<br/> `sudo cpan -i Config::General Net::IP CSS::DOM`<br/> `tar xvzf W3C-LinkChecker-4.81.tar.gz; cd W3C-LinkChecker-4.81; perl Makefile.PL; make; sudo make install`<br/> `checklink --quiet --location http://localhost:4000/ http://localhost:4000/`
 
 ## Drawn diagrams
-Don't use UML tools, as they are more restrictive and less efficient. <a href='Hidden comment: That"s why I didn"t consider using e.g. http://plantuml.sourceforge.net and http://sourceforge.net/projects/plantumlnb'></a>
+Don't use UML tools, as they are more restrictive and less efficient. <!-- That"s why I didn"t consider using e.g. http://plantuml.sourceforge.net and http://sourceforge.net/projects/plantumlnb -->
 
 Draw diagrams in LibreOffice/OpenOffice and save them as `.odg`. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git ([selite/diagrams/](https://github.com/selite/selite/tree/master/diagrams) > navigate to `.png` file > get URL of 'Raw' button).
 

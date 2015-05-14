@@ -3,6 +3,7 @@
 - variable names are in camelCase
 - variable names that contain breadcrumb-like link sequence (for navigation) start with 'nav'
 -->
+[command]: AboutDocumentation#command
 [case]: AboutDocumentation#case
 [suite]: AboutDocumentation#suite
 [script]: AboutDocumentation#script

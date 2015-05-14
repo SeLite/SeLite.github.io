@@ -28,6 +28,9 @@ Implementation is mostly documented by source comments. Detailed descriptions of
 
 # Terminology
 
+## command
+A step in Selenese [script]. See also [ClassicSelenese](ClassicSelenese) > [Auto-generated Selenese commands](ClassicSelenese#auto-generated-selenese-commands) and [Selenium IDE documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp) > [Selenium Commands – “Selenese”](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#selenium-commands-selenese]).
+
 ## Making terms not test-specific
 Selenium and SeLite are not test-specific. However, Selenium IDE GUI and its documentation refers to some features with word _test_. The following terms make it more general.
 

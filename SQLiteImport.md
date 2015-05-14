@@ -8,10 +8,10 @@ This converts a backup of your database to SQLite. It does not (and it will not)
 
   * the JAR is not distributed. Compile it yourself.
   * the imports only work from Postgres
-  * only some schema and insert SQL of Postgres was tested
+  * only some schema and insert SQL of Postgres has been tested
   * TODO autoincrement primary keys
 
-You can develop application-specific filters that only import data relevant to testing.
+You can develop application-specific filters, which import only data relevant to testing.
 
 Following steps are in Unix. They're quite trivial, so there's no version for Windows here.
 

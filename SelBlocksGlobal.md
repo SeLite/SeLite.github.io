@@ -13,7 +13,7 @@ SelBlocks Global (one of SeLite [AddOns](AddOns)) is an enhancement of [SelBlock
 So cases (within the same suite) can share functions. Since a case can be a part of multiple suites, you may now also reuse functions between suites. The benefits are
 
   * less maintenance,
-  * more compact tests and
+  * more compact [scripts][script] and
   * higher productivity.
 
 See also [AboutDocumentation](AboutDocumentation) > [Terminology](AboutDocumentation#terminology) > [function](AboutDocumentation#function).
@@ -66,7 +66,7 @@ call|myFunction|myParam=$storedVariableInCallingScope
 ```
 
 ## Try/catch suppresses error counts ##
-`try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that test Selenese commands themselves (e.g. ones provided by SeLite or any custom commands).
+`try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].
 
 # Flow control with Selenese boolean accessors
 Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. Indeed, you may combine the accessor calls in more complex boolean expressions. For example:

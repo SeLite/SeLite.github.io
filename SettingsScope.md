@@ -48,4 +48,4 @@ Manifests are cached
 # Symlinks (on Mac OS/Unix) #
 Symlinks are another way to have variety/separation of configuration sets. If you access a [suite] via a file path which has symlinked non-leaf folder(s), it can be  associated to partially/fully different configuration sets.
 
-<a href='Hidden comment: Comment: TODO Test how Selenium IDE treats a suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolve it first? If it resolves the path first, then change this paragraph.'></a>
+<!-- TODO Test how Selenium IDE treats a suite loaded via a path that depends on symlinks - does it use the provided path, or does it resolve it first? If it resolves the path first, then change this paragraph. -->

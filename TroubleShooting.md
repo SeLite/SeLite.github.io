@@ -2,7 +2,7 @@
 title: Troubleshooting
 layout: default
 ---
-
+{% include links %}
 
 # Expect complexity #
 This technology works with third party components and many variables. You can reduce amount of misunderstanding (for you and others) by providing and following clear and exact steps. Do not assume or simplify what seems obvious, duplicated or unnecessary.
@@ -20,7 +20,7 @@ When you read documentation, and things don't work:
 Do the same when you write a report about a potential issue.
 
 # Versions of components #
-Have Firefox and Selenium IDE that are supported by current SeLite. See [Overview](./) > [Compatibility](./#compatibility). Get current versions of all SeLite add-ons - as per [AddOns](AddOns) > [Latest releases](AddOns#latest-releases). (If you only get add-ons that you need, you may not be able to [run packaged tests](#run-packaged-tests)). For unreleased functionality use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge).
+Have Firefox and Selenium IDE that are supported by current SeLite. See [Overview](./) > [Compatibility](./#compatibility). Get current versions of all SeLite add-ons - as per [AddOns](AddOns) > [Latest releases](AddOns#latest-releases). (If you only get add-ons that you need, you may not be able to [run packaged scripts](#run-packaged-scripts)). For unreleased functionality use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge).
 
 # Loading Selenium plugins #
 Check whether packaged Selenium extensions start correctly: Open Selenium IDE > menu Options > Options... > Plugins. Verify that each plugin is enabled and with no error message (in red). If there is an error, inspect [Browser Console](#browser-console). (That screen doesn't show error details in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser).) TODO centralise with DevelopmentTools.
@@ -30,7 +30,7 @@ By default, Selenium IDE disables plugins that fail on start, and it keeps them 
 # Narrow down the problem #
 This may help you to figure out the issue yourself. Even if you don't solve it, you'll have collected information that will assist others to help you. In order to locate the issue you need to (as applicable)
 
-  * reload your test DB from the app DB and re-run the test
+  * reload your [script DB] from the app DB and re-run the [script]
   * eliminate extras
     * disable all other Firefox extensions and plugins (including  well-known ones like Firebug). Only leave extensions required to run your test.
     * minimise any custom Selenium extensions

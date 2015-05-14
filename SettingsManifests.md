@@ -8,7 +8,7 @@ layout: default
 Manifests connect [suites][suite] to configuration sets, or they define configuration values. They let you define
 
   * default configuration (or its parts) specific to a folder of [suite(s)][suite]
-  * associations between tests and profile-based configuration sets
+  * associations between [suites][suite] and profile-based configuration [sets][set]
   * overrides at various levels.
 
 Manifests are optional. A configuration module (schema) can opt out of using them. Such a module then only uses module default values, and the default set (if any and if the it allows multiple sets) or the only one set (if it doesn't allow multiple sets).
@@ -35,7 +35,7 @@ For single-valued fields you can use literal `SELITE_NULL` to represent Javascri
 For File fields, you can start their value(s) with literal `SELITE_THIS_MANIFEST_FOLDER`. That gets replaced with the full path to the manifest's folder. Also, such values (relative to the manifest's folder) can contain a  folder separator (\ or / - either will work on any system).
 
 # _Associations_ manifests #
-These are in files called `SeLiteSettingsAssociations.txt`. They connect tests and profile-based configuration sets. Associations are entered in simple format, one per line. Module names and set names can't contain a space, so this syntax is non-ambiguous:
+These are in files called `SeLiteSettingsAssociations.txt`. They connect scripts and profile-based configuration sets. Associations are entered in simple format, one per line. Module names and set names can't contain a space, so this syntax is non-ambiguous:
 
 ```
 moduleName setName

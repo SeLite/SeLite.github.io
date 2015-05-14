@@ -87,7 +87,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
 ## Compatibility
 SeLite is compatible with Firefox 38 and Selenium IDE 2.9.0. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
-It doesn't operate with browsers other than Firefox, nor with Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
+It doesn't operate with browsers other than Firefox, neither with Selenium WebDriver (nor with Selenium RC). Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
 ## License
 SeLite is fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.

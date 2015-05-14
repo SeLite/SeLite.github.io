@@ -56,8 +56,8 @@ Steps
 In auxiliary IDEs
 
 * optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
-* (-) if you hide Firefox menu, it often doesn't show up when you press Alt key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press Alt.
-* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite. So it's the safest not to modify tests in auxiliary IDEs.
+* (-) if you hide Firefox menu, it often doesn't show up when you press _Alt_ key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press _Alt_.
+* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite. The safest way is not to modify scripts in auxiliary IDEs.
 
 Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
 

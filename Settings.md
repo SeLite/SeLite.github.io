@@ -9,9 +9,9 @@ layout: default
 
 # Background #
 <!-- TODO Extract out: to AboutDocumentation? -->
-Selenium IDE can be extensively customised via [Core extensions][core extension] (written in Javascript). This way you add new Selenese commands and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
+Selenium IDE can be extensively customised via [Core extensions][core extension] (written in Javascript). This way you add new Selenese [commands][command] and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
 
-  * list of users or credentials
+  * users or credentials
   * location of XML files (which an extension can pass to loadXmlVars and forXml from [SelBlocksGlobal](SelBlocksGlobal))
   * location of SQLite data files
 
@@ -32,7 +32,7 @@ Most [Core extensions][core extension] can work with
     * done once for benefit of many
     * easier to use, share and manage than
       * editing Javascript files (possible typos..), or
-      * using Firefox' special URL _about:config_, which would
+      * using Firefox's special URL _about:config_, which would
         * hard-code preference names
         * allow only one configuration per Firefox profile. That is counter productive if you need to switch between configurations, since the profile contains the installed extensions, history etc. Copying the profile folders can lead to a mess.
   * an API to access the configured values
@@ -47,15 +47,15 @@ You could create custom GUI as an IDE [extension of Selenium IDE] through XUL ov
   * from [script] developer's perspective, making extension(s) configurable is a not as productive/motivating as creating extensions themselves
 
 # Functionality #
-It adds API and GUI which
-
-  * simplify management and sharing of custom configurations. They
-    * organise fields in modules and sets
-    * use both Firefox preferences and manifest files
-    * allow to add new fields to existing configurations
+It defines API and GUI that simplify management and sharing of configurations. They
+  * organise fields in modules and sets
+  * use Firefox preferences and/or manifest files
+  * allow fine-grain granularity
+  * enable adding custom fields to existing configurations
   * populate default values
   * validate free-type values
-  * give a visual interface to end users (testers), which is nicer than _about:config_
+  * give end users (e.g. testers) visual interface, which is nicer than Firefox URL _about:config_
+  * present settings as they apply to a chosen folder
 
 # API #
 You can
@@ -66,7 +66,7 @@ You can
     * Firefox profile and
       * edit them through a generic interface in a browser
       * choose one that is default (if the module allows multiple sets)
-      * associate them to folders containing the tests (if the module allows to be associated with folders)
+      * associate them to folders containing [suites][suite] (if the module allows to be associated with folders)
       * alternatively edit them access via url _about:config_
   * have your [Core extension] access the preferences via a Javascript code module (API)
 
