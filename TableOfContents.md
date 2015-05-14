@@ -7,12 +7,14 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">Overview</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Testing-specific:</li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AddOns AutoCheck BootstrapLoader ExitConfirmationChecker ExtensionSequencer AddOnsThirdParty AddOnsDependants PackagedTests">Add-ons<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AddOns AutoCheck BootstrapLoader ExitConfirmationChecker ExtensionSequencer AddOnsThirdParty AddOnsDependants PackagedScripts">Add-ons<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="AddOns">AddOns</a></li>
     <li class="divider"></li>
@@ -32,6 +34,8 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="AppsFrameworks">AppsFrameworks</a></li>
     <li><a href="GeneralFramework">GeneralFramework</a></li>
     <li><a href="InstallFramework">InstallFramework</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Application-specific:</li>
     <li><a href="DotclearFramework">DotclearFramework</a></li>
     <li><a href="DrupalFramework">DrupalFramework</a></li>
     <li><a href="FUDforumFramework">FUDforumFramework</a></li>
@@ -39,7 +43,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="Settings SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Configure<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="Settings SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Settings<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="Settings">Settings</a></li>
     <li><a href="SettingsManifests">SettingsManifests</a></li>
@@ -53,10 +57,10 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese ExtraCommands">Selenese<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
-    <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
     <li><a href="ClassicSelenese">ClassicSelenese</a></li>
     <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
+    <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
+    <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
     <li><a href="ExtraCommands">ExtraCommands</a></li>
   </ul>
 </li>
@@ -80,7 +84,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE InstallFromSource DocumentationStandard ObjectDiagrams DataObjects SeleniumFlow PackagedTests">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE InstallFromSource DocumentationStandard ObjectDiagrams DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
@@ -95,6 +99,6 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="ObjectDiagrams">ObjectDiagrams</a></li>
     <li><a href="DataObjects">DataObjects</a></li>
     <li><a href="SeleniumFlow">SeleniumFlow</a></li>
-    <li><a href="PackagedTests">PackagedTests</a></li>
+    <li><a href="PackagedScripts">PackagedScripts</a></li>
   </ul>
 </li>

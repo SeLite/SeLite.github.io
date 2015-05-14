@@ -1,7 +1,16 @@
+<!-- Naming convention:
+- link references have spaces etc. as in human text, so that they can also serve for link text
+- variable names are in camelCase
+- variable names that contain breadcrumb-like link sequence (for navigation) start with 'nav'
+-->
 [case]: AboutDocumentation#case
 [suite]: AboutDocumentation#suite
 [script]: AboutDocumentation#script
+[script DB]: AboutDocumentation#script-db
 [Core scope]: AboutDocumentation#core-scope
 [Core extension]: AboutDocumentation#core-extension
 [IDE extension]: AboutDocumentation#ide-extension
 [Extension of Selenium IDE]: AboutDocumentation#extension-of-selenium-ide
+
+{% capture scriptDB %}<code markdown="span">[script DB]</code>{% endcapture %}
+{% capture valuesManifest %}[_values_ manifest](SettingsManifests.html#values-manifests){% endcapture %}

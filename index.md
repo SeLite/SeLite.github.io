@@ -57,7 +57,7 @@ SeLite enables the following in Selenium IDE
 SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org), [Selenium IDE](http://docs.seleniumhq.org/download/) and SeLite [AddOns](AddOns). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
 ## Frameworks
-When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedTests](PackagedTests) on how to run demos. See also [Customisation](index#customisation) below.
+When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedScripts](PackagedScripts) on how to run demos. See also [Customisation](index#customisation) below.
 
 ## Database
 Scripts (whether for testing or not) can store their data in [SQLite](http://www.sqlite.org/) database. When used for testing, test DB is initialised to a copy (or an export) of the web application's DB.
@@ -79,7 +79,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
  * it uses [strict Javascript](JavascriptEssential#strict-javascript)
  * it has a coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptOther](JavascriptOther))
  * see [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
- * it is validated by [PackagedTests](PackagedTests)
+ * it is validated by [PackagedScripts](PackagedScripts)
  * it gives clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
  * it's being moved from Google Code to be hosted on GitHub - see its repository [SeLite](https://github.com/selite/selite).<!--, with two code repositories: [SeLite](https://github.com/selite/selite) and [SelBlocksGlobal](https://github.com/selite/sel-blocks-global).-->
  * [AddOns](AddOns) are verified by Mozilla

@@ -2,8 +2,9 @@
 title: Apps-specific SeLite Frameworks
 layout: default
 ---
+{% include links %}
 
-Below are some web applications or frameworks which can run with SQLite DB. That makes them ideal for testing with full SeLite (including buttons from [SettingsInterface](SettingsInterface) that make a snapshot of application DB or buttons that reload test or application DB).
+Below are some web applications or frameworks which can run with SQLite DB. That makes them SeLite ideal ideal for them, since they can fully benefit from [SettingsInterface](SettingsInterface) > [Reloading databases](SettingsInterface#reloading-databases).
 
 
 | **Language** | **WebServer/Framework/IDE**        | **Application or Demo**                                      | **SeLite framework or demo** |

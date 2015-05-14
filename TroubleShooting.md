@@ -45,9 +45,9 @@ If Selenium IDE log doesn't give much information about the problem, you need a 
 If you don't want to modify your existing Firefox profile, [create a new one](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) (with no spaces in its name). Enable [Browser Console](#browser-console). Add any necessary non-SeLite extensions, until the problem appears. Alternatively, you could also [duplicate the existing profile](http://kb.mozillazine.org/Moving_your_profile_folder) (which is stored as a folder) and narrow down the problem in that copy.
 
 # Run packaged tests #
-If you use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge), it also gives you [PackagedTests](PackagedTests). Otherwise get the tests from SeLite source as per [InstallFromSource](InstallFromSource).
+If you use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge), it also gives you [PackagedScripts](PackagedScripts). Otherwise get the tests from SeLite source as per [InstallFromSource](InstallFromSource).
 
-Disable all Selenium extensions other than ones supported by SeLite. Run the tests as per [PackagedTests](PackagedTests). Then enabled other Selenium extensions and see if they break the tests.
+Disable all Selenium extensions other than ones supported by SeLite. Run the tests as per [PackagedScripts](PackagedScripts). Then enabled other Selenium extensions and see if they break the tests.
 
 # Defects in third party components #
 If the cause is in Firefox, Selenium IDE or a third party component, submit a report in the respective bug tracking system (see also [ThirdPartyIssues](ThirdPartyIssues)). If the third party confirms the problem and it is likely to affect other SeLite users, report it to SeLite, too, so that its admins add a link to that issue to [ThirdPartyIssues](ThirdPartyIssues). Then other users can star it (vote for it), which could motivate the third party to solve your problem.

@@ -56,7 +56,7 @@ Sequencer will find and process this file. Then it will initiate the plugin afte
 ## Examples of SeLiteExtensionSequencerManifest.js ##
 See `SeLiteExtensionSequencerManifest.js` files in source of various SeLite [AddOns](AddOns). For full API, see function `SeLiteExtensionSequencer.registerPlugin(prototype)` in [SeLiteExtensionSequencer.js](https://code.google.com/p/selite/source/browse/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
 
-You may have multiple add-ons that override same parts of Selenium core and that don't need each other, but if used together then they need to override those parts in a specific order. Then you may want to declare optional dependency between them, so that they are loaded in appropriate order. For examples of dependencies, see `SeLiteExtensionSequencerManifest.js` and tests in [Shell tests](#shell-tests).
+You may have multiple add-ons that override same parts of Selenium core and that don't need each other, but if used together then they need to override those parts in a specific order. Then you may want to declare optional dependency between them, so that they are loaded in appropriate order. For examples of dependencies, see `SeLiteExtensionSequencerManifest.js` and source of [Shell tests](#shell-tests).
 
 ## Validate that SeLite Extension Sequencer is present (optional) ##
 If your Firefox add-on has SeLiteExtensionSequencerManifest.js but Extension Sequencer is missing, your add-on won't get activated. Users may then be confused by the lack of functionality. It's worth to make it check whether Extension Sequencer is present. If not, then it should alert the users that they need to install Extension Sequencer.

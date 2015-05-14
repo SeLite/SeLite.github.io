@@ -9,7 +9,7 @@ This assumes that you've set up your web application and that there is an SeLite
 
 Regardless of how you install [AddOns](AddOns), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source). If you're installing add-ons from source, follow [Install add-ons from source](InstallFromSource#install-add-ons-from-source).
 
-If your web application uses SQLite, you'll get full SeLite functionality and smoother script data life cycle. You'll be able to copy/restore `appDB`, `testDB` and `vanillaDB` from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
+If your web application uses SQLite, you'll get full SeLite functionality and smoother script data life cycle. You'll be able to copy/restore `appDB`, {{ scriptDB }} and `vanillaDB` from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
 
 The following instructions are generic. For any application-specific steps see documentation of the respective framework.
 
@@ -28,7 +28,7 @@ An alternative method is Firefox profile-based configuration set(s), controlled 
 ## Configure SeLite to load the framework ##
 
 ### Through _values_ manifests ###
-This is already done for the tests that come with SeLite frameworks. If you're creating tests with any of those frameworks, you can copy its _values_ manifest `SeLiteSettingsValues.txt`. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field `extensions.selite-settings.common.bootstrappedCoreExtensions`, so it points to location of the framework Javascript file. See also [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#values-manifests) and [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
+This is already done for [scripts][script] that come with SeLite frameworks. If you're using one of those frameworks, you can copy its {{ valuesManifest }} `SeLiteSettingsValues.txt`. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field `extensions.selite-settings.common.bootstrappedCoreExtensions`, so it points to location of the framework Javascript file. See also [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#values-manifests) and [SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values).
 
 ### Through GUI ###
 <!-- @TODO eliminate or Move to SettingsInterface? -->
@@ -72,7 +72,7 @@ If you'd like to edit profile-based configuration set(s), open _chrome://selite-
     * For `appDB` select the SQLite file which is used by your application instance. (The file often has extension other than .sqlite, e.g. .db or even .php.)
     * `testDB` is for [scripts][script]. `vanillaDB` will serve as a snapshot of `appDB`, so that you can revert `appDB` and `testDB` to it. Enter some new filenames (in a location where your account can create files).
     * If you haven't got existing `testDB` and `vanillaDB`, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanilla DB and script DB from app DB. (See [SettingsInterface](SettingsInterface)).
-  * Fill in `webRoot` (it doesn't matter whether it ends with a slash or not). Your tests can access it via `SeLiteSettings.webRoot()`. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
+  * Fill in `webRoot` (it doesn't matter whether it ends with a slash or not). Your [scripts][script] can access it via `SeLiteSettings.webRoot()`. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
   * Fill in `tablePrefix`.
   * Open the URL of the installation, log in with account(s) that you entered for role(s) above and make Firefox save your password(s). (That's for [SettingsLogins](SettingsLogins).)
   * You may want to activate [AutoCheck](AutoCheck) to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
@@ -81,7 +81,7 @@ If you'd like to edit profile-based configuration set(s), open _chrome://selite-
 {:#run-scripts}
 Unless you are using GUI to maintain or review configuration, you can run [cases][case] or suites right after you start Selenium IDE. You don't need to run any single Selenese command first.
 
-Locate, open and run a [suite] as per [PackagedTests](PackagedTests).
+Locate, open and run a [suite] as per [PackagedScripts](PackagedScripts).
 
 ## No hot switching between frameworks ##
 If you have two or more frameworks, don't switch between them during the same Firefox run. You need to restart Firefox (not just Selenium IDE). Reasons:

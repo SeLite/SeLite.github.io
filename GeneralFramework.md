@@ -23,7 +23,7 @@ See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/s
 A framework is loaded as a [Core extension]. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an .xpi file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
 
 ## Configuring and loading the data ##
-You can manage configuration through [Settings](Settings). Configuration sets can associate with tests on per-[suite] folder basis. A framework needs to know the [suite] folder, so that it can resolve its configuration (which determines the [script] DB). A framework shouldn't pre-load any data when it's activated, because a [suite] folder may not be known yet. If you need pre-loading any data, do that from a [suite] folder change handler, which gets triggered once you open (or save) a suite.
+You can manage configuration through [Settings](Settings). Configuration sets can associate with [scripts][script] on per-[suite] folder basis. A framework needs to know the [suite] folder, so that it can resolve its configuration (which determines the [script] DB). A framework shouldn't pre-load any data when it's activated, because a [suite] folder may not be known yet. If you need pre-loading any data, do that from a [suite] folder change handler, which gets triggered once you open (or save) a suite.
 
 # Extending a framework
 If you need to extend an existing framework, you may want to do it in a separate file. That makes it easy to receive updates from SeLite or within your team.
@@ -62,7 +62,7 @@ commonSettings.getField( 'roles' ).addKeys( ['second-level-admin', 'auditor', 'c
 Look at source of existing frameworks - see [AppsFrameworks](AppsFrameworks).
 
 ## Preserving special values in [script] DB
-You may want your tests to save special values in their DB. E.g. your framework could create or update users, generate random passwords for them and save those passwords in plain text (rather than encrypted), so that further runs could log in as those users.
+You may want your [scripts][script] to save special values in their DB. E.g. your framework could create or update users, generate random passwords for them and save those passwords in plain text (rather than encrypted), so that further runs could log in as those users.
 
 When reloading [script] DB (via either button), you don't want to override such special values from production/vanilla. SeLiteSettings can preserve them. Your framework needs to call `SeLiteSettings.setTestDbKeeper()` with an instance of `SeLiteSettings.TestDbKeeper.Columns` (or with an instance of a custom subclass of `SeLiteSettings.TestDbKeeper`).
 

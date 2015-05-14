@@ -45,7 +45,7 @@ The second set also auto-generates commands like `waitForTimestampDownToSeconds`
   * `assertTimestampDownToSeconds` (or `verifyTimestampDownToSeconds`) against the stored timestamp
 
 # Other commands #
-  * `disableJavascript, enableJavascript`: disable/enable Javascript for the web application that is being tested
+  * `disableJavascript, enableJavascript`: disable/enable Javascript for the web application that is being automated
   * `indexBy` - index objects
   * `selectTopFrameAnd`
 

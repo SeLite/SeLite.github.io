@@ -14,7 +14,7 @@ This is not limited to unsubmitted forms. The web application may have two or mo
 
 Also, say you have an application that attracts your attention (e.g. an alert from a calendar or an email client). Then the application may use the same confirmation method to increase the likelihood that you read the alert.
 
-ExitConfirmationChecker helps your tests to validate that the application asks for this confirmation when it should. It doesn't add any Selenese commands.
+ExitConfirmationChecker helps your [scripts][script] to validate that the application asks for this confirmation exactly when it should. (It doesn't add any Selenese commands.)
 
 # What it does for you #
 This add-on suppresses the confirmation dialog activated from `window.onbeforeunload()`. If that's all you need, use mode `ignored`. The other two active modes `includeRevertedChanges` and `skipRevertedChanges` also verify (or assert) whether the confirmation popup would show up (or would not show up) as it should.
@@ -24,7 +24,7 @@ Out-of-the-box ExitConfirmationChecker only handles
 
   * unsubmitted modified forms, and
   * standard HTML inputs (no WYSIWYG editors), and
-  * inputs modified via Selenium or SeLite commands: `type` and `typeRandom` (from SeLite Commands) and `select` only for now; not `check` or `click` yet, but not modified by a human (between the tests), and
+  * inputs modified via Selenium or SeLite commands: `type` and `typeRandom` (from SeLite Commands) and `select` only for now; not `check` or `click` yet, but not modified by a human (between the [script] runs), and
   * pages that are direct results of Selenese actions (i.e. not results of redirect or manual user navigation), and
   * any inputs as relevant for confirmation. You may have inputs that don't need confirmation when leaving the page (e.g. search-like fields), but by default ExitConfirmationChecker expects the confirmation if there was a change to any input. You can override that.<!-- TODO: how to override? Provide functions and/or filters.-->
 
@@ -54,4 +54,4 @@ If you run  a whole [case] (or [suite]), you don't set `exitConfirmationCheckerA
 <!--If your page is a result of a redirect, then you need to call `getEval | _SeLiteExitConfirmationChecker.overrideOnBeforeUnload()` before the commmand that causes the redirect. TODO implement: Have an optional parameter to indicate number of Selenese commands before the redirect; this is useful if there are structural commands in between, e.g. if/else, for/while...'>-->
 
 # Tests #
-Follow [PackagedTests](PackagedTests) for [Selenese tests](https://code.google.com/p/selite/source/browse#git%2Fexit-confirmation-checker%2Fselenese-tests) of Exit Confirmation Checker. See source of `form.html`, `SeLiteSettingsValues.txt` and the actual tests. Test cases with name starting with `negative` are supposed to fail: see [PackagedTests](PackagedTests) > [Negative tests that fail](PackagedTests#negative-tests-that-fail).<!-- @TODO put into folder selenese-tests-negative? See PackagedTests-->
+Follow [PackagedScripts](PackagedScripts) for [Selenese tests](https://code.google.com/p/selite/source/browse#git%2Fexit-confirmation-checker%2Fselenese-tests) of Exit Confirmation Checker. See source of `form.html`, `SeLiteSettingsValues.txt` and the actual tests. Test cases with name starting with `negative` are supposed to fail: see [PackagedScripts](PackagedScripts) > [Negative tests that fail](PackagedScripts#negative-tests-that-fail).<!-- @TODO put into folder selenese-tests-negative? See PackagedScripts-->

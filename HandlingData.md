@@ -41,7 +41,7 @@ We can re-load
       * the workflow of the web app allows us to re-run the script without re-loading the application DB. See below.
   * or: both script DB and app DB
 
-There will also be a need to reload both DBs, even if everything is healthy (app and test are OK and both DBs in sync). That's when we reach designed limits of the application. For example, the app may limit the number of submissions per user per day without a way to remove them through the application's web interface.
+There will also be a need to reload both DBs, even if everything is healthy (app and [script] are OK and both DBs in sync). That's when we reach designed limits of the application. For example, the app may limit the number of submissions per user per day without a way to remove them through the application's web interface.
 
 # Loose [script] data
 Some fields are difficult to replicate from app DB to script DB during the runs. Those are
@@ -131,15 +131,15 @@ Applications often use data sources outside of their DB (e.g. web services). If
 
   * the external data source is used read-only by the app and
   * there is no direct/indirect write flow from the application to that data and
-  * the test can access the data
+  * the [script] can access the data
 
-then have the test use that data (via a back door). That's fairly easy between SeLite and webservices. However, if the data source is a of some other type, then you'll need either (in order of complexity)
+then have the [script] use that data (via a back door). That's fairly easy between SeLite and webservices. However, if the data source is a of some other type, then you'll need either (in order of complexity)
 
   * a webservice adapter on the server-side, or
   * a plugin/extension for Firefox (possibly a binary XPCOM component), or
   * custom-compiled Firefox with a target data source client and a [Core extension] of Selenium IDE in Javascript
 
-If the app writes to the external data source (directly or indirectly), then treat it like another app DB. Have your test use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
+If the app writes to the external data source (directly or indirectly), then treat it like another app DB. Have your [script] use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
 
 # No column name _toString_ #
 You must not have a DB column with name `toString`. That's because Javascript objects representing DB records have method `toString()` for convenience.

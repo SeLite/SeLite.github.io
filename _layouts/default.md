@@ -109,13 +109,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar-menu">
       <ul class="nav navbar-nav">
-        <li id="toc-mobile-button"><a data-toggle="collapse" href="#toc-mobile-div" class="dropdown-toggle" role="button">This page<span class="caret"></span></a>
+        <li id="toc-mobile-button"><a data-toggle="collapse" href="#toc-mobile-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
             <div id="toc-mobile-div" class="collapse">
                 {% comment %}See the other toc below. Following replaces <ul> ID just to be consistent with markdown-toc-desktop. {% endcomment %}
                 {{ toc | replace: 'markdown-toc', 'markdown-toc-mobile' }}
             </div>
         </li>
-        <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button">This page<span class="caret"></span></a>
+        <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
         </li>
         {% include_relative TableOfContents.md %}
       </ul>

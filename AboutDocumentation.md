@@ -17,7 +17,7 @@ Alternatively, run [Jekyll locally](https://help.github.com/articles/using-jekyl
 SeLite doesn't use GitHub Wiki, which doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a wide mandatory part).
 
 # Scope
-We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedTests](PackagedTests) or the source code. Then you can experiment.
+We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedScripts](PackagedScripts) or the source code. Then you can experiment.
 
 SeLite doesn't cover general functionality of related technologies (see also [ReportingIssues](ReportingIssues) > [Support scope](ReportingIssues#support-scope)). If it elaborates on them, it's only if they are not clear or obvious from their original documentation source, or where SeLite modifies their features. Such notes and some references to third party documentation are at [SeleniumIDE](SeleniumIDE), [DevelopmentTools](DevelopmentTools), [JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [InstallFromSource](InstallFromSource).
 
@@ -43,6 +43,9 @@ A suite and any of its cases don't have to be in the same folder. Therefore a ca
 When something applies to either [cases][case] or [suites][suite], SeLite calls them _scripts_. To differentiate them from Javascript (or other scripts), they are sometimes called _Selenese scripts_. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
 Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocksGlobal](SelBlocksGlobal)/SeLite refer to them as _functions_ rather than _scripts_.
+
+### script DB
+_Script DB_ is a database (in SQLite) used by _scripts_. (It's not a DB of/containing _scripts_.) When used in automated testing, it is the test's expected/assumed version of the application data. See [TestMethodTheory](TestMethodTheory).
 
 ## function
 Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocksGlobal](SelBlocksGlobal)/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.

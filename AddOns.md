@@ -9,7 +9,7 @@ For straightforward use of SeLite, get all its add-ons. If you only want some of
 In addition to add-ons, see [SeleniumIDE](SeleniumIDE) for productivity tips.
 
 ## Quick download
-For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases delayed by about a week. If you depend on recent functionality (or if you'd like to run [PackagedTests](PackagedTests)), see [Latest releases](#latest-releases) below.
+For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases delayed by about a week. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
 
 Don't install SeLite together with SelBlocks (or Flow Control, GoTo or Sideflow) - for details see [SelBlocksGlobal](SelBlocksGlobal).
 
@@ -37,7 +37,7 @@ So, use the `download` links below for recent releases. **Ignore** the text: 'Yo
         <ul>
             <li>Selenium IDE menu</li>
             <li><em>Selenese reference</em> (see also <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#auto-generated-selenese-commands">Auto-generated Selenese commands</a>)</li>
-            <li><em>Selenese tests</em> (see also <a href="PackagedTests">PackagedTests</a>)</li>
+            <li><em>Selenese scripts</em> (see also <a href="PackagedScripts">PackagedScripts</a>)</li>
             <li><em>source</em> (only if there is no other documentation)</li>
             <li>third party documentation</li>
             <li><a href="AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui"><em>chrome://</em> URL</a> to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
@@ -173,4 +173,4 @@ So, use the `download` links below for recent releases. **Ignore** the text: 'Yo
 </table>
 
 # Cutting edge
-If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). Also, installing the add-ons that way may be faster than downloading them one by one. Additionally, the source contains [PackagedTests](PackagedTests), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
+If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). Also, installing the add-ons that way may be faster than downloading them one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.

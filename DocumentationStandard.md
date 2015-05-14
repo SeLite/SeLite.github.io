@@ -2,6 +2,7 @@
 title: Documentation standard
 layout: default
 ---
+[Dev](Dev)
 
 # Maintaining the documentation
   * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
@@ -18,8 +19,9 @@ layout: default
     * If you need Eclipse, try <http://dev.cdhq.de/eclipse/word-wrap/> (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
  * Format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
  * Don't have blank lines in HTML comments in .md files. Such comments work well online, but not with [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) in Firefox.
- * Don't blindly rely on Markdown support for NetBeans neither on Markdown Viewer for Firefox.
+ * Don't blindly rely on Markdown support for NetBeans, neither on Markdown Viewer for Firefox.
  * Preview by running [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/).
+ * `gem install link-checker` and `check-links _site`. Don't use `html-proofer` gem and its `htmlproof` command (since it doesn't like relative links).
 
 ## Drawn diagrams
 Don't use UML tools, as they are more restrictive and less efficient. <a href='Hidden comment: That"s why I didn"t consider using e.g. http://plantuml.sourceforge.net and http://sourceforge.net/projects/plantumlnb'></a>
