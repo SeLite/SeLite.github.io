@@ -46,7 +46,7 @@ Open a suite using Selenium IDE menu File > Open... or Open Test Suite... Do not
 
 ## Running multiple [suites][suite]
 {:#running-multiple-suites}
-In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-tests-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `selite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`selite` and `selite.sel-blocks-global`) under your home folder. Those folder names are the default when you [check them out](https://code.google.com/p/selite/source/checkout) from GIT. If you download them instead, rename the folders to `selite` and `selite.sel-blocks-global`.
+In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-tests-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO replace here and elsewhere -->
 
 # Javascript tests #
 These validate functionality
