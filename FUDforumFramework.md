@@ -1,5 +1,5 @@
 ---
-title: FUDforum 3 framework
+title: (for FUDforum 3)
 layout: default
 ---
 {% include links %}

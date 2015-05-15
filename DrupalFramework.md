@@ -1,5 +1,5 @@
 ---
-title: Drupal 7 framework
+title: (for Drupal 7)
 layout: default
 ---
 {% include links %}

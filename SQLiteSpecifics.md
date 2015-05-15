@@ -1,5 +1,4 @@
 ---
-title: SQLite specifics
 layout: default
 ---
 {% include links %}

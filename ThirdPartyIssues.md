@@ -1,5 +1,4 @@
 ---
-title: Third party blockers
 layout: default
 ---
 

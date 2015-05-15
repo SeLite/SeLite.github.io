@@ -1,5 +1,5 @@
 ---
-title: Automated reloading of custom Selenium Core extensions
+title: (Automated reloading of custom Selenium Core)
 layout: default
 ---
 {% include links %}

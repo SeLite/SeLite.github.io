@@ -1,5 +1,4 @@
 ---
-title: Settings Interface
 layout: default
 ---
 {% include links %}

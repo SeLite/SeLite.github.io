@@ -1,5 +1,4 @@
 ---
-title: SQLite import
 layout: default
 ---
 

@@ -1,5 +1,4 @@
 ---
-title: Selenium flow
 layout: default
 ---
 

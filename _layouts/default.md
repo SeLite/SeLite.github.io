@@ -18,12 +18,14 @@
 {% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
 
 {% assign pageName= pageNamePartsWithoutSlash[0] %}
+{% assign pageNameInTitleBar= pageName %}
 
 {% comment %} For some reason, pageName=="index" didn't evaluate to true. TODO report {% endcomment %}
 {% if pageName contains "index" and "index" contains pageName %}
     {% assign pageName = './' %}
+    {% assign pageNameInTitleBar= 'Overview' %}
 {% endif %}
-    <title>SeLite > {{ page.title }}</title>
+    <title>SeLite > {{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">

@@ -1,5 +1,5 @@
 ---
-title: Selenium IDE GUI notes/tips
+title: (GUI notes/tips)
 layout: default
 ---
 {% include links %}

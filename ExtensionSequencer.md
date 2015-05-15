@@ -1,5 +1,4 @@
 ---
-title: Extension Sequencer
 layout: default
 ---
 {% include links %}

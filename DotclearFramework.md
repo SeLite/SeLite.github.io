@@ -1,5 +1,5 @@
 ---
-title: Dotclear 2.6.3 framework
+title: (for Dotclear 2.6.3)
 layout: default
 ---
 {% include links %}

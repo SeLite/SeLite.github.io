@@ -1,5 +1,4 @@
 ---
-title: Javascript essentials
 layout: default
 ---
 {% include links %}

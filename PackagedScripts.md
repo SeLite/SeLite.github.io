@@ -1,5 +1,4 @@
 ---
-title: Packaged scripts
 layout: default
 ---
 {% include links %}

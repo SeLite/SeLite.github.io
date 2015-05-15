@@ -1,5 +1,4 @@
 ---
-title: Javascript other
 layout: default
 ---
 

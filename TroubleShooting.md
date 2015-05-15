@@ -1,5 +1,4 @@
 ---
-title: Troubleshooting
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,4 @@
 ---
-title: Settings Overview
 layout: default
 ---
 {% include links %}

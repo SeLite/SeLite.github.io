@@ -1,5 +1,4 @@
 ---
-title: Settings API
 layout: default
 ---
 {% include links %}

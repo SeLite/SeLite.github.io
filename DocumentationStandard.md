@@ -1,5 +1,4 @@
 ---
-title: Documentation standard
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,4 @@
 ---
-title: Settings Logins
 layout: default
 ---
 {% include links %}

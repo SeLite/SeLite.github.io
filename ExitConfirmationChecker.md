@@ -1,5 +1,4 @@
 ---
-title: Exit Confirmation Checker
 layout: default
 ---
 {% include links %}

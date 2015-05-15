@@ -1,5 +1,4 @@
 ---
-title: Data import
 layout: default
 ---
 {% include links %}

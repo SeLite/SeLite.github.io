@@ -1,5 +1,4 @@
 ---
-title: Why Selenium IDE?
 layout: default
 ---
 {% include links %}

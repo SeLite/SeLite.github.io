@@ -1,5 +1,5 @@
 ---
-title: Dependencies between SeLite Add-ons
+title: (dependencies within SeLite)
 layout: default
 ---
 {% include links %}

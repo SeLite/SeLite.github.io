@@ -1,5 +1,4 @@
 ---
-title: Test methods theory
 layout: default
 ---
 {% include links %}

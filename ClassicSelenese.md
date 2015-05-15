@@ -1,5 +1,5 @@
 ---
-title: Notes on classic Selenese syntax
+title: (syntax)
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,4 @@
 ---
-title: Settings Scope
 layout: default
 ---
 {% include links %}

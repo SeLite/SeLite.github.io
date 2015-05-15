@@ -1,5 +1,4 @@
 ---
-title: SeLite development tools
 layout: default
 ---
 {% include links %}

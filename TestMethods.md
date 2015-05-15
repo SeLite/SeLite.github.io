@@ -1,5 +1,4 @@
 ---
-title: Test methods
 layout: default
 ---
 {% include links %}

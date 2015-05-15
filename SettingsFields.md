@@ -1,5 +1,4 @@
 ---
-title: SettingsFields
 layout: default
 ---
 {% include links %}

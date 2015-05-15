@@ -1,5 +1,4 @@
 ---
-title: Javascript complexities
 layout: default
 ---
 {% include links %}

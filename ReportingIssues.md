@@ -1,5 +1,4 @@
 ---
-title: Reporting issues
 layout: default
 ---
 {% include links %}

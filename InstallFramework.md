@@ -1,5 +1,4 @@
 ---
-title: Install a framework
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,5 @@
 ---
-title: DB-driven browser automation - Overview
+title: (DB-driven browser automation)
 layout: default
 ---
 {% include links %}

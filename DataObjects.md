@@ -1,5 +1,4 @@
 ---
-title: SeLite Data Objects
 layout: default
 ---
 

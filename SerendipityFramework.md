@@ -1,5 +1,4 @@
 ---
-title: Serendipity framework
 layout: default
 ---
 {% include links %}

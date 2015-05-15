@@ -1,5 +1,4 @@
 ---
-title: About SeLite documentation
 layout: default
 ---
 {% include links %}

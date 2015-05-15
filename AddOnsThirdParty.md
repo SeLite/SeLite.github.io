@@ -1,5 +1,5 @@
 ---
-title: Third party Firefox extensions
+title: (Firefox extensions)
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,4 @@
 ---
-title: Settings Manifests
 layout: default
 ---
 {% include links %}

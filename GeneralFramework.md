@@ -1,5 +1,4 @@
 ---
-title: General Framework
 layout: default
 ---
 {% include links %}

@@ -1,5 +1,4 @@
 ---
-title: Apps-specific SeLite Frameworks
 layout: default
 ---
 {% include links %}

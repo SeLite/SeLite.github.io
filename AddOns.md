@@ -1,5 +1,5 @@
 ---
-title: SeLite AddOns for Firefox
+title: (Firefox extensions)
 layout: default
 ---
 {% include links %}

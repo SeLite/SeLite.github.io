@@ -1,5 +1,4 @@
 ---
-title: Handling data
 layout: default
 ---
 {% include links %}

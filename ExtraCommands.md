@@ -1,5 +1,4 @@
 ---
-title: Extra Commands
 layout: default
 ---
 {% include links %}

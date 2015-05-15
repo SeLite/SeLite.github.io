@@ -1,5 +1,4 @@
 ---
-title: SelBlocksGlobal
 layout: default
 ---
 {% include links %}

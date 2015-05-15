@@ -1,5 +1,4 @@
 ---
-title: Customising Selenese
 layout: default
 ---
 {% include links %}

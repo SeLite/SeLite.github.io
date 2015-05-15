@@ -1,5 +1,4 @@
 ---
-title: Install from source
 layout: default
 ---
 

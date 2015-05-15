@@ -1,5 +1,4 @@
 ---
-title: Dealing with timestamps
 layout: default
 ---
 {% include links %}
