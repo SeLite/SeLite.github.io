@@ -23,7 +23,7 @@ SelBlocks Global replaces SelBlocks. Do not use it together with SelBlocks (neit
 # Documentation #
 Original documentation of SelBlocks applies to SelBlocks Global (except for incompatibility listed below). See summary of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/) extension itself and its full [documentation](http://refactoror.wikia.com/wiki/Selblocks_Reference).
 
-See [Selenese reference (online)](https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml) or (offline) at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml_. In addition to those commands, SelBlocks Global also provides [EnhancedSelenese](EnhancedSelenese).
+See [Selenese reference (online)](https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml) or (offline) at {{chromeUrl}} _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml_. In addition to those commands, SelBlocks Global also provides [EnhancedSelenese](EnhancedSelenese).
 
 # Differences to SelBlocks #
 
@@ -34,7 +34,7 @@ If parameters of your Selenese actions contain back apostrophe \`, you need to d
 When calling a Selenese `function`, it doesn't inherit variables from the higher scope in SelBlocks Global. See [SelBlocks issue #5](https://github.com/refactoror/SelBlocks/issues/5).
 
 ## Strict mode ##
-SelBlocks Global is in [JavascriptEssential](JavascriptEssential) > [Strict Javascript](JavascriptEssential#strict-javascript), which prevents some bad practice code. That also applies to Javascript expressions passed to SelBlocks Global Selenese commands, or passed through [EnhancedSelenese](EnhancedSelenese) notation \`...\` and #\`...\`. This implies the following incompatibilities with SelBlocks.
+SelBlocks Global adheres to {{navStrictJavascript}}, which prevents some bad practice code. That also applies to Javascript expressions passed to SelBlocks Global Selenese commands, or passed through [EnhancedSelenese](EnhancedSelenese) notation \`...\` and #\`...\`. This implies the following incompatibilities with SelBlocks.
 
 ### Accessing stored variables ###
 When accessing stored variables with `getEval` and special SelBlockGlobal commands, use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks, which let its special commands access stored variables without using `$` prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) See [EnhancedSelenese](EnhancedSelenese) > [`$storedVariableName` notation](EnhancedSelenese#storedvariablename-notation) for the affected commands.
@@ -76,5 +76,5 @@ if | !selenium.isVisible( 'id=pmf-navbar-collapse' )
 ```
 
 @TODO > include links
-@TODO DOC Selenese > ???: CombiningExpressions: Use variable `selenium` in [Core scope] for the same as what `this` keyword is in context of Selenese actions `getEval` (and related), if, while. However, in their context `this===selenium`, hence use `selenium` instead of `this`, so that it's the same as in [Core scope]. (In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module and use `SeLiteMisc.selenium` instead<!--TODO example of loading-->).
+@TODO DOC Selenese > ???: CombiningExpressions: Use variable `selenium` in [Core scope] for the same as what `this` keyword is in context of Selenese actions `getEval` (and related), if, while. However, in their context `this===selenium`, hence use `selenium` instead of `this`, so that it's the same as in [Core scope]. (In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module and use `SeLiteMisc.selenium` instead<!--TODO example of loading-->.)
 -> So, unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't call `storeEval` but use [EnhancedSelenese](EnhancedSelenese) to pass the Javascript expression directly within paired backticks \`...\` (or =\`...\`, if the result can be other than a string). This minimises a need to use `storeEval` and auxiliary stored variables. That makes Selenese scripts shorter and clearer.

@@ -36,7 +36,7 @@ chmod 666 settings.php<br>
 cd /etc/drupal7/default<br>
 chmod 644 settings.php<br>
 <br>
-# Following is for SeLite Settings buttons to reload [script]/app/vanilla DB. (Or do it per group or in a less restrictive way, as you need.)<br>
+# Following is for SeLite Settings buttons to reload [script][script db]/[app][app db]/[vanilla DB]. (Or do it per group or in a less restrictive way, as you need.)<br>
 cd files<br>
 setfacl -m u:testersUserName:rw data.sqlite<br>
 </pre>

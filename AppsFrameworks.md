@@ -4,7 +4,7 @@ layout: default
 ---
 {% include links %}
 
-Below are some web applications or frameworks which can run with SQLite DB. That makes them SeLite ideal ideal for them, since they can fully benefit from [SettingsInterface](SettingsInterface) > [Reloading databases](SettingsInterface#reloading-databases).
+Below are some web applications or frameworks which can run with SQLite DB. That makes them SeLite ideal ideal for them, since they can fully benefit from {{navReloadingDatabases}}.
 
 
 | **Language** | **WebServer/Framework/IDE**        | **Application or Demo**                                      | **SeLite framework or demo** |

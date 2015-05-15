@@ -5,7 +5,7 @@ layout: default
 {% include links %}
 
 # SeLite Settings API #
-Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In [Core extensions][core extension] access it through object `SeLiteSettings`. In other scopes, e.g. Selenium [IDE extensions][ide extension] or Javascript code modules (as per [JavascriptComplex](JavascriptComplex) > [Javascript code modules](JavascriptComplex#javascript-code-modules)), call
+Operate SeLite Settings-managed configurations through API. See [its source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js). In [Core extensions][core extension] access it through object `SeLiteSettings`. In other scopes, e.g. Selenium [IDE extensions][ide extension] or code modules (as per {{navJavascriptCodeModules}}), call
 
 ```
 Components.utils.import("chrome://selite-settings/content/SeLiteSettings.js");
@@ -20,7 +20,7 @@ Define a configuration module (schema) in a Javascript file (in UTF-8). See [tes
 The definition must be
 
   * on the filesystem (possibly a network drive), referenced by its path or _file://_ URL; or
-  * in a custom Firefox extension (at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _resource://_ URL)
+  * in a custom Firefox extension (at {{chromeUrl}} or _resource://_ URL)
 
 Whenever you update a module definition, you need to either
 

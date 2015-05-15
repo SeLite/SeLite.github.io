@@ -2,8 +2,10 @@
 title: Documentation standard
 layout: default
 ---
+{% include links %}
+
 # Maintaining the documentation
-  * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
+  * See [Github-flavoured Markdown](https://help.github.com/articles/github-flavored-markdown/), [Liquid for Designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) and [Kramdown syntax](http://kramdown.gettalong.org/syntax.html).
   * Write and organise it clearly.
   * Provide examples.
   * Don't have any content before the first heading (`# Heading... #`).
@@ -15,7 +17,7 @@ layout: default
     * You need long lines for pre-formatted text, such as code blocks and [Drawn diagrams](#drawn-diagrams).
     * In NetBeans choose menu Tools > Options > Editor > Formatting > Line Wraps: After words.
     * If you need Eclipse, try <http://dev.cdhq.de/eclipse/word-wrap/> (install both components: word wrap and line numbering fix); however, line numbering fix (for Eclipse Kepler) doesn’t work in Eclipse Luna (4.4).
- * Format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > [Firefox _chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui).
+ * Format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > Firefox {{chromeUrl}}s.
  * Don't have blank lines in HTML comments in `.md` files. Such comments work well online, but not with [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) in Firefox.
  * Don't blindly rely on Markdown support for NetBeans, neither on Markdown Viewer for Firefox.
  * Preview by running [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/).

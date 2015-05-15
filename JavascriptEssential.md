@@ -20,15 +20,15 @@ layout: default
 If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of [extensions of Selenium IDE][Extension of Selenium IDE] (including SeLite frameworks as in [GeneralFramework](GeneralFramework)) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.
 
 ## Privileged Javascript files ##
-Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from [_chrome://_](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
+Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from {{chromeUrl}}s or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
 
 ## Scope ##
-Javascript for web applications has only two levels of scope: _global_ and _local_ (within functions). On the other hand, Firefox avoids conflicts between add-ons by running them with separate global scopes. However, extensions can share Javascript files without mixing their scopes: they can specify global scope used in those files. (The code from such files is still shared, even though global scope for each of its usages may be different. See [JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files).) See also [Core scope].
+Javascript for web applications has only two levels of scope: _global_ and _local_ (within functions). On the other hand, Firefox avoids conflicts between add-ons by running them with separate global scopes. However, extensions can share Javascript files without mixing their scopes: they can specify global scope used in those files. (The code from such files is still shared, even though global scope for each of its usages may be different. See {{navLoadingJavascriptFiles}}.) See also [Core scope].
 
 ## Prevent name conflicts ##
-If you add custom functionality at [Core scope], do it only for new Selenese commands or for use in parameters of Selenese commands. The later should be grouped in an object with a name unlikely to cause conflicts. Such an object serves as a namespace. You can have multi-level namespace objects, or group classes and functions in a Java package-like notation.
+If you add custom functionality at [Core scope], do it only for new Selenese commands or for use in parameters of Selenese commands. The later should be grouped in an object with a name unlikely to cause conflicts. Such object serves as a namespace. You can have multi-level namespace objects, or group classes and functions in a Java package-like notation.
 
-When adding functionality that doesn't need to be directly available to Selenese expressions, use [JavascriptComplex](JavascriptComplex) > [Javascript code modules](JavascriptComplex#javascript-code-modules).
+When adding functionality that doesn't need to be directly available to Selenese expressions, use {{navJavascriptCodeModules}}.
 
 If adding Selenese commands specific to a web application, give their names a prefix unlikely to cause conflicts.
 
@@ -45,7 +45,7 @@ That adds extra checks that help to prevent errors and some bad practice code. S
 See also [> MDN > Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions).
 
 ## The classic way ##
-This is a definition by `function` statement. When using [strict Javascript](#strict-javascript), have such definitions at file level only and not within other functions or conditional/loop blocks (see [MDN > Strict mode > Paving the way for future ECMAScript versions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Paving_the_way_for_future_ECMAScript_versions)).
+This is a definition by `function` statement. When employing {{navStrictJavascript}}, have such definitions at file level only and not within other functions or conditional/loop blocks (see [MDN > Strict mode > Paving the way for future ECMAScript versions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode#Paving_the_way_for_future_ECMAScript_versions)).
 
 ```javascript
 "use strict";
@@ -55,7 +55,7 @@ function myFunction( param, anotherParam... ) {
 ```
 
 ## By function expression ##
-This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and [Function intercepts](#function-intercepts).
+This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and {{navFunctionIntercepts}}.
 
 ### Avoid nameless functions ###
 This only applies to definitions by [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). That's useful for adding/defining functions
@@ -63,7 +63,7 @@ This only applies to definitions by [function expression](https://developer.mozi
   * on existing objects,
   * on existing prototypes or
   * [in the passed global scope](#passing-the-global-scope).
-  * in [strict Javascript](#strict-javascript), where this the only way of defining functions from within other function or blocks.
+  * that follow {{navStrictJavascript}}, where this the only way of defining functions from within other function or blocks.
 
 The following three definitions use function expression. However, they are all nameless.
 

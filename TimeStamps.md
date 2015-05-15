@@ -16,7 +16,7 @@ Most web apps display timestamps - when a record/item/comment... was created, mo
 # Why timestamps are not trivial
 
 ## Getting [script] timestamps
-The script drives the application, which records a timestamp (in the app DB). That timestamp will show up on the next or later page (or on the same page in an element updated via ajax). The script could parse that timestamp and store it in its DB - but that could prevent it from detecting app errors. The script, therefore, always generates its own timestamps. Then it uses them to validate timestamps parsed from the application.
+The script drives the application, which records a timestamp (in [app DB]). That timestamp will show up on the next or later page (or on the same page in an element updated via ajax). The script could parse that timestamp and store it in its DB - but that could prevent it from detecting app errors. The script, therefore, always generates its own timestamps. Then it uses them to validate timestamps parsed from the application.
 
 ## Issues with timestamps ##
 The above situations cause

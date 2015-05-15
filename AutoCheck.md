@@ -5,7 +5,7 @@ layout: default
 {% include links %}
 
 # Automatic checks #
-[AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [AddOns](AddOns), validates the current page after every successful Selenese command. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.
+[AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [AddOns](AddOns), validates the current page after every successful Selenese [command]. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.
 
 ## Negative checks ##
 Negative checks validate that given selector(s) don't match any elements on the page. That's useful if your web server, framework or programming language report errors/warnings/notices in some kind of fixed format.
@@ -21,7 +21,7 @@ Standard PHP detection class supports this (which works with [Xdebug](http://xde
 Positive checks validate that the page contains elements that match given selector(s). However, it can't validate that HTML of a page conforms to HTML standard. That's because Firefox automatically fixes incorrect HTML and it adds missing necessary elements.
 
 ## Configuration ##
-Configure these checks at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_. In order to use [AutoCheck](AutoCheck) you must select at least autoCheckDetector or autoCheckDetectorCustom. Other fields are optional.
+Configure these checks at {{chromeUrl}} _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_. In order to use [AutoCheck](AutoCheck) you must select at least `autoCheckDetector` or `autoCheckDetectorCustom`. Other fields are optional.<!-- TODO format options as `code`-->
 
   * autoCheckAssert - whether an occurrence should trigger an assert failure; by default it triggers a validation failure rather than an assert failure
   * autoCheckDetector - choose a standard detection class to use; or set it to null/undefined if you use a custom class

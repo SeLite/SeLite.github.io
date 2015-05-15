@@ -20,7 +20,7 @@ When you read documentation, and things don't work:
 Do the same when you write a report about a potential issue.
 
 # Versions of components #
-Have Firefox and Selenium IDE that are supported by current SeLite. See [Overview](./) > [Compatibility](./#compatibility). Get current versions of all SeLite add-ons - as per [AddOns](AddOns) > [Latest releases](AddOns#latest-releases). (If you only get add-ons that you need, you may not be able to [run packaged scripts](#run-packaged-scripts)). For unreleased functionality use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge).
+Have Firefox and Selenium IDE that are supported by current SeLite. See [Overview](./) > [Compatibility](./#compatibility). Get current versions of all SeLite add-ons - as per [AddOns](AddOns) > [Latest releases](AddOns#latest-releases). (If you only get add-ons that you need, you may not be able to [run packaged scripts](#run-packaged-scripts)). For unreleased functionality use {{navCuttingEdge}}.
 
 # Loading Selenium plugins #
 Check whether packaged Selenium extensions start correctly: Open Selenium IDE > menu Options > Options... > Plugins. Verify that each plugin is enabled and with no error message (in red). If there is an error, inspect [Browser Console](#browser-console). (That screen doesn't show error details in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser).) TODO centralise with DevelopmentTools.
@@ -30,11 +30,11 @@ By default, Selenium IDE disables plugins that fail on start, and it keeps them 
 # Narrow down the problem #
 This may help you to figure out the issue yourself. Even if you don't solve it, you'll have collected information that will assist others to help you. In order to locate the issue you need to (as applicable)
 
-  * reload your [script DB] from the app DB and re-run the [script]
+  * reload your [script DB] from [app DB] and re-run the [script]
   * eliminate extras
-    * disable all other Firefox extensions and plugins (including  well-known ones like Firebug). Only leave extensions required to run your test.
+    * disable all other Firefox extensions and plugins (including  well-known ones like Firebug). Only leave extensions required to run your script.
     * minimise any custom Selenium extensions
-    * cut down your test
+    * cut down your script
     * replicate the issue against local .html page(s), simplified as much as possible
     * replace SeLite-specific commands (e.g. `typeRandom`) with their Selenium alternatives and see whether your locators work.
 
@@ -44,10 +44,10 @@ If Selenium IDE log doesn't give much information about the problem, you need a 
 ## Separate Firefox profile ##
 If you don't want to modify your existing Firefox profile, [create a new one](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) (with no spaces in its name). Enable [Browser Console](#browser-console). Add any necessary non-SeLite extensions, until the problem appears. Alternatively, you could also [duplicate the existing profile](http://kb.mozillazine.org/Moving_your_profile_folder) (which is stored as a folder) and narrow down the problem in that copy.
 
-# Run packaged tests #
-If you use [AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge), it also gives you [PackagedScripts](PackagedScripts). Otherwise get the tests from SeLite source as per [InstallFromSource](InstallFromSource).
+# Run packaged scripts #
+If you use {{navCuttingEdge}}, it also gives you [PackagedScripts](PackagedScripts). Otherwise get the [scripts][script] from SeLite source as per [InstallFromSource](InstallFromSource).
 
-Disable all Selenium extensions other than ones supported by SeLite. Run the tests as per [PackagedScripts](PackagedScripts). Then enabled other Selenium extensions and see if they break the tests.
+Disable all Selenium extensions other than ones supported by SeLite. Run scripts as per [PackagedScripts](PackagedScripts). Then enable other Selenium extensions and see if they break the scripts.
 
 # Defects in third party components #
 If the cause is in Firefox, Selenium IDE or a third party component, submit a report in the respective bug tracking system (see also [ThirdPartyIssues](ThirdPartyIssues)). If the third party confirms the problem and it is likely to affect other SeLite users, report it to SeLite, too, so that its admins add a link to that issue to [ThirdPartyIssues](ThirdPartyIssues). Then other users can star it (vote for it), which could motivate the third party to solve your problem.

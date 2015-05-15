@@ -15,20 +15,20 @@ These terms are not SeLite-specific. The goal here is to clarify possible/desira
 
   * **application** - what is being tested, with
     * source, libraries, webserver, single sign on etc.
-    * application data ('test app DB' or just 'app DB')
+    * application data ('test app DB' or just '[app DB]')
   * **test** - depending on the context, either
     * the system that invokes the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + [scripts][script]
     * [scripts][script]
   * **data**
-    * **'app data', 'app DB'** or just **'data'** - the application data (or its subset) relevant to testing
+    * **'app data', '[app DB]'** or just **'data'** - the application data (or its subset) relevant to testing
       * usually it means SQLite export of the application's DB
       * if the application uses SQLite, then it can be the app DB (SQLite file) itself (SQLite file on a network drive or local)
-    * **'test data'** or **'test DB'**
-      * what the test believes that the app data is, either
+    * **'script data'** or **'[script DB]'**
+      * what the [script] believes that the app data is, either
         * same source as app data - accessed by test read-only (not a good approach, see more below), or
         * a replica of app data, which
           * is separate - not accessed by the application
-          * shadows app DB
+          * shadows [app DB]
           * gets updated by the test to reflect the changes expected to happen in the app data (see more below)
           * is used by test to navigate and verify the application
           * helps to detect and identify errors in the application or the test
@@ -46,7 +46,7 @@ These terms are not SeLite-specific. The goal here is to clarify possible/desira
       * tracking web app user session and page navigation
       * temporary storage of loaded/modified test data and generated test input data
       * custom test  control
-      * loading/updating records in test DB
+      * loading/updating records in [script DB]
   * **knock-on/silent defects** are 'hidden' or mysterious errors, whose buggy effect
     * doesn't show up immediately at all, or
     * is not initially tested or obvious (because of the scope, complexity etc.)
@@ -62,7 +62,7 @@ SeLite is for thorough, yet practical testing of DB-driven apps. Your tests
   * need to be repeatable and robust
     * i.e. not specific to a test session or to a browser's session
     * the data is flexible and not trivial, e.g.
-      * based on the test DB, rather than just hard-coded or sequential
+      * based on the [script DB], rather than just hard-coded or sequential
       * random, semi random or partially random
     * actions/groups of actions may be done in random order
 For example, you don't need SeLite  if your test just
@@ -79,7 +79,7 @@ But you'll benefit from SeLite if you continually test the application, when you
 This is not Selenium IDE or SeLite-specific, but it only covers what can be done with Selenium. There are a few options, the easiest first:
 
 ## 1. Test uses no DB ##
-This is hardly sufficient as thorough testing. The app DB
+This is hardly sufficient as thorough testing. The [app DB]
 
   * has initial state 'frozen' to make the test work
   * needs to be reset to that initial state (every time the test is run)
@@ -87,20 +87,19 @@ This is hardly sufficient as thorough testing. The app DB
 The test
 
   * has no own DB
-  * has no access to app DB (except for access to reset it - if needed and automated)
-  * depends on the initial app DB to be in the expected state
+  * has no access to [app DB] (except for access to reset it - if needed and automated)
+  * depends on the initial [app DB] to be in the expected state
   * enters/modifies the app data
     * by navigating the app via its UI
     * based on fixed/random/partially random data set
     * stores the data in test session (if needed)
     * validates the data presented by the app UI (against that session data or against the fixed data)
-  * doesn't know about any previously entered/modified data present in app DB, if (re)started
+  * doesn't know about any previously entered/modified data present in [app DB], if (re)started
 
 Maintenance cost makes this not feasible for long term. Its parts could be reused with SeLite. However, you may want to use different locators, depending on the data schema, page navigation, login functionality. That may be easier when starting from scratch.
 
 ## 2. Web app and its test use the same DB ##
-Like #1, but the test reads from the app DB.
-The app DB
+Like #1, but the test reads from [app DB], which
 
   * has no 'frozen' initial state
   * may need resetting/partial resetting from time to time
@@ -108,7 +107,7 @@ The app DB
 The test
 
   * has no own DB
-  * has read-only access (back door) to app DB (and access to reset it - if needed and automated)
+  * has read-only access (back door) to [app DB] (and access to reset it - if needed and automated)
   * generates a fixed/random/controlled random data set, which it enters/modifies via the app UI
   * it validates the data presented by the app UI against
     * the app data (reloaded from the app DB)
@@ -119,7 +118,7 @@ The test
       * possibly detecting hidden errors, but it
         * is difficult to implement, if an error shows up only several steps/stages after its initial cause
         * can't identify errors caused by previous test runs (not tracked in the current test session)
-  * if (re)started, it gets the initial state based on the current app DB only, with no other track of the changes caused by previous test runs
+  * if (re)started, it gets the initial state based on the current [app DB] only, with no other track of the changes caused by previous test runs
 
 Single source of truth - i.e. same DB used by the app and by the test - causes hidden problems (false positives). The test may succeed, but the data flow has bugs.
 
@@ -138,37 +137,37 @@ See [simple online demo](http://htmlpreview.github.io/?https://github.com/selite
 This explains [Overview](./) > [Advantages of test data separation](./#advantages-of-test-data-separation). It's like #2, but the test
 
   * has its own DB
-    * which is initially a copy of the app DB, with
+    * which is initially a copy of [app DB], with
       * schema
-        * either exactly same as in the test DB, or
-        * modified but logically equivalent to that of test DB, or
-        * simplified or a subset of test DB schema - as relevant to testing
+        * either exactly same as in [script DB], or
+        * modified but logically equivalent to that of [script DB], or
+        * subset of [script DB] schema or its simplified version (as relevant to testing)
       * data
-        * containing all data from the app DB, or
-        * being a narrowed subset of the app DB data
-          * then the test needs to be aware that the app may show more entries than what is in the test DB, i.e. the test needs to filter/scroll/navigate across the page(s) of records shown by the app, to locate the records that it wants to test
+        * containing all data from app DB, or
+        * being a narrowed subset of app DB data
+          * then the test needs to be aware that the app may show more entries than what is in [script DB], i.e. the test needs to filter/scroll/navigate across the page(s) of records shown by the app, to locate the records that it wants to test
         * should be approximately equal to the app data (for approximate fields see [HandlingData](HandlingData) and [TimeStamps](TimeStamps))
-  * keeps its DB in sync with app DB (or its part), updating test DB to reflect changes in app DB
-    * but it doesn't blindly copy/replicate the changes from app DB to test DB (via a back door), since that would effectively be approach #2
+  * keeps its DB in sync with [app DB] (or its part), updating [script DB] to reflect changes in app DB
+    * but it doesn't blindly copy/replicate the changes from app DB to script DB (via a back door), since that would effectively be approach #2
     * the test updates its DB on its own, but in a way that the tester believes the app updates its DB
     * ideally the test doesn't use exactly same SQL queries as the app, but ones that are logically equivalent
       * this helps to detect SQL-level logical bugs (other than syntax errors)
       * SeLite helps with this, by providing an object oriented layer (which is unlikely to be used by the web app, therefore the app uses a different method to generate SQL, so there's a higher chance to detect an error in the app)
-  * validates the data presented by the app UI against the data in the test DB, which enables the test to detect hidden/silent application errors
+  * validates the data presented by the app UI against the data in [script DB], which enables the test to detect hidden/silent application errors
     * whether during the test run when the error happens, or during a later test
-  * the test DB may get out of sync if
+  * [script DB] may get out of sync if
     * the test is incomplete/incorrect (being developed), or
     * the app and/or test dies/times out
-    * the app DB or test DB is changed in a way other than through the test (likely during development of the test or the app)
+    * [app DB] or [script DB] is changed in a way other than through the test (likely during development of the test or the app)
   * and then
-    * the test DB needs to be reloaded from new a copy of the app DB (if healthy), or
-    * both test and app DBs needs to be reset
+    * [script DB] needs to be reloaded from new a copy of [app DB] (if healthy), or
+    * both script and app DBs needs to be reset
     * potential challenge: automate this DB reload/reset
 
 If the same error exists in both the app and the test, then it doesn't get detected automatically. That may be at various levels
 
   * DB schema
-    * because the app and the test DB schema are same/equivalent
+    * because [app DB] and [script DB] schema are same/equivalent
     * there's no big need to detect these errors by automated testing, since the schema
       * is the cornerstone of applications/systems, so it's usually well defined, checked and tested
       * doesn't change as much as functionality, therefore there's a less chance of human error

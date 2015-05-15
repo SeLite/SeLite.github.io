@@ -43,7 +43,7 @@ Steps
 6. Start standalone Selenium IDE (by Ctrl+Alt+S, or Firefox menu Tools > Selenium IDE)
 7. Display auxiliary Selenium IDEs. For each
  1. open a new Firefox window
- 2. open one of [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui)
+ 2. open one of {{chromeUrl}}s
     * _chrome://selenium-ide/content/selenium-ide.xul#GREEN_
     * _chrome://selenium-ide/content/selenium-ide.xul#BLUE_
     * _chrome://selenium-ide/content/selenium-ide.xul#RED_

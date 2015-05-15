@@ -19,7 +19,7 @@ Some extensions may depend on others and require them to be initiated first. For
   * initiation of the dependant relies on the dependee
 
 # Loading via Extension Sequencer #
-Your add-on needs to have [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://my-plugin/content/SeLiteExtensionSequencerManifest.js_ (in UTF-8) containing something like:
+Your add-on needs to have {{chromeUrl}} _chrome://my-plugin/content/SeLiteExtensionSequencerManifest.js_ (in UTF-8) containing something like:
 
 ```javascript
 "use strict";
@@ -78,14 +78,14 @@ Invoke `run_tests.ps1` (on Windows), `run_tests_mac.sh` (on Mac OS) or `run_test
 
 When modifying or re-using those tests, follow the existing special format of their `SeLiteExtensionSequencerManifest.js` files. For `oldestCompatibleVersion`, `minVersion` and `compatibleVersion`, enclose the version numbers within quotes `".."`. Otherwise they do not get compared well when the versions end with 0's. Have any commas separating the fields at the beginning of lines rather than at the end, and have `preActivate` entry (including the whole function) on one line only. That enables `run_tests.ps1, run_tests_mac.sh` and `run_tests.sh` to comment or uncomment those lines.
 
-To debug Extension Sequencer itself with Firefox Browser Toolbox, visit [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/extensions/invoke.xul_.
+To debug Extension Sequencer itself with Firefox Browser Toolbox, visit {{chromeUrl}} _chrome://selite-extension-sequencer/content/extensions/invoke.xul_.
 
 # Core extensions loaded twice #
 Because of [ThirdPartyIssues](ThirdPartyIssues) > [Selenium issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697), [Core extensions][core extension] get loaded 2x (whether loaded via Selenium IE menu > Options > Options... > Core extension, from an .xpi file or through a proxy file - regardless of ExtensionSequencer, but not when loaded via [BootstrapLoader](BootstrapLoader)). That's OK if the extension just adds new Selenese commands. But it can be a problem if it tail/head intercepts Selenese or Selenium Core. You don't want to intercept Selenese or Selenium Core twice.
 
-In extensions loaded via ExtensionSequencer you can use `SeLiteExtensionSequencer.coreExtensionsLoadedTimes` to keep track of whether the extension is loaded for the first time or the second one. See [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-extension-sequencer/content/SeLiteExtensionSequencer.js_ or [online](https://code.google.com/p/selite/source/browse/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
+In extensions loaded via ExtensionSequencer you can use `SeLiteExtensionSequencer.coreExtensionsLoadedTimes` to keep track of whether the extension is loaded for the first time or the second one. See {{chromeUrl}} _chrome://selite-extension-sequencer/content/SeLiteExtensionSequencer.js_ or [online](https://code.google.com/p/selite/source/browse/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
 
 ## Global symbols and strict mode ##
-That Selenium issue also causes problems when adding new global symbols to [Core scope] and using [JavascriptEssential](JavascriptEssential) > [Strict Javascript](JavascriptEssential#strict-javascript). When Selenium IDE loads a [Core extension] for the first and second time, it uses different [Core scope] and a different `Selenium` class! If the extension in strict mode defines any global symbols, they are thrown away after the first load: only the second load stays in Selenium scope.
+That Selenium issue also causes problems when adding new global symbols to [Core scope] and using {{navStrictJavascript}}. When Selenium IDE loads a [Core extension] for the first and second time, it uses different [Core scope] and a different `Selenium` class! If the extension in strict mode defines any global symbols, they are thrown away after the first load: only the second load stays in Selenium scope.
 
 That may tempt you not to use strict mode and set the global symbols as undeclared (without `var` statement). This would create them in Selenium global scope (bypassing the local scope, which will be thrown away - see [MDN mozIJSSubScriptLoader.loadSubScript](https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader#loadSubScript%28%29)). However, there's a way to do it in strict mode. When setting the new global symbols, also set them as fields on an existing object accessible from global scope (e.g. a class constructor). At the beginning of your extension, check whether those fields are set on that (existing) object; if not, then set them there and also in the global scope, otherwise retrieve them from that global object and set them in the global scope. See [se-testcase-debug-context.js](https://code.google.com/p/selite/source/browse/testcase-debug-context/src/chrome/content/extensions/se-testcase-debug-context.js).

@@ -16,7 +16,7 @@ Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite 
 
 To make navigation across files easy, here's a convention: filenames of suites end with `_suite.html`, and cases are in files that have names ending with `_case.html`. If there are several shared cases, they can be in `shared_cases/` subfolder.
 
-If a script needs configuration (through [Settings](Settings)), it has [SettingsManifests](SettingsManifests) > [_Values_ manifests](SettingsManifests#-values-manifests). If the same add-on has multiple suites that need different configuration, such [suites][suite] and their _values_ manifests are in subfolders.
+Scripts have {{navValuesManifests}} for any [Settings](Settings). If the same add-on has multiple [suites][suite] that need different configuration, such [suites][suite] and their {{valuesManifest}}s are in subfolders.
 
 Selenium IDE doesn't indicate the current [suite]'s folder in the GUI. Therefore make suite file names clear. That helps especially when having similar suites in different folders (because of different configurations). SeLite own suites have file names in format `add-on-name_subfolder_suite.html` or `add-on-name_subfolder_subfolder_suite.html`.
 
@@ -55,7 +55,7 @@ These validate functionality
   * which would be awkward to test in Selenese, or
   * which is not Selenese-specific, and while it can (and should) be tested from Selenese, it should be tested without Selenium IDE, too.
 
-There's no extra installation - they are a part of their add-ons (in folders `javascript-tests`). You can invoke them offline and directly from Firefox (without starting Selenium IDE) through [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese scripts.
+There's no extra installation - they are a part of their add-ons (in folders `javascript-tests`). You can invoke them offline and directly from Firefox (without starting Selenium IDE) through {{chromeUrl}}s listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese scripts.
 
 # Shell tests #
 These are invoked from shell (i.e. `cmd` on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).

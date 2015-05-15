@@ -29,7 +29,7 @@ Frameworks can add keys to fields of class `SeLiteSettings.Field.FixedMap`. One 
 ## Creating/updating passwords by [scripts][script]
 {:#creatingupdating-passwords-by-scripts}
 
-If your [scripts][script] create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in script DB](GeneralFramework#preserving-special-values-in-script-db).
+If your [scripts][script] create/update user passwords, see {{navPreservingSpecialValuesInScriptDb}}.
 
 # Out of scope: More flexible or complex fields #
 The [scripts][script] contain rolenames or username placeholders - thus you don't want to change them frequently. So there is no need to have the roles or username placeholders editable via GUI interface; it's enough to have them hardcoded in the config field definition.

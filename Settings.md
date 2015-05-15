@@ -62,7 +62,7 @@ You can
 
   * define configuration schemas (called _modules_) and their fields
   * store any number of configuration sets (or their parts) per module in
-    * plain text files (values manifests), and/or
+    * plain text files ({{valuesManifest}}s), and/or
     * Firefox profile and
       * edit them through a generic interface in a browser
       * choose one that is default (if the module allows multiple sets)
@@ -70,7 +70,7 @@ You can
       * alternatively edit them access via url _about:config_
   * have your [Core extension] access the preferences via a Javascript code module (API)
 
-Values manifests and associated sets work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
+Associated [sets][set] and {{valuesManifest}}s work only in standalone Selenium IDE, but not in [SeleniumIDE](SeleniumIDE) > [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
 # Modules and sets #
 Modules are schemas/templates of user's configuration(s). They define each field and
@@ -81,21 +81,21 @@ Modules are schemas/templates of user's configuration(s). They define each field
   * default value(s)
   * custom validation (optional)
 
+Test developers define configuration modules (schemas) in Javascript. See [SettingsFields](SettingsFields) and [SettingsAPI](SettingsAPI).
+
 A field can be either
 
   * free-type - a string, an integer, a decimal
   * choice from a fixed list
   * boolean checkbox
   * file/folder picker
-
-User's configuration(s) - values of the fields - are stored in _sets_. A module can have either
+<!-- todo merget thif file with AboutDocumentation-->
+<!-- TODO Firefox profile-based preferences-->User's configuration(s) - values of the fields - are stored in _sets_. A module can have either
 
   * exactly one set, or
   * any number of sets; one of them can be selected as default
 
-It also works without Selenium IDE and without manifests. So you can use it in any Firefox extension.
-
-Test developers define configuration modules (schemas) in Javascript. See [SettingsFields](SettingsFields) and [SettingsAPI](SettingsAPI).
+Settings also works without Selenium IDE and without manifests. So it may serve any Firefox extension.
 
 # Granularity #
 Users can configure and override settings granularly via
@@ -103,13 +103,13 @@ Users can configure and override settings granularly via
   * profile-based configuration sets
     * through user interface
     * not shared with other team members
-    * applied to [suites][suite] through _associations_ manifest file(s)
+    * applied to [suites][suite] through {{associationsManifest}} file(s)
   * manifest file(s)
     * in plain text
     * in folder(s) on the [suite] file path
     * exist in two types
-      * _values_ manifests
-      * _associations_ manifests
+      * {{valuesManifest}}s
+      * {{associationsManifest}}s
     * can be shared, distributed and updated within a team via
       * a shared drive, or
       * source versioning system

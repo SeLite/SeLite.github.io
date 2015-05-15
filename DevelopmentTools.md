@@ -26,7 +26,7 @@ Visit Firefox URL _about:config_ and set the following preferences:
   * `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
   * The following is for developing XUL GUI or its Javascript. Add (since these preferences don't exist by default)
     * `nglayout.debug.disable_xul_cache` to boolean `true`
-    * `dom.allow_XUL_XBL_for_file` to boolean `true` (for accessing `.xul` files via _file://_ URLs in addition to using [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui)). Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
+    * `dom.allow_XUL_XBL_for_file` to boolean `true` (for accessing `.xul` files via _file://_ URLs in addition to using {{chromeUrl}}s. Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
 
 Restart Firefox, so that the above configuration takes effect.
 

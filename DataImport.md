@@ -5,7 +5,7 @@ layout: default
 {% include links %}
 
 # Using DB filters #
-Does your app use RDBMS other than SQLite and would you like your [scripts][script] to have a copy of it? Then you want to export the data from your app DB to SQLite. For that you need
+Does your app use RDBMS other than SQLite and would you like your [scripts][script] to have a copy of it? Then you want to export the data from your [app DB] to SQLite. For that you need
 
   * [SQLite binary](http://www.sqlite.org/download.html)
     * 3.6.20 distributed with CentOS 6.2 x64 used to generate strange 'Error: file is encrypted or is not a database'. 3.7.16 compiled from source works well.

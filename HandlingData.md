@@ -8,7 +8,7 @@ layout: default
 This explains how a web app and Selenese [scripts][script] can operate with separate databases ([TestMethodsTheory](TestMethodsTheory) > [Web app and its test have separate DBs](TestMethodsTheory#web-app-and-its-test-have-separate-dbs)).
 
 # [Script] data lifecycle
-Initially, the [script] database is a copy of the web application's DB (possibly with less tables and columns or records). For each logical step, the [script] triggers an operation in the browser and it also updates its own DB to reflect that operation. The script DB updates don't need to be exactly same as app DB updates. The script only updates columns/tables that we use for validation. The script compares the result page of the web app to the updated script data.
+Initially, the [script DB] is a copy of the web application's DB (possibly with less tables and columns or records). For each logical step, the [script] triggers an operation in the browser and it also updates its own DB to reflect that operation. Updates in [script DB] don't need to be exactly same as updates in [app DB]. The script only updates columns/tables that we use for validation. The script compares the result page of the web app to the updated script data.
 
 If the app or the script fails, their databases can get out-of-sync. That causes non-obvious knock-on errors later. That should normally happen only if
 
@@ -19,32 +19,32 @@ If the app or the script fails, their databases can get out-of-sync. That causes
 # Re-loading the data #
 If the script and web app data is out of sync, you we want to re-load it. SeLite doesn't automate this. If we (ever) automate it, then we want it to
 
-  * periodically take synchronised snapshots of script and app DB
-  * back up the script state (e.g. Selenium variables), both script and web app DB and take a screenshot, so that you can identify the problem later
+  * periodically take synchronised snapshots of script and [app DB]
+  * back up the script state (e.g. Selenium variables), both script and web [app DB] and take a screenshot, so that you can identify the problem later
 
 If the error was outside of both the app and the script, and the script can detect that, it could
 
-  * reload app and script DB (if needed - if the failed operation is likely to apply some incomplete modifications, or modifications different between the app and the script)
+  * reload [app DB] and [script DB] (if needed - if the failed operation is likely to apply some incomplete modifications, or modifications different between the app and the script)
   * sleep (ideally for a period that increases exponentially on each re-try) and re-try (repeating this for up to a limited number of times).
 
 Otherwise, the error is in the app or in the script. Re-loading the data won't fix the script neither the application. It is beneficial, however, when user needs to use other parts (before the failed part, whether of the app or the script, gets fixed).
 
 We can re-load
 
-  * just the script DB
-    * to make it reflect the current web app DB
+  * just the [script DB]
+    * to make it reflect the current web [app DB]
     * that only works if
       * the script was incorrect just under a specific condition
       * we fixed the script
       * the web app itself is correct
-      * there were no errors from the third group (so the app DB is healthy)
-      * the workflow of the web app allows us to re-run the script without re-loading the application DB. See below.
-  * or: both script DB and app DB
+      * there were no errors from the third group (so the [app DB] is healthy)
+      * the workflow of the web app allows us to re-run the script without re-loading the [app DB]. See below.
+  * or: both [script DB] and [app DB]
 
 There will also be a need to reload both DBs, even if everything is healthy (app and [script] are OK and both DBs in sync). That's when we reach designed limits of the application. For example, the app may limit the number of submissions per user per day without a way to remove them through the application's web interface.
 
 # Loose [script] data
-Some fields are difficult to replicate from app DB to script DB during the runs. Those are
+Some fields are difficult to replicate from [app DB] to [script DB] during the runs. Those are
 
   * IDs fields of inserted records
   * non-trivial references
@@ -60,10 +60,10 @@ Say you want a script to navigate by
 
 That is needed e.g. for security testing to ensure that a user can't access record(s) created by other user(s). In such a case the script can't navigate through the web app to the forbidden page, so it needs to know the ID value to generate the link.
 
-When the script creates a new record in its DB, it needs to set its ID to reflect the ID in the app DB. Methods:
+When the script creates a new record in its DB, it needs to set its ID to reflect the ID in the [app DB]. Methods:
 
   * **Generate/assume**
-    * the last used values are the same between script DB (SQLite) and app DB, and script DB (SQLite) uses same method to generate the new IDs as app DB
+    * the last used values are the same between [script DB] (SQLite) and [app DB], and [script DB] (SQLite) uses same method to generate the new IDs as [app DB]
     * this is optimistic - it breaks if one side gets broken temporarily and the last used values get out of sync
     * script SQLite tables can use following options (as relevant to SeLite)
       * `INTEGER PRIMARY KEY`, which
@@ -77,10 +77,10 @@ When the script creates a new record in its DB, it needs to set its ID to reflec
         * the import filter can set set next values of SQLite `INTEGER PRIMARY KEY AUTOINCREMENT` columns in special table [sqlite_sequence](http://www.sqlite.org/fileformat2.html#seqtab) (which is present only after there is at least one table with `INTEGER PRIMARY KEY AUTOINCREMENT` column).
       * both options reuse IDs from rolled back transaction
       * (both options require the key to be `INTEGER`, not `INT`)
-    * app DB-specific
+    * [app DB]-specific
       * **PostgreSQL sequences**
-        * if a transaction dies/is rolled back, it increases the sequence anyway, and any next transaction will use the next value. That's incompatible with SQLite `INTEGER PRIMARY KEY` and SQLite `INTEGER PRIMARY KEY AUTOINCREMENT`
-        * in the initial app DB, last values of all (relevant) ID sequences must reflect the highest IDs in the respective tables. I.e. either
+        * if a transaction dies/is rolled back, it increases the sequence anyway, and any next transaction will use the next value. That's incompatible with SQLite `INTEGER PRIMARY KEY` and SQLite `INTEGER PRIMARY KEY AUTOINCREMENT`.
+        * when importing/loading [app DB], last values of all (relevant) ID sequences must reflect the highest IDs in the respective tables. I.e. either
           * the last created record in each table still exists and it didn't get deleted. Otherwise Postgres sequence would use a subsequent ID for the next new record, while SQLite would use the ID of the deleted record (since the data dump doesn't contain the deleted record, and SQLite doesn't know that it has existed in past), or
           * when/just after the data dump from Postgres to SQLite, reset Postgres sequences to return the next available id for each relevant table. E.g. `SELECT setval('your_table_id_seq', (SELECT MAX(id) FROM your_table)+1)`
         * **simplified approach**
@@ -94,14 +94,14 @@ When the script creates a new record in its DB, it needs to set its ID to reflec
             * script creates a new record (commiting the transaction), then it deletes the new record
             * this app failure is not easy to differentiate from the following one
           * **on app failure without an `INSERT`**
-            * detected e.g. as a session/single-sign out timeout, app DB down etc.
+            * detected e.g. as a session/single-sign out timeout, [app DB] down etc.
             * script doesn't create a new record
         * if the web app is not tied to Postgres, an alternative is to export the app data into a different DB that doesn't increase sequences by uncommitted transactions and run the app against that different DB
           * the simplest situation is if the web app can work with SQLite; then the DB import process means just copying the file
           * differences between RDBMS may apply. See [TestMethodsTheory](TestMethodsTheory) > [SQLite side effects of SeLite](TestMethodsTheory#sqlite-side-effects-of-SeLite) and [SQLiteSpecifics](SQLiteSpecifics).
       * other types of DB may need to reset their sequences
   * **Capture**
-    * after submitting it shows a view page of the new submission. Its URL contains the new ID. Selenium IDE can extract it and save it in script DB.
+    * after submitting it shows a view page of the new submission. Its URL contains the new ID. Selenium IDE can extract it and save it in [script DB].
     * otherwise (if the application/module doesn't present the view page after submission) the script
       * navigates the application to a page that lists the records
       * navigates the application to sort those submissions so that the latest is shown first
@@ -119,12 +119,12 @@ Non-trivial references are based on
 
   * random-based values, or
   * system-specific values not replicable in the script (e.g. univeraly unique IDs), or
-  * data/configuration values not represented in script DB.
+  * data/configuration values not represented in [script DB].
 
-If you want to validate them, you need to make the script capture those values and store them in script DB whenever they get created/updated in the app.
+If you want to validate them, you need to make the script capture those values and store them in [script DB] whenever they get created/updated in the app.
 
 # Reloading databases and creating/updating user passwords #
-See [SettingsInterface](SettingsInterface) > [Reloading databases](SettingsInterface#reloading-databases). If your scripts create/update user passwords, see [GeneralFramework](GeneralFramework) > [Preserving special values in script DB](GeneralFramework#preserving-special-values-in-script-db).
+See {{navReloadingDatabases}}. If your scripts create/update user passwords, see {{navPreservingSpecialValuesInScriptDb}}.
 
 # External data #
 Applications often use data sources outside of their DB (e.g. web services). If
@@ -139,7 +139,7 @@ then have the [script] use that data (via a back door). That's fairly easy betwe
   * a plugin/extension for Firefox (possibly a binary XPCOM component), or
   * custom-compiled Firefox with a target data source client and a [Core extension] of Selenium IDE in Javascript
 
-If the app writes to the external data source (directly or indirectly), then treat it like another app DB. Have your [script] use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
+If the app writes to the external data source (directly or indirectly), then treat it like another [app DB]. Have your [script] use (read and update) a writable copy of that external data (transformed to SQLite). You'll need script(s) to populate those table(s), so you can change and re-load the copy in future.
 
 # No column name _toString_ #
 You must not have a DB column with name `toString`. That's because Javascript objects representing DB records have method `toString()` for convenience.

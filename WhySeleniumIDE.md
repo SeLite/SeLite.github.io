@@ -2,7 +2,7 @@
 title: Why Selenium IDE?
 layout: default
 ---
-
+{% include links %}
 
 # Similarities between Selenium IDE and WebDriver #
 [Selenium](http://seleniumhq.org) - both [Selenium IDE](http://docs.seleniumhq.org/projects/ide/) and [WebDriver](http://seleniumhq.org/projects/webdriver) - automates operation of web browser. It usually doesn't need any modification of the web application. Both alternatives run automation scripts that control the browser (as if it were operated by a human). They
@@ -31,7 +31,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
     * no compilation, no Tomcat restart or the like
     * development, running and sharing of scripts and extensions directly from sources (without packaging)
     * smoother development of extensions with automatic re-loading by [BootstrapLoader](BootstrapLoader)
-  * (+) easy deployment (no test DB server, no binary dependencies)
+  * (+) easy deployment (no extra DB server, no binary dependencies)
   * (+) no involvement of server-side programming languages
   * (+) convenience of single environment: the browser with Selenium IDE is one place for recording, editing and running the scripts
   * (-) it's for Firefox only
@@ -52,7 +52,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
     * (+) scripts can access privileged Firefox features, like
       * SQLite data storage
         * in a local DB file (under user's control)
-        * this allows data separation between the test and the application
+        * this allows data separation between the script and the application
         * with object-oriented layer
       * taking screenshots of application screen
       * Login Manager (passwords stored by Firefox), which allows scripts
@@ -64,7 +64,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
 
 ## WebDriver ##
   * (+) supporting various browsers
-  * (-) missing some functionality (screenshots) that is only supported in Firefox (see online [Selenium Core Reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Selenium Actions](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#actions) > `captureEntirePageScreenshot()` or offline [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selenium-ide/content/selenium-core/reference.html#actions_ > `captureEntirePageScreenshot()`)
+  * (-) missing some functionality (screenshots) that is only supported in Firefox (see online [Selenium Core Reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Selenium Actions](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#actions) > `captureEntirePageScreenshot()` or offline at {{chromeUrl}} _chrome://selenium-ide/content/selenium-core/reference.html#actions_ > `captureEntirePageScreenshot()`)
   * (-) less practical for developing, running and distributing the scripts
     * you can import the scripts back from their language to Selenium IDE. However, if you re-edit them, you can't save them in the target language (see [changing formats](http://blog.reallysimplethoughts.com/2011/06/10/does-selenium-ide-v1-0-11-support-changing-formats)). You'd have to maintain both the Selenium IDE scripts (.html) and the generated server-side scripts, and to track any customization, so that you could re-generate them from Selenium IDE.
     * it involves packaging into jar files and restarting Tomcat (or similar)

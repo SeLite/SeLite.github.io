@@ -30,7 +30,7 @@ If you need to extend an existing framework, you may want to do it in a separate
 
 However, standard frameworks get loaded by [BootstrapLoader](BootstrapLoader), which doesn't guarantee order of loading multiple files. So one framework file can't robustly and easily intercept/replace functions defined in another file of the same framework (since the order of loading multiple files may work in one Firefox profile, but not in another). If you need that, replace the existing framework rather than extend it.
 
-Alternatively, load the dependency files yourself. See [JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files) > [Files loaded through mozIJSSubScriptLoader](JavascriptComplex#files-loaded-through-mozijssubscriptloader).
+Alternatively, load the dependency files yourself. See {{navLoadingJavascriptFiles}} > [Files loaded through mozIJSSubScriptLoader](JavascriptComplex#files-loaded-through-mozijssubscriptloader).
 
 All files that define parts of the same framework declare the same namespace object near their top. If the object doesn't exist yet, they also create it, with any essential fields (using the same code in all those files).
 
@@ -61,13 +61,13 @@ commonSettings.getField( 'roles' ).addKeys( ['second-level-admin', 'auditor', 'c
 # Creating a new framework #
 Look at source of existing frameworks - see [AppsFrameworks](AppsFrameworks).
 
-## Preserving special values in [script] DB
+## Preserving special values in [script DB]
 You may want your [scripts][script] to save special values in their DB. E.g. your framework could create or update users, generate random passwords for them and save those passwords in plain text (rather than encrypted), so that further runs could log in as those users.
 
 When reloading [script] DB (via either button), you don't want to override such special values from production/vanilla. SeLiteSettings can preserve them. Your framework needs to call `SeLiteSettings.setTestDbKeeper()` with an instance of `SeLiteSettings.TestDbKeeper.Columns` (or with an instance of a custom subclass of `SeLiteSettings.TestDbKeeper`).
 
 ## Limitations ##
-  * Call `SeLiteSettings.setTestDbKeeper()` even if you don't use testDbKeeper - then call it as `SeLiteSettings.setTestDbKeeper(null);` (This is needed by GUI buttons that reload [script]/app/vanilla DB.)
+  * Call `SeLiteSettings.setTestDbKeeper()` even if you don't use testDbKeeper - then call it as `SeLiteSettings.setTestDbKeeper(null);` (This is needed by GUI buttons that reload [script][script db]/[app][app db]/[vanilla DB].)
   * Give your framework file a (fairly) unique name.
   * If you've already loaded your framework (i.e. you've run a Selenese command in a [suite] that uses that framework) and then you modify its call to `SeLiteSettings.setTestDbKeeper()`, the new call won't have effect until you restart Firefox.
 
@@ -76,4 +76,4 @@ The reason for those limitations is in code of `SeLiteSettings.setTestDbKeeper()
 ### One stage GUI configuration ###
 <a href='Hidden comment: @TODO move to a page on its own: CreateExtensions '></a>This is only enabled for [Core extensions][core extension] that come with SeLite, but not for frameworks. It enables the extension to add custom configuration fields, or to add custom options for existing configuration fields. Those new fields or new options (keys) are available in [SettingsInterface](SettingsInterface) immediately after start of Firefox. That is different to fields or options added by frameworks, loaded through [BootstrapLoader](BootstrapLoader), which have effect only after running the first Selenese command.
 
-It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have `SeLiteExtensionSequencerManifest.js` with `preActivate` handler, where it adds any custom fields. See its source in e.g. [AutoCheck](AutoCheck) online [selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js](https://github.com/selite/selite/blob/master/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js) or offline at [_chrome://_ URL](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui) _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_.
+It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have `SeLiteExtensionSequencerManifest.js` with `preActivate` handler, where it adds any custom fields. See its source in e.g. [AutoCheck](AutoCheck) online [selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js](https://github.com/selite/selite/blob/master/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js) or offline at {{chromeUrl}} _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_.

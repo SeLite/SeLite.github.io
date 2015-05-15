@@ -7,7 +7,7 @@ layout: default
 # Accessing the interface of SeLiteSettings #
 Two most frequent use cases are available in Selenium IDE menu > Options. They link to `tree.xul` and `tree.xul?selectFolder` (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
 
-SeLiteSettings' configuration interface is within Firefox at [_chrome://_ URLs](AboutDocumentation#firefox-chrome-urls-for-documentation-and-gui URLs). The URLs are
+SeLiteSettings' configuration interface is within Firefox at {{chromeUrl}}s. The URLs are
 
 | _chrome://selite-settings/content/tree.xul_                                   | to manage Firefox profile-based set(s) for all registered modules |
 | _chrome://selite-settings/content/tree.xul?module=full-module-name_           | to manage set(s) for a given module |
@@ -20,12 +20,10 @@ Per-folder view colours fields based on where the value(s) come from:
 
  * module definition (field default)
  * Firefox profile-based configuration set
- * values manifest
+ * {{valuesManifest}}
 
 # Reloading databases
-SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of [script] DB, app DB or vanilla DB (as per the table below). These buttons do the full job on their own only if your web app uses SQLite as its DB. Otherwise apply [DataImport](DataImport).
-
-See [TestMethodsTheory](TestMethodsTheory) for definition of script and app DB. Vanilla DB serves as a snapshot of app DB, which you can revert to after the script gets out of sync with the app, because of timeout, a bug in the script etc.
+SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of [script DB], [app DB] or [vanilla DB] (as per the table below). These buttons do the full job on their own only if your web app uses SQLite as its DB. Otherwise apply [DataImport](DataImport).
 
 | **Selenium IDE button** | **Source DB** | **Target DB** | **Extra target DB** |
 | ![reload test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_test.png) | App | Test | |
@@ -35,7 +33,7 @@ See [TestMethodsTheory](TestMethodsTheory) for definition of script and app DB. 
 You should pause [scripts][script] while using these buttons, otherwise the [script] or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.
 
 ## Permissions
-Reloading databases requires your local account (which runs Firefox) to have access to delete the web app DB file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux `setfacl` - see [DrupalFramework](DrupalFramework)).
+Reloading databases requires your local account (which runs Firefox) to have access to delete the web [app DB] file and to create new files in the web app DB folder. That works when the app runs in  locally and you started it yourself, or when it is under your home folder. Otherwise your account needs to have the access granted (e.g. via Linux/Mac OS groups or SeLinux `setfacl` - see [DrupalFramework](DrupalFramework)).
 
 # Typing strings `'null'` or `'undefined'`
 This is unlikely, but possible. If a freetype field has a non-null defined value (possibly empty string), then you can type in string literals `'null'` or `'undefined'` (within apostrophes or quotes) and they will be accepted as those strings. They won't get converted to Javascript null or undefined. Use a special column 'Null/Undefine' for that.
