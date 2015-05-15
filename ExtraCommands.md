@@ -28,7 +28,7 @@ For that the commands have two parameters:
 
 `typeRandomEmail` co-operates with `typeRandom`. It types a random email address, based on a name already typed in another element.
 
-For more details see [its Selenese tests](https://code.google.com/p/selite/source/browse/#git%2Fcommands%2Fselenese-tests).
+For more details see [its Selenese tests](https://github.com/selite/selite/tree/master/commands/selenese-tests).
 
 # Timestamp-related commands #
 There are two sets of functionality that support [TimeStamps](TimeStamps). The first set defines commands (primary names): `sleepUntilTimestampDistinctDownToMilliseconds, sleepUntilTimestampDistinctDownToSeconds, sleepUntilTimestampDistinctDownToMinutes`. Each ensures that a timestamp from that moment will be unique, when compared to any timestamp created just before any previous or future call to the same command (or to a command with finer precision).
