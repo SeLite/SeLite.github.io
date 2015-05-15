@@ -20,7 +20,7 @@ Does your app use RDBMS other than SQLite and would you like your [scripts][scri
   * you don't need full JDK neither a Java editor/IDE, unless you want to create custom filters.
 
 # Development of custom filters #
-  * get `src/filter` from [Source](https://code.google.com/p/selite/source/checkout)
+  * get `filter/` from [Source](https://github.com/selite/selite)
   * get Java SE JDK 7+
   * you may want to get [NetBeans IDE](http://www.netbeans.org)
     * get NetBeans for Java SE
