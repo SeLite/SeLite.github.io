@@ -12,8 +12,8 @@ You could have an (optional) parameter, for which you set a meaningful default v
 /** @param id 0-based ID of the sport. 0 by default.
 */
 function sport( id ) {
-id= id || 0;
-return ['running', 'soccer', 'basketball'][id];
+    id= id || 0;
+    return ['running', 'soccer', 'basketball'][id];
 }
 ```
 
@@ -42,13 +42,13 @@ var cachedResult= undefined;
 /** @param boolean cached Whether to return the cached result (if available). True by default.
 */
 function process(cached) {
-caches= cached!==undefined
-? cached
-: true;
-if( !cached || cachedResult===undefined ) {
-cachedResult= <calculate the result>;
-}
-return cachedResult;
+    cached= cached!==undefined
+    ? cached
+    : true;
+    if( !cached || cachedResult===undefined ) {
+        cachedResult= <calculate the result>;
+    }
+    return cachedResult;
 }
 process( true ) ; // This returns the cached result (if available)
 process( false ); // This always returns a new result
@@ -60,7 +60,7 @@ Sometimes you want some functionality to be used by default, and to turn it off 
   * `folderPath` defaults to the folder of [suite] currently open in Selenium IDE
   * `dontCache` defaults to false, i.e. the function caches the results by default. (Note that the meaning of `dontCache` is not exactly reverse of `cached` parameter of function `process(cached)` above, because `process(false)` returns a new result every time, but it still updates it in `cachedResult`, which will be returned by `process(true)`).
 
-So, use default parameter values that are 'logically equivalent' to one of 0, `false_`, ``null` or "". Deviate from this only if a different default value (possibly dynamic: based on other parameters) really makes sense for the use of the function. Then document it clearly. ('Logically equivalent' also means that a function performs type checks. E.g. it may refuse `null` if it expects a boolean.)
+So, use default parameter values that are 'logically equivalent' to one of `0, false, null` or `""`. Deviate from this only if a different default value (possibly dynamic: based on other parameters) really makes sense for the use of the function. Document it clearly.
 
 # Operator `instanceof` and standard classes #
 Operator `instanceof` doesn't work for objects of most standard classes (`Array, Boolean, Number` etc.) if such objects are passed between [Javascript code modules](#javascript-code-modules). That's because such classes (i.e. their constructors) are 'global objects' and they are separate for each 'global scope'. For `Array` you can use `Array.isArray(object)`. For all those classes you can use `SeLiteMisc.isInstance(object)`. See [SeLiteMisc source](https://code.google.com/p/selite/source/browse/misc/src/chrome/content/selite-misc.js).
@@ -80,7 +80,7 @@ In Javascript code modules you can define functions in [JavascriptEssential](Jav
 "use strict";
 
 function myFunction( param, anotherParam... ) {
-...
+    ...
 }
 var EXPORTED_SYMBOLS= [myFunction, ...];
 ```
@@ -97,27 +97,11 @@ then NetBeans can't navigate to functionality exported from of such a code modul
   * encapsulate the functionality within one plain object (serving as an associative array) in the code module
   * make `EXPORTED_SYMBOLS` contain just the name of that plain object
   * load sources of SeLite or 3rd party code modules as a part of your NetBeans project (see [DevelopmentTools](DevelopmentTools))
-  * load the code module into the global scope of the client code using e.g.
-
-```
-   Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js" );
-```
-
- * instead of e.g.
-
-```
-   var SeLiteMisc= Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js", {} ).SeLiteMisc;
-```
-
- * because with the second, if you `Ctrl+click` at `SeLiteMisc.abcDef`, NetBeans takes you to the `Components.utils.import()` line, rather than to the source of the functionality.
+  * load the code module into the global scope of the client code using e.g.<br/>`Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js" );`<br/>instead of e.g.<br/>`var SeLiteMisc= Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js", {} ).SeLiteMisc;`<br/>because with the second, if you `Ctrl+click` at `SeLiteMisc.abcDef`, NetBeans takes you to the `Components.utils.import()` line, rather than to the source of the functionality.
 
 That makes the navigation and naming same, whether in the code module source itself, or in code where you use the functionality. It means that the code module source itself is a bit more wordy, repeating the name of the exported variable (e.g. `SeLiteMisc`) a lot, but that's OK.
 
-Another option (that facilitates NetBeans navigation) would be to have all classes/functions listed in `EXPORTED_SYMBOLS` instead of having them encapsulated in an object. Again, load the code module into the global scope of the client code using e.g.
-
-```
-   Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js" );
-```
+Another option (that facilitates NetBeans navigation) would be to have all classes/functions listed in `EXPORTED_SYMBOLS` instead of having them encapsulated in an object. Again, load the code module into the global scope of the client code using e.g. `Components.utils.import( "chrome://selite-misc/content/SeLiteMisc.js" );`
 
 However, that would flood the client's namespace with no obvious benefit. It would also go against [JavascriptEssential](JavascriptEssential) > [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
@@ -144,11 +128,11 @@ There are many ways of class inheritance in Javascript. Follow [Mozilla way](htt
 ```javascript
 "use strict";
 function Parent( name ) {
-this.name= name;
+    this.name= name;
 }
 
 function Child( name ) {
-Parent.call( this, name );
+    Parent.call( this, name );
 }
 
 Child.prototype= Object.create(Parent.prototype);
@@ -156,16 +140,16 @@ Child.prototype.constructor= Child;
 
 // Or within a block/function:
 if( true ) {
-var LocalParent= function LocalParent( name ) {
-this.name= name;
-};
+    var LocalParent= function LocalParent( name ) {
+        this.name= name;
+    };
 
-var LocalChild= function LocalChild( name ) {
-LocalParent.call( this, name );
-};
+    var LocalChild= function LocalChild( name ) {
+        LocalParent.call( this, name );
+    };
 
-LocalChild.prototype= Object.create(LocalParent.prototype);
-LocalChild.prototype.constructor= LocalChild;
+    LocalChild.prototype= Object.create(LocalParent.prototype);
+    LocalChild.prototype.constructor= LocalChild;
 }
 ```
 

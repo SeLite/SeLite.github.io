@@ -24,11 +24,7 @@ Selenium IDE doesn't indicate the current [suite]'s folder in the GUI. Therefore
 
 Reasoning: A case can open local pages relative to its location, or to location of the current suite (the one loaded). Either choice has some positives, and can also be confusing. However, using URLs relative to the current suite allows flexible re-use of automation cases and their Selenese functions, with customised versions of local pages for each [suite]. If all such suites can use same version of a local page, such a file can be in a common parent folder. This results in similar suites having the same folder structure and same names for local pages, which simplifies navigation.
 
-[Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g.
-
-```
-TODO FIX open | file://SeLiteSettings.getTestSuiteFolder()/form.html
-```
+[Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g. <!-- TODO check/FIX--> <code>open | file://` SeLiteSettings.getTestSuiteFolder() `/form.html</code>
 
 ## Negative tests that succeed
 If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocksGlobal](SelBlocksGlobal). Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.

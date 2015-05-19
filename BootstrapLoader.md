@@ -28,15 +28,15 @@ It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs in
 ## Intercepts ##
 Bootstrap reloads all registered extensions (whenever you modify any one of them). You can 'extend' existing Javascript functions as per {{navFunctionIntercepts}}. However, don't re-save and re-extend the current function each time the Javascript is run. Otherwise it would increase the intercept chain every time Bootstrap reloads it. Instead, save the original function on the first load only, but re-extend it on every load. For example:
 
-```js
+```javascript
 var originalMethod;
 if( originalMethod===undefined ) {
-originalMethod= Selenium.prototype.methodName;
+    originalMethod= Selenium.prototype.methodName;
 }
 Selenium.prototype.methodName= function(pqr...) {
-originalMethod.call(this);
-// extra new tasks...
-}
+    originalMethod.call(this);
+    // extra new tasks...
+};
 ```
 See also {{navFunctionIntercepts}}.
 

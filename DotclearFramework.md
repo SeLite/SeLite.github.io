@@ -7,7 +7,7 @@ layout: default
 # Install Dotclear 2.6.3 #
 This is what worked on Fedora 20. The example [script] logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
 
-[Download](http://dotclear.org/download) .tgz file of Dotclear. Then
+[Download](http://dotclear.org/download) `.tgz` file of Dotclear. Then
 <pre>
 cd /var/www/html<br>
 sudo tar xvzf ~/Downloads/dotclear-2.6.3.tar.gz<br>

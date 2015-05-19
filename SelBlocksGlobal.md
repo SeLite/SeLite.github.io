@@ -42,26 +42,26 @@ When accessing stored variables with `getEval` and special SelBlockGlobal comman
 `for` loop now must use `$xyz` notation for all stored parameters (loop iterator or any other), whether on the left side or right side of the assignment operator =. So, instead of
 
 ```
-for|i=1; i<=10; i++
+for | i=1; i<=10; i++
 ```
 
 use
 
 ```
-for|$i=1; $i<=10; $i++
+for | $i=1; $i<=10; $i++
 ```
 
 ### Passing parameters to functions via `call` ###
 `call` can use `$xyz`, but only in expressions on the right side of parameter assignments `parameterName=expression`. The formal parameter names on the left (ones being passed to the function) must not start with $. So, instead of
 
 ```
-call|myFunction|myParam=storedVariableInCallingScope
+call | myFunction | myParam=storedVariableInCallingScope
 ```
 
 use
 
 ```
-call|myFunction|myParam=$storedVariableInCallingScope
+call | myFunction | myParam=$storedVariableInCallingScope
 ```
 
 ## Try/catch suppresses error counts ##

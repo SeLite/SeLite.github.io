@@ -32,11 +32,7 @@ When adding functionality that doesn't need to be directly available to Selenese
 If adding Selenese commands specific to a web application, give their names a prefix unlikely to cause conflicts.
 
 ## Strict Javascript ##
-In Javascript files, have the following as the very first statement (at the top level):
-
-```javascript
-"use strict";
-```
+In Javascript files, have the following as the very first statement (at the top level): `"use strict";`
 
 That adds extra checks that help to prevent errors and some bad practice code. Strict mode only applies to the code within that file; it doesn't apply to any functions called from there. See [MDN > Strict mode ](https://developer.mozilla.org/en/JavaScript/Strict_mode).
 
@@ -49,7 +45,7 @@ This is a definition by `function` statement. When employing {{navStrictJavascri
 ```javascript
 "use strict";
 function myFunction( param, anotherParam... ) {
-...
+    ...
 }
 ```
 
@@ -74,7 +70,7 @@ var myNameSpace= {};
 myNameSpace.anotherFunction= function( param... ) { ... };
 
 var object= {
-memberFunction: function( param... ) { ... }
+    memberFunction: function( param... ) { ... }
 };
 ```
 
@@ -95,7 +91,7 @@ var myNameSpace= {};
 myNameSpace.anotherFunction= function anotherFunction( param... ) { ... };
 
 var object= {
-memberFunction: function memberFunction( param... ) { ... }
+    memberFunction: function memberFunction( param... ) { ... }
 };
 ```
 
@@ -166,12 +162,12 @@ function greeting() {return "Hello";}
 
 // Anonymous closure to keep 'originalGreeting' variable local
 ( function() {
-var originalGreeting= greeting;
+    var originalGreeting= greeting;
 
-greeting= function greeting() {
-var originalResult= originalGreeting.call();
-return originalResult+ ", my friend.";
-};
+    greeting= function greeting() {
+        var originalResult= originalGreeting.call();
+        return originalResult+ ", my friend.";
+    };
 } ) ();
 ```
 
@@ -190,12 +186,12 @@ The solution is to have such a (long) function, but make it anonymous. It then l
 var usefulExportedFunction;
 
 ( function() {
-var localVariable;
+    var localVariable;
 
-usefulExportedFunction= function usefulExportedFunction( anyParameters... ) {
-use localVariable here...
-};
-}
+    usefulExportedFunction= function usefulExportedFunction( anyParameters... ) {
+        use localVariable here...
+    };
+  }
 )();
 ```
 
@@ -208,12 +204,12 @@ So then the above example would be
 "use strict";
 
 ( function(global) {
-var localVariable;
+    var localVariable;
 
-global.usefulExportedFunction= function usefulExportedFunction( anyParameters... ) {
-use localVariable here...
-};
-}
+    global.usefulExportedFunction= function usefulExportedFunction( anyParameters... ) {
+       use localVariable here...
+    };
+  }
 )( this );
 ```
 
@@ -226,27 +222,27 @@ You need to save that outer `this` into a variable (usually called `self`) local
 "use strict";
 
 function applyToArray( array, method ) {
-for( var i=0; i<array.length; i++ ) {
-method.call( null, array[i] );
-}
+    for( var i=0; i<array.length; i++ ) {
+        method.call( null, array[i] );
+    }
 }
 
 function TestArrayWorker( array, multiplyBy ) {
-this.array= array;
-this.multiplyBy= multiplyBy;
+    this.array= array;
+    this.multiplyBy= multiplyBy;
 }
 
 TestArrayWorker.prototype.run= function() {
-var self= this;
-var result= 0;
+    var self= this;
+    var result= 0;
 
-applyToArray(
-this.array,
-function(item) {
-result+= item*self.multiplyBy;
-}
-);
-return result;
+    applyToArray(
+        this.array,
+        function(item) {
+            result+= item*self.multiplyBy;
+        }
+    );
+    return result;
 };
 
 new TestArrayWorker( [1, 2], 5 ).run(); // This returns 15
@@ -281,7 +277,7 @@ However, NetBeans 8.0.1 doesn't support it (it breaks Navigator and block expand
 ```javascript
 var a=[1, 2];
 for( var i=0; i<a.length; i++ ) {
-var value= a[i];
+    var value= a[i];
 }
 ```
 

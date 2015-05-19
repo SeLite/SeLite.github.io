@@ -12,24 +12,17 @@ Sorting of DB results varies between database systems, or even between various c
 
 If you need to sort case-insensitively in SQLite, that works only for ASCII characters by default. You can do it at either
 
-  * table definition level
-
-```
-CREATE TABLE items( item VARCHAR(255) COLLATE NOCASE);
-INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');
-
-SELECT * FROM items ORDER BY item;
-```
-
-  * query level
-
-```
-CREATE TABLE items( item VARCHAR(255) );
-INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');
-
-SELECT * FROM items ORDER BY item COLLATE NOCASE; --for ASCII only
-SELECT * FROM items ORDER BY UPPER(item); -- for UTF, too - but only if you enable Unicode - read below
-```
+  * table definition level:<code><br/>
+    CREATE TABLE items( item VARCHAR(255) COLLATE NOCASE);<br/>
+    INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');<br/><br/>
+    SELECT * FROM items ORDER BY item;
+    </code>
+  * query level:<code><br/>
+    CREATE TABLE items( item VARCHAR(255) );<br/>
+    INSERT INTO items(item) VALUES ('a'), ('b'), ('B'), ('A');<br/><br/>
+    SELECT * FROM items ORDER BY item COLLATE NOCASE; --for ASCII only<br/>
+    SELECT * FROM items ORDER BY UPPER(item); -- for UTF, too - but only if you enable Unicode - read below
+    </code>
 
 If you need case-insensitive sorting and Unicode, see [SQLite FAQ on Unicode](http://www.sqlite.org/faq.html#q18), [SQLITE\_ENABLE\_ICU compilation option](http://www.sqlite.org/compile.html#enable_icu) and [SQLite ICU README](http://www.sqlite.org/src/artifact?ci=trunk&filename=ext/icu/README.txt). On CentOS 6.4 I've installed `icu` using Add/Remove Software, but I couldn't get it to work. If you figure it out, please let me know.
 

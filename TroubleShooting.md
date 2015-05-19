@@ -34,7 +34,7 @@ This may help you to figure out the issue yourself. Even if you don't solve it, 
     * disable all other Firefox extensions and plugins (including  well-known ones like Firebug). Only leave extensions required to run your script.
     * minimise any custom Selenium extensions
     * cut down your script
-    * replicate the issue against local .html page(s), simplified as much as possible
+    * replicate the issue against local `.html` page(s), simplified as much as possible
     * replace SeLite-specific commands (e.g. `typeRandom`) with their Selenium alternatives and see whether your locators work.
 
 ## Browser Console ##

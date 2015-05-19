@@ -8,7 +8,7 @@ The example [script] logs in as an admin and creates a user with random credenti
 # Install Serendipity #
 This worked on Fedora 20. I've cloned the github repository up to commit e12b998bf7 into `/var/www/html/serendipity` (git clone https://github.com/s9y/Serendipity.git). Install Serendipity as per its [documentation](http://www.s9y.org/36.html).
 
-The easiest way is using Serendipity with SQLite. If you choose SQLite and you don't provide any db-related fields, the installer creates a .db file under webroot (e.g. _`serendipity_a2a42d7580267f6dcf1a3fd779040498.db`_) and puts that filename (excluding .db extension) in field dbName in `serendipity_config_local.inc.php`. The default `dbPrefix` is `serendipity_`.
+The easiest way is using Serendipity with SQLite. If you choose SQLite and you don't provide any db-related fields, the installer creates a `.db` file under webroot (e.g. _`serendipity_a2a42d7580267f6dcf1a3fd779040498.db`_) and puts that filename (excluding `.db` extension) in field dbName in `serendipity_config_local.inc.php`. The default `dbPrefix` is `serendipity_`.
 
 # Install SeLite Serendipity framework #
 Apply [InstallFramework](InstallFramework). The framework and [scripts][script] are in [serendipity](https://code.google.com/p/selite/source/browse/serendipity) folder.

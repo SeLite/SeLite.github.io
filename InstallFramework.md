@@ -68,7 +68,7 @@ If you'd like to edit profile-based configuration set(s), open _chrome://selite-
 
   * Enter usernames for roles that you need.
   * Point the configuration [set] at your app/script/vanilla SQLite files. You need at least {{ scriptDB }} to get benefits of [Overview](./) > [Data separation (in testing)](./#data-separation-in-testing). {{appDB}} and {{vanillaDB}} make sense only if the application data is in SQLite.
-    * For {{appDB}} select the SQLite file which is used by your application instance. (The file often has extension other than .sqlite, e.g. .db or even .php.)
+    * For {{appDB}} select the SQLite file which is used by your application instance. (The file often has an extension other than `.sqlite`, e.g. `.db` or even `.php`.)
     * {{scriptDB}} is for [scripts][script]. {{vanillaDB}} will serve as a snapshot of {{appDB}}, so that you can revert `appDB` and `testDB` to it. Enter some new filenames (in a location where your account can create files).
     * If you haven't got existing `testDB` and `vanillaDB`, in Selenium IDE click at button ![Reload Vanilla and Test](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png). That reloads vanilla DB and script DB from app DB. (See [SettingsInterface](SettingsInterface)).
   * Fill in `webRoot` (it doesn't matter whether it ends with a slash or not). Your [scripts][script] can access it via `SeLiteSettings.webRoot()`. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](http://code.google.com/p/selenium/issues/detail?id=3116). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)

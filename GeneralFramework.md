@@ -19,7 +19,7 @@ Selenese functions (blocks of Selenese commands) can be shared between [cases][c
 See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/selite/source/browse/drupal) and other [AppsFrameworks](AppsFrameworks).
 
 ## Loading a framework ##
-A framework is loaded as a [Core extension]. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an .xpi file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
+A framework is loaded as a [Core extension]. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an `.xpi` file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).
 
 ## Configuring and loading the data ##
 You can manage configuration through [Settings](Settings). Configuration sets can associate with [scripts][script] on per-[suite] folder basis. A framework needs to know the [suite] folder, so that it can resolve its configuration (which determines the [script] DB). A framework shouldn't pre-load any data when it's activated, because a [suite] folder may not be known yet. If you need pre-loading any data, do that from a [suite] folder change handler, which gets triggered once you open (or save) a suite.
@@ -41,10 +41,10 @@ For many frameworks the only essential field of the namespace object is `db`. Th
 /** @type{object} A namespace-like object in the global scope.*/
 var Drupal;
 if( Drupal===undefined ) {
-Drupal= {
-/** @type {SeLiteData.Db}*/
-db: new SeLiteData.Db( SeLiteData.getStorageFromSettings() )
-};
+    Drupal= {
+        /** @type {SeLiteData.Db}*/
+        db: new SeLiteData.Db( SeLiteData.getStorageFromSettings() )
+    };
 }
 ```
 
@@ -52,7 +52,6 @@ db: new SeLiteData.Db( SeLiteData.getStorageFromSettings() )
 If you'd like to add custom roles, use e.g.
 
 ```javascript
-
 var commonSettings= SeLiteSettings.loadFromJavascript( 'extensions.selite-settings.common' );
 commonSettings.getField( 'roles' ).addKeys( ['second-level-admin', 'auditor', 'contributor'] );
 ```
@@ -75,4 +74,4 @@ The reason for those limitations is in code of `SeLiteSettings.setTestDbKeeper()
 ### One stage GUI configuration ###
 <a href='Hidden comment: @TODO move to a page on its own: CreateExtensions '></a>This is only enabled for [Core extensions][core extension] that come with SeLite, but not for frameworks. It enables the extension to add custom configuration fields, or to add custom options for existing configuration fields. Those new fields or new options (keys) are available in [SettingsInterface](SettingsInterface) immediately after start of Firefox. That is different to fields or options added by frameworks, loaded through [BootstrapLoader](BootstrapLoader), which have effect only after running the first Selenese command.
 
-It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an .xpi package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have `SeLiteExtensionSequencerManifest.js` with `preActivate` handler, where it adds any custom fields. See its source in e.g. [AutoCheck](AutoCheck) online [selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js](https://github.com/selite/selite/blob/master/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js) or offline at {{chromeUrl}} _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_.
+It requires that the extension is packaged as a Firefox add-on, rather than loaded through [BootstrapLoader](BootstrapLoader). The add-on has to be installed from an `.xpi` package, or through a proxy file as per [InstallFromSource](InstallFromSource). It has to have `SeLiteExtensionSequencerManifest.js` with `preActivate` handler, where it adds any custom fields. See its source in e.g. [AutoCheck](AutoCheck) online [selite/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js](https://github.com/selite/selite/blob/master/auto-check/src/chrome/content/SeLiteExtensionSequencerManifest.js) or offline at {{chromeUrl}} _chrome://selite-auto-check/content/SeLiteExtensionSequencerManifest.js_.
