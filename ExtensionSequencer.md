@@ -67,9 +67,9 @@ See [browser.js](https://code.google.com/p/selite/source/browse/db-objects/src/c
 ExtensionSequencer is tested against a list of variations of `SeLiteExtensionSequencerManifest.js` in several plain [extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). You can browse their source code at [extension-sequencer/shell-tests](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests). See [a list of those tests](http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html) with test descriptions and expected outputs.
 
 ### Installing shell tests ###
-The tests use a separate Firefox profile called SeLiteExtensionSequencerTest, with some [extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). To set up that profile and its add-ons, download source of [Extension Sequencer](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer) (or whole SeLite as per [InstallFromSource](InstallFromSource)) and run `extension-sequencer\setup_proxies.bat` or `extension-sequencer/setup_proxies.sh`. It will start Firefox and create and set up that profile.
+The tests use a separate Firefox profile called SeLiteExtensionSequencerTest, with some [extra extensions](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer%2Fshell-tests%2Fextensions). To set up that profile and its add-ons, download source of [Extension Sequencer](https://code.google.com/p/selite/source/browse/#git%2Fextension-sequencer) (or  of whole SeLite as per [InstallFromSource](InstallFromSource)) and run `extension-sequencer\setup_proxies.bat` or `extension-sequencer/setup_proxies.sh`. It will start Firefox and create and set up that profile.
 
-On Windows (and probably on Mac OS, too) you'll need to install [Selenium IDE](http://docs.seleniumhq.org/download/) and apply Windows/Mac OS-specific steps from [InstallFromSource](InstallFromSource).
+On Windows (and probably on Mac OS, too) you'll need to install apply Windows/Mac OS-specific steps from [InstallFromSource](InstallFromSource).
 
 (You don't need any other SeLite [AddOns](AddOns) for these tests.)
 
