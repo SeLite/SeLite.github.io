@@ -81,5 +81,5 @@ Do not inherit directly from `Field` class, because the implementation may chang
 # Customising existing fields #
 Frameworks can add or remove fields from existing configuration modules (like `extensions.selite-settings.common`) and they can add keys to existing fields. See
 
-  * [serendipity-framework.js](https://code.google.com/p/selite/source/browse/serendipity/serendipity-framework.js) and
+  * [serendipity-framework.js](https://github.com/SeLite/SeLite/tree/master/serendipity/serendipity-framework.js) and
   * [SettingsLogins](SettingsLogins) > [Adding custom keys](SettingsLogins#adding-custom-keys).

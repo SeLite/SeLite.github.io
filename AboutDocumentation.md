@@ -91,4 +91,4 @@ By submitting a comment you agree that project administrator(s) can, without not
   * remove your comment.
 
 # Details #
-If you read TODO subfolder, or a separate listing page [Object Diagrams](https://code.google.com/p/selite/w/list?q=label:ObjectDiagram), you may want to see [DocumentationStandard](DocumentationStandard) > [Textual object diagrams](DocumentationStandard#textual-object-diagrams).
+If you read Object Diagrams, see also [DocumentationStandard](DocumentationStandard) > [Textual object diagrams](DocumentationStandard#textual-object-diagrams).

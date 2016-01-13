@@ -9,7 +9,7 @@ SeLite doesn't support functionality of related components and technologies (Sel
 Search in current [issues](https://github.com/selite/selite/issues). If an existing issue covers your problem, vote for it. See also [ThirdPartyIssues](ThirdPartyIssues) > [Where to vote](ThirdPartyIssues#where-to-vote).
 
 # Report an issue #
-First, follow [TroubleShooting](TroubleShooting). Before you [report an issue](https://code.google.com/p/selite/issues/entry), note details and versions of
+First, follow [TroubleShooting](TroubleShooting). Before you [report an issue](https://github.com/SeLite/SeLite/issues/new), note details and versions of
 
   * any SeLite extensions
   * Selenium IDE

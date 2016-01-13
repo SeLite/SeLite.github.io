@@ -16,7 +16,7 @@ Javascript structures are Selenium [Core extensions][core extension] that define
 
 Selenese functions (blocks of Selenese commands) can be shared between [cases][case] and [suites][suite] (via [SelBlocksGlobal](SelBlocksGlobal)). The framework consists of library-like automation cases, which contain Selenese functions. Automation suites include those framework cases and _action_ cases that utilise those functions.
 
-See [DrupalFramework](DrupalFramework), [its source](https://code.google.com/p/selite/source/browse/drupal) and other [AppsFrameworks](AppsFrameworks).
+See [DrupalFramework](DrupalFramework), [its source](https://github.com/SeLite/SeLite/tree/master/drupal) and other [AppsFrameworks](AppsFrameworks).
 
 ## Loading a framework ##
 A framework is loaded as a [Core extension]. The easiest way to load frameworks is through [BootstrapLoader](BootstrapLoader). Alternatively you can make it a Firefox extension (with use of [ExtensionSequencer](ExtensionSequencer)), either packaged in an `.xpi` file or loaded through a proxy file (see [DevelopmentTools](DevelopmentTools)).

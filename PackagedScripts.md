@@ -11,7 +11,7 @@ In SeLite these scripts validate functionality of [AddOns](AddOns) and applicati
 ## Structure
 
 ## Installing and getting around ###
-Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [AddOns](AddOns) that can be tested in Selenium IDE have subfolder `selenese-tests`, e.g. [commands/selenese-tests/](https://code.google.com/p/selite/source/browse/#git%2Fcommands%2Fselenese-tests). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://code.google.com/p/selite/source/browse/#git%2Fphpmyfaq%2Ftest_suites_and_cases).
+Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [AddOns](AddOns) that can be tested in Selenium IDE have subfolder `selenese-tests`, e.g. [commands/selenese-tests/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://github.com/SeLite/SeLite/tree/master/phpmyfaq/test_suites_and_cases).
 
 To make navigation across files easy, here's a convention: filenames of suites end with `_suite.html`, and cases are in files that have names ending with `_case.html`. If there are several shared cases, they can be in `shared_cases/` subfolder.
 

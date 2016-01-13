@@ -21,6 +21,7 @@ MySQL (future): --no-data, --no-create-info
 ## Importing the schema ##
 ```
 java -ea -jar SeliteFilter.jar
+# TODO rename classes?
 com.googlecode.selite.filter.apps.Moodle pg_structure-orig.sql schema.sql --usage schema
 
 echo "PRAGMA synchronous = OFF; PRAGMA journal_mode= OFF; BEGIN TRANSACTION;" >schema-fast.sql

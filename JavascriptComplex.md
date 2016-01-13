@@ -55,7 +55,7 @@ process( false ); // This always returns a new result
 process(); // Since cached is optional and boolean, the most obvious default value would be false, and not true!
 ```
 
-Sometimes you want some functionality to be used by default, and to turn it off by specifying an optional parameter. Then you need to pick a name for such parameter that represents negation of the default behaviour. It may complicate documentation wording a tiny bit, but it makes the API clearer and more error-proof. See [SeLiteSettings source](https://code.google.com/p/selite/source/browse/settings/src/chrome/content/SeLiteSettings.js) and its function `getFieldsDownToFolder( folderPath, dontCache )` in class `SeLiteSettings.Module`. It demonstrates two approaches for optional parameters
+Sometimes you want some functionality to be used by default, and to turn it off by specifying an optional parameter. Then you need to pick a name for such parameter that represents negation of the default behaviour. It may complicate documentation wording a tiny bit, but it makes the API clearer and more error-proof. See [SeLiteSettings source](https://github.com/SeLite/SeLite/tree/master/settings/src/chrome/content/SeLiteSettings.js) and its function `getFieldsDownToFolder( folderPath, dontCache )` in class `SeLiteSettings.Module`. It demonstrates two approaches for optional parameters
 
   * `folderPath` defaults to the folder of [suite] currently open in Selenium IDE
   * `dontCache` defaults to false, i.e. the function caches the results by default. (Note that the meaning of `dontCache` is not exactly reverse of `cached` parameter of function `process(cached)` above, because `process(false)` returns a new result every time, but it still updates it in `cachedResult`, which will be returned by `process(true)`).
@@ -63,7 +63,7 @@ Sometimes you want some functionality to be used by default, and to turn it off 
 So, use default parameter values that are 'logically equivalent' to one of `0, false, null` or `""`. Deviate from this only if a different default value (possibly dynamic: based on other parameters) really makes sense for the use of the function. Document it clearly.
 
 # Operator `instanceof` and standard classes #
-Operator `instanceof` doesn't work for objects of most standard classes (`Array, Boolean, Number` etc.) if such objects are passed between [Javascript code modules](#javascript-code-modules). That's because such classes (i.e. their constructors) are 'global objects' and they are separate for each 'global scope'. For `Array` you can use `Array.isArray(object)`. For all those classes you can use `SeLiteMisc.isInstance(object)`. See [SeLiteMisc source](https://code.google.com/p/selite/source/browse/misc/src/chrome/content/selite-misc.js).
+Operator `instanceof` doesn't work for objects of most standard classes (`Array, Boolean, Number` etc.) if such objects are passed between [Javascript code modules](#javascript-code-modules). That's because such classes (i.e. their constructors) are 'global objects' and they are separate for each 'global scope'. For `Array` you can use `Array.isArray(object)`. For all those classes you can use `SeLiteMisc.isInstance(object)`. See [SeLiteMisc source](https://github.com/SeLite/SeLite/tree/master/misc/src/chrome/content/selite-misc.js).
 
 # Loading Javascript files
 
@@ -159,6 +159,6 @@ Don't use `objectExtend()` from Selenium Core, since it doesn't work with operat
 
 # See also #
   * [JavascriptEssential](JavascriptEssential)
-  * [Google Style Guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml), especially [Closures](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=Closures#Closures)
+  * [Google Style Guide](https://google.github.io/styleguide/javascriptguide.xml), especially [Closures](https://google.github.io/styleguide/javascriptguide.xml#Closures)
   * [MDN: Guide to iterators and generators](https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators)
   * [MDN: Array comprehensions](https://developer.mozilla.org/en/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions)
