@@ -34,13 +34,12 @@ There are real negative tests in e.g. `selite.sel-blocks-global/selenese-tests-n
 
 # Invoking scripts
 
-## Running a [suite]
+## Running a suite
 Before you run a [script] packaged with local forms/pages, the current tab in Firefox must be blank (or showing something loaded through _file://..._ URL). If it shows anything from _http://_ or _https://_, the script will fail (it won't be able to access any local files).
 
 Open a suite using Selenium IDE menu File > Open... or Open Test Suite... Do not open actual [cases][case] via menu File > Open..., otherwise they won't be able to access any local forms/pages (as per above) nor any shared Selenese functions. Then you can run the whole suite, or selected cases. Shared [cases][case] that only define Selenese functions are not intended as runnable.
 
-## Running multiple [suites][suite]
-{:#running-multiple-suites}
+## Running multiple suites
 In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-tests-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO replace here and elsewhere -->
 
 # Javascript tests #

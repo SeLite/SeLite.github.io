@@ -4,18 +4,18 @@ layout: default
 ---
 {% include links %}
 
-# What to get
+# How to download
 For straightforward use of SeLite, get all its add-ons. Alternatively, if you want only some of them, read [AddOnsDependants](AddOnsDependants).
 
 In addition to add-ons, see [SeleniumIDE](SeleniumIDE) for productivity tips.
 
 ## Quick download
-For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases delayed by about a week. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
+For the easiest download get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases with a delay. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
 
-Don't install SeLite together with SelBlocks, Flow Control, GoTo or Sideflow (since those are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
+Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait (since those are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
 
 ## Latest releases
-Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up at add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. And if you've installed older versions of the add-ons, you won't get an automatic update until then either.
+Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the add-ons, you won't get an automatic update until then either.
 
 So, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
