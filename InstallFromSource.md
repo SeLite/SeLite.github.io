@@ -41,11 +41,10 @@ cd ~/.mozilla/firefox/*.default/extensions
 # if you have Selenium IDE installed already from an `.xpi` file, turn Firefox off and:
    rm -rf \{a6fd85ed-e919-4a43-a5af-8da18bda539f\}.xpi
 
-unzip ~/Downloads/selenium-ide-X.Y.Z.xpi
 mkdir selenium-ide-X.Y.Z
 cd selenium-ide-X.Y.Z
-unzip ../selenium-ide.zip
-pwd > `echo ~/.mozilla/firefox/*.default/extensions/\{a6fd85ed-e919-4a43-a5af-8da18bda539f\}
+unzip ../selenium-ide-X.Y.Z.zip
+pwd > `echo ~/.mozilla/firefox/*.default`/extensions/\{a6fd85ed-e919-4a43-a5af-8da18bda539f\}
 ```
 
 Restart Firefox.
