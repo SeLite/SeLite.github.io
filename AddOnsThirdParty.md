@@ -3,6 +3,7 @@ title: (Firefox extensions)
 layout: default
 ---
 {% include links %}
+{::options auto_id_stripping="true" /}
 
 # Other versions of Selenium IDE #
 In order to use an old version of Selenium IDE 
@@ -12,9 +13,7 @@ In order to use an old version of Selenium IDE
 
 If you'd like to use the current development version of Selenium IDE, see [InstallFromSource](InstallFromSource) > [Install Selenium IDE from source](InstallFromSource#install-selenium-ide-from-source).
 
-# Add-ons for development of Selenese [scripts][script]
-{:#add-ons-for-development-of-selenese-scripts}
-<!-- ID specified due to https://github.com/gettalong/kramdown/issues/252 -->
+# Add-ons for development of Selenese scripts
 
   * [Firebug](https://addons.mozilla.org/en-us/firefox/addon/firebug)
   * [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath) For checking Selenese XPath selectors. Beware that sometimes an XPath works in FirePath, but not in Selenium IDE. Changing `/` to `//` within it seems to help.

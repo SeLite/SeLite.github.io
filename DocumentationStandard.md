@@ -19,6 +19,7 @@ layout: default
  * Format any _chrome://_ URLs in _italic_ but don't make them links. See [AboutDocumentation](AboutDocumentation) > Firefox {{chromeUrl}}s.
  * Don't have blank lines in HTML comments in `.md` files. Such comments work well online, but not with [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) in Firefox.
  * Don't blindly rely on Markdown support for NetBeans, neither on Markdown Viewer for Firefox.
+ * Don't have links in headers - otherwise they are confusing in TOC. See [https://github.com/gettalong/kramdown/issues/252](https://github.com/gettalong/kramdown/issues/252).
  * Preview by running [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/).
  * `gem install link-checker` and `check-links _site` (not maintained since v. 0.7.2, Oct 2012; it reports broken external links but not broken local links). Don't use `html-proofer` gem and its `htmlproof` command (since it doesn't like GitHub-based relative links).
  * Use online [W3 Link Checker](https://validator.w3.org/checklink). A faster way: run it locally with Jekyll 3.0 (or with `gem install jekyll --pre`):<br/> `wget http://search.cpan.org/CPAN/authors/id/S/SC/SCOP/W3C-LinkChecker-4.81.tar.gz`<br/> `sudo cpan -i Config::General Net::IP CSS::DOM`<br/> `tar xvzf W3C-LinkChecker-4.81.tar.gz; cd W3C-LinkChecker-4.81; perl Makefile.PL; make; sudo make install`<br/> `checklink --quiet --location http://localhost:4000/ http://localhost:4000/`
