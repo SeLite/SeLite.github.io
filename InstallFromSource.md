@@ -34,7 +34,7 @@ Add-ons set up this way won't receive any updates. You'll need to run `GIT pull`
 # Install Selenium IDE from source #
 You'd need this only for debugging Selenium IDE, or custom add-ons that override it.
 
-[Download Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) as an `.xpi` file, but don't install it (right click at the link to an `.xpi` file >  'Save Link As...'). Then unzip the `.xpi` file (you may have to rename it to end with `.zip`). It contains several `.xpi` files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
+(If you've already installed Selenium IDE, uninstall it and restart Firefox). [Download Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) as an `.xpi` file, but don't install it (right click at the link to an `.xpi` file >  'Save Link As...'). Then unzip the `.xpi` file (you may have to rename it to end with `.zip`). It contains several `.xpi` files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
 
 ```
 cd ~/.mozilla/firefox/*.default/extensions

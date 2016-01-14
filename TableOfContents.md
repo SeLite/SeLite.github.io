@@ -60,17 +60,18 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="ClassicSelenese">ClassicSelenese</a></li>
     <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
-    <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
     <li><a href="ExtraCommands">ExtraCommands</a></li>
+    <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptOther">Develop<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptOther InstallFromSource">Develop<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
     <li><a href="JavascriptEssential">JavascriptEssential</a></li>
     <li><a href="JavascriptComplex">JavascriptComplex</a></li>
     <li><a href="JavascriptOther">JavascriptOther</a></li>
+    <li><a href="InstallFromSource">InstallFromSource</a></li>
   </ul>
 </li>
 <li class="dropdown">
@@ -84,14 +85,13 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE InstallFromSource DocumentationStandard ObjectDiagrams DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard ObjectDiagrams DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
     <li><a href="TroubleShooting">TroubleShooting</a></li>
     <li><a href="ReportingIssues">ReportingIssues</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
-    <li><a href="InstallFromSource">InstallFromSource</a></li>
     <li class="divider"></li>
     <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
