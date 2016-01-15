@@ -6,7 +6,7 @@ layout: default
 # Summary #
 This explains how a web app and Selenese [scripts][script] can operate with separate databases ([TestMethodsTheory](TestMethodsTheory) > [Web app and its test have separate DBs](TestMethodsTheory#web-app-and-its-test-have-separate-dbs)).
 
-# [Script] data lifecycle
+# Script data lifecycle
 Initially, the [script DB] is a copy of the web application's DB (possibly with less tables and columns or records). For each logical step, the [script] triggers an operation in the browser and it also updates its own DB to reflect that operation. Updates in [script DB] don't need to be exactly same as updates in [app DB]. The script only updates columns/tables that we use for validation. The script compares the result page of the web app to the updated script data.
 
 If the app or the script fails, their databases can get out-of-sync. That causes non-obvious knock-on errors later. That should normally happen only if
@@ -42,7 +42,7 @@ We can re-load
 
 There will also be a need to reload both DBs, even if everything is healthy (app and [script] are OK and both DBs in sync). That's when we reach designed limits of the application. For example, the app may limit the number of submissions per user per day without a way to remove them through the application's web interface.
 
-# Loose [script] data
+# Loose script data
 Some fields are difficult to replicate from [app DB] to [script DB] during the runs. Those are
 
   * IDs fields of inserted records

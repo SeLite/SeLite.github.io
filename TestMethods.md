@@ -31,10 +31,10 @@ The following legend applies to all diagrams here.
 
 ![Basic legend](https://raw.githubusercontent.com/selite/selite/master/diagrams/legend_basic.png).
 
-# [Script] has no DB #
+# Script has no DB #
 
 ## Separate script runs don't account for previous actions
-Since the script has no DB, it 'loses the track' when its session ends. Successive separate script sessions will not know what will have been applied to [script DB] by earlier runs.
+Since the [script] has no DB, it 'loses the track' when its session ends. Successive separate script sessions will not know what will have been applied to [script DB] by earlier runs.
 
 ![App with no bug fails on further runs](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_no_data/app_no_bug_fails_further_runs.png)
 
@@ -43,13 +43,13 @@ If a script run fails, it may confuse successive runs which would succeed otherw
 
 ![App with a bug fails further tests](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_no_data/app_bug_fails_all_runs.png)
 
-# [Script] has backdoor access to [app DB]
-If script doesn't detect a bug straight away, it may not be discovered even though it made app data incorrect. The framework depends on the backdoor data from [app DB]. However, that shared data fools it. The script can't detect the incorrect data, because it has no other dataset to compare against. This is the main reason for SeLite.
+# Script has backdoor access to app DB
+If [script] doesn't detect a bug straight away, it may not be discovered even though it made app data incorrect. The framework depends on the backdoor data from [app DB]. However, that shared data fools it. The script can't detect the incorrect data, because it has no other dataset to compare against. This is the main reason for SeLite.
 
 ![A bug goes undetected](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_backdoor_data/app_bug_goes_undetected.png)
 
-# [Script] keeps a separate replica of [app DB] (SeLite)
-Just as with other frameworks (listed here), if script fails, it may affect its further runs (which would succeed otherwise).
+# Script keeps a separate replica of app DB (SeLite)
+Just as with other frameworks (listed here), if [script] fails, it may affect its further runs (which would succeed otherwise).
 
 ![App bug fails further tests](https://raw.githubusercontent.com/selite/selite/master/diagrams/test_has_data/app_bug_fails_all_runs.png)
 

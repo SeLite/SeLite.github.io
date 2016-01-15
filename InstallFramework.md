@@ -76,9 +76,8 @@ If you'd like to edit profile-based configuration set(s), open _chrome://selite-
   * Open the URL of the installation, log in with account(s) that you entered for role(s) above and make Firefox save your password(s). (That's for [SettingsLogins](SettingsLogins).)
   * You may want to activate [AutoCheck](AutoCheck) to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
 
-# Run [scripts][script]
-{:#run-scripts}
-Unless you are using GUI to maintain or review configuration, you can run [cases][case] or suites right after you start Selenium IDE. You don't need to run any single Selenese command first.
+# Run scripts
+Unless you are using GUI to maintain or review configuration, you can run [scripts][script] ([cases][case] or [suites][suite]) right after you start Selenium IDE. You don't need to run any single Selenese command first.
 
 Locate, open and run a [suite] as per [PackagedScripts](PackagedScripts).
 

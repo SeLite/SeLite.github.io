@@ -30,7 +30,7 @@ This notation allows you to pass results of one or multiple Javascript expressio
 
 You can have any prefix or suffix around \`...\`. The whole Selenese parameter is treated as a string and results of Javascript codes from \`...\` are concatenated together with any prefix, suffix and any interlacing strings.
 
-## Compatibility with [ClassicSelenese](ClassicSelenese)
+## Compatibility with ClassicSelenese
 <code>`... $storedVariableName ...`</code> works. However, <code>`...${storedVariableName}...`</code> (as per [ClassicSelenese](ClassicSelenese) > [Stored variables](ClassicSelenese#stored-variables)) doesn't work. Side note: We don't want this combination anyway, because `${storedVariableName}` works through string substitution. It would cause unexpected Javascript errors if `${variableName}` were a number but later it would become a non-numeric string and if there were no quotes/apostrophes around it. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in prefix/suffix of <code>`...`</code> (as per standard Selenese).
 
 ## Passing back apostrophe \` itself

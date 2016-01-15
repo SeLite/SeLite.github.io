@@ -29,9 +29,8 @@ By submitting or commenting on a report, you agree that any part of it can be us
 * create reports as [http://sscce.org/ Short, Self Contained, Correct Examples]
 '></a>
 
-## Submit any failing [scripts][script]
-{:#submit-any-failing-scripts}
-Save your [cases][case] and [suites][suite], along with any HTML forms/pages as per [PackagedScripts](PackagedScripts) > [Structure](PackagedScripts#structure). If needed, include any [Settings](Settings) as per {{navValuesManifests}}. Put that in a `.zip` file and <!--TODO: can't attach non-picutres -->attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:
+## Submit any failing scripts
+Save your [scripts][script] ([cases][case] and [suites][suite]), along with any HTML forms/pages as per [PackagedScripts](PackagedScripts) > [Structure](PackagedScripts#structure). If needed, include any [Settings](Settings) as per {{navValuesManifests}}. Put that in a `.zip` file and <!--TODO: can't attach non-picutres -->attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:
 
 ```
 command | target | value

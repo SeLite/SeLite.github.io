@@ -13,8 +13,8 @@ In order to use an old version of Selenium IDE
 
 If you'd like to use the current development version of Selenium IDE, see [InstallFromSource](InstallFromSource) > [Install Selenium IDE from source](InstallFromSource#install-selenium-ide-from-source).
 
-# Add-ons for development of Selenese [scripts][script]
-{:#add-ons-for-development-of-selenese-scripts}
+# Add-ons for development of Selenese scripts
+For development of Selenese [scripts][script]:
 
   * [Firebug](https://addons.mozilla.org/en-us/firefox/addon/firebug)
   * [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath) For checking Selenese XPath selectors. Beware that sometimes an XPath works in FirePath, but not in Selenium IDE. Changing `/` to `//` within it seems to help.

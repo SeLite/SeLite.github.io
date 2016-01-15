@@ -59,8 +59,8 @@ commonSettings.getField( 'roles' ).addKeys( ['second-level-admin', 'auditor', 'c
 # Creating a new framework #
 Look at source of existing frameworks - see [AppsFrameworks](AppsFrameworks).
 
-## Preserving special values in [script DB]
-You may want your [scripts][script] to save special values in their DB. E.g. your framework could create or update users, generate random passwords for them and save those passwords in plain text (rather than encrypted), so that further runs could log in as those users.
+## Preserving special values in script DB
+You may want your [scripts][script] to save special values in their [DB][script DB]. E.g. your framework could create or update users, generate random passwords for them and save those passwords in plain text (rather than encrypted), so that further runs could log in as those users.
 
 When reloading [script] DB (via either button), you don't want to override such special values from production/vanilla. SeLiteSettings can preserve them. Your framework needs to call `SeLiteSettings.setTestDbKeeper()` with an instance of `SeLiteSettings.TestDbKeeper.Columns` (or with an instance of a custom subclass of `SeLiteSettings.TestDbKeeper`).
 

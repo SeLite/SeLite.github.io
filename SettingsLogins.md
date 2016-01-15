@@ -25,8 +25,7 @@ This uses `SeLiteSettings.Field.FixedMap`, which provides multivalued freetype f
 ## Adding custom keys ##
 Frameworks can add keys to fields of class `SeLiteSettings.Field.FixedMap`. One such field is 'extensions.selite-settings.common.roles'. Then they benefit from common functionality like `SeLiteSettings.roleToUser()`. See [InstallFramework](InstallFramework) > [Load and configure the framework](InstallFramework#load-and-configure-the-framework).
 
-## Creating/updating passwords by [scripts][script]
-{:#creatingupdating-passwords-by-scripts}
+## Creating/updating passwords by scripts
 
 If your [scripts][script] create/update user passwords, see {{navPreservingSpecialValuesInScriptDb}}.
 
