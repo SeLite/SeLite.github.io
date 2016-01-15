@@ -155,7 +155,14 @@
                 $('a').each(function () {
                     var href = $(this).attr('href');
                     if( urlWithNoProtocolAndNoExtensionRegex.test(href) ) {
-                        $(this).attr( 'href', href+'.html' );
+                        var indexOfHash= href.indexOf('#');
+                        var url= indexOfHash>0
+                            ? href.substring(0, indexOfHash)
+                            : href;
+                        var hashPart= indexOfHash>0
+                            ? href.substring(indexOfHash)
+                            : '';
+                        $(this).attr( 'href', url +'.html' +hashPart );
                     }
                 });
             });
