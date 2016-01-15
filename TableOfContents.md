@@ -85,7 +85,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard ObjectDiagrams DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
@@ -96,7 +96,6 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
     <!-- TODO make an li-based header/title: -->
-    <li><a href="ObjectDiagrams">ObjectDiagrams</a></li>
     <li><a href="DataObjects">DataObjects</a></li>
     <li><a href="SeleniumFlow">SeleniumFlow</a></li>
     <li><a href="PackagedScripts">PackagedScripts</a></li>
