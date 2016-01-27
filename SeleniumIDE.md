@@ -10,13 +10,27 @@ These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects
 # Add .html extension to files
 When saving a [case] or a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
-# Hands-on GUI and Clipboard And Indent
-[AddOns](AddOns) > 'Hands-on GUI' and 'Clipboard And Indent' enable
+# Hands-on GUI
+[AddOns](AddOns) > 'Hands-on GUI' enables
 
-* in-place editing of Selenese commands and their parameters (`target` and `value`), right in the commands list
-* indentation of commands (suitable especially for [SelBlocksGlobal](SelBlocksGlobal) functions and structured commands)
+* in-place editing of Selenese commands/comments and their parameters (`target` and `value`), right in the commands list
 * productivity keyboard shortcuts
-* clipboard sharing between Selenium IDE and other applications
+
+You can edit commands/comments an 'in place' by clicking at them (where they are listed). In order to edit 'in place'
+
+* click at a cell, or
+* select a row (more below), then hit `Enter` or `I` or `M`, or
+* edit another cell, then hit `TAB` or `Shift+TAB`.
+
+After you select a row, you can use key shortcuts `I` and `M` to insert new command and comment, respectively, and to edit it 'in place'. (Similarly, pressing `I` or `M` in right click context menu goes to edit 'in place'). If using with 'Clipboard And Indent', when you start to type new a command/comment, it already has the initial indentation based on the previous command/comment.
+
+'Command' cell (of commands, i.e. non-comments) operates with autocomplete dropdown. Long comments overflow to the right. 'Target' cell (of commands, i.e. non-comments) overflows to the right (if there is nothing in 'Value' cell), which lets you see long selectors.
+
+
+# Clipboard And Indent
+[AddOns](AddOns) > 'Clipboard And Indent' enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
+
+It enables Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal).
 
 # Using multiple Selenium IDEs in parallel
 A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different [cases][case] in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.

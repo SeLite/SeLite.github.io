@@ -70,7 +70,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <thead><th> <strong>Issue</strong>                                                                                               </th><th> <strong>Third party</strong> </th><th> <strong>Reason</strong>                           </th></thead><tbody>
 
 <!-- -->
-<tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<br>(See a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#hands-on-gui-and-clipboard-and-indent">Hands-on GUI and Clipboard And Indent</a>.) </td></tr>
+<tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=6903'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<!-- There is a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#hands-on-gui">Hands-on GUI</a> and <a href="SeleniumIDE#clipboard-and-indent">Clipboard And Indent</a>--> </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=3116'>Base URL Should Allow Path</a>                  </td><td> Selenium    </td><td> Practical testing and integration </td></tr>
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1537'>Refactor TestCase.debugContext to have a class on its own</a>             </td><td> Selenium    </td><td> Stable API of <a href="SelBlocksGlobal">SelBlocksGlobal</a> </td></tr>
@@ -81,7 +81,6 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=396966'>Support XPath 2.0</a>                               </td><td> Mozilla     </td><td> Robust tests.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) </td></tr>
 <tr><td><a href="https://github.com/Thiht/markdown-viewer/pull/39">Support for local .md links...</a></td> <td>Markdown Viewer</td><td>Offline access to documentation</td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1051632'>Breakpoint triggers on code that doesn't...</a>    </td><td> Mozilla     </td><td> Productive development </td></tr>
-<tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1003554'>Strange behavior when stepping through try statement</a>  </td><td> Mozilla     </td><td> Productive development </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=406629'>Sidebars should not have maximum width</a>          </td><td> Mozilla     </td><td> GUI usability </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=962861'>Allow sidebar to be selected and turned on/off independently</a>      </td><td> Mozilla     </td><td> GUI usability </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=237640'>Support for( var value of array ) {...} loop</a>   </td><td> NetBeans   </td><td> Cleaner code </td></tr>
@@ -106,7 +105,6 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=929703'>&lt;treechildren tooltip="_child"&gt; doesn't work</a>    </td><td> Mozilla     </td><td> Robust code</td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=220119'>Navigate &gt; Go to type doesn't show types from javascript files</a>                       </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=932578'>Allow sidebars to be different widths</a>           </td><td> Mozilla     </td><td> Flexible testing </td></tr>
-<tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1094057'>Violations of "use strict"; should generate errors, not warnings</a>       </td><td> Mozilla </td><td> Less distracted development </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1096135'>"use strict"; violations only logged at LOG level from AddonManager.jsm</a> </td><td> Mozilla </td><td>  Less distracted development </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=891774'>nsTreeView and TreeView.setCellText() is either badly...</a>         </td><td> Mozilla     </td><td> Robust SeLite Settings </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=278536'>Tree documentation: setCellText and redrawing</a>                    </td><td> Mozilla     </td><td> Robust SeLite Settings </td></tr>

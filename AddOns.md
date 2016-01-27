@@ -61,7 +61,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions </td>
 </tr>
 <tr>
-    <td>Clipboard And Indent</td>
+    <td> <a href='SeleniumIDE#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
     <td> Apache License 2 </td>
@@ -106,7 +106,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     </ul> </td>
 </tr>
 <tr>
-    <td> Hands-on GUI              </td>
+    <td> <a href='SeleniumIDE#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
     <td> Apache License 2 </td>
