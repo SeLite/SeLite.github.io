@@ -4,7 +4,7 @@ layout: default
 {% include links %}
 
 # Overview #
-SelBlocks Global (one of SeLite [AddOns](AddOns)) is an enhancement of [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/). It enables 
+SelBlocks Global (one of SeLite [AddOns](AddOns)) is an enhancement of [SelBlocks](https://github.com/refactoror/SelBlocks/). It enables 
 
 * calling Selenese _functions_ (blocks of steps, formerly called _scripts_) across cases and
 * [EnhancedSelenese](EnhancedSelenese)

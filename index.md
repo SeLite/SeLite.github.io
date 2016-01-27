@@ -76,12 +76,12 @@ When customising or creating frameworks or components for Selenium IDE, followin
 # Project details
 
 ## Standards
- * it uses [strict Javascript](JavascriptEssential#strict-javascript)
- * it has a coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptOther](JavascriptOther))
- * see [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
- * it is validated by [PackagedScripts](PackagedScripts)
- * it gives clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
- * it's being moved from Google Code to be hosted on GitHub - see its repository [SeLite](https://github.com/selite/selite).<!--, with two code repositories: [SeLite](https://github.com/selite/selite) and [SelBlocksGlobal](https://github.com/selite/sel-blocks-global).-->
+ * [strict Javascript](JavascriptEssential#strict-javascript)
+ * coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptOther](JavascriptOther))
+ * [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
+ * validated by [PackagedScripts](PackagedScripts)
+ * clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
+ * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal) and [documentation](https://github.com/SeLite/SeLite.github.io)
  * [AddOns](AddOns) are verified by Mozilla
 
 ## Compatibility
