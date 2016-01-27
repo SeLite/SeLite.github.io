@@ -13,9 +13,9 @@ There are repositories for
 
 | **Purpose**                        | **Repository: files and details** | **Download ZIP** | **Clone from GIT** |
 |--------------------------------------|---------------------------------------|-----------------------|------|
-| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [selite/selite](https://github.com/selite/selite) | [Download ZIP](https://github.com/selite/selite/archive/master.zip) | https://github.com/selite/selite.git |
-| [SelBlocksGlobal](SelBlocksGlobal) source                | TODO [browse or download](https://code.google.com/p/selite/source/browse?repo=sel-blocks-global) | [checkout](https://code.google.com/p/selite/source/checkout?repo=sel-blocks-global) |
-| Documentation                | [selite/selite.github.io](https://github.com/selite/selite.github.io) | [Download ZIP](https://github.com/selite/selite.github.io/archive/master.zip) | https://github.com/selite/selite.github.io.git |
+| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git |
+| [SelBlocksGlobal](SelBlocksGlobal) source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git |
+| Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git |
 
 # Install add-ons from source #
 (If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `selite\setup_proxies.bat` and TODO change after GitHub migration: `selite.sel-blocks-global\setup_proxy.bat` (or `selite/setup_proxies.sh` and `selite.sel-blocks-global/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).

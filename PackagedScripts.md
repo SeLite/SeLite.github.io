@@ -26,6 +26,8 @@ Reasoning: A case can open local pages relative to its location, or to location 
 
 [Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g. <!-- TODO check/FIX--> <code>open | file://` SeLiteSettings.getTestSuiteFolder() `/form.html</code>
 
+We don't indent commands in tests. That allows us to use them either with or without [SeLite Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/).
+
 ## Negative tests that succeed
 If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocksGlobal](SelBlocksGlobal). Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
 
