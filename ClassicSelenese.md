@@ -114,4 +114,4 @@ Sometimes you want a _global_ variable that spreads across Selenese functions (w
 Don't use `storeEval` for that - it sets a stored variable, which is local to current Selenese [function].
 
 # Limitations of getEval, storeEval
-[Command] `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error `unterminated string literal`. Use `String.fromCharCode(10)` instead.
+[Command] `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error `unterminated string literal`. Use `String.fromCharCode(10)` or `'\\u000A'` (as per [a suggestion](https://code.google.com/p/selenium/issues/detail?id=1816#c7)) instead.
