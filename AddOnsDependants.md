@@ -7,7 +7,7 @@ layout: default
 Following shows direct dependencies between Firefox [AddOns](AddOns) that form SeLite.
 
 <!-- Keep the following table sorted alphabetically.-->
-<table><thead>
+<table class="table"><thead>
 <tr><td><strong>Providers</strong> &gt;<hr/>Dependents \/</td><td>&#160;</td><td>&#160;</td><td> <a href="BootstrapLoader">Bootstrap</a></td><td> Clipboard And Indent</td><td><a href="ExtraCommands">Commands</a></td><td>DB Objects</td><td><a href="ExtensionSequencer">ExtensionSequencer</a></td><td>Miscellaneous</td><td><a href="SelBlocksGlobal">SelBlocksGlobal</a></td><td><a href="Settings">Settings</a></td><td>SQLite<br/>Connection<br/>Manager</td><td>TestCase<br>Debug<br>Context</td></tr>
 </thead>
 <tbody>

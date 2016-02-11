@@ -16,3 +16,4 @@ Below are some web applications or frameworks which can run with SQLite DB. That
 | PHP        |                                   | [FUDforum](http://fudforum.org/forum/) (& [FUDforum downloads, sources etc.](http://sourceforge.net/projects/fudforum/)) | [FUFDforumFramework](FUFDforumFramework) |
 | PHP        |                                   | [Serendipity](http://www.s9y.org)                           | [SerendipityFramework](SerendipityFramework) |
 | PHP        |                                   | [Dotclear](http://dotclear.org/)                            | [DotclearFramework](DotclearFramework) |
+{: .table}

@@ -25,7 +25,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
 
 # Add-ons
 {% comment %}Keep the following table sorted alphabetically. Using options parse_block_html="true" didn't help, so links are in HTML.{% endcomment %}
-<table>
+<table class="table">
 <tbody>
 <tr>
     <td> <strong>Extension name</strong><br/>and <strong>user documentation</strong><br/>

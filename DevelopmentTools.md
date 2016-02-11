@@ -93,7 +93,7 @@ Then (re)start Firefox, open Browser Toolbox/Debugger and only after that open S
 You can also start Firefox with debugger from shell, i.e. `firefox -jsdebugger`. However, it seems that you can't use keyword `debugger` to investigate the very first loading stage of extensions (e.g. when [ExtensionSequencer](ExtensionSequencer) loads an extension's `SeLiteExtensionSequencerManifest.js`). The debugger doesn't stop there. Instead, see above how to print messages with `console`.
 
 #### Breakpoints in Core extensions ####
-Selenium IDE loads custom [Core extensions][core extension] twice (reported in [ThirdPartyIssues](ThirdPartyIssues) > [Selenium IDE issue #6697](http://code.google.com/p/selenium/issues/detail?id=6697)). That applies regardless of whether you use Selenium IDE menu Options > Options > General > Selenium Core extensions, or whether you use [ExtensionSequencer](ExtensionSequencer).
+Selenium IDE loads custom [Core extensions][core extension] twice (reported in [ThirdPartyIssues](ThirdPartyIssues) > [Core extensions are loaded 2x](https://github.com/SeleniumHQ/selenium/issues/1549)). That applies regardless of whether you use Selenium IDE menu Options > Options > General > Selenium Core extensions, or whether you use [ExtensionSequencer](ExtensionSequencer).
 
 Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole [case] or [suite]) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with `?numericTimeStamp` appended to their file names. For each [Core extension] pick the one that has the highest timestamp.
 

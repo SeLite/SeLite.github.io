@@ -14,6 +14,7 @@ SeLiteSettings' configuration interface is within Firefox at {{chromeUrl}}s. The
 | _chrome://selite-settings/content/tree.xul?selectFolder_                      | to select a folder for which to review any fields |
 | _chrome://selite-settings/content/tree.xul?folder=/full/path/to/folder_       | to review effective configuration for [suites][suite] in that folder, based on any applicable sets or manifests as per [SettingsScope](SettingsScope) |
 | _chrome://selite-settings/content/tree.xul?register_ | to register a module manually (from its javascript file). You need this only if you design or import a custom configuration module that is not packaged as an [extension of Selenium IDE]. Alternatively you may use your own [Core extension] and [SettingsAPI](SettingsAPI) to register your module automatically. |
+{: .table}
 
 Per-folder view colours fields based on where the value(s) come from:
 
@@ -28,6 +29,7 @@ SeLiteSettings adds three buttons to Selenium IDE. They re-load one or two of [s
 | ![reload test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_test.png) | App | Test | |
 | ![reload vanilla and test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_vanilla_and_test.png) | App | Test | Vanilla |
 | ![reload app and test DB](https://raw.githubusercontent.com/selite/selite/master/settings/src/chrome/skin/classic/reload_app_and_test.png) | Vanilla | Test | App |
+{: .table}
 
 You should pause [scripts][script] while using these buttons, otherwise the [script] or application may modifying their DB files. Beware of background web processes (Ajax or CRON) - wait until they finish. Otherwise you may need to stop the application (e.g. by shutting down Tomcat/JBoss, Apache or WEBrick). If the DB file is on a network filesystem, it may not lock properly.
 

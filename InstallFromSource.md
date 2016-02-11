@@ -16,6 +16,7 @@ There are repositories for
 | SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git |
 | [SelBlocksGlobal](SelBlocksGlobal) source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git |
 | Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git |
+{: .table}
 
 # Install add-ons from source #
 (If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `selite\setup_proxies.bat` and TODO change after GitHub migration: `selite.sel-blocks-global\setup_proxy.bat` (or `selite/setup_proxies.sh` and `selite.sel-blocks-global/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
@@ -25,7 +26,7 @@ On Windows (and probably on Mac OS, too):
   * you may need to accept add-ons
   * verify that all SeLite add-ons are enabled at Firefox menu > Tools > Add-ons > Extensions.
 
-Visit Firefox chrome URL _about:config_. Find or create a preference with name `xpinstall.signatures.required` and set it to `false`. (See [MDN Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)).
+Visit Firefox chrome URL _about:config_. Find or create a preference with name `xpinstall.signatures.required` and set it to `false`. (See [MDN Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)). <!-- Also see https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct and https://wiki.mozilla.org/Add-ons/Extension_Signing -->
 
 Restart Firefox.
 

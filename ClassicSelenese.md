@@ -12,7 +12,7 @@ Selenese [commands][command] are defined in these primary forms: <code>xyz, <str
 
 Selenium IDE shows the original reference for both the primary and auto-generated commands. However, the online reference contains only the primary commands. So if you'd like to locate them online (or in the source), use the following. (See also `loadSeleniumCommands()` in Selenium IDE's `treeView.js`.<!-- TODO link to chrome & SE IDE Github-->)
 
-<table>
+<table class="table">
 <thead>
 <tr>
     <td><strong markdown="span">Primary [command]</strong><br/> (as listed both online and in Reference tab; same as Javascript implementation function, unless mentioned otherwise)</td>
