@@ -17,13 +17,7 @@ Use the following links to register with third parties, disable email notificati
 
 <!--
 Update the following links whenever you update the detailed list.
-How to get the links:
-
-- For Mozilla: search for "ALL bug_id:XXX,YYY,ZZZ...". That gives you e.g. https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1094057%2C1051632%2C1003554%2C1108132%2C1096135%2C1071816&list_id=11740717 Then click at "Change Columns" and add "Votes" column. Make a note of that link; it seems that Bugzilla generates a new list_id everytime the filter changes. Then append the following to that link: &columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Cvotes
-
-- For NetBeans: https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119 -> append the same as for Mozilla.
-
-- For GitHub: I couldn"t make it search by pairs of [repository, issue #]. Therefore
+How to get the links for GitHub: I couldn"t make it search by pairs of [repository, issue #]. Therefore
 https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93. To edit that search, visit this link and then follow "Advanced search" link from that screen.
 
 Filter multiple GitHub pull requests by commit # and 'OR': https://github.com/Thiht/markdown-viewer/issues?utf8=%E2%9C%93&q=213d5645af8+OR++f6269e7a3+
@@ -42,9 +36,9 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 | Selenium      | GitHub |                            |                                  |  (not migrated yet) | https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('seleniumHQ', 'selenium')">your comments</a> |
 | Markdown Viewer | GitHub   |  |  | [Markdown Viewer feature](https://github.com/Thiht/markdown-viewer/pull/39) | https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('Thiht', 'markdown-viewer')">your comments</a> |
 | Selblocks     | GitHub     |  |  | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=✓) | https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('refactoror', 'Selblocks')">your comments</a> |
-| Mozilla       | Mozilla     | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL%20bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1094057%2C1051632%2C1003554%2C1108132%2C1096135%2C1071816&list_id=11740717&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Cvotes) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
+| Mozilla       | Mozilla     | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL+bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1051632%2C1108132%2C1096135%2C1071816%2C1247476) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
 | _Projects outside of GitHub_ | | | | | | |
-| NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C227972%2C226477%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C220119) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
+| NetBeans     | NetBeans   | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C238942%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C238942) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
 {: .table}
 
 Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/8850141255642605.xml) (via RSS) and vote for them in future.
@@ -69,6 +63,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <thead><th> Issue                                                                                               </th><th> Third party </th><th> Reason                           </th></thead><tbody>
 
 <!-- -->
+<tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1247476'>tree.inputField's type as autocomplete fails</a> </td><td>Mozilla</td><td>Usable Clipboard And Indent</td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1546'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<!-- There is a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#hands-on-gui">Hands-on GUI</a> and <a href="SeleniumIDE#clipboard-and-indent">Clipboard And Indent</a>--> </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1550'>Base URL Should Allow Path</a>                  </td><td> Selenium    </td><td> Practical testing and integration </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1537'>Refactor TestCase.debugContext to have a class on its own</a>             </td><td> Selenium    </td><td> Stable API of <a href="SelBlocksGlobal">SelBlocksGlobal</a> </td></tr>
@@ -81,7 +76,6 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=406629'>Sidebars should not have maximum width</a>          </td><td> Mozilla     </td><td> GUI usability </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=962861'>Allow sidebar to be selected and turned on/off independently</a>      </td><td> Mozilla     </td><td> GUI usability </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=237640'>Support for( var value of array ) {...} loop</a>   </td><td> NetBeans   </td><td> Cleaner code </td></tr>
-<tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=227972'>JavaScript Ctrl+Click method navigator</a>         </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=852837'>ICU-based Intl.DateTimeFormat implementation...</a> </td><td> Mozilla     </td><td> Timestamps across timezones </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=837961'>Add support for IANA time zone names to internationalization API</a>   </td><td> Mozilla     </td><td> Timestamps across timezones </td></tr>
 <tr><td> <a href='https://github.com/refactoror/SelBlocks/issues/4'>Selblocks and SelBlocksGlobal </a>                     </td><td> Selblocks   </td><td> Joined effort </td></tr>
@@ -91,7 +85,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1535'>safe_alert() fails at UI element startup in Selenium IDE</a>  </td><td> Selenium    </td><td> Design of UI element locators </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1536'>UI element test cases should be run even after Selenium IDE startup</a> </td><td> Selenium    </td><td> Design of UI element locators </td></tr>
 <!-- -->
-<tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=226477'>const not recognized in JavaScript</a>             </td><td> NetBeans   </td><td> Simpler code </td></tr>
+<tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=238942'>...Javascript 1.7 keywords</a>             </td><td> NetBeans   </td><td> Simpler & robust code using 'const' keyword </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=244329'>Allow search minidialog and highlighting for multiple tabs/windows...</a> </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=234888'>Code fold at indention level</a>                  </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=238121'>Highlight NaN, Infinity and undefined</a>          </td><td> NetBeans   </td><td> Editing </td></tr>
@@ -100,7 +94,6 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=240529'>Don't collapse empty {}</a>                        </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=238691'>JavaScript editor uses camelCase navigation even when disabled</a>       </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=929703'>&lt;treechildren tooltip="_child"&gt; doesn't work</a>    </td><td> Mozilla     </td><td> Robust code</td></tr>
-<tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=220119'>Navigate &gt; Go to type doesn't show types from javascript files</a>                       </td><td> NetBeans   </td><td> Code navigation </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=932578'>Allow sidebars to be different widths</a>           </td><td> Mozilla     </td><td> Flexible testing </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1096135'>"use strict"; violations only logged at LOG level from AddonManager.jsm</a> </td><td> Mozilla </td><td>  Less distracted development </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=891774'>nsTreeView and TreeView.setCellText() is either badly...</a>         </td><td> Mozilla     </td><td> Robust SeLite Settings </td></tr>
@@ -108,6 +101,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1031985'>console reports syntax error for valid json fetched via jquery.ajax</a> </td><td> Mozilla </td><td> Cleaner log in Browser Console </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1071816'>Support loading BOMless UTF-8 text/plain files from file: URLs</a> </td><td> Mozilla    </td><td> Cleaner log in Browser Console </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1239898'>Confusing text: Be careful with old versions! ...</a></td><td> Mozilla </td><td> Clear download instructions </td></tr>
+<tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=257897'>Regex search in any folder tree with an empty file fails</a> </td><td> NetBeans </td><td>Smooth development </td></tr>
 
 <!--
 <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
