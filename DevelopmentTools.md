@@ -2,6 +2,7 @@
 layout: default
 ---
 {% include links %}
+This is on top of [AddOnsThirdParty](AddOnsThirdParty).
 
 # Development and debugging #
 
@@ -17,7 +18,11 @@ This is for developing [Core extensions][core extension] and SeLite frameworks (
   * [Debugging Extensions (MDN)](https://developer.mozilla.org/en-US/docs/Building_an_Extension#Debugging_Extensions)
   * [TroubleShooting](TroubleShooting)
 
-Install [DevPrefs add-on](https://addons.mozilla.org/en-US/firefox/addon/devprefs/). Alternatively, visit Firefox URL _about:config_ and set the following preferences:
+For the easiest download get all add-ons of [SeLite Development Tools collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-development-tools/). Otherwise install
+
+ * [AMO admin assistant](https://addons.mozilla.org/en-US/firefox/addon/amo-admin-assistant/)
+ * [DOM Inspector](https://addons.mozilla.org/en-US/firefox/addon/dom-inspector-6622/)
+ * [DevPrefs](https://addons.mozilla.org/en-US/firefox/addon/devprefs/). If you don't install DevPrefs, visit Firefox URL _about:config_ and set the following preferences:
 
   * `browser.dom.window.dump.enabled` to boolean `true`
   * `devtools.chrome.enabled` to boolean `true`
@@ -25,7 +30,7 @@ Install [DevPrefs add-on](https://addons.mozilla.org/en-US/firefox/addon/devpref
   * `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
   * add `nglayout.debug.disable_xul_cache` as boolean `true` (this preference is not set by default). It is for developing XUL GUI or its Javascript.
 
-Regardless of whether you installed DevPrefs add-on, or whether you set the above preferences manually, now set a few more preferences. Visit Firefox URL _about:config_ and
+Regardless of whether you installed DevPrefs add-on or whether you set the above preferences manually, now set a few more preferences. Visit Firefox URL _about:config_ and
 
   * set `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
   * add `dom.allow_XUL_XBL_for_file` as boolean `true` (this preference is not set by default). It is for developing XUL GUI. (It enables access to `.xul` files via _file://_ URLs in addition to using {{chromeUrl}}s. Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
@@ -37,7 +42,10 @@ These are for development of SeLite frameworks, Selenium IDE and its extensions.
 
 Find these in Firefox menu Tools > Web Developer > Browser Console (shortcut `Ctrl+Shift+J`) and Browser Toolbox (formerly Browser Debugger; since Firefox 39 it has a shortcut `Ctrl+Alt+Shift+I`). If you start `firefox` binary from a shell on Linux, messages from Browser Console also show up in that shell. You can also start `firefox.exe` or `firefox` binary with Browser Console and/or Browser Toolbox by passing parameters `-jsconsole` or `-jsdebugger` (as per [command line options](https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options)).
 
-In Browser Console, JS tab/dropdown has level Warnings. Name of that level is confusing. Undefined variables in strict mode and some syntax errors generate messages at visible only Warnings level (or more detailed), but they halt execution of the script anyway. So if things don't add up, include Warnings level.
+In Browser Console, JS tab/dropdown has level Warnings. Name of that level is confusing. Undefined variables in strict mode and some syntax errors generate messages at visible only Warnings level (or more detailed), but they halt execution of the script anyway. So if things don't add up, include `Warnings` level.
+
+## Evaluating expressions for XUL##
+Firefox menu Tools > Web Developer > Scratchpad (Shift+F4) doesn’t work for XUL files loaded via e.g. `chrome://extension/path/file-name.xul` (regardless of Environment setting - whether Content or Browser). Instead, use Firebug’s Console.
 
 ### Logging ###
 Don't use `alert(message)` since it's disruptive. Also, it's not available in Javascript code modules.
@@ -146,4 +154,4 @@ If you host your extensions at [addons.mozilla.org](https://addons.mozilla.org/)
 * See [AddOns](AddOns) > [Latest releases](AddOns#latest-releases).
 * When uploading a new version, do not remove all previously reviewed versions, but keep at least one. Otherwise _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/_ and _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/versions/_ will stop working. (However, _https://addons.mozilla.org/en-US/developers/addon/XXXXX/edit_ will still work and [Manage My Submissions](https://addons.mozilla.org/en-US/developers/addons) will still list the extension.) Vote for fixing this at [ThirdPartyIssues](ThirdPartyIssues) > Show version awaiting review in detail page....
 * If you create a new add-on, upload it to _addons.mozilla.org_ early. They sometimes delayed the initial review by over a month. Until then your add-on is not public (not even at _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/versions/_)!
-* See [Mozilla bug on selecting dependencies](https://bugzilla.mozilla.org/show_bug.cgi?id=1239191) and use [AMO admin assistant](https://addons.mozilla.org/en-US/firefox/addon/amo-admin-assistant/).
+* See [Mozilla bug on selecting dependencies](https://bugzilla.mozilla.org/show_bug.cgi?id=1239191).

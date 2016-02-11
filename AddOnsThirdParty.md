@@ -14,7 +14,7 @@ In order to use an old version of Selenium IDE
 If you'd like to use the current development version of Selenium IDE, see [InstallFromSource](InstallFromSource) > [Install Selenium IDE from source](InstallFromSource#install-selenium-ide-from-source).
 
 # Add-ons for development of Selenese scripts
-For development of Selenese [scripts][script]:
+Following add-ons are for development of Selenese [scripts][script]. For the easiest download get all add-ons of [SeLite Third Party collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-third-party/).
 
   * [Firebug](https://addons.mozilla.org/en-us/firefox/addon/firebug)
   * [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath) For checking Selenese XPath selectors. Beware that sometimes an XPath works in FirePath, but not in Selenium IDE. Changing `/` to `//` within it seems to help.
@@ -22,9 +22,7 @@ For development of Selenese [scripts][script]:
   * [Stored Variables Viewer](https://addons.mozilla.org/en-US/firefox/addon/stored-variables-viewer-seleni/)
   * [Highlight Elements](https://addons.mozilla.org/en-us/firefox/addon/highlight-elements-selenium-id/)
   * [Log Search Bar](https://addons.mozilla.org/en-US/firefox/addon/log-search-bar-selenium-ide)
-  * [Log Search Bar](https://addons.mozilla.org/en-US/firefox/addon/log-search-bar-selenium-ide/)
   * [Page Coverage](https://addons.mozilla.org/en-US/firefox/addon/page-coverage-selenium-ide)
-  * [Favorites (favorite suites in Selenium IDE)](https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/)
   * [File Logging](https://addons.mozilla.org/en-US/firefox/addon/file-logging-selenium-ide/)
   * [SQLite Manager](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager)
 
