@@ -1,7 +1,7 @@
 gems:
   - jekyll-sitemap
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 kramdown:
   input: GFM
   auto_ids:       true
