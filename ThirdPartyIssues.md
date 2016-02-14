@@ -64,6 +64,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 
 <!-- -->
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1247476'>tree.inputField's type as autocomplete fails</a> </td><td>Mozilla</td><td>Usable Clipboard And Indent</td></tr>
+<tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1636'>Selenium IDE chrome/content/formats/html.js has an incorrect regex</a> </td><td> Selenium </td><td> Reliable testing </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1546'>Selenium IDE chrome/content/formats/html.js to preserve indented...</a>    </td><td> Selenium    </td><td> Readable test cases.<!-- There is a workaround at <a href="SeleniumIDE">SeleniumIDE</a> > <a href="SeleniumIDE#hands-on-gui">Hands-on GUI</a> and <a href="SeleniumIDE#clipboard-and-indent">Clipboard And Indent</a>--> </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1550'>Base URL Should Allow Path</a>                  </td><td> Selenium    </td><td> Practical testing and integration </td></tr>
 <tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1537'>Refactor TestCase.debugContext to have a class on its own</a>             </td><td> Selenium    </td><td> Stable API of <a href="SelBlocksGlobal">SelBlocksGlobal</a> </td></tr>
@@ -102,8 +103,9 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1071816'>Support loading BOMless UTF-8 text/plain files from file: URLs</a> </td><td> Mozilla    </td><td> Cleaner log in Browser Console </td></tr>
 <tr><td> <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1239898'>Confusing text: Be careful with old versions! ...</a></td><td> Mozilla </td><td> Clear download instructions </td></tr>
 <tr><td> <a href='https://netbeans.org/bugzilla/show_bug.cgi?id=257897'>Regex search in any folder tree with an empty file fails</a> </td><td> NetBeans </td><td>Smooth development </td></tr>
+<tr><td> <a href='https://github.com/SeleniumHQ/selenium/issues/1635'>Documentation and handling...</a> </td><td> Selenium </td><td> Reliable API </td></tr>
 
 <!--
-<tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
+<tr><td> <a href='https://code.google.com/archive/p/selenium/issues/2706'>Base URL inconsistent behavior (IDE)</a>        </td><td> Selenium    </td><td> Flexible testing </td></tr>
 <tr><td> <a href='https://code.google.com/p/selenium/issues/detail?id=1816'>[IDE] JS regex replace for line break does not work...</a> </td><td> Selenium </td><td> Robust and expressive <tr><td> <a href='http://code.google.com/p/selenium/issues/detail?id=3028'>Keyboard shortcut to Selenium IDE</a>                            </td><td> Selenium    </td><td> GUI usability </td></tr>
 -->
