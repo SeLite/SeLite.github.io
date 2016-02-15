@@ -21,7 +21,7 @@ First, follow [TroubleShooting](TroubleShooting). Before you [report an issue](h
 
 Collect any errors from logs (as per [TroubleShooting](TroubleShooting)). If logs are short, copy and paste them in the error report. Otherwise install [AddOnsThirdParty](AddOnsThirdParty) > File Logging, restart Firefox, re-run your script, save the log in a file and attach it to the error issue.
 
-By submitting or commenting on a report, you agree that any part of it can be used in SeLite (under current or any future license).
+By submitting an issue or a comment you agree that project administrator(s) can, without notice, edit your comment, and/or incorporate your comment into SeLite, under the current or any future license.
 
 <a href='Hidden comment: Comment: too much:
 * apply [https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines Bug Writing Guidelines] from Mozilla
