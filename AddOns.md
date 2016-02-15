@@ -73,7 +73,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <ul>
         <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
         <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</em></li>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests'>Selenese tests</a></li>
+        <li><a href='https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests'>Selenese scripts</a></li>
     </ul> </td>
 </tr>
 <tr>
@@ -92,7 +92,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
     <td> <ul>
         <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-tests'>Selenese tests</a></li>
+        <li><a href='https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-tests'>Selenese scripts</a></li>
     </ul> </td>
 </tr>
 <tr>
@@ -120,7 +120,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
          <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-misc/content/reference.xml</em></li>
          <li><a href='https://github.com/SeLite/SeLite/blob/master/misc/src/chrome/content/extensions/core-extension.js'>Source</a></li>
          <li>Source (offline): <em>chrome://selite-misc/content/extensions/core-extension.js</em></li>
-         <li><a href='https://github.com/SeLite/SeLite/tree/master/misc/selenese-tests'>Selenese tests</a></li>
+         <li><a href='https://github.com/SeLite/SeLite/tree/master/misc/selenese-tests'>Selenese scripts</a></li>
          <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em><!-- This link only works offline, because neither gitraw.com nor htmlpreview.github.io accept URL-based HTTP parameters passed to .html file.--></li>
      </ul>          </td>
 </tr>
@@ -143,7 +143,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
         <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
         <li><a href='https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
         <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
-        <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-tests'>Selenese tests</a></li>
+        <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-tests'>Selenese scripts</a></li>
         <li>MPL License 1.1</li>
     </ul> </td>
 </tr>
