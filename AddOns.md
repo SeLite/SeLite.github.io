@@ -52,48 +52,66 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td><a href="AutoCheck">AutoCheck</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
-    <td> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>autoCheck</em>...</td>
+    <td> <ul>
+            <li> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>autoCheck</em>...</li>
+            <li> Since July 2014</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href='BootstrapLoader'>Bootstrap</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-bootstrap/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
-    <td> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions </td>
+    <td> <ul>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions</li>
+            <li>Since 2012</li>
+         </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href='SeleniumIDE#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
-    <td> Apache License 2 </td>
+    <td> <ul>
+            <li>Apache License 2 </li>
+            <li>Since February 2015</li>
+         </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href='ExtraCommands'>Commands</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/versions/'>download</a>                </td>
     <td> <ul>
-        <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
-        <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</em></li>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests'>Selenese scripts</a></li>
-    </ul> </td>
+            <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+            <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</em></li>
+            <li><a href='https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests'>Selenese scripts</a></li>
+            <li>Since 2011</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> DB Objects                </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-db-objects/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-db-objects/versions/'>download</a>              </td>
     <td> <ul>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/db-objects/src/chrome/content/'>source files</a></li>
-        <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/db-objects/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
-        <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-db-objects/content/reference.xml</em></li>
-    </ul> </td>
+            <li><a href='https://github.com/SeLite/SeLite/tree/master/db-objects/src/chrome/content/'>source files</a></li>
+            <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/db-objects/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+            <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-db-objects/content/reference.xml</em></li>
+            <li>Since May 2013</li>
+        </ul>
+    </td>
 </tr>
 <tr>
 <td> <a href="ExitConfirmationChecker">ExitConfirmationChecker</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
     <td> <ul>
-        <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-tests'>Selenese scripts</a></li>
-    </ul> </td>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
+            <li><a href='https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-tests'>Selenese scripts</a></li>
+            <li>Since June 2014</li>
+        </ul>
+    </td>
 </tr>
 <tr>
  <td> <a href="ExtensionSequencer">ExtensionSequencer</a>        </td>
@@ -103,13 +121,18 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
         <li><a href='http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
         <li><a href='https://github.com/SeLite/SeLite/tree/master/extension-sequencer/shell-tests'>Shell tests (source)</a></li>
         <li>Apache License 2</li>
+        <li>Since September 2013</li>
     </ul> </td>
 </tr>
 <tr>
     <td> <a href='SeleniumIDE#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
-    <td> Apache License 2 </td>
+    <td> <ul>
+            <li>Apache License 2</li>
+            <li>Since February 2015</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> Miscellaneous             </td>
@@ -122,55 +145,69 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
          <li>Source (offline): <em>chrome://selite-misc/content/extensions/core-extension.js</em></li>
          <li><a href='https://github.com/SeLite/SeLite/tree/master/misc/selenese-tests'>Selenese scripts</a></li>
          <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em><!-- This link only works offline, because neither gitraw.com nor htmlpreview.github.io accept URL-based HTTP parameters passed to .html file.--></li>
-     </ul>          </td>
+         <li>Since May 2013</li>
+     </ul>
+   </td>
 </tr>
 <tr>
     <td> Run All Favorites         </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/versions/'>download</a>            </td>
     <td> <ul>
-        <li>Not backwards compatible with Favorites (Selenium IDE), only forward compatible (see <em>info</em>).</li>
-        <li>It requires <a href='https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/'>Favorites (Selenium IDE)</a>.</li>
-        <li>MPL License 1.1</li>
-    </ul> </td>
+            <li>Not backwards compatible with Favorites (Selenium IDE), only forward compatible (see <em>info</em>).</li>
+            <li>It requires <a href='https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/'>Favorites (Selenium IDE)</a>.</li>
+            <li>MPL License 1.1</li>
+            <li>Since September 2014</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href="SelBlocksGlobal">SelBlocksGlobal</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-selblocks-global/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SelBlocks-Global/versions/'>download</a>        </td>
     <td> <ul>
-        <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
-        <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
-        <li><a href='https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
-        <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
-        <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-tests'>Selenese scripts</a></li>
-        <li>MPL License 1.1</li>
-    </ul> </td>
+            <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
+            <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
+            <li><a href='https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+            <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
+            <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-tests'>Selenese scripts</a></li>
+            <li>MPL License 1.1</li>
+            <li>Since 2011</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href='Settings'>Settings</a>                </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
     <td> <ul>
-        <li>Options > SeLite Settings for this suite</li>
-        <li>Configuration: <em>chrome://selite-settings/content/tree.xul</em></li>
-        <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
-        <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>
-        <li><a href='https://github.com/SeLite/SeLite/blob/master/settings/src/chrome/content/SeLiteSettings.js'>source</a></li>
-        <li>GUI is under GNU GPL 3; API is under GNU LGPL 3</li>
-    </ul> </td>
+            <li>Options > SeLite Settings for this suite</li>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul</em></li>
+            <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
+            <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>
+            <li><a href='https://github.com/SeLite/SeLite/blob/master/settings/src/chrome/content/SeLiteSettings.js'>source</a></li>
+            <li>GUI is under GNU GPL 3; API is under GNU LGPL 3</li>
+            <li>Since 2013</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> SQLite Connection Manager </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-sqlite-connection-mg/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SQLite-Connection-Mg/versions/'>download</a>     </td>
-    <td>&#160;</td>
+    <td>
+        <ul><li> Since 2013</li></ul>
+    </td>
 </tr>
 <tr>
     <td> TestCase Debug Context   </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-TestCase-Debug-Conte/versions/'>download</a>      </td>
-    <td> Apache License 2</td>
+    <td> <ul>
+            <li>Apache License 2</li>
+            <li>Since 2013</li>
+        </ul>
+    </td>
 </tr>
 </tbody>
 </table>

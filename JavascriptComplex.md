@@ -157,6 +157,17 @@ That ensures integrity of `SeLiteMisc.isInstance()` and operator `instanceof`, w
 
 Don't use `objectExtend()` from Selenium Core, since it doesn't work with operator `instanceof`.
 
+# ECMAScript 6 and 7
+Use [MDN: Arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), [MDN: Default parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [MDN: Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) and [MDN: Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+
+See 
+
+ * [Mozilla support for ECMAScript 6](https://developer.mozilla.org/en/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)
+ * [ECMAScript 6 specification](http://www.ecma-international.org/ecma-262/6.0/#sec-function-definitions)
+ * [ECMAScript 7 draft](https://tc39.github.io/ecma262/#sec-function-definitions)
+ * [new features in ECMAScript 6](http://es6-features.org/) - especially
+   *  [Enhanced Object Properties &gt; Computed Property Names](http://es6-features.org/#ComputedPropertyNames)
+
 # See also #
   * [JavascriptEssential](JavascriptEssential)
   * [Google Style Guide](https://google.github.io/styleguide/javascriptguide.xml), especially [Closures](https://google.github.io/styleguide/javascriptguide.xml#Closures)

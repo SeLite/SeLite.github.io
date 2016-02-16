@@ -65,7 +65,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Selenium IDE chrome/content/formats/html.js has an incorrect regex](https://github.com/SeleniumHQ/selenium/issues/1636)        | Selenium        | Reliable testing |
 | [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)       | Selenium        | Readable test cases |
 | [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                | Selenium        | Practical testing and integration |
-| [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                 | Selenium        | Stable API of (SelBlocksGlobal)[SelBlocksGlobal] |
+| [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                 | Selenium        | Stable API of [SelBlocksGlobal](SelBlocksGlobal) |
 | [Core extensions are loaded 2x - document this, or prevent it](https://github.com/SeleniumHQ/selenium/issues/1549)              | Selenium        | Robust core extensions |
 | [verify* should show the diff](https://github.com/SeleniumHQ/selenium/issues/1538)                                              | Selenium        | Robust tests. <br>See [ExitConfirmationChecker](ExitConfirmationChecker) &gt; [Details](ExitConfirmationChecker#details) |
 | [XPath 2.0](https://bugzilla.mozilla.org/show_bug.cgi?id=396966)                                                        | Mozilla         | Robust tests.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) |
