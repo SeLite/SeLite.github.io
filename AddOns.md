@@ -168,7 +168,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <ul>
             <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
             <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
-            <li><a href='https://cdn.rawgit.com/selite/sel-blocks-global/master/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+            <li><a href='https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
             <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-tests'>Selenese scripts</a></li>
             <li>MPL License 1.1</li>
