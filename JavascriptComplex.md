@@ -11,8 +11,7 @@ You could have an (optional) parameter, for which you set a meaningful default v
 ```javascript
 /** @param id 0-based ID of the sport. 0 by default.
 */
-function sport( id ) {
-    id= id || 0;
+function sport( id=0 ) {
     return ['running', 'soccer', 'basketball'][id];
 }
 ```

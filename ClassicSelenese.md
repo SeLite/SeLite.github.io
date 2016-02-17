@@ -78,7 +78,7 @@ Selenium IDE shows the original reference for both the primary and auto-generate
 Selenese [commands][command] accept up to two parameters: `target` and `value`.
 
 * `target` is often a locator (an expression that identifies an element). It can also be a Javascript expression (for `getEval`).
-* One or multiple parts of `target` or `value` can be Javascript expressions, each enclosed within back ticks \`...\`. A few variations of back tick notation exist. See [EnhancedSelenese](EnhancedSelenese).
+* One or multiple parts of `target` or `value` can be Javascript expressions, each enclosed within pairs of `<>...<>`. A few variations of this notation exist. See [EnhancedSelenese](EnhancedSelenese).
 * If `target` is a locator, `value` is usually the expected or new value, which is compared or entered into element identified by `target`. `value` can also be a name of a stored variable, or something else.
 * [Selenium Core reference](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html) > [Element Locators](http://release.seleniumhq.org/selenium-core/1.0.1/reference.html#locators) is handy (if you installed Selenium IDE, see it offline in Firefox at {{chromeUrl}} _chrome://selenium-ide/content/selenium-core/reference.html#locators_).
 * Command references can call these parameters something more relevant/specific. Then the first one stands for `target` and the second one (if used) for `value`.
