@@ -47,6 +47,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li markdown="span">({{chromeUrl}}s only work after you install the add-on in Firefox)</li>
         </ul>
     </td>
+    <td><strong>Other</strong></td>
 </tr>
 <tr>
     <td><a href="AutoCheck">AutoCheck</a></td>
@@ -54,6 +55,10 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
     <td> <ul>
             <li> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>autoCheck</em>...</li>
+        </ul>
+    </td>
+    <td>
+        <ul>
             <li> Since July 2014</li>
         </ul>
     </td>
@@ -64,6 +69,9 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
     <td> <ul>
             <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions</li>
+         </ul>
+    </td>
+    <td> <ul>
             <li>Since 2012</li>
          </ul>
     </td>
@@ -72,8 +80,9 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='SeleniumIDE#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
+    <td>&#160;</td>
     <td> <ul>
-            <li>Apache License 2 </li>
+            <li>Apache License&#160;2 </li>
             <li>Since February 2015</li>
          </ul>
     </td>
@@ -85,7 +94,14 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <ul>
             <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</em></li>
-            <li><a href='https://github.com/SeLite/SeLite/tree/master/commands/selenese-scripts'>Selenese scripts</a></li>
+            <li>selenese-scripts/
+                <ul>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/commands/selenese-scripts/case.html'>case.html</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td> <ul>
             <li>Since 2011</li>
         </ul>
     </td>
@@ -98,6 +114,9 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li><a href='https://github.com/SeLite/SeLite/tree/master/db-objects/src/chrome/content/'>source files</a></li>
             <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/db-objects/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-db-objects/content/reference.xml</em></li>
+        </ul>
+    </td>
+    <td> <ul>
             <li>Since May 2013</li>
         </ul>
     </td>
@@ -108,7 +127,19 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
     <td> <ul>
             <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
-            <li><a href='https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts'>Selenese scripts</a></li>
+            <li>selenese-scripts/
+                <ul>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/ignored/case.html'>ignored/case.html</a></li>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/includeRevertedChanges/positive_case.html'>includeRevertedChanges/positive_case.html</a></li>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/includeRevertedChanges/assert/negative_case.html'>includeRevertedChanges/assert/negative_case.html</a></li>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/positive_case.html'>skipRevertedChanges/positive_case.html</a></li>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/assert/negative_case.html'>skipRevertedChanges/assert/negative_case.html</a></li>
+                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/verify/negative_case.html'>skipRevertedChanges/verify/negative_case.html</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td> <ul>
             <li>Since June 2014</li>
         </ul>
     </td>
@@ -118,18 +149,23 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/'>download</a>     </td>
     <td> <ul>
-        <li><a href='http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
-        <li><a href='https://github.com/SeLite/SeLite/tree/master/extension-sequencer/shell-tests'>Shell tests (source)</a></li>
-        <li>Apache License 2</li>
-        <li>Since September 2013</li>
-    </ul> </td>
+            <li><a href='http://htmlpreview.github.io/?https://github.com/selite/selite/blob/master/extension-sequencer/shell-tests/tests.html'>Shell tests (list)</a></li>
+            <li><a href='https://github.com/SeLite/SeLite/tree/master/extension-sequencer/shell-tests'>Shell tests (source)</a></li>
+         </ul>
+    </td>
+    <td> <ul>
+            <li>Apache License&#160;2</li>
+            <li>Since September 2013</li>
+        </ul>
+    </td>
 </tr>
 <tr>
     <td> <a href='SeleniumIDE#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
+    <td>&#160;</td>
     <td> <ul>
-            <li>Apache License 2</li>
+            <li>Apache License&#160;2</li>
             <li>Since February 2015</li>
         </ul>
     </td>
@@ -143,10 +179,17 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
          <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-misc/content/reference.xml</em></li>
          <li><a href='https://github.com/SeLite/SeLite/blob/master/misc/src/chrome/content/extensions/core-extension.js'>Source</a></li>
          <li>Source (offline): <em>chrome://selite-misc/content/extensions/core-extension.js</em></li>
-         <li><a href='https://github.com/SeLite/SeLite/tree/master/misc/selenese-scripts'>Selenese scripts</a></li>
          <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em><!-- This link only works offline, because neither gitraw.com nor htmlpreview.github.io accept URL-based HTTP parameters passed to .html file.--></li>
-         <li>Since May 2013</li>
+        <li>selenese-scripts/
+            <ul>
+                 <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/misc/selenese-scripts/case.html'>case.html</a></li>
+            </ul>
+        </li>
      </ul>
+   </td>
+   <td> <ul>
+         <li>Since May 2013</li>
+        </ul>
    </td>
 </tr>
 <tr>
@@ -156,7 +199,10 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <ul>
             <li>Not backwards compatible with Favorites (Selenium IDE), only forward compatible (see <em>info</em>).</li>
             <li>It requires <a href='https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/'>Favorites (Selenium IDE)</a>.</li>
-            <li>MPL License 1.1</li>
+        </ul>
+    </td>
+    <td> <ul>
+            <li>MPL License&#160;1.1</li>
             <li>Since September 2014</li>
         </ul>
     </td>
@@ -170,8 +216,28 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
             <li><a href='https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
-            <li><a href='https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts'>Selenese scripts</a></li>
-            <li>MPL License 1.1</li>
+            <li>selenese-scripts/
+                <ul>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/misc_case.html'>misc_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/plain_function_call_case.html'>plain_function_call_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/plain_function_definition_case.html'>plain_function_definition_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/try_catch_function_calls_case.html'>try_catch_function_calls_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/try_catch_function_definitions_case.html'>try_catch_function_definitions_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/use_data_from_files_case.html'>use_data_from_files_case.html</a></li>
+                </ul>
+            </li>
+            <li>selenese-scripts-negative/
+                <ul>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/successful_try_then_failed_assert.html'>successful_try_then_failed_assert.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_with_no_catch_nor_finally_at_top_level_case.html'>try_with_no_catch_nor_finally_at_top_level_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_without_catch_at_top_level_case.html'>try_without_catch_at_top_level_case.html</a></li>
+                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_with_unmatching_catch_at_top_level_case.html'>try_with_unmatching_catch_at_top_level_case.html</a></li>
+                </ul>
+            </li>
+        </ul>
+    </td>
+    <td> <ul>
+            <li>MPL License&#160;1.1</li>
             <li>Since 2011</li>
         </ul>
     </td>
@@ -186,7 +252,10 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
             <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>
             <li><a href='https://github.com/SeLite/SeLite/blob/master/settings/src/chrome/content/SeLiteSettings.js'>source</a></li>
-            <li>GUI is under GNU GPL 3; API is under GNU LGPL 3</li>
+        </ul>
+    </td>
+    <td> <ul>
+            <li>GUI is under GNU GPL&#160;3; API is under GNU LGPL&#160;3</li>
             <li>Since 2013</li>
         </ul>
     </td>
@@ -195,6 +264,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> SQLite Connection Manager </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-sqlite-connection-mg/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SQLite-Connection-Mg/versions/'>download</a>     </td>
+    <td>&#160;</td>
     <td>
         <ul><li> Since 2013</li></ul>
     </td>
@@ -203,8 +273,9 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> TestCase Debug Context   </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-TestCase-Debug-Conte/versions/'>download</a>      </td>
+    <td>&#160;</td>
     <td> <ul>
-            <li>Apache License 2</li>
+            <li>Apache License&#160;2</li>
             <li>Since 2013</li>
         </ul>
     </td>
