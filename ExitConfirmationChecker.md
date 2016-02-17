@@ -52,5 +52,5 @@ If you run  a whole [case] (or [suite]), you don't set `exitConfirmationCheckerA
 
 <!--If your page is a result of a redirect, then you need to call `getEval | _SeLiteExitConfirmationChecker.overrideOnBeforeUnload()` before the commmand that causes the redirect. TODO implement: Have an optional parameter to indicate number of Selenese commands before the redirect; this is useful if there are structural commands in between, e.g. if/else, for/while...'>-->
 
-# Tests #
-Follow [PackagedScripts](PackagedScripts) for [Selenese tests](https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-tests) of Exit Confirmation Checker. See source of `form.html`, `SeLiteSettingsValues.txt` and the actual tests. Test cases with name starting with `negative` are supposed to fail: see [PackagedScripts](PackagedScripts) > [Negative tests that fail](PackagedScripts#negative-tests-that-fail).<!-- @TODO put into folder selenese-tests-negative? See PackagedScripts-->
+# Scripts (tests) #
+Follow [PackagedScripts](PackagedScripts) for [Selenese scripts](https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts) of Exit Confirmation Checker. See source of `form.html`, `SeLiteSettingsValues.txt` and the actual scripts. Test cases with name starting with `negative` are supposed to fail: see [PackagedScripts](PackagedScripts) > [Negative tests that fail](PackagedScripts#negative-tests-that-fail).<!-- @TODO put into folder selenese-scripts-negative? See PackagedScripts-->

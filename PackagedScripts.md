@@ -11,7 +11,7 @@ In SeLite these scripts validate functionality of [AddOns](AddOns) and applicati
 ## Structure
 
 ## Installing and getting around ###
-Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [AddOns](AddOns) that can be tested in Selenium IDE have subfolder `selenese-tests`, e.g. [commands/selenese-tests/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-tests). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://github.com/SeLite/SeLite/tree/master/phpmyfaq/test_suites_and_cases).
+Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [AddOns](AddOns) that can be tested in Selenium IDE have subfolder `selenese-scripts`, e.g. [commands/selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-scripts). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://github.com/SeLite/SeLite/tree/master/phpmyfaq/test_suites_and_cases).
 
 To make navigation across files easy, here's a convention: filenames of suites end with `_suite.html`, and cases are in files that have names ending with `_case.html`. If there are several shared cases, they can be in `shared_cases/` subfolder.
 
@@ -32,7 +32,7 @@ We don't indent commands in tests. That allows us to use them either with or wit
 If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocksGlobal](SelBlocksGlobal). Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
 
 ## Negative tests that fail
-There are real negative tests in e.g. `selite.sel-blocks-global/selenese-tests-negative/`. Those tests themselves are supposed to fail (e.g. they validate situations when `try..catch..endTry` is supposed not to catch an error). If these tests don't fail, then there's a problem.
+There are real negative tests in e.g. `selite.sel-blocks-global/selenese-scripts-negative/`. Those tests themselves are supposed to fail (e.g. they validate situations when `try..catch..endTry` is supposed not to catch an error). If these tests don't fail, then there's a problem.
 
 # Invoking scripts
 
@@ -42,7 +42,7 @@ Before you run a [script] packaged with local forms/pages, the current tab in Fi
 Open a suite using Selenium IDE menu File > Open... or Open Test Suite... Do not open actual [cases][case] via menu File > Open..., otherwise they won't be able to access any local forms/pages (as per above) nor any shared Selenese functions. Then you can run the whole suite, or selected cases. Shared [cases][case] that only define Selenese functions are not intended as runnable.
 
 ## Running multiple suites
-In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-tests-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
+In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-scripts-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
 
 # Javascript tests #
 These validate functionality
