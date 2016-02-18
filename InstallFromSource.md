@@ -11,15 +11,15 @@ There are repositories for
 * [SelBlocksGlobal](SelBlocksGlobal)
 * documentation (you can view it offline as per [AboutDocumentation](AboutDocumentation)).
 
-| **Purpose**                        | **Repository: files and details** | **Download ZIP** | **Clone from GIT** |
+| **Purpose**                        | **Repository: files and details** | **Download ZIP** | **Clone from GIT** | **Updates (XML feed)** |
 |--------------------------------------|---------------------------------------|-----------------------|------|
-| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git |
-| [SelBlocksGlobal](SelBlocksGlobal) source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git |
-| Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git |
+| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git | [Updates (feed)](https://github.com/SeLite/SeLite/commits/master.atom) |
+| [SelBlocksGlobal](SelBlocksGlobal) source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git | [Updates (feed)](https://github.com/SeLite/SeLBlocksGlobal/commits/master.atom) |
+| Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git | [Updates (feed)](https://github.com/SeLite/SeLite.github.io/commits/master.atom) |
 {: .table}
 
 # Install add-ons from source #
-(If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `selite\setup_proxies.bat` and TODO change after GitHub migration: `selite.sel-blocks-global\setup_proxy.bat` (or `selite/setup_proxies.sh` and `selite.sel-blocks-global/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
+(If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `SeLite\setup_proxies.bat` and `SeLBlocksGlobal\setup_proxy.bat` (or `SeLite/setup_proxies.sh` and `SeLBlocksGlobal/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
 
 On Windows (and probably on Mac OS, too):
 

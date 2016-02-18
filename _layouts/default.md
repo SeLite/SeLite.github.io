@@ -17,7 +17,7 @@
 {% if page.rss != null %}
     <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ page.rss }}"/>
 {% else %}
-    <link href="https://github.com/selite/selite.github.io/commits/master.atom" rel="alternate" title="SeLite updates" type="application/atom+xml">
+    <link href="https://github.com/selite/selite.github.io/commits/master.atom" rel="alternate" title="SeLite Documentation updates" type="application/atom+xml">
 {% endif %}
 {% assign pageNameParts = (page.url | split: '/') %}
 {% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
