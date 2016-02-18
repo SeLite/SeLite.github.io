@@ -163,7 +163,11 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='SeleniumIDE#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
-    <td>&#160;</td>
+    <td>
+        <b>Urgent note</b><br/>
+        This productivity add-on is affected by Firefox defect <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1247476'>"tree.inputField's type as autocomplete fails"</a>. Vote for that bug, please.<br/><br/>
+        Your vote is essential. Otherwise Mozilla may take years to fix it. Please, also vote for <a href="ThirdPartyIssues">ThirdPartyIssues</a>.
+    </td>
     <td> <ul>
             <li>Apache License&#160;2</li>
             <li>Since February 2015</li>
