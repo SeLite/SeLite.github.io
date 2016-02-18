@@ -65,6 +65,8 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [tree.inputField's type as autocomplete fails](https://bugzilla.mozilla.org/show_bug.cgi?id=1247476)                            | Mozilla         | Usable Clipboard And Indent |
 | [Selenium IDE chrome/content/formats/html.js has an incorrect regex](https://github.com/SeleniumHQ/selenium/issues/1636)        | Selenium        | Reliable testing |
 | [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)       | Selenium        | Readable test cases |
+| [Source code highlighted, but Reference is empty](https://github.com/esdoc/esdoc/issues/222)                                    | ESDoc           | Generating developer documentation |
+| [Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662)                                    | Selenium        | Compact tests |
 | [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                | Selenium        | Practical testing and integration |
 | [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                 | Selenium        | Stable API of [SelBlocksGlobal](SelBlocksGlobal) |
 | [Core extensions are loaded 2x - document this, or prevent it](https://github.com/SeleniumHQ/selenium/issues/1549)              | Selenium        | Robust core extensions |
