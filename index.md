@@ -1,7 +1,6 @@
 ---
 title: (DB-driven browser automation)
 layout: default
-rss: http://www.feed43.com/selite-compatibility.xml
 ---
 {% include links %}
 
@@ -90,7 +89,7 @@ SeLite is compatible with Firefox 45 and Selenium IDE 2.9.1. It's platform-indep
 
 It doesn't operate with browsers other than Firefox, neither with Selenium WebDriver (nor with Selenium RC). Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
-Stay updated: subscribe to get [updates on compatibility](http://www.feed43.com/selite-compatibility.xml) (via RSS).
+Stay updated: subscribe to get [updates on compatibility](http://www.feed43.com/selite-compatibility.xml) (via RSS).<!-- Don't include that in the header of this page. It's the landing page, hence we want its RSS to reflect changes anywhere in the documentation. -->
 
 ## License
 SeLite is fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.
