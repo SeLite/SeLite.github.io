@@ -14,6 +14,9 @@
            page.url ends with .html (whether on GitHub and in Jekyll), so I treat it.
            The following has to be in three expressions, rather than in one complex expression - otherwise it failed.
          {% endcomment %}
+{% if page.rss != null %}
+    <link rel="alternate" type="application/rss+xml" title="RSS feed" href="{{ page.rss }}"/>
+{% endif %}
 {% assign pageNameParts = (page.url | split: '/') %}
 {% assign pageNamePartsWithoutSlash = (pageNameParts[1] | split: '.html') %}
 

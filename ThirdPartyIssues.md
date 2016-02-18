@@ -1,5 +1,6 @@
 ---
 layout: default
+rss: http://www.feed43.com/selite-third_party_issues.xml
 ---
 
 # Your vote is significant #
@@ -41,7 +42,7 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 | NetBeans             | NetBeans      | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C238942%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C238942) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
 {: .table}
 
-Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/8850141255642605.xml) (via RSS) and vote for them in future.
+Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Stay updated: subscribe to get updates about [new third party issues](http://www.feed43.com/selite-third_party_issues.xml) (via RSS) and vote for them in future.
 
 ## Selenium, Markdown Viewer and SelBlocks (on GitHub)
 [Registration with GitHub](https://github.com/join) is easy.

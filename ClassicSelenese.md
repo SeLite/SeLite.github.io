@@ -113,5 +113,10 @@ Sometimes you want a _global_ variable that spreads across Selenese functions (w
 
 Don't use `storeEval` for that - it sets a stored variable, which is local to current Selenese [function].
 
+# ECMAScript 6
+Firefox supports many ECMAScript 6 features. [Template Literals](http://es6-features.org/#StringInterpolation) are useful especially with [Javascript variables](#javascript-variables) (rather than with stored variables).
+
+However, that is in conflict with standard Selenese use of `${...}` to access stored variables. See [Selenium IDE > Store Commands and Selenium Variables](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#store-commands-and-selenium-variables).
+
 # Limitations of getEval, storeEval
 [Command] `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error `unterminated string literal`. Use `String.fromCharCode(10)` or `'\\u000A'` (as per [a suggestion](https://code.google.com/p/selenium/issues/detail?id=1816#c7)) instead.
