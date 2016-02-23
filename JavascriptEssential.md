@@ -248,6 +248,8 @@ TestArrayWorker.prototype.run= function() {
 new TestArrayWorker( [1, 2], 5 ).run(); // This returns 15
 ```
 
+As an easier alternative, use [JavascriptComplex](JavascriptComplex) > [ECMAScript 6 and 7](JavascriptComplex#ecmascript-6-and-7) > MDN: Arrow fuctions.
+
 # Documentation #
 Document the functions, parameters, variables etc. in [JSDoc](http://usejsdoc.org) format. Apply JSDoc 3 when useful (even though NetBeans 7.3 only supports JSDoc 2). Some JSDoc tags are not obvious - e.g. use [@extends](http://usejsdoc.org/tags-augments.html) for documenting class inheritance. For documenting Javascript modules see [JavascriptComplex](JavascriptComplex).
 
