@@ -35,7 +35,10 @@ Add-ons set up this way won't receive any updates. You'll need to run `GIT pull`
 # Install Selenium IDE from source #
 You'd need this only for debugging Selenium IDE, or custom add-ons that override it.
 
-(If you've already installed Selenium IDE, uninstall it and restart Firefox). [Download Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) as an `.xpi` file, but don't install it (right click at the link to an `.xpi` file >  'Save Link As...'). Then unzip the `.xpi` file (you may have to rename it to end with `.zip`). It contains several `.xpi` files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
+If you've already installed Selenium IDE, uninstall it and restart Firefox. Then you have the following two options.
+
+## Download ##
+[Download Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) as an `.xpi` file, but don't install it (right click at the link to an `.xpi` file >  'Save Link As...'). Then unzip the `.xpi` file (you may have to rename it to end with `.zip`). It contains several `.xpi` files inside, and you want `selenium-ide.xpi`. Unzip it and point a proxy file to the unzipped folder. All that is done by the following steps for Linux. For Windows or Mac OS see `setup_proxies.bat` or `setup_proxies.sh` above and figure out similar steps to the effect of the following.
 
 ```
 cd ~/.mozilla/firefox/*.default/extensions
@@ -50,7 +53,28 @@ pwd > `echo ~/.mozilla/firefox/*.default`/extensions/\{a6fd85ed-e919-4a43-a5af-8
 
 Restart Firefox.
 
-For debugging Selenium IDE, apply [DevelopmentTools](DevelopmentTools) > [Debugging](DevelopmentTools#debugging). Then use Firefox > Tools > Web Developer > Browser Toolbox. You need to know a file name; locate it in that unzipped folder using `grep` or some other text search tool. For easier code navigation create a NetBeans project from the unzipped folder. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide).
+This way you won't receive any updates. Subscribe to [RSS XML feed](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/versions/format:rss) of Selenium IDE versions.
+
+## From GitHub ##
+```
+git clone https://github.com/SeleniumHQ/selenium.git
+cd selenium
+./go
+cd ide/main/src
+```
+
+Either `wget https://raw.githubusercontent.com/peter-kehl/selenium/master/ide/main/src/setup_symlinks.sh`, or [download it raw](https://raw.githubusercontent.com/peter-kehl/selenium/master/ide/main/src/setup_symlinks.sh). Alternatively, copy [its code](https://github.com/peter-kehl/selenium/blob/master/ide/main/src/setup_symlinks.sh) and save it as `setup_symlinks.sh`.
+
+
+```
+./setup_symlinks.sh
+pwd > `echo ~/.mozilla/firefox/*.default`/extensions/\{a6fd85ed-e919-4a43-a5af-8da18bda539f\}
+```
+
+Restart Firefox.
+
+# Debugging Selenium IDE #
+For debugging Selenium IDE, apply [DevelopmentTools](DevelopmentTools) > [Debugging](DevelopmentTools#debugging). Then use Firefox > Tools > Web Developer > Browser Toolbox. You need to know a file name. Identify the file using `grep` or some other text search tool. For easier code navigation create a NetBeans project. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide).
 
 # Get Firefox Beta/Nightly #
 Download Beta version from [Releases](http://ftp.mozilla.org/pub/firefox/releases/) or Nightly version from [Central](http://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central/).

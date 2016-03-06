@@ -95,7 +95,26 @@ var object= {
 };
 ```
 
-However, you don't need to name functions that exist only to [isolate the local scope](#isolate-the-local-scope). Those are an exception.
+You don't need to name functions that exist only to [isolate the local scope](#isolate-the-local-scope). Indeed, you can't name functions defined with [JavascriptComplex](JavascriptComplex) > [ECMAScript 6 and 7](JavascriptComplex#ecmascript-6-and-7) > Arrow functions.
+
+#### Special function names ####
+A function name "hides" any outer symbol with the same name. Hence, a function can't have the name same as any outer symbolcs (variables or functions) that it accesses.
+
+```javascript
+var mySymbol= "hi";
+
+// The following function can't have name mySymbol, otherwise it won't return the outer mySymbol variable, but it returns reference to the function itself instead.
+var result= (function someNameOtherThan_mySymbol() {
+  return mySymbol;
+})();
+alert( result ); // => "hi"
+
+// You most likely don't want this:
+result= (function mySymbol() {
+  return mySymbol;
+})();
+alert( typeof result ); // => "function"
+```
 
 ## Be careful with assigned/passed functions created the classic way ##
 You could split the above suggested approach into a function definition ([the classic way](#the-classic-way)) and an assignment. E.g.
