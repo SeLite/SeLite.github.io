@@ -20,6 +20,7 @@ SeLite doesn't use GitHub Wiki, which doesn't utilise screen well, especially on
   * Write and organise it clearly.
   * Provide examples.
   * Don't have any content before the first heading (`# Heading... #`).
+  * If a heading contains any special characters (e.g. `<, >`), then specify its ID on the next line in form `{:#heading-id-here}`.
   * Refer to third party documentation if you mention something for the first time (if you have a reference).
   * Try NetBeans. See [DevelopmentTools](DevelopmentTools) > [NetBeans as a Javascript IDE](DevelopmentTools#netbeans-as-a-javascript-ide). Install [Markdown support](https://github.com/madflow/flow-netbeans-markdown). Open the documentation folder as a PHP project.
   * Don't use fixed line length, especially not in documentation source.

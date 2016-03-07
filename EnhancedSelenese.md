@@ -26,11 +26,13 @@ This syntax enables Selenese commands and structures that evaluate their paramet
 See also [SelBlocksGlobal](SelBlocksGlobal) > [Accessing stored variables](SelBlocksGlobal#accessing-stored-variables). 
 
 # Javascript within &lt;&gt;...&lt;&gt;
+{:#javascript-within}
 This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of `<>...<>`) to Selenese commands in their parameter (`target` or `value`). It evaluates any Javascript code in `target` or `value` that is between any pair of `<>...<>` (excluding the pair of `<>` itself).
 
 This is similar to standard Selenese `javascript{...}` as per [Selenium IDE > JavaScript Usage with Non-Script Parameters](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#javascript-usage-with-non-script-parameters). However, `javascript{...}` must have no prefix/postfix - i.e. it must be the only content of a Selenese command's parameter (`target` or `value`). Hence, there can't be multiple occurrences of `javascript{...}` in the same Selenese parameter.
 
 ## &lt;&gt;...&lt;&gt; without special prefix (cast to a string)
+{:#without-special-prefix}
 This converts the evaluated result to a string. You can have any prefix or suffix around `<>...<>`. The whole Selenese parameter (`target` or `value`) is treated as a string. Results of Javascript codes from `<>...<>` are concatenated together with any prefix, interlacing strings and any suffix.
 
 ## Variations of Javascript within &lt;&gt;...&lt;&gt; with special prefixes
@@ -39,6 +41,7 @@ Following are variations of <code><>...<></code> syntax. They all treat the stri
 They all start with special characters `=, <>` or `@` immediately in front of the opening pair of `<>`. Those characters `=, <>` and `@` are only a part of the syntax; they are not included in the result that is passed to the Selenese command.
 
 ### =&lt;&gt;...&lt;&gt; (with preserved type)
+{:#with-preserved-type}
 If a Selenese parameter contains only one <code>=<>...<></code> with no prefix and no suffix (not even a space), then its result is not treated as a string. [SelBlocksGlobal](SelBlocksGlobal) preserves the type of result of Javascript expression within <code><>...<></code> and it passes the exact result as a Selenese parameter. That's useful if you want to pass a number, an object or an array (and it still works for strings). If there is any prefix or suffix, [SelBlocksGlobal](SelBlocksGlobal) generates an error.
 
 ### \\<span></span>&lt;&gt;...&lt;&gt; (a string literal/constant in XPath)
@@ -49,11 +52,12 @@ If a Selenese parameter contains only one <code>=<>...<></code> with no prefix a
 Like <code><>...<></code> without prefix, <code>\<>...<></code> evaluates the enclosed part as Javascript expression. The result is treated as content of a string literal/constant for XPath. Then this escapes both apostrophes and/or quotation marks in it. It generates an XPath string sub-expression that may use XPath function `concat()`. (For details see `quoteForXPath()` in Selenium Core's online [htmlutils.js](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/htmlutils.js) or offline at {{chromeUrl}} _chrome://selenium-ide/content/selenium-core/scripts/htmlutils.js_).
 
 ### @&lt;&gt;...&lt;&gt; (an extra Selenese parameter)
+{:#an-extra-selenese-parameter}
 By default, Selenium IDE allows to pass only two parameters to commands: `target` (usually a locator) and `value`. However, some SeLite commands (e.g. in [ExitConfirmationChecker](ExitConfirmationChecker)) need to receive extra one or two parameters. [SelBlocksGlobal](SelBlocksGlobal) enhances syntax by allowing value of each standard Selenese parameter (`target` or `value`) to include one occurrence of <code>@<>...<></code> containing a Javascript expression.
 
 This notation extracts and completely removes that <code>@<>...<></code> from the parameter. It concatenates the rest (any prefix merged with any suffix) for the string value (potentially empty) of that Selenese parameter (`target` or `value`). It transforms that value into a String object (rather than a string primitive). Then it evaluates the Javascript from within <code>@<>...<></code> (the part that it extracted and removed). It stores the result as an extra (optional) field `seLiteExtra` on that String object (one made from any prefix and suffix). Then it passes the result String object to the called action as the actual value of the intended Selenese parameter (either `target` or `value`).
 
-The Selenese command (i.e. a custom command or a custom override/intercept of standard Selenese) can access the result of Javascript through field `seLiteExtra` if it is set on the parameter. Using <code>@<>...<></code> makes the command receive instance of `String` object rather than a primitive string. That is OK for the most of standard Selenese.
+The Selenese command (i.e. a custom command or a custom override/intercept of standard Selenese) can access the result of Javascript through field `seLiteExtra` if it is set on the parameter. Using <code>@<>...<></code> makes the command receive instance of `String` object rather than a primitive string. That will work with most use cases of primitive strings. Hence this mechanism is mostly forward compatible.
 
 ## Compatibility with ClassicSelenese
 <code><>...$storedVariableName...<></code> works. It translates to <code><>...storedVars.storedVariableName...<></code>. The javascript expression will be valid or invalid regardless of type of stored variable with name `storedVariableName`.
@@ -61,6 +65,7 @@ The Selenese command (i.e. a custom command or a custom override/intercept of st
 However, <code><>...${storedVariableName}...<></code> (as per [ClassicSelenese](ClassicSelenese) > [Stored variables](ClassicSelenese#stored-variables)) doesn't work. Side note: We don't want this second form anyway, because `${storedVariableName}` works through brute string substitution. It could cause unexpected Javascript errors. E.g. when developing the script, `${variableName}` could be a number. However, later it could become a non-numeric string. If there were no quotes/apostrophes around it, an the Javascript expression would expect a number, it would fail. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in any prefix/suffix of <code><>...<></code> (as per standard Selenese).
 
 ## Special rules on using =&lt;&gt;...&lt;&gt; or @&lt;&gt;...&lt;&gt;
+{:#special-rules-on-using}
 
 ### Passing (sub)string &lt;&gt; verbatim
 To pass actual text `<>` to Selenium, generate it from an expression. For example, pass `<>'<' + '>'<>`. See [SelBlocksGlobal/selenese-scripts/misc_case.html](http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/misc_case.html).
