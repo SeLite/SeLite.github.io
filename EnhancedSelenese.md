@@ -8,7 +8,9 @@ layout: default
 When compared to [ClassicSelenese](ClassicSelenese), automation scripts with SeLite are shorter and clearer.
  [SelBlocksGlobal](SelBlocksGlobal) enhances syntax of [ClassicSelenese](ClassicSelenese) > [Selenese parameters target and value](ClassicSelenese#selenese-parameters-target-and-value). It allows those expressions to
 
-* conveniently access stored variables through `$storedVariableName` notation and
+* conveniently access
+  * stored variables through `$storedVariableName` notation and
+  * any fields/subfields/methods on stored variables. E.g. `$object-var-name.fieldXYZ, $object.method(...)` or `$array-var-name[index]`
 * use Javascript within `<>...<>`
 
 # `$storedVariableName` notation
@@ -42,7 +44,9 @@ They all start with special characters `=, <>` or `@` immediately in front of th
 
 ### =&lt;&gt;...&lt;&gt; (with preserved type)
 {:#with-preserved-type}
-If a Selenese parameter contains only one <code>=<>...<></code> with no prefix and no suffix (not even a space), then its result is not treated as a string. [SelBlocksGlobal](SelBlocksGlobal) preserves the type of result of Javascript expression within <code><>...<></code> and it passes the exact result as a Selenese parameter. That's useful if you want to pass a number, an object or an array (and it still works for strings). If there is any prefix or suffix, [SelBlocksGlobal](SelBlocksGlobal) generates an error.
+If a Selenese parameter contains only one <code>=<>...<></code> with no prefix and no suffix (not even a space), then its result is not treated as a string. [SelBlocksGlobal](SelBlocksGlobal) preserves the type of result of Javascript expression within <code><>...<></code> and it passes the exact result as a Selenese parameter. That's useful if you want to pass a number, an object or an array (and it still works for strings). If there is any prefix or suffix, [SelBlocksGlobal](SelBlocksGlobal) reports an error.
+
+If a Selenese command supports (or requires) an object passed this way, then do not invoke that Selenese command with an extra parameter passed through `@<>...<>`.
 
 ### \\<span></span>&lt;&gt;...&lt;&gt; (a string literal/constant in XPath)
 {:#a-string-literalconstant-in-xpath}
@@ -82,11 +86,12 @@ Alternatively, if you'd really like to pass the string value of this object as a
 ### For developers of custom commands
 If you develop Selenese commands that may be used with <code>=<>...<></code> or <code>@<>...<></code> then:
 
-1. Do not compare the values of standard Selenese parameters (`target` and `value`) using strict comparison operators === and !==. Also, don't depend on their `typeof`, which will be `object` rather than `string` if the passed parameter contains <code><>...<></code> with no prefix and no suffix or if it contains <code>@<>...<></code>. If you'd like to use strict comparison or `typeof` with such a parameter, transform it to a string (see the next rule).
-2. If the command doesn't need <code><>...<></code> syntax, and the user passes <code>=<>...<></code> with no prefix and no suffix, you may want the command to show an error, asking the user to put space(s) as a prefix or suffix, to indicate that the result of <code>=<>...<></code> should be cast to a string. See also [selblocks.js](https://github.com/SeLite/SelBlocksGlobal/blob/master/sel-blocks-fx_xpi/chrome/content/extensions/selblocks.js) > `Selenium.prototype.preprocessParameter` and `Selenium.prototype.getEval`.
-3. If you implement a Selenese command that evaluates any of its parameters (`target` or `value`) as Javascript and you also want it to work with <code>@<>...<></code>, then in the definition of the command
-  * get field `seLiteExtra` from the parameter and store it for later use (if needed), e.g. `var seLiteExtra=target.seLiteExtra;`
-  * transform the parameter to a primitive string, e.g. `target=''+target;` and only then pass it to `eval()`.
+ 1. Do not compare the values of standard Selenese parameters (`target` and `value`) using strict comparison operators === and !==. Also, don't depend on their `typeof`, which will be `object` rather than `string` if the passed parameter uses `=<>...<>` or `@<>...<>..`. If you'd like to use strict comparison or `typeof` with such a parameter, transform it to a string (see rule #4 below).
+ 2. If the command doesn't need `<>...<>` syntax, the user shouldn't pass an object (i.e. `=<>...<>` with no prefix and no suffix, or `@<>...<>` with any prefix/postfix). If `typeof(first_or_second_parameter_name)==='object'` then make it fail. See also [selblocks.js](https://github.com/SeLite/SelBlocksGlobal/blob/master/sel-blocks-fx_xpi/chrome/content/extensions/selblocks.js) > `Selenium.prototype.preprocessParameter` and `Selenium.prototype.getEval`.
+ 3. If the command allows (or requires) a parameter to be an object (i.e. passed through `=<>...<>` with no prefix and no suffix), then prevent it to be passed through `@<>...<>` by mistake. If `typeof first_or_second_parameter_name==='object' && 'seLiteExtra' in first_or_second_parameter_name` then make it fail.
+ 4. If you implement a Selenese command that evaluates any of its parameters (`target` or `value`) as Javascript and you also want it to work with <code>@<>...<></code>, then in the definition of the command
+   * get field `seLiteExtra` from the parameter and store it for later use (if needed), e.g. `var seLiteExtra=target.seLiteExtra;`
+   * transform the parameter to a primitive string, e.g. `target=''+target;` and only then pass it to `eval()`.
 
 (See also Mozilla's documentation of [String object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) > Distinction between string primitives and String objects.)
 
