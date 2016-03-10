@@ -38,6 +38,8 @@ SelBlocks Global adheres to {{navStrictJavascript}}, which prevents some bad pra
 ### Accessing stored variables ###
 When accessing stored variables with `getEval` and special SelBlockGlobal commands, use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks, which let its special commands access stored variables without using `$` prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) See [EnhancedSelenese](EnhancedSelenese) > [`$storedVariableName` notation](EnhancedSelenese#storedvariablename-notation) for the affected commands.
 
+Apply the same to right side of assignments in `value` parameter of `call`. See [Passing parameters to functions via `call`](#passing-parameters-to-functions-via-call).
+
 ### Loop `for` ###
 `for` loop now must use `$xyz` notation for all stored parameters (loop iterator or any other), whether on the left side or right side of the assignment operator =. So, instead of
 
@@ -51,8 +53,10 @@ use
 for | $i=1; $i<=10; $i++
 ```
 
-### Passing parameters to functions via `call` ###
-`call` can use `$xyz`, but only in expressions on the right side of parameter assignments `parameterName=expression`. The formal parameter names on the left (ones being passed to the function) must not start with $. So, instead of
+## Passing parameters to functions via `call` ##
+
+### Modified classic way ###
+This is similar to SelBlocks, but modified due to [Strict mode](#strict-mode). `call` has to prefix `$` when accessing stored variables in expressions on the right side of parameter assignments `parameterName=expression`. Hence, instead of
 
 ```
 call | myFunction | myParam=storedVariableInCallingScope
@@ -63,6 +67,27 @@ use
 ```
 call | myFunction | myParam=$storedVariableInCallingScope
 ```
+
+### Passing an object ###
+This benefits from [EnhancedSelenese](EnhancedSelenese) > [`=<>…<> (with preserved type)`](EnhancedSelenese#with-preserved-type). Pass an object in Selenese `value` parameter. Its direct fields become parameters passed to the chosen Selenese function (defined by respective Selenese block `function...endFunction`).
+
+Use either an existing object, or an object literal. E.g.
+
+```
+call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2...}<>
+```
+
+## 'Synchronous' Selenese calls
+A Selenese command (usually `getEval` or a custom command) can invoke Javascript. You may want to trigger other Selenese commands from that Javascript. Use `selenium.callBack( nameOfseleneseFunction, seleneseFunctionParameters )`. Don't invoke it from asynchronous handlers.
+
+That injects a call to given Selenese function after the current Selenese command (i.e. `getEval` or a custom command). Handle any failures with `try...catch...finally...endTry`.
+
+## Asynchronous Selenese calls
+Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
+
+See Preview.
+
+This requires Selenium to finish any running.
 
 ## Try/catch suppresses error counts ##
 `try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].
