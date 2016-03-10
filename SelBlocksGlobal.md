@@ -78,16 +78,14 @@ call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2..
 ```
 
 ## 'Synchronous' Selenese calls
-A Selenese command (usually `getEval` or a custom command) can invoke Javascript. You may want to trigger other Selenese commands from that Javascript. Use `selenium.callBack( nameOfseleneseFunction, seleneseFunctionParameters )`. Don't invoke it from asynchronous handlers.
+A Selenese command (usually `getEval` or a custom command) can invoke Javascript. From there you may want to trigger other Selenese commands. Use `selenium.callBack( nameOfseleneseFunction, seleneseFunctionParameters )`. However, don't invoke it from asynchronous handlers.
 
 That injects a call to given Selenese function after the current Selenese command (i.e. `getEval` or a custom command). Handle any failures with `try...catch...finally...endTry`.
 
 ## Asynchronous Selenese calls
-Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
+You can invoke Selenese functions 'asynchronously' after your script finished its run. Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
 
-See Preview.
-
-This requires Selenium to finish any running.
+See [[Preview]].
 
 ## Try/catch suppresses error counts ##
 `try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].

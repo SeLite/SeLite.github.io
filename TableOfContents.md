@@ -3,29 +3,15 @@
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 -->
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ AddOns SeleniumIDE TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">Overview</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
+    <li><a href="AddOns">AddOns</a></li>
     <li class="divider"></li>
     <li class="dropdown-header">Testing-specific:</li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AddOns AutoCheck BootstrapLoader ExitConfirmationChecker ExtensionSequencer AddOnsThirdParty AddOnsDependants PackagedScripts">Add-ons<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="AddOns">AddOns</a></li>
-    <li class="divider"></li>
-    <li><a href="AutoCheck">AutoCheck</a></li>
-    <li><a href="BootstrapLoader">BootstrapLoader</a></li>
-    <li><a href="ExitConfirmationChecker">ExitConfirmationChecker</a></li>
-    <li><a href="ExtensionSequencer">ExtensionSequencer</a></li>
-    <li class="divider"></li>
-    <li class="dropdown-header">Other:</li>
-    <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
-    <li><a href="AddOnsDependants">AddOnsDependants</a></li>
   </ul>
 </li>
 <li class="dropdown">
@@ -65,12 +51,19 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptOther InstallFromSource">Develop<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptOther AutoCheck BootstrapLoader ExtensionSequencer InstallFromSource">Develop<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
+    <li class="divider"></li>
     <li><a href="JavascriptEssential">JavascriptEssential</a></li>
     <li><a href="JavascriptComplex">JavascriptComplex</a></li>
     <li><a href="JavascriptOther">JavascriptOther</a></li>
+    <li class="divider"></li>
+    <li><a href="AutoCheck">AutoCheck</a></li>
+    <li><a href="BootstrapLoader">BootstrapLoader</a></li>
+    <li><a href="ExitConfirmationChecker">ExitConfirmationChecker</a></li>
+    <li><a href="ExtensionSequencer">ExtensionSequencer</a></li>
+    <li class="divider"></li>
     <li><a href="InstallFromSource">InstallFromSource</a></li>
   </ul>
 </li>
@@ -85,10 +78,13 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty AddOnsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
+    <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
+    <li><a href="AddOnsDependants">AddOnsDependants</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
+    <li class="divider"></li>
     <li><a href="TroubleShooting">TroubleShooting</a></li>
     <li><a href="ReportingIssues">ReportingIssues</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
