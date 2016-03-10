@@ -48,7 +48,8 @@ SeLite enables the following in Selenium IDE
   * [AutoCheck](AutoCheck) detects webserver errors/warnings
   * [Run All Favorites](https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/) executes multiple Selenese [suites][suite]
 * productive environment
-  * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves clibpoard usage and it supports indentation of commands
+  * [Hands-on GUI](SeleniumIDE#hands-on-gui) enhances Selenium IDE visual interface. It enables editing commands in-place (in the list itself). It makes Selenium IDE more intuitive.
+  * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves operation of clibpoard. It supports indentation of commands.
   * fast development cycle for custom Javascript functionality (via [BootstrapLoader](BootstrapLoader))
   * robust loading of extensions honouring dependancies (through [ExtensionSequencer](ExtensionSequencer))
   * see also [Selenium IDE](SeleniumIDE) for productivity tips.
