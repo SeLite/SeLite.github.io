@@ -4,7 +4,7 @@ layout: default
 {% include links %}
 
 # Scope
-We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedScripts](PackagedScripts) or the source code. Then you can experiment.
+We document only what is not self-explanatory. We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedScripts](PackagedScripts) or the source code. Then you can experiment.
 
 SeLite doesn't cover general functionality of related technologies (see also [ReportingIssues](ReportingIssues) > [Support scope](ReportingIssues#support-scope)). If it elaborates on them, it's only if they are not clear or obvious from their original documentation source, or where SeLite modifies their features. Such notes and some references to third party documentation are at [SeleniumIDE](SeleniumIDE), [DevelopmentTools](DevelopmentTools), [JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [InstallFromSource](InstallFromSource).
 

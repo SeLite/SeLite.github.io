@@ -83,9 +83,9 @@ A Selenese command (usually `getEval` or a custom command) can invoke Javascript
 That injects a call to given Selenese function after the current Selenese command (i.e. `getEval` or a custom command). Handle any failures with `try...catch...finally...endTry`.
 
 ## Asynchronous Selenese calls
-You can invoke Selenese functions 'asynchronously' after your script finished its run. Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
+You can invoke Selenese functions 'asynchronously' after your Selenese script finished its run. That allows Selenese scripts to run in stages. Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
 
-See [[Preview]].
+See [Preview](Preview).
 
 ## Try/catch suppresses error counts ##
 `try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].

@@ -43,8 +43,8 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li><em>source</em> (only if there is no other documentation)</li>
             <li>third party documentation</li>
             <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
-            <li markdown="span">({{chromeUrl}}s only work after you install the add-on in Firefox)</li>
         </ul>
+        <span>{{chromeUrl}}s only work after you install the add-on in Firefox</span>
     </td>
     <td><strong>Other</strong></td>
 </tr>
@@ -79,7 +79,10 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     <td> <a href='SeleniumIDE#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
-    <td>&#160;</td>
+    <td> <ul>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > indentationStep</li>
+         </ul>
+    </td>
     <td> <ul>
             <li>Apache License&#160;2 </li>
             <li>Since February 2015</li>
@@ -176,7 +179,8 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
 <tr>
     <td> Miscellaneous             </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/versions/'>download</a>           </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-miscellaneous/versions/'>download</a>
+    </td>
     <td> <ul>
          <li><a href='https://cdn.rawgit.com/selite/selite/91106478cbdecc86c53cce7dad1aa4f231754853/misc/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
          <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-misc/content/reference.xml</em></li>
@@ -196,9 +200,21 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
    </td>
 </tr>
 <tr>
+    <td> <a href='Preview'>Preview</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/'>info</a>  </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/versions/'>download</a>
+    </td>
+    <td>&#160;</td>
+    <td> <ul>
+            <li>Since 2016</li>
+        </ul>
+    </td>
+</tr>
+<tr>
     <td> Run All Favorites         </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/versions/'>download</a>            </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/versions/'>download</a>
+    </td>
     <td> <ul>
             <li>Not backwards compatible with Favorites (Selenium IDE), only forward compatible (see <em>info</em>).</li>
             <li>It requires <a href='https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/'>Favorites (Selenium IDE)</a>.</li>

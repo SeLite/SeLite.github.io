@@ -121,7 +121,7 @@ In order to move towards CommonJS we'd need to:
 
 The migration may not change [ExtensionSequencer](ExtensionSequencer) mechanism, since that resolves the order of activating [extensions of Selenium IDE][extension of Selenium IDE], and not the order of loading Javascript code modules.
 
-# Inheritance #
+# Class inheritance #
 There are many ways of class inheritance in Javascript. Follow [Mozilla way](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance) with `Object.create()`. E.g.:
 
 ```javascript
