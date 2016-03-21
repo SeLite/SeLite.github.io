@@ -1,0 +1,5 @@
+#gem 'jekyll', '3.0.0.pre.beta4'
+#gem 'jekyll', '3.0.1'
+source 'https://rubygems.org'
+gem 'github-pages'
+gem 'jekyll-sitemap'
