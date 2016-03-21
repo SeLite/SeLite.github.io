@@ -32,6 +32,8 @@ See [EnhancedSelenese](EnhancedSelenese).
 ## Lexical scope ##
 When calling a Selenese `function`, it doesn't inherit variables from the higher scope in SelBlocks Global. See [SelBlocks issue #5](https://github.com/refactoror/SelBlocks/issues/5).
 
+`for... endFor` loop keeps the iterator variable(s) after it finishes. (Hence, these override any variable(s) with the same name(s) that existed before the loop. Classic SelBlocks protects those outer variables, but it removes the iterators from the scope afterwards.) That's useful especially when the loop finishes by `break`.
+
 ## Strict mode ##
 SelBlocks Global adheres to {{navStrictJavascript}}, which prevents some bad practice code. That also applies to Javascript expressions passed to SelBlocks Global Selenese commands, or passed through [EnhancedSelenese](EnhancedSelenese) notation `<>...<>` (and its variations). This implies the following incompatibilities with SelBlocks.
 
