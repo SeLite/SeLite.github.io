@@ -6,7 +6,7 @@ layout: default
 # Summary #
 [SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [AddOns](AddOns), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
 
-It only works for extensions packaged as Firefox add-ons (as `.xpi` files, or through [proxy files](https://developer.mozilla.org/en/Setting_up_extension_development_environment)). It doesn't cover extensions loaded from single Javascript files via Selenium IDE menu Options > Options > General, neither through [BootstrapLoader](BootstrapLoader).
+It only works for extensions packaged as Firefox add-ons (as `.xpi` files, or through [proxy files](https://developer.mozilla.org/en/Setting_up_extension_development_environment)). It doesn't cover extensions loaded from single Javascript files via Selenium IDE menu Options > Options > General, neither through [Bootstrap](Bootstrap).
 
 # Use cases #
 Say you have two or more extensions of the same type (Core or IDE). Then Firefox and Selenium IDE don't guarantee a specific order of loading them up.
@@ -81,7 +81,7 @@ When modifying or re-using those tests, follow the existing special format of th
 To debug Extension Sequencer itself with Firefox Browser Toolbox, visit {{chromeUrl}} _chrome://selite-extension-sequencer/content/extensions/invoke.xul_.
 
 # Core extensions loaded twice #
-Because of [ThirdPartyIssues](ThirdPartyIssues) > [Core extensions are loaded 2x](https://github.com/SeleniumHQ/selenium/issues/1549)), [Core extensions][core extension] get loaded 2x (whether loaded via Selenium IE menu > Options > Options... > Core extension, from an `.xpi` file or through a proxy file - regardless of ExtensionSequencer, but not when loaded via [BootstrapLoader](BootstrapLoader)). That's OK if the extension just adds new Selenese commands. But it can be a problem if it tail/head intercepts Selenese or Selenium Core. You don't want to intercept Selenese or Selenium Core twice.
+Because of [ThirdPartyIssues](ThirdPartyIssues) > [Core extensions are loaded 2x](https://github.com/SeleniumHQ/selenium/issues/1549)), [Core extensions][core extension] get loaded 2x (whether loaded via Selenium IE menu > Options > Options... > Core extension, from an `.xpi` file or through a proxy file - regardless of ExtensionSequencer, but not when loaded via [Bootstrap](Bootstrap)). That's OK if the extension just adds new Selenese commands. But it can be a problem if it tail/head intercepts Selenese or Selenium Core. You don't want to intercept Selenese or Selenium Core twice.
 
 In extensions loaded via ExtensionSequencer you can use `SeLiteExtensionSequencer.coreExtensionsLoadedTimes` to keep track of whether the extension is loaded for the first time or the second one. See {{chromeUrl}} _chrome://selite-extension-sequencer/content/SeLiteExtensionSequencer.js_ or [online](https://github.com/SeLite/SeLite/tree/master/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
 

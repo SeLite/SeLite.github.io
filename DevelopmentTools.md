@@ -12,7 +12,7 @@ This is for developing [Core extensions][core extension] and SeLite frameworks (
   * [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment). Following are the relevant sections (in order of general importance):
     * see [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile) on how to run separate profiles of Firefox at the same time
     * skip 'Development preferences', see below instead
-    * if you develop your own packaged extensions (without [BootstrapLoader](BootstrapLoader)), then read [Firefox extension proxy file](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file). See also [setup_proxies.bat](https://github.com/selite/selite/blob/master/setup_proxies.bat) or [setup_proxies.sh](https://github.com/selite/selite/blob/master/setup_proxies.sh).
+    * if you develop your own packaged extensions (without [Bootstrap](Bootstrap)), then read [Firefox extension proxy file](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file). See also [setup_proxies.bat](https://github.com/selite/selite/blob/master/setup_proxies.bat) or [setup_proxies.sh](https://github.com/selite/selite/blob/master/setup_proxies.sh).
     * if you start Firefox from automated commandline/shell scripts, read 'Preventing the first launch extension selector'
   * [Debugging JavaScript (MDN)](https://developer.mozilla.org/en/docs/Debugging_JavaScript)
   * [Debugging Extensions (MDN)](https://developer.mozilla.org/en-US/docs/Building_an_Extension#Debugging_Extensions)
@@ -97,7 +97,7 @@ Selenium IDE loads custom [Core extensions][core extension] twice (reported in [
 
 Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get loaded once more when you run a Selenese command (or a whole [case] or [suite]) for the first time. So, when you use Firefox Browser Toolbox/Debugger, do it only after you've run at least one Selenese command. Browser Toolbox/Debugger reports those files with `?numericTimeStamp` appended to their file names. For each [Core extension] pick the one that has the highest timestamp.
 
-This doesn't affect Javascript code modules (accessed via `Components.utils.import( 'chrome://...', optionalScope )`) - those get loaded once only. If you use [BootstrapLoader](BootstrapLoader) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
+This doesn't affect Javascript code modules (accessed via `Components.utils.import( 'chrome://...', optionalScope )`) - those get loaded once only. If you use [Bootstrap](Bootstrap) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
 
 #### Source of functions ####
 If you inspect a variable that refers to a function (including a function field of an object/prototype), browser debugger doesn't list `toSource()` on the function object by default. You have to add it to Watch pane. But you shouldn't need this if you apply [JavascriptEssential](JavascriptEssential) > [Avoid nameless functions](JavascriptEssential#avoid-nameless-functions).

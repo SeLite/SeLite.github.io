@@ -44,7 +44,7 @@ This shows one (standard) Selenium IDE detached from Firefox browser windows. Ot
 * (+) involves less maintenance: it runs only one Firefox instance (with one profile)
 * (+) is more convenient: shared bookmarks, window history, add-ons etc.
 * (+-) shares history of recent files in Selenium IDE; however, it gets overwritten by the instance closed as the last one
-* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with [suites][suite]. (That prevents potential conflicts due to the fact that all auxiliary Selenium IDEs share [Core scope] along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [BootstrapLoader](BootstrapLoader), either.
+* (-) can't run scripts in auxiliary Selenium IDEs (they target their own window/tab). If you modify a script there without saving it and your run a command that changes the current page, your changes will be lost! So you should use auxiliary Selenium IDEs primarily to view scripts (for reference). Auxiliary Selenium IDEs don't load any [SettingsManifests](SettingsManifests) neither any [Settings](Settings) sets associated with [suites][suite]. (That prevents potential conflicts due to the fact that all auxiliary Selenium IDEs share [Core scope] along with the standalone Selenium IDE, if any). Therefore they don't load any extensions through [Bootstrap](Bootstrap), either.
 
 Steps
 
@@ -73,7 +73,7 @@ In auxiliary IDEs
 * (-) if you hide Firefox menu, it often doesn't show up when you press _Alt_ key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press _Alt_.
 * (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite. The safest way is not to modify scripts in auxiliary IDEs.
 
-Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [BootstrapLoader](BootstrapLoader). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
+Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [Bootstrap](Bootstrap). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
 
 ## Multiple standard Selenium IDEs
 This shows multiple Selenium IDEs, detached from Firefox browser windows. Compared to the previous method, this

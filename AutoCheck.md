@@ -24,7 +24,7 @@ Configure these checks at {{chromeUrl}} _chrome://selite-settings/content/tree.x
 
   * autoCheckAssert - whether an occurrence should trigger an assert failure; by default it triggers a validation failure rather than an assert failure
   * autoCheckDetector - choose a standard detection class to use; or set it to null/undefined if you use a custom class
-  * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into [Core scope] e.g. via [BootstrapLoader](BootstrapLoader)); used only if autoCheckDetector is null/undefined
+  * autoCheckDetectorCustom - enter a name of the custom detection class (which you must load into [Core scope] e.g. via [Bootstrap](Bootstrap)); used only if autoCheckDetector is null/undefined
   * autoCheckIgnored - the format of entries depends on the detection class. [AutoCheck](AutoCheck) reports failures unless they match an autoCheckIgnored entry. Use autoCheckIgnored to match already reported bugs (so that they don't get reported again).
     * for PHP enter XPath logical conditions (not whole XPath expressions). Those would match either PHP warning/notice/error message (description) or a leaf file path (where the failure occurred). The conditions can refer to that text node by '.' (and they must not refer to parent/sibling nodes). Examples are
       * contains(., 'Undefined variable')

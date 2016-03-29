@@ -29,7 +29,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
   * (+) hands-on, fast life cycle
     * no compilation, no Tomcat restart or the like
     * development, running and sharing of scripts and extensions directly from sources (without packaging)
-    * smoother development of extensions with automatic re-loading by [BootstrapLoader](BootstrapLoader)
+    * smoother development of extensions with automatic re-loading by [Bootstrap](Bootstrap)
   * (+) easy deployment (no extra DB server, no binary dependencies)
   * (+) no involvement of server-side programming languages
   * (+) convenience of single environment: the browser with Selenium IDE is one place for recording, editing and running the scripts

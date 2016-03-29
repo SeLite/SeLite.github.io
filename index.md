@@ -50,7 +50,7 @@ SeLite enables the following in Selenium IDE
 * productive environment
   * [Hands-on GUI](SeleniumIDE#hands-on-gui) enhances Selenium IDE visual interface. It enables editing commands in-place (in the list itself). It makes Selenium IDE more intuitive.
   * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves operation of clibpoard. It supports indentation of commands.
-  * fast development cycle for custom Javascript functionality (via [BootstrapLoader](BootstrapLoader))
+  * fast development cycle for custom Javascript functionality (via [Bootstrap](Bootstrap))
   * robust loading of extensions honouring dependancies (through [ExtensionSequencer](ExtensionSequencer))
   * [Preview](Preview) presents custom reports and forms. User can preview and confirm next actions.
   * see also [Selenium IDE](SeleniumIDE) for productivity tips.

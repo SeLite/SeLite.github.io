@@ -63,7 +63,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
     </td>
 </tr>
 <tr>
-    <td> <a href='BootstrapLoader'>Bootstrap</a></td>
+    <td> <a href='Bootstrap'>Bootstrap</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-bootstrap/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
     <td> <ul>

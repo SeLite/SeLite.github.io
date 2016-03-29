@@ -19,7 +19,7 @@ layout: default
 If you've used Javascript only for web pages, you’ll find out some new terms and patterns here. This applies to development of [extensions of Selenium IDE][Extension of Selenium IDE] (including SeLite frameworks as in [GeneralFramework](GeneralFramework)) or Firefox extensions in general. They run in privileged mode. That provides extra features and it also sets some restrictions.
 
 ## Privileged Javascript files ##
-Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from {{chromeUrl}}s or _file://_ URLs. That is why [BootstrapLoader](BootstrapLoader) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
+Privileged Javascript controls (or extends or overrides) Firefox functionality. It can only come from {{chromeUrl}}s or _file://_ URLs. That is why [Bootstrap](Bootstrap) and [SettingsInterface](SettingsInterface) (and [SettingsAPI](SettingsAPI)) can't load files over http (neither https). _chrome://_ URLs are governed by extension's `chrome.manifest` (which maps a custom _chrome://xyz/_ URL prefix to a location within the extension).
 
 ## Scope ##
 Javascript for web applications has only two levels of scope: _global_ and _local_ (within functions). On the other hand, Firefox avoids conflicts between add-ons by running them with separate global scopes. However, extensions can share Javascript files without mixing their scopes: they can specify global scope used in those files. (The code from such files is still shared, even though global scope for each of its usages may be different. See {{navLoadingJavascriptFiles}}.) See also [Core scope].
@@ -190,7 +190,7 @@ function greeting() {return "Hello";}
 } ) ();
 ```
 
-If you use SeLite Bootstrap, see also [BootstrapLoader](BootstrapLoader) > [Intercepts](BootstrapLoader#intercepts).
+If you use SeLite Bootstrap, see also [Bootstrap](Bootstrap) > [Intercepts](Bootstrap#intercepts).
 
 # Isolate the local scope
 Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the [Core scope]), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
