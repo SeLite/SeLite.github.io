@@ -24,10 +24,10 @@ Original documentation of SelBlocks applies to SelBlocks Global (except for inco
 
 See [Selenese reference (online)](https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml) or (offline) at {{chromeUrl}} _chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml_. In addition to those commands, SelBlocks Global also provides [EnhancedSelenese](EnhancedSelenese).
 
-# Differences to SelBlocks #
+A known limitation: After you pause a run of Selenese script, don't run any single command. Otherwise resuming the script afterwards fails.
 
-## Usage of &lt;&gt;
-See [EnhancedSelenese](EnhancedSelenese).
+# Changes from SelBlocks #
+Following changes are not backwards compatible with classic SelBlocks. However, they are trivial and intuitive.
 
 ## Lexical scope ##
 When calling a Selenese `function`, it doesn't inherit variables from the higher scope in SelBlocks Global. See [SelBlocks issue #5](https://github.com/refactoror/SelBlocks/issues/5).
@@ -71,7 +71,7 @@ call | myFunction | myParam=$storedVariableInCallingScope
 ```
 
 ### Passing an object ###
-This benefits from [EnhancedSelenese](EnhancedSelenese) > [`=<>…<> (with preserved type)`](EnhancedSelenese#with-preserved-type). Pass an object in Selenese `value` parameter. Its direct fields become parameters passed to the chosen Selenese function (defined by respective Selenese block `function...endFunction`).
+This benefits from [EnhancedSelenese](EnhancedSelenese) > [`=<>…<> (with preserved type)`](EnhancedSelenese#with-preserved-type). Pass an object in Selenese `value` parameter. Its direct fields become parameters passed to the chosen Selenese function (defined by respective Selenese block `function...endFunction`). (This also enables expressions that contain a comma, which is not allowed by syntax of classic SelBlocks.)
 
 Use either an existing object, or an object literal. E.g.
 
@@ -79,12 +79,23 @@ Use either an existing object, or an object literal. E.g.
 call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2...}<>
 ```
 
-## 'Synchronous' Selenese calls
-A Selenese command (usually `getEval` or a custom command) can invoke Javascript. From there you may want to trigger other Selenese commands. Use `selenium.callBack( nameOfseleneseFunction, seleneseFunctionParameters )`. However, don't invoke it from asynchronous handlers.
+# Enhancements to SelBlocks #
+These are forward-compatible with classic SelBlocks.
 
-That injects a call to given Selenese function after the current Selenese command (i.e. `getEval` or a custom command). Handle any failures with `try...catch...finally...endTry`.
+## Usage of &lt;&gt;
+See [EnhancedSelenese](EnhancedSelenese).
 
-## Asynchronous Selenese calls
+## Call backs
+These invoke Selenese functions programatically. Custom Javascript can trigger Selenese functions, which then run in Selenium IDE. The user can pause them, inspect stored variables and logs. The biggest benefit is in presenting with [Preview](Preview).
+
+### 'Synchronous' Selenese calls
+A Selenese command (usually `getEval` or a custom command) can invoke Javascript. From there you may want to trigger other Selenese commands. Use `selenium.callBack( nameOfseleneseFunction, seleneseFunctionParameters )`. (Don't invoke it from the last command of any test case). Don't invoke it from asynchronous handlers.
+
+That injects a call to given Selenese function, but only after the current Selenese command (i.e. `getEval` or a custom command) finishes. Handle any failures with `try...catch...finally...endTry` outside the current Selenese command (which triggered `selenium.callBack(...)`).
+
+Be careful when implementing a workflow that uses `selenium.callBack(...)`. This Javascript code doesn't invoke the Selenese function immediately. It only adds it to Selenium IDE schedule, and it returns the control back. Therefore any following Javascript code must not depend or affect the running of that Selenese function. As a rule of thumb, trigger such a call at the latest possible point in custom Javascript.
+
+### Asynchronous Selenese calls
 You can invoke Selenese functions 'asynchronously' after your Selenese script finished its run. That allows Selenese scripts to run in stages. Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
 
 See [Preview](Preview).

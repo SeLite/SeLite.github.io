@@ -27,6 +27,8 @@ This syntax enables Selenese commands and structures that evaluate their paramet
 
 See also [SelBlocksGlobal](SelBlocksGlobal) > [Accessing stored variables](SelBlocksGlobal#accessing-stored-variables). 
 
+If you need to pass `'$'` (a dollar as a string constant) to any of the above Selenese commands, use `String.fromCharCode(36)`.
+
 # Javascript within &lt;&gt;...&lt;&gt;
 {:#javascript-within}
 This notation allows you to pass results of one or multiple Javascript expressions (each enclosed within a pair of `<>...<>`) to Selenese commands in their parameter (`target` or `value`). It evaluates any Javascript code in `target` or `value` that is between any pair of `<>...<>` (excluding the pair of `<>` itself).
