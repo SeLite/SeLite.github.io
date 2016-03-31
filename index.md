@@ -79,7 +79,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
 
 ## Standards
  * [strict Javascript](JavascriptEssential#strict-javascript)
- * coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptOther](JavascriptOther))
+ * coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptSpecial](JavascriptSpecial))
  * [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
  * validated by [PackagedScripts](PackagedScripts)
  * clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)

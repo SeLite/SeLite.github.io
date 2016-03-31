@@ -52,13 +52,13 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptOther AutoCheck Bootstrap ExtensionSequencer InstallFromSource">Develop<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptSpecial AutoCheck Bootstrap ExtensionSequencer InstallFromSource">Develop<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
     <li class="divider"></li>
     <li><a href="JavascriptEssential">JavascriptEssential</a></li>
     <li><a href="JavascriptComplex">JavascriptComplex</a></li>
-    <li><a href="JavascriptOther">JavascriptOther</a></li>
+    <li><a href="JavascriptSpecial">JavascriptSpecial</a></li>
     <li class="divider"></li>
     <li><a href="AutoCheck">AutoCheck</a></li>
     <li><a href="Bootstrap">Bootstrap</a></li>

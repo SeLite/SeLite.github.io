@@ -142,56 +142,6 @@ first(); // This returns 2 rather than 1!
 
 That's when you have two or more definitions of the function with the same name (within the same scope), even though you save it to a different variable or to a different object/prototype. This can happen if you extend the existing code and you've forgot what methods there were already, or if someone else extends your code. It creates highly confusing conflicts.
 
-# Function intercepts
-This is for extending or completely replacing behaviour of existing functions that come from Selenium or third party. It can be done for ordinary (non-member) functions (including class constructors) and also for methods (member functions of objects). Methods can be intercepted on either
-
-  * the class prototype (which is more transparent, simpler and preferable, where possible), or
-  * an instance, which is more complex (you may also need to intercept the class constructor, and make it set up intercept of the actual function that you intend to modify). It's needed when there's no robust access to the prototype.
-
-## _Head/tail_ intercepts
-Extending (rather than replacing) is useful for small changes, and it's more likely to stay compatible with future updates from Selenium or third party. The original function is stored. The new function adds steps before and/or after calling the original function (with the same or different parameters). This approach is called _head_ or _tail_ intercept. If it's supposed to return a value, it can return the result of the original function, or something different.
-
-Head intercept with a modification of the parameter passed to the original function:
-
-```javascript
-"use strict";
-// The original function (it would come from Selenium or third party)
-function greeting( name ) {return "Hello " +name;}
-
-// Anonymous closure to keep 'originalGreeting' variable local
-( function() {
-    var originalGreeting= greeting;
-
-    greeting= function greeting( name ) {
-        if( !name ) {
-            name= "guest";
-        }
-        return originalGreeting.call( null/*'this' object*/, name );
-    };
-  }
-) ();
-```
-
-Tail intercept:
-
-```javascript
-"use strict";
-// The original function (it would come from Selenium or third party)
-function greeting() {return "Hello";}
-
-// Anonymous closure to keep 'originalGreeting' variable local
-( function() {
-    var originalGreeting= greeting;
-
-    greeting= function greeting() {
-        var originalResult= originalGreeting.call();
-        return originalResult+ ", my friend.";
-    };
-} ) ();
-```
-
-If you use SeLite Bootstrap, see also [Bootstrap](Bootstrap) > [Intercepts](Bootstrap#intercepts).
-
 # Isolate the local scope
 Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the [Core scope]), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
 
@@ -217,7 +167,7 @@ var usefulExportedFunction;
 ## Passing the global scope
 If you want a function (anonymous or not) to define global symbols, you can pass the global scope (i.e. ['global object'](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects)) to it. It's accessible via `this` keyword at global scope (similar to `$GLOBALS` in PHP).
 
-So then the above example would be
+Then the above example could be:
 
 ```javascript
 "use strict";

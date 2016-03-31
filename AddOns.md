@@ -11,7 +11,7 @@ Alternatively, if you want only some of them, read [AddOnsDependants](AddOnsDepe
 
 Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
 
-Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait (since those are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
+Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
 
 # Latest releases
 Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the add-ons, you won't get an automatic update until then either.

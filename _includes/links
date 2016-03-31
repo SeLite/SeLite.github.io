@@ -32,7 +32,7 @@
 
 {% capture navLiteralsForSpecialValues %}[SettingsManifests](SettingsManifests) > [Literals for special values](SettingsManifests#literals-for-special-values){% endcapture %}
 
-{%capture navFunctionIntercepts %}[JavascriptEssential](JavascriptEssential) > [Function intercepts](JavascriptEssential#function-intercepts){% endcapture %}
+{%capture navFunctionIntercepts %}[JavascriptSpecial](JavascriptSpecial) > [Function intercepts](JavascriptSpecial#function-intercepts){% endcapture %}
 
 {%capture navCoreExtensionsLoadedTwice %}[ExtensionSequencer](ExtensionSequencer) > [Core extensions loaded twice](ExtensionSequencer#core-extensions-loaded-twice){% endcapture %}
 
