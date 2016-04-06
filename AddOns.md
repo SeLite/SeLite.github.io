@@ -7,7 +7,7 @@ layout: default
 # Quick download
 For the easiest download, get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases with a delay. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
 
-Alternatively, if you want only some of them, read [AddOnsDependants](AddOnsDependants).
+Alternatively, if you want only some of them, install [Selenium IDE](http://www.seleniumhq.org/download/#selenium_ide). Choose from [AddOnsDependants](AddOnsDependants).
 
 Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
 

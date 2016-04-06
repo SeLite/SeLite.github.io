@@ -9,7 +9,7 @@ layout: default
 ## SeLite makes Selenium better
 SeLite ([Selenium](SeleniumIDE) + [SQLite](http://www.sqlite.org/)) is a family of Selenium extensions and frameworks. It
 
- * improves development interface
+ * improves visual interface
  * facilitates team work
  * enhances Selenese syntax and API, which
    * increases development efficiency
@@ -56,7 +56,7 @@ SeLite enables the following in Selenium IDE
   * see also [Selenium IDE](SeleniumIDE) for productivity tips.
 
 # Install
-SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and SeLite [AddOns](AddOns). You may want some [AddOnsThirdParty](AddOnsThirdParty).
+SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [AddOns](AddOns) (Selenium IDE and add-ons of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
 ## Frameworks
 When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedScripts](PackagedScripts) on how to run demos. See also [Customisation](index#customisation) below.
