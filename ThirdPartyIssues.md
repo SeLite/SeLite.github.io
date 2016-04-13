@@ -37,6 +37,7 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 | Selenium             | GitHub        |             |                                               |  (see below) | https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('seleniumHQ', 'selenium')">your comments</a> |
 | Markdown Viewer      | GitHub        |  |  | [Markdown Viewer feature](https://github.com/Thiht/markdown-viewer/pull/39) | https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('Thiht', 'markdown-viewer')">your comments</a> |
 | Selblocks            | GitHub        |  |  | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=✓) | https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('refactoror', 'Selblocks')">your comments</a> |
+| PURE                 " GitHub        |  |  | [PURE pull request](https://github.com/pure/pure/pull/20 | https://github.com/pure/pure/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('pure', 'pure')">your comments</a> |
 | _Projects outside of GitHub_ | | | | | | |
 | Mozilla              | Mozilla       | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL+bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1051632%2C1108132%2C1096135%2C1071816%2C1247476) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
 | NetBeans             | NetBeans      | [NetBeans registration](https://netbeans.org/people/new)                            | [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email)            | [NetBeans issues](https://netbeans.org/bugzilla/buglist.cgi?quicksearch=ALL%20bug_id%3A237640%2C238942%2C244329%2C234888%2C%2C238121%2C240529%2C238691%2C238942) | [NetBeans votes](https://netbeans.org/bugzilla/page.cgi?id=voting/user.html) |
@@ -44,10 +45,10 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 
 Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Subscribe to [XML RSS feed](http://www.feed43.com/selite-third_party_issues.xml) on these issues.
 
-## Selenium, Markdown Viewer and SelBlocks (on GitHub)
+## Selenium, Markdown Viewer, SelBlocks, PURE (on GitHub)
 [Registration with GitHub](https://github.com/join) is easy.
 
-There is currently no voting for issues/pull requests on GitHub. Instead, add comments like '+1'. (Do not vote by Star button at the top right corner: It doesn't star the issue/pull request itself. Instead, it stars the whole repository.)
+There is no voting for issues/pull requests on GitHub. Instead, add a thumbs up ![thumbs up](https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png) reaction. However, reactions are per-comment. Choose an existing comment that supports fixing the problem rather than avoids it. (See []https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Do not vote by Star button at the top right corner: It doesn't star the issue/pull request itself. Instead, it stars the whole repository.)
 
 By default, you will get notifications for issues that you comment on. After you commented on an issue, you may want to unfollow it by 'Unsubscribe' button on the right. See also your [notification settings](https://github.com/settings/notifications) and [repositories that you are watching](https://github.com/watching).
 
@@ -65,6 +66,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [tree.inputField's type as autocomplete fails](https://bugzilla.mozilla.org/show_bug.cgi?id=1247476)                            | Mozilla         | Usable Clipboard And Indent |
 | [Selenium IDE chrome/content/formats/html.js has an incorrect regex](https://github.com/SeleniumHQ/selenium/issues/1636)        | Selenium        | Reliable testing |
 | [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)       | Selenium        | Readable test cases |
+| [Enable use with XHTML](https://github.com/pure/pure/pull/20)                                                                   | PURE            | Exporting templatedXML
 | [Source code highlighted, but Reference is empty](https://github.com/esdoc/esdoc/issues/222)                                    | ESDoc           | Generating developer documentation |
 | [Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662)                                    | Selenium        | Compact tests |
 | [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                | Selenium        | Practical testing and integration |
