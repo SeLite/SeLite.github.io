@@ -3,15 +3,17 @@ layout: default
 ---
 {% include links %}
 
-= Overview =
-Preview visually presents custom HTML reports or forms. It allows Selenese scripts to present data. It can also collect confirmation, selection or data from the user. Selenese scripts can run further processing depending on the user's decision.
+# Overview
+Preview presents custom HTML reports or forms. It allows Selenese scripts to interact with the user. It can collect confirmation, selection or data entry. When the user operates Preview, it can trigger Selenese commands. That subsequent processing executes like classic Selenese run. The user can pause, stop or debug it.
 
-The presentation is through HTML, possibly with client-side template, such as [PURE](https://github.com/pure/pure). Together with [SelBlocksGlobal](SelBlocksGlobal) > [Asynchronous Selenese calls](SelBlocksGlobal#asynchronous-selenese-calls) it enables a bidirectional channel between [Selenium IDE](SeleniumIDE) and the presentation window. The reports or forms can subsequently trigger further Selenese actions by calling Selenese functions. That allows user scripts to run interactively.
+The presentation is customizable through HTML or XML. HTML (and in XML, too) can use client-side templates, such as [PURE](https://github.com/pure/pure). Together with [SelBlocksGlobal](SelBlocksGlobal) > [Asynchronous Selenese calls](SelBlocksGlobal#asynchronous-selenese-calls) Preview enables a bidirectional channel between [Selenium IDE](SeleniumIDE) and the presentation window. The report or form can subsequently call custom Selenese functions (i.e. blocks of Selenese commands). That allows user scripts to run interactively.
 
-Presentation layer renders in a Firefox "chrome" window. That looks like a part of Firefox GUI, rather than a webpage. Hence the user can differentiate it from the webpage intuitively. That also saves screen space.
+# Exporting 
+The content renders in a standard Firefox window. The user can bookmark it, or pass the URL to it. It uses [data: URIs](https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs), hence it works without a need to pass any files. (data: URI can also contain images, stylesheets and Javascripts). This works for XML, too.
 
-= Limitations =
-The custom HTML must define basic formatting in CSS, since "chrome" layer doesn't include default HTML style. Links can't point to URLs. Instead, use `onclick="..."` to invoke Selenese functions through `selenium.callFromAsync(...)`.
+# Connection to Selenium IDE 
+Preview is "live" and connected to Selenium IDE, but only in the window that was opened from Selenium IDE by `getEval | editor.openPreview( templateURL, data, config )`. Invoke Selenese functions through `selenium.callFromAsync(...)` from the presented content.
 
-Previews windows are not bookmarkable and the user can't navigate backwards & forwards. Otherwise links in a preview could be in conflict with Selenese state (call stack, stored variables) once the user executes any further Selenese commands.
-<!-- TODO try open in FF sidebar. Have it configurable via Settings. -->
+The user may not be able to navigate backwards & forwards in Preview. Otherwise links in Preview could be in conflict with Selenese state (call stack, stored variables) once the user executes any further Selenese commands.
+<!-- TODO try open in FF sidebar.
+TODO Have it configurable via Settings. -->
