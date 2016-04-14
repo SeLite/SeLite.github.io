@@ -98,7 +98,7 @@ Be careful when implementing a workflow that uses `selenium.callBack(...)`. This
 ### Asynchronous Selenese calls
 You can invoke Selenese functions 'asynchronously' after your Selenese script finished its run. That allows Selenese scripts to run in stages. Use `selenium.callFromAsync( nameOfseleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
 
-See [Preview](Preview).
+See also [Preview](Preview).
 
 ## Try/catch suppresses error counts ##
 `try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].

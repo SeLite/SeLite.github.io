@@ -11,8 +11,8 @@ The presentation is customizable through HTML or XML. HTML (and XML, too - if yo
 # Exporting 
 The content renders in a standard Firefox window. The user can bookmark it, or pass the URL to it. It uses [data: URIs](https://developer.mozilla.org/en-US/docs/Web/HTTP/data_URIs), hence it works without a need to pass any files. (data: URI can also contain images, stylesheets and Javascripts). This works for XML, too.
 
-# Connection to Selenium IDE 
-Preview is "live" and connected to Selenium IDE, but only in the window that was opened from Selenium IDE by `getEval | editor.openPreview( templateURL, data, config )`. From the content in Preview invoke Selenese functions through `selenium.callFromAsync(...)`.
+# Connection back to Selenium IDE 
+Preview is "live" and connected to Selenium IDE, but only in the window that was opened from Selenium IDE by `getEval | editor.openPreview( templateURL, data, config )`. From the content in Preview invoke Selenese functions via [SelBlocksGlobal](SelBlocksGlobal) &gt; [Asynchronous Selenese calls](SelBlocksGlobal#asynchronous-selenese-calls).
 
 The user may not be able to navigate backwards & forwards in Preview. Otherwise links in Preview could be in conflict with Selenese state (call stack, stored variables) once the user executes any further Selenese commands.
 <!-- TODO try open in FF sidebar.
