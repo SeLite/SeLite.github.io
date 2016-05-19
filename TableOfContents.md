@@ -3,30 +3,14 @@
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 -->
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE AddOns  Preview TestMethods TestMethodsTheory">Automate<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE AddOns  Preview">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">Overview</a></li>
+    <li><a href="AddOns">AddOns (Install)</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
-    <li><a href="AddOns">AddOns</a></li>
-    <li><a href="Preview">Preview</a></li>
+    <li><a href="Preview">Preview (Experimental)</a></li>
     <li class="divider"></li>
     <li class="dropdown-header">Testing-specific:</li>
-    <li><a href="TestMethods">TestMethods</a></li>
-    <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
-  </ul>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AppsFrameworks GeneralFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Frameworks<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="AppsFrameworks">AppsFrameworks</a></li>
-    <li><a href="GeneralFramework">GeneralFramework</a></li>
-    <li><a href="InstallFramework">InstallFramework</a></li>
-    <li class="divider"></li>
-    <li class="dropdown-header">Application-specific:</li>
-    <li><a href="DotclearFramework">DotclearFramework</a></li>
-    <li><a href="DrupalFramework">DrupalFramework</a></li>
-    <li><a href="FUDforumFramework">FUDforumFramework</a></li>
-    <li><a href="SerendipityFramework">SerendipityFramework</a></li>
   </ul>
 </li>
 <li class="dropdown">
@@ -52,9 +36,10 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptSpecial AutoCheck Bootstrap ExtensionSequencer InstallFromSource">Develop<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools InstallFromSource ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptSpecial AutoCheck Bootstrap ExtensionSequencer AppsFrameworks GeneralFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Develop<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
+    <li><a href="InstallFromSource">InstallFromSource</a></li>
     <li class="divider"></li>
     <li><a href="JavascriptEssential">JavascriptEssential</a></li>
     <li><a href="JavascriptComplex">JavascriptComplex</a></li>
@@ -65,7 +50,15 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="ExitConfirmationChecker">ExitConfirmationChecker</a></li>
     <li><a href="ExtensionSequencer">ExtensionSequencer</a></li>
     <li class="divider"></li>
-    <li><a href="InstallFromSource">InstallFromSource</a></li>
+    <li><a href="AppsFrameworks">AppsFrameworks</a></li>
+    <li><a href="GeneralFramework">GeneralFramework</a></li>
+    <li><a href="InstallFramework">InstallFramework</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Application-specific:</li>
+    <li><a href="DotclearFramework">DotclearFramework</a></li>
+    <li><a href="DrupalFramework">DrupalFramework</a></li>
+    <li><a href="FUDforumFramework">FUDforumFramework</a></li>
+    <li><a href="SerendipityFramework">SerendipityFramework</a></li>
   </ul>
 </li>
 <li class="dropdown">
@@ -79,7 +72,7 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty AddOnsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty AddOnsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
@@ -90,9 +83,12 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="ReportingIssues">ReportingIssues</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
     <li class="divider"></li>
+    <li class="dropdown-header">Testing-specific:</li>
+    <li><a href="TestMethods">TestMethods</a></li>
+    <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
+    <li class="divider"></li>
     <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
-    <!-- TODO make an li-based header/title: -->
     <li><a href="DataObjects">DataObjects</a></li>
     <li><a href="SeleniumFlow">SeleniumFlow</a></li>
     <li><a href="PackagedScripts">PackagedScripts</a></li>
