@@ -46,7 +46,7 @@ You also need the current release of [Selenium IDE](https://addons.mozilla.org/e
             <li>third party documentation</li>
             <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
         </ul>
-        <span>{{chromeUrl}}s only work after you install the add-on in Firefox</span>
+        <span markdown="span">{{chromeUrl}}s only work after you install the add-on in Firefox</span>
     </td>
     <td><strong>Other</strong></td>
 </tr>

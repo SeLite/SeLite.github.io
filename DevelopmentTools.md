@@ -66,7 +66,7 @@ In Javascript code modules call `SeLiteMisc.log()`, which gives you Selenium Cor
 
 ```javascript
 
-var console= Components.utils.import("resource://gre/modules/devtools/Console.jsm", {}).console;
+var console= Components.utils.import("resource://gre/modules/Console.jsm", {}).console;
 console.log(...);
 console.info(...);
 console.warn(...);
