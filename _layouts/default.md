@@ -82,6 +82,15 @@
 
         /* Override bootstrap.min.css: */
         * code { color: black; }
+
+        #navbar-menu .navbar-nav > li > a {
+            padding-bottom: 5px;
+            padding-top: 5px;
+        }
+        body .navbar {
+            margin-bottom: 5px;
+            min-height: 30px;
+        }
     </style>
     <script type="text/javascript">
         // Based on https://github.com/twbs/bootstrap/issues/1768:
