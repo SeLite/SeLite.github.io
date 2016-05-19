@@ -55,6 +55,9 @@ use
 for | $i=1; $i<=10; $i++
 ```
 
+### No isOneOf(), mapTo() or translate()
+SelBlocks added functions `isOneOf(), mapTo()` and `translate()` to `String.prototype`. However, now Mozilla rules don't allow extensons of built-in JS types for security and compatibility reasons. Hence SelBlocks Global had to removed them.
+
 ## Passing parameters to functions via `call` ##
 
 ### Modified classic way ###
