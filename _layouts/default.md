@@ -26,9 +26,11 @@
 {% assign pageNameInTitleBar= pageName %}
 
 {% comment %} For some reason, pageName=="index" didn't evaluate to true. TODO report {% endcomment %}
-{% if pageName contains "index" and "index" contains pageName %}
+<!-- pagename: {{pageName}} -->
+{% if pageName == null or pageName contains "index" and "index" contains pageName %}
     {% assign pageName = './' %}
     {% assign pageNameInTitleBar= 'Overview' %}
+    <!-- pagename was empty ot index -->
 {% endif %}
     <title>SeLite > {{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}</title>
     <!-- Latest compiled and minified CSS -->

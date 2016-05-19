@@ -1,4 +1,6 @@
-<!-- This page doesn't have YAML Front Matter block (which would be between ---- and ----). Otherwise, such YAML would show up as page content this when file is included from _layouts/default.md.
+<!-- Don’t add any more 1st level menu items, neither make wording of the existing items longer. Reason: With Firefox 46.0.1 on Samsung S5 (SM-G900I) in landscape, the menu still shows up vertically. When there were more menu items at 1st level, they wouldn’t all show up on the screen. (The problem is bigger in landscape than in portrait).
+
+This page doesn't have YAML Front Matter block (which would be between ---- and ----). Otherwise, such YAML would show up as page content this when file is included from _layouts/default.md.
 (As a side effect, you can't access this page at http://selite.github.io/TableOfContents. If need be, use http://selite.github.io/TableOfContents.md instead - but then code like {% comment %}...{% endcomment %}  doesn't work here, therefore use HTML comments here instead.)
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 -->
