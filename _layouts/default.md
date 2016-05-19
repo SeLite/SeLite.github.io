@@ -84,11 +84,11 @@
         * code { color: black; }
 
         #navbar-menu .navbar-nav > li > a {
-            padding-bottom: 5px;
-            padding-top: 5px;
+            padding-bottom: 2px;
+            padding-top: 2px;
         }
         body .navbar {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
             min-height: 30px;
         }
     </style>
