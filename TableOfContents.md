@@ -11,8 +11,6 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
     <li><a href="AddOns">AddOns (Install)</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
     <li><a href="Preview">Preview (Experimental)</a></li>
-    <li class="divider"></li>
-    <li class="dropdown-header">Testing-specific:</li>
   </ul>
 </li>
 <li class="dropdown">
