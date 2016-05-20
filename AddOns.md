@@ -7,20 +7,19 @@ layout: default
 # Quick download
 <!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->
 
-For the easiest download, get all add-ons of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases with a delay. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
-
-Alternatively, if you want only some of them, install [Selenium IDE](http://www.seleniumhq.org/download/#selenium_ide). Choose from [AddOnsDependants](AddOnsDependants).
-
-Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
+For the easiest download, get all components of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases with a delay. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
 
 Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
+
+# By component
+Alternatively, if you want only some of SeLite components, install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). Choose from [AddOnsDependants](AddOnsDependants).
+
+Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
 
 # Latest releases
 Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the add-ons, you won't get an automatic update until then either.
 
 To get the latest releases, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
-
-You also need the current release of [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/).
 
 {::options parse_block_html="true" /}
 

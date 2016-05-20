@@ -92,14 +92,14 @@ See [EnhancedSelenese](EnhancedSelenese).
 These invoke a Selenese function from user's Javascript. The Selenese function executes in Selenium IDE as if it were invoked through `call` command during a standard case/suite run. The user can pause it, inspect stored variables and logs.
 
 ### In-flow Selenese callbacks
-A Selenese command (usually `getEval` or a custom command) can invoke Javascript. From there you may want to trigger other Selenese commands. Use `selenium.callBack( nameOfSeleneseFunction, seleneseFunctionParameters )`. (Don't invoke it from the last command of any test case). This is re-entrant (it can be multi-level). However, don't invoke it from asynchronous handlers.
+A Selenese command (usually `getEval` or a custom command) can invoke Javascript. From there you may want to trigger other Selenese commands. Use `selenium.callBackInFlow( nameOfSeleneseFunction, seleneseFunctionParameters )`. (Don't invoke it from the last command of any test case). This is re-entrant (it can be multi-level). However, don't invoke it from asynchronous handlers.
 
-That injects a call to given Selenese function, but only after the current Selenese command (i.e. `getEval` or a custom command) finishes. Handle any failures with `try...catch...finally...endTry` outside the current Selenese command (which triggered `selenium.callBack(...)`).
+That injects a call to given Selenese function, but only after the current Selenese command (i.e. `getEval` or a custom command) finishes. Handle any failures with `try...catch...finally...endTry` outside the current Selenese command (which triggered `selenium.callBackInFlow(...)`).
 
-Be careful when implementing a workflow that uses `selenium.callBack(...)`. This Javascript code doesn't invoke the Selenese function immediately. It only adds it to Selenium IDE schedule, and it returns the control back. Therefore any following Javascript code must not depend or affect the running of that Selenese function. As a rule of thumb, trigger such a call at the latest possible point in your Javascript.
+Be careful when implementing a workflow that uses `selenium.callBackInFlow(...)`. This Javascript code doesn't invoke the Selenese function immediately. It only adds it to Selenium IDE schedule, and it returns the control back. Therefore any following Javascript code must not depend or affect the running of that Selenese function. As a rule of thumb, trigger such a call at the latest possible point in your Javascript.
 
 ### Out-of-flow Selenese callbacks
-These invoke a Selenese function 'asynchronously' when your Selenese script is not running. That allows Selenese scripts to run in stages. Use `selenium.callFromAsync( nameOfSeleneseFunction, seleneseFunctionParameters, [onSuccess, [onFailure]] )`.
+These invoke a Selenese function 'asynchronously' when your Selenese script is not running. That allows Selenese scripts to run in stages. Use `selenium.callBackOutFlow( nameOfSeleneseFunction, seleneseFunctionParameters )`. This returns [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). Use `then( function successHandler(value) )` or `then( function successHandler(value), function failureHandler(exception) )` to handle callback outcome.
 
 These callbacks are especially useful for presenting with [Preview](Preview).
 
