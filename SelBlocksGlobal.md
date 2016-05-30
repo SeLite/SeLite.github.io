@@ -95,7 +95,7 @@ These commands wait for a given `Promise` object to resolve. If it gets rejected
 
  * `promise` is similar to `getEval`.
  * `storePromiseValue` is similar to `storeEval`, but it stores the resolved (fulfilled) value of the promise (rather than the promise itself).
- * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to any of `false, null, 0` or `undefined`, then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected to it times out, the command throws an error.
+ * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to non-strict false (i.e. any of `false, null, 0, ` empty string `""` or `undefined`), then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected or it times out, the command throws an error.
 
 ## Iterator and iterable-based loops
 `forIterator...endForIterator` and `forIterable...endForIterable` iterate the given iterator or iterable object. See [MDN > Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
