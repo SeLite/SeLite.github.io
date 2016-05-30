@@ -4,36 +4,23 @@ layout: default
 ---
 {% include links %}
 
-# Database-driven browser automation
+# Hands-on browser automation
 
 ## SeLite makes Selenium better
-SeLite ([Selenium](SeleniumIDE) + [SQLite](http://www.sqlite.org/)) is a family of Selenium extensions and frameworks. It
+SeLite is for automated browser navigation and testing. It extends Selenium. It
 
- * improves visual interface
+ * improves Selenium (API, syntax and visual interface)
+ * enables reuse
  * facilitates team work
- * enhances Selenese syntax and API, which
-   * increases development efficiency
-   * enables user scripts to be more effective.
 
-It enables DB-driven navigation with SQLite (the [most widely deployed](http://www.sqlite.org/mostdeployed.html) SQL database). It automates
-
- * testing of web applications
- * web-based administration
- * data mining/manipulation etc.
-
-## Data separation (in testing)
-Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
-
-Separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its database with the test, such defects would be difficult or even impossible to detect.
-
-See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheory](TestMethodsTheory).
+SeLite enables DB-driven navigation with SQLite (the [most widely deployed](http://www.sqlite.org/mostdeployed.html) SQL database).
 
 ## Benefits
 SeLite enables the following in Selenium IDE
 
 * reusable, structured and expressive scripts
   * [SelBlocksGlobal](SelBlocksGlobal): flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
-  * [EnhancedSelenese](EnhancedSelenese) for shorter and cleaner scripts
+  * [EnhancedSelenese](EnhancedSelenese): enhanced syntax for shorter and cleaner scripts
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
   * test database isolated from the application (see [TestMethods](TestMethods) and [HandlingData](HandlingData))
@@ -66,6 +53,13 @@ Scripts (whether for testing or not) can store their data in [SQLite](http://www
 
  * If the web application stores its data in [SQLite](http://www.sqlite.org/), test data lifecycle is streamlined. You can then use all buttons of [SettingsInterface](SettingsInterface). They snapshot application DB (into 'vanilla' DB). They (re)load test DB and/or application DB from that snapshot.
  * Otherwise import the app DB (from Postgres, MySQL and potentially other types) via customisable filters. Apply [DataImport](DataImport).
+
+## Data separation (in testing)
+Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
+
+Separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its database with the test, such defects would be difficult or even impossible to detect.
+
+See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheory](TestMethodsTheory).
 
 ## Customisation
 When customising or creating frameworks or components for Selenium IDE, following topics can assist you:

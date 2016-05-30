@@ -58,6 +58,8 @@ for | $i=1; $i<=10; $i++
 ### No isOneOf(), mapTo() or translate()
 SelBlocks added functions `isOneOf(), mapTo()` and `translate()` to `String.prototype`. However, now Mozilla rules don't allow extensons of built-in JS types for security and compatibility reasons. Hence SelBlocks Global had to removed them.
 
+try...endTry can catch timeout
+
 ## Passing parameters to functions via `call` ##
 
 ### Modified classic way ###
@@ -88,6 +90,16 @@ These are forward-compatible with classic SelBlocks.
 ## Usage of &lt;&gt;
 See [EnhancedSelenese](EnhancedSelenese).
 
+## Promise-based commands
+These commands wait for a given `Promise` object to resolve. If it gets rejected or it times out, then the command throws an error.
+
+ * `promise` is similar to `getEval`.
+ * `storePromiseValue` is similar to `storeEval`, but it stores the resolved (fulfilled) value of the promise (rather than the promise itself).
+ * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to any of `false, null, 0` or `undefined`, then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected to it times out, the command throws an error.
+
+## Iterator and iterable-based loops
+`forIterator...endForIterator` and `forIterable...endForIterable` iterate the given iterator or iterable object. See [MDN > Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+
 ## Javascript callbacks to Selenium
 These invoke a Selenese function from user's Javascript. The Selenese function executes in Selenium IDE as if it were invoked through `call` command during a standard case/suite run. The user can pause it, inspect stored variables and logs.
 
@@ -103,8 +115,8 @@ These invoke a Selenese function 'asynchronously' when your Selenese script is n
 
 These callbacks are especially useful for presenting with [Preview](Preview).
 
-## Try/catch suppresses error counts ##
-`try...catch` suppresses error counts and some error logs for exceptions, errors or failures of asserts/verifications. This benefits [scripts][script] that verify functionality of custom [commands][command].
+## Try/catch suppresses error and timeout counts ##
+`try...catch` suppresses counts and some logs for errors, failures of asserts/verifications and timeouts. [Scripts][script] can verify that custom [commands][command] fail or time out as expected (and if they fail or time out, the script succeeds; on the other hand, if the command succeeds, the test script fails).
 
 # Flow control with Selenese boolean accessors
 Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. Indeed, you may combine the accessor calls in more complex boolean expressions. For example:
