@@ -46,6 +46,6 @@
 
 {%capture navJavascriptCodeModules%}[JavascriptComplex](JavascriptComplex) > [Javascript code modules](JavascriptComplex#javascript-code-modules){%endcapture%}
 
-{%capture navCuttingEdge%}[AddOns](AddOns) > [Cutting edge](AddOns#cutting-edge){%endcapture%}
+{%capture navCuttingEdge%}[Components](Components) > [Cutting edge](Components#cutting-edge){%endcapture%}
 
 {%capture navLoadingJavascriptFiles%}[JavascriptComplex](JavascriptComplex) > [Loading Javascript files](JavascriptComplex#loading-javascript-files){%endcapture%}

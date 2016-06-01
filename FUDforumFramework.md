@@ -12,7 +12,7 @@ I had some sessions issues with `FUDforum_3.0.6RC2.zip`. Therefore I've installe
 SeLite can't solve the captcha (it would be a weak captcha otherwise). Therefore select Administration > Global Settings Manager > Disable Captcha Test.
 
 # Install SeLite #
-Install recent [Firefox](http://www.mozilla.org) and all SeLite [AddOns](AddOns).
+Install recent [Firefox](http://www.mozilla.org) and all SeLite [Components](Components).
 
 # Install SeLite FUDforum framework #
 Apply [InstallFramework](InstallFramework). The framework and [scripts][script] are in [fudforum](https://github.com/SeLite/SeLite/tree/master/fudforum) folder. Note that `appDB` filename ends with `.db.php` (e.g. `/var/www/fudforum-data/forum.db.php`).

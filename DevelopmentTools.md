@@ -151,7 +151,7 @@ If you repeat a pattern of code or similar sections of code, consider applying [
 # Hosting add-ons at addons.mozilla.org #
 If you host your extensions at [addons.mozilla.org](https://addons.mozilla.org/):
 
-* See [AddOns](AddOns) > [Latest releases](AddOns#latest-releases).
+* See [Components](Components) > [Latest releases](Components#latest-releases).
 * When uploading a new version, do not remove all previously reviewed versions, but keep at least one. Otherwise _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/_ and _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/versions/_ will stop working. (However, _https://addons.mozilla.org/en-US/developers/addon/XXXXX/edit_ will still work and [Manage My Submissions](https://addons.mozilla.org/en-US/developers/addons) will still list the extension.) Vote for fixing this at [ThirdPartyIssues](ThirdPartyIssues) > Show version awaiting review in detail page....
 * If you create a new add-on, upload it to _addons.mozilla.org_ early. They sometimes delayed the initial review by over a month. Until then your add-on is not public (not even at _https://addons.mozilla.org/en-US/firefox/addon/XXXXX/versions/_)!
 * See [Mozilla bug on selecting dependencies](https://bugzilla.mozilla.org/show_bug.cgi?id=1239191).

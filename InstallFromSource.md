@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Get the source #
-You need SeLite source to get [AppsFrameworks](AppsFrameworks) and [PackagedScripts](PackagedScripts). You also need it to install development versions of [AddOns](AddOns). Check the source out with a [GIT client](http://git-scm.com/downloads) (which makes receiving updates or managing local modifications easier). Alternatively, download [SeLite as a ZIP](https://github.com/SeLite/SeLite/archive/master.zip) and [SeLite SelBlocks Global as a ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip).
+You need SeLite source to get [AppsFrameworks](AppsFrameworks) and [PackagedScripts](PackagedScripts). You also need it to install development versions of [Components](Components). Check the source out with a [GIT client](http://git-scm.com/downloads) (which makes receiving updates or managing local modifications easier). Alternatively, download [SeLite as a ZIP](https://github.com/SeLite/SeLite/archive/master.zip) and [SeLite SelBlocks Global as a ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip).
 
 There are repositories for
 

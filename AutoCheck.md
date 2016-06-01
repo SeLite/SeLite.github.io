@@ -4,7 +4,7 @@ layout: default
 {% include links %}
 
 # Automatic checks #
-[AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [AddOns](AddOns), validates the current page after every successful Selenese [command]. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.
+[AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [Components](Components), validates the current page after every successful Selenese [command]. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.
 
 ## Negative checks ##
 Negative checks validate that given selector(s) don't match any elements on the page. That's useful if your web server, framework or programming language report errors/warnings/notices in some kind of fixed format.

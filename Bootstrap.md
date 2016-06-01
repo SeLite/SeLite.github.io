@@ -5,7 +5,7 @@ layout: default
 {% include links %}
 
 # Summary #
-[SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [AddOns](AddOns), allows smoother development of Selenium [Core extensions][Core extension] (just in plain Javascript files, not packaged as `.xpi`). It reloads them automatically on change.
+[SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [Components](Components), allows smoother development of Selenium [Core extensions][Core extension] (just in plain Javascript files, not packaged as `.xpi`). It reloads them automatically on change.
 
 It's more convenient than Selenium IDE's way of loading [Core extensions][core extension] (Selenium menu > _Options > Options > General > Activate developer tools_), which requires you to apply Selenium menu > _Options > Options > General > Reload_ button every time you change your extension file.
 

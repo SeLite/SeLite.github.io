@@ -11,7 +11,7 @@ These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects
 When saving a [case] or a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
 # Hands-on GUI
-[AddOns](AddOns) > 'Hands-on GUI' enables
+[Components](Components) > 'Hands-on GUI' enables
 
 * in-place editing of Selenese commands/comments and their parameters (`target` and `value`), right in the commands list
 * productivity keyboard shortcuts
@@ -28,7 +28,7 @@ After you select a row, you can use key shortcuts `I` and `M` to insert new comm
 
 
 # Clipboard And Indent
-[AddOns](AddOns) > 'Clipboard And Indent' enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
+[Components](Components) > 'Clipboard And Indent' enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
 
 It enables Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal).
 
@@ -77,14 +77,14 @@ Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, 
 
 ## Multiple standard Selenium IDEs
 This shows multiple Selenium IDEs, detached from Firefox browser windows. Compared to the previous method, this
-* (-) needs multiple running Firefox instances (and profiles). Each profile each needs an installation of Selenium IDE; ones that run scripts also need their own installations of SeLite [AddOns](AddOns) and any other extensions.
+* (-) needs multiple running Firefox instances (and profiles). Each profile each needs an installation of Selenium IDE; ones that run scripts also need their own installations of SeLite [Components](Components) and any other extensions.
 * (+) can run multiple scripts in parallel with separate sessions (cookies)
 
 To set up
 
 1. Create Firefox profiles, one per Selenium IDE: Follow [Setting up extension development environment (MDN)](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment) > [Development profile](https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Development_profile).
 2. Start multiple Firefox instances, one per profile, with command line parameters `-no-remote` and (`-P ProfileName`).
-3. Install Selenium IDE in each profile. Install SeLite [AddOns](AddOns) any other extensions in profiles where you will run scripts.
+3. Install Selenium IDE in each profile. Install SeLite [Components](Components) any other extensions in profiles where you will run scripts.
 4. Mark the second and successive profiles to identify Selenium IDEs:
   * Visually by menu text colour
     1. Install [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish)

@@ -24,7 +24,7 @@ SeLite enables the following in Selenium IDE
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
   * test database isolated from the application (see [TestMethods](TestMethods) and [HandlingData](HandlingData))
-  * data access through high-level formulas (see [AddOns](AddOns) > DB Objects)
+  * data access through high-level formulas (see [Components](Components) > DB Objects)
   * making and reverting database snapshots through [SettingsInterface](SettingsInterface) directly from Selenium IDE
 * configuration of scripts - see [Settings](Settings)
   * having custom fields ([SettingsFields](SettingsFields))
@@ -43,7 +43,7 @@ SeLite enables the following in Selenium IDE
   * see also [Selenium IDE](SeleniumIDE) for productivity tips.
 
 # Install
-SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [AddOns](AddOns) (Selenium IDE and add-ons of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
+SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [Components](Components) (Selenium IDE and add-ons of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
 ## Frameworks
 When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedScripts](PackagedScripts) on how to run demos. See also [Customisation](index#customisation) below.
@@ -78,7 +78,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
  * validated by [PackagedScripts](PackagedScripts)
  * clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
  * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal) and [documentation](https://github.com/SeLite/SeLite.github.io)
- * [AddOns](AddOns) are verified by Mozilla
+ * [Components](Components) are verified by Mozilla
 
 ## Compatibility
 SeLite is compatible with Firefox 45 and Selenium IDE 2.9.1. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
@@ -88,7 +88,7 @@ It doesn't operate with browsers other than Firefox, neither with Selenium WebDr
 Subscribe to [XML RSS feed](http://www.feed43.com/selite-compatibility.xml) on compatibility.<!-- Don't include that in the header of this page. It's the landing page, hence we want its RSS to reflect changes anywhere in the documentation. -->
 
 ## License
-SeLite is fully open source. Most [AddOns](AddOns) are under GNU LGPL 3.
+SeLite is fully open source. Most [Components](Components) are under GNU LGPL 3.
 
 ## Moral support
 The best ways you can support SeLite:

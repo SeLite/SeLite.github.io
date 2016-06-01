@@ -6,12 +6,12 @@ layout: default
 # Packaged scripts
 Packaged scripts are Selenese [scripts][script] together with any [Settings](Settings) and optional local `.html` forms/pages. They usually also use a framework.
 
-In SeLite these scripts validate functionality of [AddOns](AddOns) and application-specific frameworks. They also serve as practical documentation, ready for inspecting at any detail in Selenium IDE.
+In SeLite these scripts validate functionality of [Components](Components) and application-specific frameworks. They also serve as practical documentation, ready for inspecting at any detail in Selenium IDE.
 
 ## Structure
 
 ## Installing and getting around ###
-Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [AddOns](AddOns) that can be tested in Selenium IDE have subfolder `selenese-scripts`, e.g. [commands/selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-scripts). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://github.com/SeLite/SeLite/tree/master/phpmyfaq/test_suites_and_cases).
+Follow [InstallFromSource](InstallFromSource) for the easiest way to get SeLite packaged scripts. [Components](Components) that can be tested in Selenium IDE have subfolder `selenese-scripts`, e.g. [commands/selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-scripts). Each framework that comes with SeLite has [suites][suite] in its subfolder `test_suites_and_cases`, e.g. [phpmyfaq/test\_suites\_and\_cases/](https://github.com/SeLite/SeLite/tree/master/phpmyfaq/test_suites_and_cases).
 
 To make navigation across files easy, here's a convention: filenames of suites end with `_suite.html`, and cases are in files that have names ending with `_case.html`. If there are several shared cases, they can be in `shared_cases/` subfolder.
 
@@ -42,7 +42,7 @@ Before you run a [script] packaged with local forms/pages, the current tab in Fi
 Open a suite using Selenium IDE menu File > Open... or Open Test Suite... Do not open actual [cases][case] via menu File > Open..., otherwise they won't be able to access any local forms/pages (as per above) nor any shared Selenese functions. Then you can run the whole suite, or selected cases. Shared [cases][case] that only define Selenese functions are not intended as runnable.
 
 ## Running multiple suites
-In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-scripts-negative/`), use [AddOns](AddOns) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
+In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-scripts-negative/`), use [Components](Components) > Run All Favorites. Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
 
 # Javascript tests #
 These validate functionality
@@ -51,7 +51,7 @@ These validate functionality
   * which would be awkward to test in Selenese, or
   * which is not Selenese-specific, and while it can (and should) be tested from Selenese, it should be tested without Selenium IDE, too.
 
-There's no extra installation - they are a part of their add-ons (in folders `javascript-tests`). You can invoke them offline and directly from Firefox (without starting Selenium IDE) through {{chromeUrl}}s listed at [AddOns](AddOns). However, you normally don't need to run them separately, since they get invoked from packaged Selenese scripts.
+There's no extra installation - they are a part of their add-ons (in folders `javascript-tests`). You can invoke them offline and directly from Firefox (without starting Selenium IDE) through {{chromeUrl}}s listed at [Components](Components). However, you normally don't need to run them separately, since they get invoked from packaged Selenese scripts.
 
 # Shell tests #
 These are invoked from shell (i.e. `cmd` on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).

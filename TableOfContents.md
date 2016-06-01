@@ -5,10 +5,10 @@ This page doesn't have YAML Front Matter block (which would be between ---- and 
 This page has to be .md rather than .html, so that we can use it with Firefox Markup Viewer add-on. Only when it's an .md file, Markup Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 -->
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE AddOns  Preview">Automate<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE Components  Preview">Automate<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu">
     <li><a href="./">Overview</a></li>
-    <li><a href="AddOns">AddOns (Install)</a></li>
+    <li><a href="Components">Components (Install)</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
     <li><a href="Preview">Preview (Experimental)</a></li>
   </ul>
@@ -72,11 +72,11 @@ This page has to be .md rather than .html, so that we can use it with Firefox Ma
   </ul>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty AddOnsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
   <ul class="dropdown-menu" role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
-    <li><a href="AddOnsDependants">AddOnsDependants</a></li>
+    <li><a href="ComponentsDependants">ComponentsDependants</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
     <li class="divider"></li>
     <li><a href="TroubleShooting">TroubleShooting</a></li>

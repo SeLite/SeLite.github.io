@@ -10,7 +10,7 @@ SeLite doesn't cover general functionality of related technologies (see also [Re
 
 Implementation is mostly documented by source comments. Detailed descriptions of Selenese [commands][command] are in reference files. You can find them
 
-  * online - see [AddOns](AddOns)
+  * online - see [Components](Components)
   * in Selenium IDE reference pane (once you type a chosen command in IDE).
 
 # Terminology

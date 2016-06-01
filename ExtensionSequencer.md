@@ -4,7 +4,7 @@ layout: default
 {% include links %}
 
 # Summary #
-[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [AddOns](AddOns), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
+[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [Components](Components), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
 
 It only works for extensions packaged as Firefox add-ons (as `.xpi` files, or through [proxy files](https://developer.mozilla.org/en/Setting_up_extension_development_environment)). It doesn't cover extensions loaded from single Javascript files via Selenium IDE menu Options > Options > General, neither through [Bootstrap](Bootstrap).
 
@@ -54,7 +54,7 @@ SeLiteExtensionSequencer.registerPlugin( {
 Sequencer will find and process this file. Then it will initiate the plugin after all its sequenced dependencies. If it depends on any add-ons that don't use ExtensionSequencer, then this doesn't guarantee their respective activation order. You can use `window.setTimeout()` in your extension to delay the parts of its activation that depend on any non-sequenced add-ons. Alternatively, encourage the third party to use ExtensionSequencer, too.
 
 ## Examples of SeLiteExtensionSequencerManifest.js ##
-See `SeLiteExtensionSequencerManifest.js` files in source of various SeLite [AddOns](AddOns). For full API, see function `SeLiteExtensionSequencer.registerPlugin(prototype)` in [SeLiteExtensionSequencer.js](https://github.com/SeLite/SeLite/tree/master/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
+See `SeLiteExtensionSequencerManifest.js` files in source of various SeLite [Components](Components). For full API, see function `SeLiteExtensionSequencer.registerPlugin(prototype)` in [SeLiteExtensionSequencer.js](https://github.com/SeLite/SeLite/tree/master/extension-sequencer/src/chrome/content/SeLiteExtensionSequencer.js).
 
 You may have multiple add-ons that override same parts of Selenium core and that don't need each other, but if used together then they need to override those parts in a specific order. Then you may want to declare optional dependency between them, so that they are loaded in appropriate order. For examples of dependencies, see `SeLiteExtensionSequencerManifest.js` and source of [Shell tests](#shell-tests).
 
@@ -71,7 +71,7 @@ The tests use a separate Firefox profile called SeLiteExtensionSequencerTest, wi
 
 On Windows (and probably on Mac OS, too) you'll need to install apply Windows/Mac OS-specific steps from [InstallFromSource](InstallFromSource).
 
-(You don't need any other SeLite [AddOns](AddOns) for these tests.)
+(You don't need any other SeLite [Components](Components) for these tests.)
 
 ### Running and modifying shell tests ###
 Invoke `run_tests.ps1` (on Windows), `run_tests_mac.sh` (on Mac OS) or `run_tests.sh`.
