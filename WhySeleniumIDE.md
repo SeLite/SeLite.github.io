@@ -34,6 +34,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
   * (+) no involvement of server-side programming languages
   * (+) convenience of single environment: the browser with Selenium IDE is one place for recording, editing and running the scripts
   * (-) it's for Firefox only
+    * (+) In 2017 Firefox extensions will use [the same API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) as Opera and Chrome.
     * (-) it can't work with other browsers. That may be perceived as a limitation. However, there may not be much benefit in automated testing for multiple browsers, since
       * cross-browser libraries (like JQuery) make applications less browser-dependent
       * there are also application-independent themes or styles, which are tested by their producers

@@ -125,6 +125,9 @@ Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors.
 if | !selenium.isVisible( 'id=pmf-navbar-collapse' )
 ```
 
+## Selenium.download
+If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
+
 @TODO > include links
 @TODO DOC Selenese > ???: CombiningExpressions: Use variable `selenium` in [Core scope] for the same as what `this` keyword is in context of Selenese actions `getEval` (and related), if, while. However, in their context `this===selenium`, hence use `selenium` instead of `this`, so that it's the same as in [Core scope]. (In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module and use `SeLiteMisc.selenium` instead<!--TODO example of loading-->.)
 -> So, unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't call `storeEval` but use [EnhancedSelenese](EnhancedSelenese) to pass the Javascript expression directly within pairs `<>...<>` (or `=<>...<>` if the result can be other than a string). This minimises use of `storeEval` and auxiliary stored variables. That makes Selenese scripts shorter, clearer, more robust and reusable.

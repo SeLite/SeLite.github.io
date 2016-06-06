@@ -107,6 +107,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Confusing text: Be careful with old versions!...](https://bugzilla.mozilla.org/show_bug.cgi?id=1239898)                         | Mozilla         | Clear download instructions<br> (Can't be voted on yet) |
 | [Regex search in any folder tree with an empty file fails](https://netbeans.org/bugzilla/show_bug.cgi?id=257897)                 | NetBeans        | Smooth development |
 | [Documentation and handling of Selenium.prototype.getXYZ functions...](https://github.com/SeleniumHQ/selenium/issues/1635)       | Selenium        | Reliable API |
+| [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215) | Selenium | Usability |
 {: .table #issues}
 
 <!--
