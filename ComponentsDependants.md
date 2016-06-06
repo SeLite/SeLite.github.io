@@ -4,7 +4,9 @@ layout: default
 ---
 {% include links %}
 
-Following shows direct dependencies between Firefox [Components](Components) that form SeLite.
+Following shows direct dependencies between Firefox [Components](Components) that form SeLite. You don't need to read this if you use all SeLite components.
+
+If you disable some components, do it at {{chromeUrl}} _about:addons_. Don't disable them in Selenium menu Options > Options... > Plugins.<!-- because that doesn't disable chrome overloads/overlays -->
 
 <!-- Keep the following table sorted alphabetically.-->
 <table class="table"><thead>

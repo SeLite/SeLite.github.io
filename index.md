@@ -7,7 +7,7 @@ layout: default
 # Hands-on browser automation
 
 ## SeLite makes Selenium better
-SeLite is for automated browser navigation and testing. It extends Selenium. It
+SeLite is for automated browser navigation and testing. It extends [Selenium](http://docs.seleniumhq.org/projects/ide/). It
 
  * improves Selenium (API, syntax and visual interface)
  * enables reuse
@@ -83,7 +83,9 @@ When customising or creating frameworks or components for Selenium IDE, followin
 ## Compatibility
 SeLite is compatible with Firefox 45 and Selenium IDE 2.9.1. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
-It doesn't operate with browsers other than Firefox, neither with Selenium WebDriver (nor with Selenium RC). Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
+Currently it doesn't operate with browsers other than Firefox. That will change. In 2017 Firefox extensions will use the same API as Opera and Chrome.
+
+SeLite is not for Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
 Subscribe to [XML RSS feed](http://www.feed43.com/selite-compatibility.xml) on compatibility.<!-- Don't include that in the header of this page. It's the landing page, hence we want its RSS to reflect changes anywhere in the documentation. -->
 
