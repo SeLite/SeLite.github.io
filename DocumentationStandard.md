@@ -84,3 +84,14 @@ In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, bec
 Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button. The URL will start with _https://raw.githubusercontent.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._
 
 Apply similar steps to SelBlocksGlobal.
+<!--TODO
+Ubuntu 16.04
+apt-get install ruby ruby-dev zlib1g-dev
+gem install github-pages
+
+npm i -g jsdoc
+
+cd docs
+git checkout gh-pages
+jsdoc -r ../selite ../sel-blocks-global -d .
+-->
