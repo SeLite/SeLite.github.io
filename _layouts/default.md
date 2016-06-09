@@ -97,7 +97,7 @@
         }
         .navbar
         {
-            height:16px !important;
+            height:unset !important;
         }
         .navbar-header
         {
