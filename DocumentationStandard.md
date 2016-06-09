@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Format
 Having documentation in one large piece would make its structure too rigid. Maintenance and online navigation would be impractical. Instead, it's split into small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:

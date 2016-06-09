@@ -3,6 +3,8 @@ title: (DB-driven browser automation)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Hands-on browser automation
 

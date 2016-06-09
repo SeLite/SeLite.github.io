@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Support scope #
 SeLite doesn't support functionality of related components and technologies (Selenium IDE, SelBlocks, SQLite, Firefox, Selenium selectors, XPath, Javascript...). See also [AboutDocumentation](AboutDocumentation) > [Documentation scope](AboutDocumentation#documentation-scope).

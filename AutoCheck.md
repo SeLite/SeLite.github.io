@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Automatic checks #
 [AutoCheck](https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/), one of SeLite [Components](Components), validates the current page after every successful Selenese [command]. (That is not necessarily on every page reload - e.g. it may skip pages that redirect.) You can use some standard checks (with optional configuration) or create custom ones.

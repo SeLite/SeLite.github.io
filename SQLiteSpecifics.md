@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Operator LIKE and case sensitivity #
 In SQLite, operator LIKE matches case-insensitively. By default that applies to ASCII characters only; see below for more details on Unicode.

@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # General notes #
   * Design and code for clarity, simplicity and robustness (but within reason). Don't optimise minor parts or if optimisation adds much complexity.

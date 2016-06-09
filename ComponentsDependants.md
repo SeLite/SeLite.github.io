@@ -3,6 +3,8 @@ title: (dependencies within SeLite)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 Following shows direct dependencies between Firefox [Components](Components) that form SeLite. You don't need to read this if you use all SeLite components.
 

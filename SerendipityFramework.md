@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 The example [script] logs in as an admin and creates a user with random credentials and settings. It logs in as that user and posts and validates random content. It stores user settings preferences (e.g. preference for WYSIWYG) in the [script DB]. It validates that the application honours those settings.
 

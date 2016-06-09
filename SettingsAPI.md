@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # SeLite Settings API #
 Operate SeLite Settings-managed configurations through API. See [its source](https://github.com/SeLite/SeLite/tree/master/settings/src/chrome/content/SeLiteSettings.js). In [Core extensions][core extension] access it through object `SeLiteSettings`. In other scopes, e.g. Selenium [IDE extensions][ide extension] or code modules (as per {{navJavascriptCodeModules}}), call

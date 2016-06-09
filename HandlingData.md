@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 This explains how a web app and Selenese [scripts][script] can operate with separate databases ([TestMethodsTheory](TestMethodsTheory) > [Web app and its test have separate DBs](TestMethodsTheory#web-app-and-its-test-have-separate-dbs)).

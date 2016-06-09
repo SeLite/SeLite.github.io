@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Scope
 We document only what is not self-explanatory. We describe the mainstream use cases, handled in the most common ways. For more information see [PackagedScripts](PackagedScripts) or the source code. Then you can experiment.

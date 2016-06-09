@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 It's a bad practice to hard-code [script] logins in your [scripts][script] or components. SeLite helps you to make it flexible, but it can't do all the work for you.

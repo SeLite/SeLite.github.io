@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Overview #
 SelBlocks Global (one of SeLite [Components](Components)) is an enhancement of [SelBlocks](https://github.com/refactoror/SelBlocks/). It enables 

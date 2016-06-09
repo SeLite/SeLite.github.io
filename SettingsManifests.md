@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Purpose of manifests #
 Manifests connect [suites][suite] to configuration sets, or they define configuration values. They let you define

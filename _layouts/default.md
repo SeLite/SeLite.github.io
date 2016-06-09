@@ -1,4 +1,3 @@
-{% include toc %}
 <!doctype html>
 <html xml:lang="en" lang="en">
   <head>
@@ -104,6 +103,8 @@
             if (window.location.hash) {
                 shiftWindow();
             }
+            $( '#markdown-toc' ).appendTo( '#toc-mobile-div' );
+            $( '#markdown-toc' ).clone().appendTo( '#toc-desktop-div' );
         }
     </script>
   </head>
@@ -127,8 +128,6 @@
       <ul class="nav navbar-nav">
         <li id="toc-mobile-button"><a data-toggle="collapse" href="#toc-mobile-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
             <div id="toc-mobile-div" class="collapse">
-                {% comment %}See the other toc below. Following replaces <ul> ID just to be consistent with markdown-toc-desktop. {% endcomment %}
-                {{ toc | replace: 'markdown-toc', 'markdown-toc-mobile' }}
             </div>
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
@@ -137,8 +136,6 @@
       </ul>
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">
-        {% comment %}Replace ID of the <ul>, otherwise CSS rules didn't apply to the following (because of a duplicate ID). I could have used Javascript to clone the above toc, change <ul> ID here, but it could complicate the client side. {% endcomment %}
-        {{ toc | replace: 'markdown-toc', 'markdown-toc-desktop' }}
     </div>
   </div><!-- /.container-fluid -->
 </nav>

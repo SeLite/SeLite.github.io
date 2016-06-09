@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Scope and downloads #
 This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [Components](Components) yet, getting them from source (which you'll need anyway) may be faster.

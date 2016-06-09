@@ -2,7 +2,10 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
+# Overview
 [SeLite Commands](https://addons.mozilla.org/en-US/firefox/addon/selite-commands/), one of SeLite [Components](Components), provides several Selenese commands and related functionality.
 
 # Robust commands #

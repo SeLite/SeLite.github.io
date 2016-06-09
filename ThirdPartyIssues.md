@@ -2,6 +2,8 @@
 layout: default
 rss: http://www.feed43.com/selite-third_party_issues.xml
 ---
+* TOC
+{:toc}
 
 # Your vote is significant #
 Below is a list of issues (or pull requests) in Selenium IDE, Firefox and third party software that complicate maintenance and progress of SeLite. They also restrict usability of Selenium IDE. Many of them were reported by other people, but they affect SeLite, too. Some of those defects and requests even have fixes proposed, but not accepted by the third party.

@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Packaged scripts
 Packaged scripts are Selenese [scripts][script] together with any [Settings](Settings) and optional local `.html` forms/pages. They usually also use a framework.

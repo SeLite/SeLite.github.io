@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Accessing the interface of SeLiteSettings #
 Two most frequent use cases are available in Selenium IDE menu > Options. They link to `tree.xul` and `tree.xul?selectFolder` (see below). Changes are immediate: if you change a field's value, or delete a set, it's saved right then.
