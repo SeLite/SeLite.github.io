@@ -29,7 +29,8 @@
     {% assign pageName = './' %}
     {% assign pageNameInTitleBar= 'Overview' %}
 {% endif %}
-    <title>SeLite > {{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}</title>
+    {% capture pageNameInTitleBar %}{{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}{% endcapture %}
+    <title>SeLite > {{pageNameInTitleBar}}</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
@@ -138,7 +139,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu"><img alt="SeLite logo" src="favicon-16x16.png" width="16" height="16"/> {{ page.title }}</p>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu"><img alt="SeLite logo" src="favicon-16x16.png" width="16" height="16"/> {{ pageNameInTitleBar }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

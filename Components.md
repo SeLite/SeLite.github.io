@@ -1,5 +1,5 @@
 ---
-title: (Firefox extensions)
+title: (Install)
 layout: default
 ---
 {% include links %}
