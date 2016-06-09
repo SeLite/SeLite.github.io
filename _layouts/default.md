@@ -31,8 +31,8 @@
 {% endif %}
     <title>SeLite > {{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <style type="text/css">
         /* Based on http://getbootstrap.com/css/#grid-media-queries - @screen-sm-min */
         @media (max-width: 767px) {
@@ -88,7 +88,25 @@
         }
         body .navbar {
             margin-bottom: 2px;
-            min-height: 30px;
+            min-height: 18px;
+        }
+        p#toc-mobile-title.navbar-text {
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .navbar
+        {
+            height:16px !important;
+        }
+        .navbar-header
+        {
+            min-height:16px !important;
+        }
+        button.navbar-toggle {
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
     </style>
     <script type="text/javascript">
@@ -142,7 +160,7 @@
     {{ content }}
 <!-- Based on http://getbootstrap.com/components/#navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         // After clicking at a link from Table of Contents, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
         $( "#toc-mobile-div a" ).click(
