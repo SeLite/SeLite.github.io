@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 [SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [Components](Components), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.

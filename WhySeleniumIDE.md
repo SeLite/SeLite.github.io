@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Similarities between Selenium IDE and WebDriver #
 [Selenium](http://seleniumhq.org) - both [Selenium IDE](http://docs.seleniumhq.org/projects/ide/) and [WebDriver](http://seleniumhq.org/projects/webdriver) - automates operation of web browser. It usually doesn't need any modification of the web application. Both alternatives run automation scripts that control the browser (as if it were operated by a human). They

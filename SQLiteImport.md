@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+* TOC
+{:toc}
 
 ## Overview ##
 This converts a backup of your database to SQLite. It does not (and it will not) connect to your DB. For now

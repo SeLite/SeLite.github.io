@@ -3,7 +3,10 @@ title: (for FUDforum 3)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
+# Overview
 The example script logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.
 
 # Install FUDforum 3 #

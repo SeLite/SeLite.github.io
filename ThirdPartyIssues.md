@@ -2,6 +2,8 @@
 layout: default
 rss: http://www.feed43.com/selite-third_party_issues.xml
 ---
+* TOC
+{:toc}
 
 # Your vote is significant #
 Below is a list of issues (or pull requests) in Selenium IDE, Firefox and third party software that complicate maintenance and progress of SeLite. They also restrict usability of Selenium IDE. Many of them were reported by other people, but they affect SeLite, too. Some of those defects and requests even have fixes proposed, but not accepted by the third party.
@@ -20,8 +22,6 @@ Use the following links to register with third parties, disable email notificati
 Update the following links whenever you update the detailed list.
 How to get the links for GitHub: I couldn"t make it search by pairs of [repository, issue #]. Therefore
 https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=%E2%9C%93. To edit that search, visit this link and then follow "Advanced search" link from that screen.
-
-Filter multiple GitHub pull requests by commit # and 'OR': https://github.com/Thiht/markdown-viewer/issues?utf8=%E2%9C%93&q=213d5645af8+OR++f6269e7a3+
 -->
 <script type="text/javascript">
 function goToYourGitHubComments( repositoryUser, repositoryProject ) {
@@ -35,7 +35,6 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 |:---------------------|:--------------|:-------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:------------------------------|:-------------------|
 | _Projects on GitHub_ | _GitHub_      | [GitHub registration](https://github.com/join)                           | [GitHub notifications](https://github.com/settings/notifications) | (see below) | https://github.com/search?type=Issues&utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="var username=prompt('What is your GitHub username?'); if(username) { window.location= 'https://github.com/search?type=Issues&utf8=✓&q=commenter%3A' +escape(username); }">your comments</a> |
 | Selenium             | GitHub        |             |                                               |  (see below) | https://github.com/seleniumHQ/selenium/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('seleniumHQ', 'selenium')">your comments</a> |
-| Markdown Viewer      | GitHub        |  |  | [Markdown Viewer feature](https://github.com/Thiht/markdown-viewer/pull/39) | https://github.com/Thiht/markdown-viewer/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('Thiht', 'markdown-viewer')">your comments</a> |
 | Selblocks            | GitHub        |  |  | [Selblocks issues](https://github.com/search?q=repo%3Arefactoror%2FSelBlocks+label%3Aquestion+author%3Apeter-kehl&ref=searchresults&type=Issues&utf8=✓) | https://github.com/refactoror/SelBlocks/issues?utf8=✓&q=commenter%3A**your-github-user-name** <br/><a href="#" onclick="goToYourGitHubComments('refactoror', 'Selblocks')">your comments</a> |
 | _Projects outside of GitHub_ | | | | | | |
 | Mozilla              | Mozilla       | [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi)              | [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email)                  | [Mozilla issues](https://bugzilla.mozilla.org/buglist.cgi?quicksearch=ALL+bug_id%3A396966%2C406629%2C962861%2C852837%2C837961%2C627808%2C929703%2C932578%2C891774%2C278536%2C1031985%2C1051632%2C1108132%2C1096135%2C1071816%2C1247476) | [Mozilla votes](https://bugzilla.mozilla.org/page.cgi?id=voting/user.html) |
@@ -74,7 +73,6 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [IDE: alert() fails in a modified test case](https://github.com/SeleniumHQ/selenium/issues/1768)                                 | Selenium        | Reliable automation |
 | [IDE: a subsequent call to open() fails with multiprocessed Firefox (e10s)](https://github.com/SeleniumHQ/selenium/issues/1769)  | Selenium | Major Firefox Compatibility |
 | [XPath 2.0](https://bugzilla.mozilla.org/show_bug.cgi?id=396966)                                                                 | Mozilla         | Robust tests.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) |
-| [Support for local .md links. Support for GitHub page-style links...](https://github.com/Thiht/markdown-viewer/pull/39)          | Markdown Viewer | Offline access to documentation |
 | [Breakpoint triggers on code that doesn't run...](https://bugzilla.mozilla.org/show_bug.cgi?id=1051632)                          | Mozilla         | Productive development |
 | [Sidebars  (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629)              | Mozilla         | GUI usability |
 | [Allow sidebar to be selected and turned on/off independently](https://bugzilla.mozilla.org/show_bug.cgi?id=962861)              | Mozilla         | GUI usability |

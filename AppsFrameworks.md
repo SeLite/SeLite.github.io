@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 Below are some web applications or frameworks which can run with SQLite DB. That makes them SeLite ideal ideal for them, since they can fully benefit from {{navReloadingDatabases}}.
 

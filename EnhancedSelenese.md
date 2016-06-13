@@ -3,6 +3,8 @@ title: (syntax)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Overview
 When compared to [ClassicSelenese](ClassicSelenese), automation scripts with SeLite are shorter and clearer.

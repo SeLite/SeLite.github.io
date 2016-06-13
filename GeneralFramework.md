@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # What an SeLite framework is
 An SeLite framework is on optional layer, that encapsulates low-level application-specific components. Those are mostly Javascript structures and Selenese functions.

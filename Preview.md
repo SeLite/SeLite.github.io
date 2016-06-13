@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Overview
 Preview presents custom HTML reports or forms. It allows Selenese scripts to interact with the user. It can collect confirmation, selection or data entry. When the user operates Preview, it can trigger Selenese commands. That subsequent processing executes like classic Selenese run. The user can pause, stop or debug it.

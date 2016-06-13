@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Using DB filters #
 Does your app use RDBMS other than SQLite and would you like your [scripts][script] to have a copy of it? Then you want to export the data from your [app DB] to SQLite. For that you need

@@ -4,6 +4,8 @@ layout: default
 ---
 {% include links %}
 {::options auto_id_stripping="true" /}
+* TOC
+{:toc}
 
 # Add-ons for running and development of Selenese scripts
 Following add-ons are for development of Selenese [scripts][script]. For the easiest download get all add-ons of [SeLite Third Party collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-third-party/).

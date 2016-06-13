@@ -3,6 +3,8 @@ title: (Automated reloading of custom Selenium Core)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 [SeLite Bootstrap](https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/), one of SeLite [Components](Components), allows smoother development of Selenium [Core extensions][Core extension] (just in plain Javascript files, not packaged as `.xpi`). It reloads them automatically on change.

@@ -3,6 +3,8 @@ title: (GUI notes/tips)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary and scope
 These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop [scripts][script], frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).

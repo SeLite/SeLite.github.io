@@ -3,6 +3,8 @@ title: (syntax)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary and scope
 These notes on Selenese syntax are on top of [Selenium documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). See [EnhancedSelenese](EnhancedSelenese) on how SeLite improves it.

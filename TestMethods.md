@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # About the diagrams and descriptions #
 Time axis is vertical, from up downwards. Steps are grouped in runs, which are separated by a vertical dotted line.

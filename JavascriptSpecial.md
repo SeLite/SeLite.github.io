@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+* TOC
+{:toc}
 
 # Locating a Javascript function in sources #
 There are various ways of how to define/set/override a function in Javascript (usually through setting it as if it were a field on the class prototype object). So if you need to debug/modify/extend a function, it may not be easy to locate. You can use the following regular expressions to find definition(s) of a function (if implemented in one of the common ways). Replace `FUNCTION` with the name of the function.

@@ -1,4 +1,3 @@
-{% include toc %}
 <!doctype html>
 <html xml:lang="en" lang="en">
   <head>
@@ -30,10 +29,11 @@
     {% assign pageName = './' %}
     {% assign pageNameInTitleBar= 'Overview' %}
 {% endif %}
-    <title>SeLite > {{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}</title>
+    {% capture pageNameInTitleBar %}{{pageNameInTitleBar}}{% if page.title != null %} {{ page.title }}{% endif %}{% endcapture %}
+    <title>SeLite > {{pageNameInTitleBar}}</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
     <style type="text/css">
         /* Based on http://getbootstrap.com/css/#grid-media-queries - @screen-sm-min */
         @media (max-width: 767px) {
@@ -89,7 +89,25 @@
         }
         body .navbar {
             margin-bottom: 2px;
-            min-height: 30px;
+            min-height: 18px;
+        }
+        p#toc-mobile-title.navbar-text {
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .navbar
+        {
+            height:unset !important;
+        }
+        .navbar-header
+        {
+            min-height:16px !important;
+        }
+        button.navbar-toggle {
+            padding: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
         }
     </style>
     <script type="text/javascript">
@@ -104,6 +122,8 @@
             if (window.location.hash) {
                 shiftWindow();
             }
+            $( '#markdown-toc' ).appendTo( '#toc-mobile-div' );
+            $( '#markdown-toc' ).clone().appendTo( '#toc-desktop-div' );
         }
     </script>
   </head>
@@ -119,7 +139,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu"><img alt="SeLite logo" src="favicon-16x16.png" width="16" height="16"/> {{ page.title }}</p>
+      <p class="navbar-text" id="toc-mobile-title" data-toggle="collapse" data-target="#navbar-menu"><img alt="SeLite logo" src="favicon-16x16.png" width="16" height="16"/> {{ pageNameInTitleBar }}</p>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -127,8 +147,6 @@
       <ul class="nav navbar-nav">
         <li id="toc-mobile-button"><a data-toggle="collapse" href="#toc-mobile-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
             <div id="toc-mobile-div" class="collapse">
-                {% comment %}See the other toc below. Following replaces <ul> ID just to be consistent with markdown-toc-desktop. {% endcomment %}
-                {{ toc | replace: 'markdown-toc', 'markdown-toc-mobile' }}
             </div>
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
@@ -137,15 +155,13 @@
       </ul>
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">
-        {% comment %}Replace ID of the <ul>, otherwise CSS rules didn't apply to the following (because of a duplicate ID). I could have used Javascript to clone the above toc, change <ul> ID here, but it could complicate the client side. {% endcomment %}
-        {{ toc | replace: 'markdown-toc', 'markdown-toc-desktop' }}
     </div>
   </div><!-- /.container-fluid -->
 </nav>
     {{ content }}
 <!-- Based on http://getbootstrap.com/components/#navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         // After clicking at a link from Table of Contents, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
         $( "#toc-mobile-div a" ).click(

@@ -1,8 +1,10 @@
 ---
-title: (Firefox extensions)
+title: (Install)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Quick download
 <!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->

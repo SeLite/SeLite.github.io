@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Status #
 This add-on is a work in progress. Currently it works only for Selenese commands `type` and `typeRandom`.

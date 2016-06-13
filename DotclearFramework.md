@@ -3,6 +3,8 @@ title: (for Dotclear 2.6.3)
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Install Dotclear 2.6.3 #
 This is what worked on Fedora 20. The example [script] logs in as an admin and creates a user with random credentials. It logs in as that user and posts and validates random content.

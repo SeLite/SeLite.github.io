@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Optional parameters of functions #
 Javascript doesn't allow a function to specify a default value for a parameter. When calling a function and not specifying one or several parameters, they are `undefined`. Use strict comparison operator === to compare with `undefined`. Do not compare for that by non-strict operator == (since `undefined` non-strictly equals to `false, null, 0` and "", i.e. `undefined==true`).

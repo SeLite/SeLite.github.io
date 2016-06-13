@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Expect complexity #
 This technology works with third party components and many variables. You can reduce amount of misunderstanding (for you and others) by providing and following clear and exact steps. Do not assume or simplify what seems obvious, duplicated or unnecessary.

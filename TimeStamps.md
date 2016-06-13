@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 Most web apps display timestamps - when a record/item/comment... was created, modified or deleted. Good automation or QA should deal with timestamps between its scripts and the app even if

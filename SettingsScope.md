@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Level of applying configurations and manifests #
 Configurations have effect on [suites][suite], rather than to specific [cases][case]. That's because an automation case can call Selenese function from another [case] (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those [cases][case] were associated with different configurations.

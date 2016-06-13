@@ -2,6 +2,8 @@
 layout: default
 ---
 {% include links %}
+* TOC
+{:toc}
 
 # Summary #
 This describes and compares ways of test automation and its data. See also  pictures at [TestMethods](TestMethods).
