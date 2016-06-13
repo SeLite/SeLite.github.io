@@ -23,7 +23,7 @@ For the easiest download get all add-ons of [SeLite Development Tools collection
  * [AMO admin assistant](https://addons.mozilla.org/en-US/firefox/addon/amo-admin-assistant/)
  * [DOM Inspector](https://addons.mozilla.org/en-US/firefox/addon/dom-inspector-6622/)
  * [DevPrefs](https://addons.mozilla.org/en-US/firefox/addon/devprefs/). If you don't install DevPrefs, visit Firefox URL _about:config_ and set the following preferences:
-
+  * `xpinstall.signatures.required` to boolean `false`
   * `browser.dom.window.dump.enabled` to boolean `true`
   * `devtools.chrome.enabled` to boolean `true`
   * `devtools.debugger.remote-enabled` to boolean `true`
