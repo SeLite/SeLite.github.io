@@ -103,7 +103,7 @@ Custom Core file(s) get first loaded at the start of Selenium IDE. Then they get
 This doesn't affect Javascript code modules (accessed via `Components.utils.import( 'chrome://...', optionalScope )`) - those get loaded once only. If you use [Bootstrap](Bootstrap) to load your extension(s) and you modify them while debugging, browser debugger will probably not refresh them.
 
 #### Source of functions ####
-If you inspect a variable that refers to a function (including a function field of an object/prototype), browser debugger doesn't list `toSource()` on the function object by default. You have to add it to Watch pane. But you shouldn't need this if you apply [JavascriptEssential](JavascriptEssential) > [Avoid nameless functions](JavascriptEssential#avoid-nameless-functions).
+If you inspect a variable that refers to a function (including a function field of an object/prototype), browser debugger doesn't list `toSource()` on the function object by default. You have to add it to Watch pane.
 
 ### Selenium IDE settings
 When developing Selenium extensions, you'll most likely benefit from unchecking the following two options in Selenium IDE > Options > Options... > Plugins (as per [TroubleShooting](TroubleShooting) > [Loading Selenium plugins](TroubleShooting#loading_selenium_plugins)):

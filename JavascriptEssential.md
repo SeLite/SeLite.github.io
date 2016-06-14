@@ -56,53 +56,8 @@ function myFunction( param, anotherParam... ) {
 ## By function expression ##
 This applies [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). It generates [closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#Closures), functions that can access non-global variables from outside their scope (i.e. from the scope that contains that `function` expression). See examples below, at [Isolate the local scope](#isolate-the-local-scope) and {{navFunctionIntercepts}}.
 
-### Avoid nameless functions ###
-This only applies to definitions by [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function). That's useful for adding/defining functions
-
-  * on existing objects,
-  * on existing prototypes or
-  * [in the passed global scope](#passing-the-global-scope).
-  * that follow {{navStrictJavascript}}, where this the only way of defining functions from within other function or blocks.
-
-The following three definitions use function expression. However, they are all nameless.
-
-```javascript
-"use strict";
-var myFunction= function( param... ) { ... };
-
-var myNameSpace= {};
-myNameSpace.anotherFunction= function( param... ) { ... };
-
-var object= {
-    memberFunction: function( param... ) { ... }
-};
-```
-
-Such functions don't have a name. That doesn't affect the functionality, but:
-
-  * It makes debugging (as per [DevelopmentTools](DevelopmentTools) > [Browser Toolbox](DevelopmentTools#browser_toolbox)) more difficult. In debugger's call stack, it shows these names. If you don't give a function a name, then you or others need to locate it by the source line.
-  * For nameless constructors (i.e. functions that define classes):
-    * If you inspect their instances, you need to add their `.constructor.toSource()` to the Watch pane (as per [DevelopmentTools](DevelopmentTools) > [Source of functions](DevelopmentTools#source-of-functions)).
-    * Their instances don't work with `SeLiteMisc.isInstance()`.
-
-Prevent that by creating a named function (with the desired name) via [Named function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function#Named_function_expression) and assign it to the target symbol. E.g.
-
-```javascript
-"use strict";
-var myFunction= function myFunction( param... ) { ... };
-
-var myNameSpace= {};
-myNameSpace.anotherFunction= function anotherFunction( param... ) { ... };
-
-var object= {
-    memberFunction: function memberFunction( param... ) { ... }
-};
-```
-
-You don't need to name functions that exist only to [isolate the local scope](#isolate-the-local-scope). Indeed, you can't name functions defined with [JavascriptComplex](JavascriptComplex) > [ECMAScript 6 and 7](JavascriptComplex#ecmascript-6-and-7) > Arrow functions.
-
-#### Special function names ####
-A function name "hides" any outer symbol with the same name. Hence, a function can't have the name same as any outer symbolcs (variables or functions) that it accesses.
+### Special function names ###
+A function name "hides" any outer symbol with the same name. Hence, a function can't have the name same as any outer symbols (variables or functions) that it accesses.
 
 ```javascript
 var mySymbol= "hi";
@@ -120,18 +75,8 @@ result= (function mySymbol() {
 alert( typeof result ); // => "function"
 ```
 
-## Be careful with assigned/passed functions created the classic way ##
-You could split the above suggested approach into a function definition ([the classic way](#the-classic-way)) and an assignment. E.g.
-
-```javascript
-"use strict";
-function f() {return 1;}
-var fn= f;
-```
-
-However, you shouldn't need that - if you assign it, use that variable to invoke (or access) the function.
-
-Even worse, if you later redefine a function within the same scope, the new definition will apply to wherever you've assigned the old definition earlier! See:
+## Redefining functions the classic way ##
+If you redefine a function within the same scope, the new definition will apply to wherever you've assigned the old definition! See:
 
 ```javascript
 "use strict";
@@ -139,12 +84,11 @@ function f() {return 1;}
 var first=f;
 
 function f() { return 2;}
-var second=f;
 
 first(); // This returns 2 rather than 1!
 ```
 
-That's when you have two or more definitions of the function with the same name (within the same scope), even though you save it to a different variable or to a different object/prototype. This can happen if you extend the existing code and you've forgot what methods there were already, or if someone else extends your code. It creates highly confusing conflicts.
+That's when you have two or more definitions of the function with the same name (within the same scope), even though you save it to a different variable or to a different object/prototype. This can happen if you extend the existing code and you forget to check what methods there were already, or if someone else extends your code. It creates highly confusing conflicts.
 
 # Isolate the local scope
 Often, functions need variables/symbols that are global-like (or static-like), but you don't want such symbols in the global scope. This applies mostly to [Core extensions][core extension] (which share the [Core scope]), including SeLite frameworks (as in GeneralFramework](GeneralFramework)). (Javascript code modules have separate scopes, so they don't need this.)
