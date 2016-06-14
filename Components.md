@@ -47,7 +47,7 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li>third party documentation</li>
             <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
         </ul>
-        <span markdown="span">{{chromeUrl}}s only work after you install the add-on in Firefox</span>
+        <span markdown="span">{{chromeUrl}}s only work after you install the component in Firefox</span>
     </td>
     <td><strong>Other</strong></td>
 </tr>
@@ -306,4 +306,4 @@ To get the latest releases, use the `download` links below for recent releases. 
 </table>
 
 # Cutting edge
-If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). Also, installing the add-ons that way may be faster than downloading them one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
+If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). That way may be faster than downloading components one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.

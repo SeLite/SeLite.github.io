@@ -109,19 +109,7 @@ However, that would flood the client's namespace with no obvious benefit. It wou
 ### Dependent Javascript code modules ###
 A Javascript code module can depend on one or more other code modules. If the dependent functionality is optional, wrap any respective code, e.g. calls to `Components.utils.import()`, in a `try{..}` statement, so that clients can still use the essential functionality even without the optional module.
 
-Also, two or more Javascript code modules can depend on each other cyclically. That can be required (for essential functionality), each one requiring the other(s), or optional (for some functionality only). Make sure a code module defines `EXPORTED_SYMBOLS` and any symbols required by its cyclic dependent code module(s) before it loads those dependants via `Components.utils.import()`. See sources of `SeLiteSettings` and `SeLiteData.Storage`. TODO links.
-
-## CommonJS modules in the future ##
-This is a new approach to Javascript modules - [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1). Firefox offers it for add-ons, but it documented it only in December 2013 (at [Module structure of the SDK](https://developer.mozilla.org/en-US/Add-ons/SDK/Guides/Module_structure_of_the_SDK)).
-
-SeLite depends on Firefox-specific Javascript features and on Selenium IDE, which is for Firefox only. Due to high number of existing user extensions, Firefox will most likely support its classic way of code modules for years. So there is no urgent need to migrate SeLite to CommonJS.
-
-In order to move towards CommonJS we'd need to:
-
-  * migrate the documentation to use JSDoc 3 [@module tag](http://usejsdoc.org/tags-module.html) (more at [JSDoc CommonJS support](http://usejsdoc.org/howto-commonjs-modules.html)). However, JSDoc 3 is not supported by [NetBeans 7.3](https://netbeans.org/kb/73/ide/javascript-editor.html#jsdoc_support) (not sure about newer versions). Until then the JSDoc documentation would not show up in NetBeans.
-  * have NetBeans code navigation to recognise CommonJS notation.
-
-The migration may not change [ExtensionSequencer](ExtensionSequencer) mechanism, since that resolves the order of activating [extensions of Selenium IDE][extension of Selenium IDE], and not the order of loading Javascript code modules.
+Also, two or more Javascript code modules can depend on each other cyclically. That can be required (for essential functionality), each one requiring the other(s), or optional (for some functionality only). Make sure a code module defines `EXPORTED_SYMBOLS` and any symbols required by its cyclic dependent code module(s) before it loads those dependants via `Components.utils.import()`. See sources of `SeLiteSettings` and `SeLiteData.Storage`. <!--TODO links.-->
 
 # Class inheritance #
 There are many ways of class inheritance in Javascript. Follow [Mozilla way](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript#Inheritance) with `Object.create()`. E.g.:

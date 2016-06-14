@@ -9,7 +9,7 @@ You need SeLite source to get [AppsFrameworks](AppsFrameworks) and [PackagedScri
 
 There are repositories for
 
-* all add-ons (except for [SelBlocksGlobal](SelBlocksGlobal)) and frameworks
+* all components (except for [SelBlocksGlobal](SelBlocksGlobal)) and frameworks
 * [SelBlocksGlobal](SelBlocksGlobal)
 * documentation (you can view it offline as per [AboutDocumentation](AboutDocumentation)).
 
@@ -20,19 +20,16 @@ There are repositories for
 | Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git | [Updates (feed)](https://github.com/SeLite/SeLite.github.io/commits/master.atom) |
 {: .table}
 
-# Install add-ons from source #
-(If you've already installed any SeLite add-ons from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `SeLite\setup_proxies.bat` and `SeLBlocksGlobal\setup_proxy.bat` (or `SeLite/setup_proxies.sh` and `SeLBlocksGlobal/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
+# Install components from source #
+(If you've already installed any SeLite components from downloads, uninstall them and restart Firefox. Only then apply the next steps.) Run `SeLite\setup_proxies.bat` and `SeLBlocksGlobal\setup_proxy.bat` (or `SeLite/setup_proxies.sh` and `SeLBlocksGlobal/setup_proxy.sh` on Mac OS/Linux). You can provide a Firefox profile name as a parameter, otherwise it uses `default` profile. After setting up proxy files, start Firefox (with that profile).
 
-On Windows (and probably on Mac OS, too):
-
-  * you may need to accept add-ons
-  * verify that all SeLite add-ons are enabled at Firefox menu > Tools > Add-ons > Extensions.
+You may need to accept components (add-ons). Verify that all SeLite components are enabled at Firefox menu > Tools > Add-ons > Extensions.
 
 Visit Firefox chrome URL _about:config_. Find or create a preference with name `xpinstall.signatures.required` and set it to `false`. (See [MDN Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)). <!-- Also see https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct and https://wiki.mozilla.org/Add-ons/Extension_Signing -->
 
 Restart Firefox.
 
-Add-ons set up this way won't receive any updates. You'll need to run `GIT pull` (or download a new `.zip` file and extract it at the same location).
+Components set up this way won't receive any updates. You'll need to run `GIT pull` (or download a new `.zip` file and extract it at the same location).
 
 # Install Selenium IDE from source #
 You'd need this only for debugging Selenium IDE, or custom add-ons that override it.

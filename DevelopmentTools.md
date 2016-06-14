@@ -21,7 +21,7 @@ This is for developing [Core extensions][core extension] and SeLite frameworks (
   * [Debugging Extensions (MDN)](https://developer.mozilla.org/en-US/docs/Building_an_Extension#Debugging_Extensions)
   * [TroubleShooting](TroubleShooting)
 
-For the easiest download get all add-ons of [SeLite Development Tools collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-development-tools/). Otherwise install
+For the easiest download get all components of [SeLite Development Tools collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-development-tools/). Otherwise install
 
  * [AMO admin assistant](https://addons.mozilla.org/en-US/firefox/addon/amo-admin-assistant/)
  * [DOM Inspector](https://addons.mozilla.org/en-US/firefox/addon/dom-inspector-6622/)

@@ -46,7 +46,7 @@ Following are qualities of Selenium IDE and WebDriver, as relevant to SeLite. (+
           * applications often allow multiple themes
           * the actual look varies with application state, screen size, device, browser and system
     * (+) there are many third party add-ons, which enhance the language and GUI of Selenium IDE (but not of WebDriver)
-    * (+) it uses only Javascript (rather than multiple languages as handled by WebDriver) for add-ons. Using single technology means a bigger group of developers and users. That gives more traction for progress.
+    * (+) it uses only Javascript (rather than multiple languages as handled by WebDriver). Using single technology means a bigger group of developers and users. That gives more traction for progress.
     * (+) all components are distributed in source code, rather than in compiled form. Upgrades don't involve any compilation/re-build on user's side.
     * (+) you can package your custom functionality as add-ons, and
       * have them checked for security by Mozilla (whether you make them public or not)

@@ -45,7 +45,7 @@ SeLite enables the following in Selenium IDE
   * see also [tips on Selenium IDE](SeleniumIDE) productivity.
 
 # Install
-SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [Components](Components) (Selenium IDE and add-ons of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
+SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [Components](Components) (Selenium IDE and components of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
 ## Frameworks
 When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedScripts](PackagedScripts) on how to run demos. See also [Customisation](index#customisation) below.

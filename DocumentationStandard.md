@@ -80,10 +80,10 @@ Don't use [Kramdown-specific header IDs](http://kramdown.gettalong.org/syntax.ht
 ## Generating raw links
 GitHub doesn't serve raw versions of most file types with their MIME, except for images. So we use [htmlpreview.github.io](http://htmlpreview.github.io) for `.html` files. For any other files, e.g. `.xml, .xsl` or `.js`, use [rawgit.com](http://rawgit.com).
 
-In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. So we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. So if you change e.g. `add-on's-name/src/chrome/content/reference.xml` or `extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl`, then update its _cdn.rawgit.com_ URLs to use the new commit hash or tag.
+In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. Therefore we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. If you change e.g. `component's-name/src/chrome/content/reference.xml` or `extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl`, then update its _cdn.rawgit.com_ URLs to use the new commit hash or tag.
 
 ### Updating links to cdn.rawgit.com
-Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button. The URL will start with _https://raw.githubusercontent.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<add-on's-name\>/src/chrome/..._
+Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button. The URL will start with _https://raw.githubusercontent.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._
 
 Apply similar steps to SelBlocksGlobal.
 <!--TODO

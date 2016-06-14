@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Status #
-This add-on is a work in progress. Currently it works only for Selenese commands `type` and `typeRandom`.
+This component is a work in progress. Currently it works only for Selenese commands `type` and `typeRandom`.
 
 # Overview #
 Modern web pages assist you to prevent unintended loss of the data that you entered. When you edit a form but you don't submit it and then you try to close the tab (or the window or the browser), or you try to navigate away from the screen (following links or typing a new URL), the page asks you to confirm your intention. In Firefox it says 'This page is asking you to confirm that you want to leave - data you have entered may not be saved.' and it gives you a choice of two buttons: 'Stay on Page' and 'Leave Page'. (You won't be able to close the tab/window or even Firefox unless you click at one of those buttons, or unless you close Firefox forcibly). The application asks for that confirmation in a handler for [window.onbeforeunload()](https://developer.mozilla.org/en-US/docs/WindowEventHandlers.onbeforeunload).
@@ -18,7 +18,7 @@ Also, say you have an application that attracts your attention (e.g. an alert fr
 ExitConfirmationChecker helps your [scripts][script] to validate that the application asks for this confirmation exactly when it should. (It doesn't add any Selenese commands.)
 
 # What it does for you #
-This add-on suppresses the confirmation dialog activated from `window.onbeforeunload()`. If that's all you need, use mode `ignored`. The other two active modes `includeRevertedChanges` and `skipRevertedChanges` also verify (or assert) whether the confirmation popup would show up (or would not show up) as it should.
+This component suppresses the confirmation dialog activated from `window.onbeforeunload()`. If that's all you need, use mode `ignored`. The other two active modes `includeRevertedChanges` and `skipRevertedChanges` also verify (or assert) whether the confirmation popup would show up (or would not show up) as it should.
 
 ## Out-of-the-box ##
 Out-of-the-box ExitConfirmationChecker only handles
