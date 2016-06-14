@@ -19,13 +19,13 @@ Alternatively, if you want only some of SeLite components, install [Selenium IDE
 Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
 
 # Latest releases
-Background: All updates of add-ons are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the add-ons, you won't get an automatic update until then either.
+Background: All updates of components (add-ons) are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the components, you will get an automatic update with a delay.
 
 To get the latest releases, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
 {::options parse_block_html="true" /}
 
-# Details on add-ons
+# Details on components
 {% comment %}Keep the following table sorted alphabetically. Using options parse_block_html="true" didn't help, so links are in HTML.{% endcomment %}
 <table class="table">
 <tbody>
