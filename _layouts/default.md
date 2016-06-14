@@ -124,6 +124,18 @@
             }
             $( '#markdown-toc' ).appendTo( '#toc-mobile-div' );
             $( '#markdown-toc' ).clone().appendTo( '#toc-desktop-div' );
+            
+            // After clicking at a link from Table of Contents, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
+            $( "#toc-mobile-div a" ).click(
+                function() {
+                    $("#navbar-menu").toggleClass("in");
+                }
+            );
+            $( "#toc-desktop-div a" ).click(
+                function() {
+                    $("#toc-desktop-div").toggleClass("in");
+                }
+            );
         }
     </script>
   </head>
@@ -163,18 +175,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-        // After clicking at a link from Table of Contents, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
-        $( "#toc-mobile-div a" ).click(
-            function() {
-                $("#navbar-menu").toggleClass("in");
-            }
-        );
-        $( "#toc-desktop-div a" ).click(
-            function() {
-                $("#toc-desktop-div").toggleClass("in");
-            }
-        );
-
         // Following enables both GitHub page-like links (with no .md at the end) and running Jekyll locally. It's because for each page Abc.md Jekyll generates Abc.html. GitHub pages support both URLs Abc and Abc.html; however, we use Abc since it seems clearer and more Markdown-compatible.
         // @TODO Remove once Jekyll 3 is common. See https://github.com/jekyll/jekyll/pull/3452.
         // A reverse of http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages/16389663#16389663. See also https://github.com/github/pages-gem/issues/69.
@@ -197,7 +197,7 @@
                 });
             });
         }
-        
+        /*
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -205,6 +205,7 @@
 
   ga('create', 'UA-62560081-1', 'auto');
   ga('send', 'pageview');
+*/
     </script>
   </body>
 </html>
