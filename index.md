@@ -47,6 +47,8 @@ SeLite enables the following in Selenium IDE
 # Install
 SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [Components](Components) (Selenium IDE and components of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
+See [Compatibility](#compatibility) regarding Opera and Chrome.
+
 ## Frameworks
 When using complex scripts you need a framework. Several come with SeLite and are listed at [AppsFrameworks](AppsFrameworks). Follow [InstallFramework](InstallFramework) and any framework-specific steps. Read [PackagedScripts](PackagedScripts) on how to run demos. See also [Customisation](index#customisation) below.
 
@@ -83,9 +85,9 @@ When customising or creating frameworks or components for Selenium IDE, followin
  * [Components](Components) are verified by Mozilla
 
 ## Compatibility
-SeLite is compatible with Firefox 45 and Selenium IDE 2.9.1. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
+SeLite is compatible with Firefox 47 and Selenium IDE 2.9.1. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
-Currently it doesn't operate with browsers other than Firefox. That will change. In 2017 Firefox extensions will use the same API as Opera and Chrome.
+Currently it doesn't operate with browsers other than Firefox. However, in 2017 Firefox extensions will use the same API as Opera and Chrome.
 
 SeLite is not for Selenium WebDriver. Effectiveness and convenience of Selenium IDE together with SeLite can, however, outweigh WebDriver. For detailed comparison see [WhySeleniumIDE](WhySeleniumIDE).
 
