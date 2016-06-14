@@ -45,7 +45,9 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li><em>Selenese scripts</em> (see also <a href="PackagedScripts">PackagedScripts</a>)</li>
             <li><em>source</em> (only if there is no other documentation)</li>
             <li>third party documentation</li>
-            <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li><li>license (if other than GNU LGPL 3)</li>
+            <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li>
+            <li>license (if other than GNU LGPL 3)</li>
+            <li>for low level see <a href="http://selite.github.io/docs/">API documentation</a></li>
         </ul>
         <span markdown="span">{{chromeUrl}}s only work after you install the component in Firefox</span>
     </td>
