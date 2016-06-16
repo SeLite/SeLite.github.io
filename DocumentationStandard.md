@@ -114,4 +114,12 @@ git push origin gh-pages
 git checkout master
 git branch -D gh-pages
 git push origin :gh-pages
+
+#For jsdoc-baseline
+npm install -g js-beautify
+OR
+pip install jsbeautifier
+
+underscore-contrib
+jsdoc --template ../jsdoc-baseline -r ../SeLite ../SelBlocksGlobal -d .
 -->

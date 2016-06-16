@@ -28,6 +28,7 @@ Reasoning: A case can open local pages relative to its location, or to location 
 
 [Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g. <!-- TODO check/FIX--> <code>open | file://` SeLiteSettings.getTestSuiteFolder() `/form.html</code>
 
+TODO:
 We don't indent commands in tests. That allows us to use them either with or without [SeLite Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/).
 
 ## Negative tests that succeed

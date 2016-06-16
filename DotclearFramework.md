@@ -25,3 +25,9 @@ Configure it at e.g. [http://localhost/dotclear/admin/install/](http://localhost
 
 # Install SeLite Dotclear framework #
 Apply [InstallFramework](InstallFramework). The framework and [scripts][script] are in [dotclear](https://github.com/SeLite/SeLite/tree/master/dotclear) folder - e.g. /var/www/html/dotclear/inc/db.sqlite. The default DB prefix is `dc`.
+
+<!--TODO:
+chmod a+rwx inc
+chmod a+rwx db
+Database Name: e.g. /var/www/html/dotclear/db/db.sqlite
+-->
