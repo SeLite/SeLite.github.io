@@ -9,7 +9,7 @@ layout: default
 # Hands-on browser automation
 
 ## SeLite makes Selenium better
-SeLite is for automated browser navigation and testing. It extends [Selenium](http://docs.seleniumhq.org/projects/ide/). It
+SeLite automates browser navigation and testing. It extends [Selenium](http://docs.seleniumhq.org/projects/ide/). It
 
  * improves Selenium (API, syntax and visual interface)
  * enables reuse
