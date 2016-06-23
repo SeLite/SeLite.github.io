@@ -123,11 +123,13 @@ These callbacks are especially useful for presenting with [Preview](Preview).
 `try...catch` suppresses counts and some logs for errors, failures of asserts/verifications and timeouts. [Scripts][script] can verify that custom [commands][command] fail or time out as expected (and if they fail or time out, the script succeeds; on the other hand, if the command succeeds, the test script fails).
 
 # Flow control with Selenese boolean accessors
-Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. Indeed, you may combine the accessor calls in more complex boolean expressions. For example:
+Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. For example:
 
 ```
 if | !selenium.isVisible( 'id=pmf-navbar-collapse' )
 ```
+
+You may also combine the accessor calls in more complex boolean expressions.
 
 ## Selenium.download
 If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).

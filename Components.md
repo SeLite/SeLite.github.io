@@ -47,7 +47,7 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li>third party documentation</li>
             <li markdown="span">{{chromeUrl}} to configure via <a href="SettingsInterface">SettingsInterface</a></li>
             <li>license (if other than GNU LGPL 3)</li>
-            <li>for low level see <a href="http://selite.github.io/docs/">API documentation</a></li>
+            <li>for low level see <a href="http://selite.github.io/API/">API documentation</a></li>
         </ul>
         <span markdown="span">{{chromeUrl}}s only work after you install the component in Firefox</span>
     </td>

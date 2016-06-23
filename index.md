@@ -44,6 +44,13 @@ SeLite enables the following in Selenium IDE
   * [Preview](Preview) presents custom reports and forms. User can preview and confirm next actions.
   * see also [tips on Selenium IDE](SeleniumIDE) productivity.
 
+## Data separation (in testing)
+Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
+
+Separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its database with the test, such defects would be difficult or even impossible to detect.
+
+See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheory](TestMethodsTheory).
+
 # Install
 SeLite is easy to install, with no server side (apart from the controlled web application itself). You need [Firefox](http://www.mozilla.org) and [Components](Components) (Selenium IDE and components of SeLite family). You may want some [AddOnsThirdParty](AddOnsThirdParty).
 
@@ -58,13 +65,6 @@ Scripts (whether for testing or not) can store their data in [SQLite](http://www
  * If the web application stores its data in [SQLite](http://www.sqlite.org/), test data lifecycle is streamlined. You can then use all buttons of [SettingsInterface](SettingsInterface). They snapshot application DB (into 'vanilla' DB). They (re)load test DB and/or application DB from that snapshot.
  * Otherwise import the app DB (from Postgres, MySQL and potentially other types) via customisable filters. Apply [DataImport](DataImport).
 
-## Data separation (in testing)
-Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
-
-Separation allows validation of the data as presented by the application anytime later, rather than just right after the data was updated. So in addition to checking the immediate pages within the same test run, this also checks the application continually, taking any previous operations into account (including previous sessions). If the application shared its database with the test, such defects would be difficult or even impossible to detect.
-
-See illustrations at [TestMethods](TestMethods) and details at [TestMethodsTheory](TestMethodsTheory).
-
 ## Customisation
 When customising or creating frameworks or components for Selenium IDE, following topics can assist you:
 
@@ -73,7 +73,7 @@ When customising or creating frameworks or components for Selenium IDE, followin
 * [GeneralFramework](GeneralFramework)
 * [JavascriptComplex](JavascriptComplex).
 
-# Project details
+# Project
 
 ## Standards
  * [strict Javascript](JavascriptEssential#strict-javascript)
@@ -96,9 +96,15 @@ Subscribe to [XML RSS feed](http://www.feed43.com/selite-compatibility.xml) on c
 ## License
 SeLite is fully open source. Most [Components](Components) are under GNU LGPL 3.
 
-## Moral support
-The best ways you can support SeLite:
+# Get more value
+<a name="moral-support" /><!-- TODO update descriptions at addons.mozilla.org; then remove this anchor-->You could get more out of SeLite. However, it depends on third party components. To help it progress, please would you
 
  * vote for [ThirdPartyIssues](ThirdPartyIssues)
- * tell others
- * create and share frameworks.
+ * star on GitHub
+   * code projects: [SeLite](https://github.com/SeLite/SeLite) and [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal)
+   * documentation projects: [SeLite documentation](https://github.com/SeLite/SeLite.github.io) and [API reference](https://github.com/SeLite/API)
+ * star and review at Mozilla
+   * [multi-package](https://addons.mozilla.org/en-US/firefox/addon/selite/) (all SeLite components packaged together)
+   * [collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/) and each of its add-ons
+ * create and share frameworks
+ * tell others.

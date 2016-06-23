@@ -43,7 +43,7 @@ function goToYourGitHubComments( repositoryUser, repositoryProject ) {
 
 Please, vote even if an issue is closed (with comments like _doesn't meet a 'feature bar'_). Subscribe to [XML RSS feed](http://www.feed43.com/selite-third_party_issues.xml) on these issues.
 
-## Selenium, Markdown Viewer, SelBlocks (on GitHub)
+## Selenium, SelBlocks (on GitHub)
 [Registration with GitHub](https://github.com/join) is easy.
 
 There is no voting for issues/pull requests on GitHub. Instead, add a thumbs up ![thumbs up](https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png){:height="25px" width="20px"} reaction. Watch out, however: reactions are per-comment. Choose an existing comment that supports fixing the problem rather than avoids it. (For reactions click at the smiley face near the top right corner of a comment.) Do not 'vote' by Star button at the top right corner. (It doesn't star the issue/pull request itself. Instead, it stars the whole repository.)
