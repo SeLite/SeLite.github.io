@@ -17,7 +17,7 @@ For the easiest download, get an [overall package](https://addons.mozilla.org/en
 If you depend on recent functionality (released within last few days), see [Latest releases](#latest-releases) or [Cutting edge](#cutting-edge).
 
 # By component
-Alternatively, choose specific SeLite components [below](#details-of-components). For dependancies see [ComponentsDependants](ComponentsDependants). Download chosen components from [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name).
+Alternatively, choose specific SeLite components [below](#details-of-components). For dependancies see [ComponentsDependants](ComponentsDependants). Install components from [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name).
 <!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->
 
 ## Latest releases
