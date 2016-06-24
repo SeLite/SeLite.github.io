@@ -11,9 +11,10 @@ layout: default
 ## SeLite makes Selenium better
 SeLite automates browser navigation and testing. It extends [Selenium](http://docs.seleniumhq.org/projects/ide/). It
 
- * improves Selenium (API, syntax and visual interface)
- * enables reuse
- * facilitates team work
+ * improves Selenium (API, syntax and visual interface),
+ * enables reuse,
+ * supports reporting and interaction,
+ * facilitates team work.
 
 SeLite enables DB-driven navigation with SQLite (the [most widely deployed](http://www.sqlite.org/mostdeployed.html) SQL database).
 
@@ -75,17 +76,19 @@ When customising or creating frameworks or components for Selenium IDE, followin
 
 # Project
 
-## Standards
- * [strict Javascript](JavascriptEssential#strict-javascript)
+## Quality
+Quality is ensured by
+
  * coding standard ([JavascriptEssential](JavascriptEssential), [JavascriptComplex](JavascriptComplex) and [JavascriptSpecial](JavascriptSpecial))
- * [AboutDocumentation](AboutDocumentation) and [DocumentationStandard](DocumentationStandard)
- * validated by [PackagedScripts](PackagedScripts)
- * clear instructions on [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
- * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal) and [documentation](https://github.com/SeLite/SeLite.github.io)
- * [Components](Components) are verified by Mozilla
+ * [strict Javascript](JavascriptEssential#strict-javascript)
+ * testing by [PackagedScripts](PackagedScripts)
+ * processes for [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
+ * [DocumentationStandard](DocumentationStandard)
+ * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal) and [this documentation](https://github.com/SeLite/SeLite.github.io)
+ * [Components](Components) are verified by Mozilla.
 
 ## Compatibility
-SeLite is compatible with Firefox 47 and Selenium IDE 2.9.1. It's platform-independent. It doesn't support Flash/Silverlight/ActiveX. Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
+SeLite is compatible with Firefox 48 and Selenium IDE 2.9.1. It's platform-independent. (It doesn't support Flash/Silverlight/ActiveX.) Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
 Currently it doesn't operate with browsers other than Firefox. However, in 2017 Firefox extensions will use the same API as Opera and Chrome.
 
@@ -106,5 +109,4 @@ SeLite is fully open source. Most [Components](Components) are under GNU LGPL 3.
  * star and review at Mozilla
    * [multi-package](https://addons.mozilla.org/en-US/firefox/addon/selite/) (all SeLite components packaged together)
    * [collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/) and each of its add-ons
- * create and share frameworks
  * tell others.
