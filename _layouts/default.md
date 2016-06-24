@@ -125,7 +125,7 @@
             $( '#markdown-toc' ).appendTo( '#toc-mobile-div' );
             $( '#markdown-toc' ).clone().appendTo( '#toc-desktop-div' );
             
-            // After clicking at a link from Table of Contents, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
+            // After clicking at a link from toc.md, collapse the whole expanded menu (on mobile) or collapse TOC (on desktop)
             $( "#toc-mobile-div a" ).click(
                 function() {
                     $("#navbar-menu").toggleClass("in");
