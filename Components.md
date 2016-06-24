@@ -6,26 +6,28 @@ layout: default
 * TOC
 {:toc}
 
-# Quick download
-<!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->
-
-For the easiest download, get all components of [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name). However, that can be out of date: it receives latest releases with a delay. If you depend on recent functionality (or if you'd like to run [PackagedScripts](PackagedScripts)), see [Latest releases](#latest-releases) below.
+# Dependancies
+Install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). Unless you're choosing specific components, also get [Favorites (Selenium IDE)](https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/).
 
 Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
 
+# Single download
+For the easiest download, get an [overall package](https://addons.mozilla.org/en-US/firefox/addon/selite).
+
+If you depend on recent functionality (released within last few days), see [Latest releases](#latest-releases) or [Cutting edge](#cutting-edge).
+
 # By component
-Alternatively, if you want only some of SeLite components, install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). Choose from [ComponentsDependants](ComponentsDependants).
+Alternatively, choose specific SeLite components [below](#details-of-components). For dependancies see [ComponentsDependants](ComponentsDependants). Download chosen components from [SeLite collection](https://addons.mozilla.org/en-US/firefox/collections/peter-kehl/selite/?sort=name).
+<!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->
 
-Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
-
-# Latest releases
-Background: All updates of components (add-ons) are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on add-ons' _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the components, you will get an automatic update with a delay.
+## Latest releases
+Background: All updates of components (add-ons) are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on Mozilla _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the components, you will get automatic updates with a delay.
 
 To get the latest releases, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
 {::options parse_block_html="true" /}
 
-# Details on components
+## Details of components
 {% comment %}Keep the following table sorted alphabetically. Using options parse_block_html="true" didn't help, so links are in HTML.{% endcomment %}
 <table class="table">
 <tbody>
@@ -309,3 +311,6 @@ To get the latest releases, use the `download` links below for recent releases. 
 
 # Cutting edge
 If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). That may be faster than downloading components one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
+
+# Extra
+Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
