@@ -100,7 +100,7 @@ Subscribe to [XML RSS feed](http://www.feed43.com/selite-compatibility.xml) on c
 SeLite is fully open source. Most [Components](Components) are under GNU LGPL 3.
 
 # Get more value
-<a name="moral-support" /><!-- TODO update descriptions at addons.mozilla.org; then remove this anchor-->You could get more out of SeLite. However, it depends on third party components. To help it progress, please would you
+You could get more out of SeLite. However, it depends on third party components. To help it progress, please would you
 
  * vote for [ThirdPartyIssues](ThirdPartyIssues)
  * star on GitHub
