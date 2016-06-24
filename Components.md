@@ -308,4 +308,4 @@ To get the latest releases, use the `download` links below for recent releases. 
 </table>
 
 # Cutting edge
-If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). That way may be faster than downloading components one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
+If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). That may be faster than downloading components one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
