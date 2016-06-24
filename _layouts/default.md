@@ -52,7 +52,7 @@
             left: auto;
             right: 0px;
         }
-        /* Following, and the respective data-placement="left" in TableOfContents.md, is from https://github.com/twbs/bootstrap/issues/1411 */
+        /* Following, and the respective data-placement="left" in TableOfContentsInternal.md, is from https://github.com/twbs/bootstrap/issues/1411 */
         .navbar .nav>li>.dropdown-menu[data-placement="left"]:before {
             left: auto;
             right: 9px;
@@ -163,7 +163,7 @@
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
         </li>
-        {% include_relative TableOfContents.md %}
+        {% include_relative TableOfContentsInternal.md asBootstrapMenu="true" %}
       </ul>
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">
@@ -178,7 +178,7 @@
         // Following enables both GitHub page-like links (with no .md at the end) and running Jekyll locally. It's because for each page Abc.md Jekyll generates Abc.html. GitHub pages support both URLs Abc and Abc.html; however, we use Abc since it seems clearer and more Markdown-compatible.
         // @TODO Remove once Jekyll 3 is common. See https://github.com/jekyll/jekyll/pull/3452.
         // A reverse of http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages/16389663#16389663. See also https://github.com/github/pages-gem/issues/69.
-        if( location.host!=='selite.github.io' ) {
+        if( location.host!=='selite.github.io' && false) {
             $(function () {
                 // Match any local URLs to other files with no extension, i.e. URLS with no protocol, not starting with #, with any directory path (optional), ending with a filename that doesn't contain a dot. This doesn't match './' or URLs ending with '/' (e.g. ones for /index.md or subfolder/index.md), which is OK, since those work well with both GitHub pages and Jekyll.
                 var urlWithNoProtocolAndNoExtensionRegex= /^(?!#|[a-z]+:\/\/)(.*\/)?([^/.]+)$/;

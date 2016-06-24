@@ -1,21 +1,43 @@
-<!-- Don’t add any more 1st level menu items, neither make wording of the existing items longer. Reason: With Firefox 46.0.1 on Samsung S5 (SM-G900I) in landscape, the menu still shows up vertically. When there were more menu items at 1st level, they wouldn’t all show up on the screen. (The problem is bigger in landscape than in portrait).
+{% comment %}
+ Don’t add any more 1st level menu items, neither make wording of the existing items longer. Reason: With Firefox 46.0.1 on Samsung S5 (SM-G900I) in landscape, the menu still shows up vertically. When there were more menu items at 1st level, they wouldn’t all show up on the screen. (The problem is bigger in landscape than in portrait).
 
 This page doesn't have YAML Front Matter block (which would be between ---- and ----). Otherwise, such YAML would show up as page content this when file is included from _layouts/default.md.
-(As a side effect, you can't access this page at http://selite.github.io/TableOfContents. If need be, use http://selite.github.io/TableOfContents.md instead - but then code like {% comment %}...{% endcomment %}  doesn't work here, therefore use HTML comments here instead.)
 This page has to be .md rather than .html, so that we can use it with Markdown Viewer add-on(see DocumentationStandard.md). Only when it's an .md file, Markdown Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 -->
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="./ SeleniumIDE Components  Preview">Automate<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
+{% endcomment %}
+{% comment %}
+Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableOfContents to display both the Bootstrap menu, and then the following lists as a tree (below the menu) rather than as a Bootstrap menu. I've tried to turn these Bootstrap classes on/off in Javascript, but then Bootstrap menu didn't show well:
+        $( function () {
+            $( "#selite-menu-span li.toc-menu" ).addClass( 'dropdown' );
+            $( "#selite-menu-span ul.toc-menu" ).addClass( 'dropdown-menu' );
+        } );
+{% endcomment %}
+<!-- pageName contains "TableOfContents" and "TableOfContents" contains pageName -->
+{% if include.asBootstrapMenu %}
+    {% assign topLiClass = 'class="dropdown"' %}
+    {% assign luClass = 'class="dropdown-menu"' %}
+    {% assign caret = '<span class="caret"></span>' %}
+    {% assign menuOpener= '<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"' %}
+    {% assign menuCloser= '</a>' %}
+{% else %}
+    {% assign topLiClass = '' %}
+    {% assign luClass = '' %}
+    {% assign caret = '' %}
+    {% assign menuOpener= '<span' %}
+    {% assign menuCloser= '</span>' %}
+{% endif %}
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="./ SeleniumIDE Components  Preview">Automate{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu">
     <li><a href="./">Overview</a></li>
     <li><a href="Components">Components (Install)</a></li>
     <li><a href="SeleniumIDE">SeleniumIDE</a></li>
     <li><a href="Preview">Preview (Experimental)</a></li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="Settings SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Settings<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="Settings SettingsManifests SettingsScope SettingsInterface SettingsFields SettingsLogins SettingsAPI">Settings{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu">
     <li><a href="Settings">Settings</a></li>
     <li><a href="SettingsManifests">SettingsManifests</a></li>
     <li><a href="SettingsScope">SettingsScope</a></li>
@@ -25,9 +47,9 @@ This page has to be .md rather than .html, so that we can use it with Markdown V
     <li><a href="SettingsAPI">SettingsAPI</a></li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese ExtraCommands">Selenese<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese ExtraCommands">Selenese{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu">
     <li><a href="ClassicSelenese">ClassicSelenese</a></li>
     <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
@@ -35,9 +57,9 @@ This page has to be .md rather than .html, so that we can use it with Markdown V
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="DevelopmentTools InstallFromSource ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptSpecial AutoCheck Bootstrap ExtensionSequencer AppsFrameworks GeneralFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Develop<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu">
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="DevelopmentTools InstallFromSource ExtensionSequencer JavascriptEssential JavascriptComplex JavascriptSpecial AutoCheck Bootstrap ExtensionSequencer AppsFrameworks GeneralFramework InstallFramework DotclearFramework DrupalFramework FUDforumFramework SerendipityFramework">Develop{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu">
     <li><a href="DevelopmentTools">DevelopmentTools</a></li>
     <li><a href="InstallFromSource">InstallFromSource</a></li>
     <li class="divider"></li>
@@ -61,9 +83,9 @@ This page has to be .md rather than .html, so that we can use it with Markdown V
     <li><a href="SerendipityFramework">SerendipityFramework</a></li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="HandlingData TimeStamps DataImport SQLiteImport SQLiteSpecifics">Data<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu" data-placement="left">
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="HandlingData TimeStamps DataImport SQLiteImport SQLiteSpecifics">Data{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu" data-placement="left">
     <li><a href="HandlingData">HandlingData</a></li>
     <li><a href="TimeStamps">TimeStamps</a></li>
     <li><a href="DataImport">DataImport</a></li>
@@ -71,9 +93,9 @@ This page has to be .md rather than .html, so that we can use it with Markdown V
     <li><a href="SQLiteSpecifics">SQLiteSpecifics</a></li>
   </ul>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-group-page-names="AboutDocumentation AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other<span class="caret"></span></a>
-  <ul class="dropdown-menu" role="menu" data-placement="left">
+<li {{ topLiClass }}>
+  {{ menuOpener }} data-group-page-names="AboutDocumentation AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other{{ caret }}{{ menuCloser }}
+  <ul {{ luClass }} role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
     <li><a href="ComponentsDependants">ComponentsDependants</a></li>
