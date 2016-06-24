@@ -52,7 +52,7 @@
             left: auto;
             right: 0px;
         }
-        /* Following, and the respective data-placement="left" in TableOfContentsInternal.md, is from https://github.com/twbs/bootstrap/issues/1411 */
+        /* Following, and the respective data-placement="left" in _includes/toc, is from https://github.com/twbs/bootstrap/issues/1411 */
         .navbar .nav>li>.dropdown-menu[data-placement="left"]:before {
             left: auto;
             right: 9px;
@@ -163,7 +163,7 @@
         </li>
         <li id="toc-desktop-button"><a data-toggle="collapse" href="#toc-desktop-div" class="dropdown-toggle" role="button"><em>This page</em><span class="caret"></span></a>
         </li>
-        {% include_relative TableOfContentsInternal.md asBootstrapMenu="true" %}
+        {% include toc asBootstrapMenu="true" %}
       </ul>
     </div><!-- /.navbar-collapse -->
     <div id="toc-desktop-div" class="collapse">

@@ -10,7 +10,7 @@ Having documentation in one large piece would make its structure too rigid. Main
 
 * install [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
 * clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
-* for navigation open [TableOfContents](TableOfContents)
+* for navigation open [custom 404 page](404)
 * note that Markdown Viewer is not 100% proof
 
 Alternatively, run [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/). Install Jekyll 3.0 or newer (so that it is [Github-compatible](https://github.com/jekyll/jekyll/pull/3452)).
