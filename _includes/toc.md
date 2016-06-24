@@ -29,11 +29,11 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
     {% assign menuCloser= '</span>' %}
 {% endif %}
 <li {{ topLiClass }}>
-  {{ menuOpener }} data-group-page-names="./ SeleniumIDE Components  Preview">Automate{{ caret }}{{ menuCloser }}
+  {{ menuOpener }} data-group-page-names="./ SeleniumIDEtips Components  Preview">Automate{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu">
     <li><a href="./">Overview</a></li>
     <li><a href="Components">Components (Install)</a></li>
-    <li><a href="SeleniumIDE">SeleniumIDE</a></li>
+    <li><a href="SeleniumIDEtips">SeleniumIDEtips</a></li>
     <li><a href="Preview">Preview (Experimental)</a></li>
   </ul>
 </li>

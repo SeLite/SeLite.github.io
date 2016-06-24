@@ -23,7 +23,7 @@ If you modify any one file that is registered with Bootstrap (while using Seleni
 
 Apply [JavascriptEssential](JavascriptEssential), especially sections [Strict Javascript](JavascriptEssential#strict-javascript) and [Prevent name conflicts](JavascriptEssential#prevent-name-conflicts).
 
-It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs inside browser](SeleniumIDE#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
+It works only in standalone Selenium IDE, but not in [auxiliary Selenium IDEs inside browser](SeleniumIDEtips#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
 # Limitations #
 

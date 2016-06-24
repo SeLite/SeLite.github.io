@@ -83,7 +83,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='SeleniumIDE#clipboard-and-indent'>Clipboard And Indent</a> </td>
+    <td> <a href='SeleniumIDEtips#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
     <td> <ul>
@@ -169,7 +169,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='SeleniumIDE#hands-on-gui'>Hands-on GUI</a> </td>
+    <td> <a href='SeleniumIDEtips#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
     <td>
@@ -313,4 +313,4 @@ To get the latest releases, use the `download` links below for recent releases. 
 If you're eager to use the development versions, apply [InstallFromSource](InstallFromSource). That may be faster than downloading components one by one. Additionally, the source contains [PackagedScripts](PackagedScripts), which serve as active documentation. If you use a [GIT client](http://git-scm.com/downloads), it gives you easy access to future development versions.
 
 # Extra
-Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDE](SeleniumIDE) for productivity tips.
+Additionally, get [AddOnsThirdParty](AddOnsThirdParty). See [SeleniumIDEtips](SeleniumIDEtips) for productivity tips.

@@ -37,12 +37,12 @@ SeLite enables the following in Selenium IDE
   * [AutoCheck](AutoCheck) detects webserver errors/warnings
   * [Run All Favorites](https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/) executes multiple Selenese [suites][suite]
 * productive environment
-  * [Hands-on GUI](SeleniumIDE#hands-on-gui) enhances Selenium IDE visual interface. It enables editing commands in-place (in the list itself). It makes Selenium IDE more intuitive.
+  * [Hands-on GUI](SeleniumIDEtips#hands-on-gui) enhances Selenium IDE visual interface. It enables editing commands in-place (in the list itself). It makes Selenium IDE more intuitive.
   * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves operation of clibpoard. It supports indentation of commands.
   * fast development cycle for custom Javascript functionality (via [Bootstrap](Bootstrap))
   * robust loading of extensions honouring dependancies (through [ExtensionSequencer](ExtensionSequencer))
   * [Preview](Preview) presents custom reports and forms. User can preview and confirm next actions.
-  * see also [tips on Selenium IDE](SeleniumIDE) productivity.
+  * see also [tips on Selenium IDE](SeleniumIDEtips) productivity.
 
 ## Data separation (in testing)
 Some application errors cause incorrect data that doesn't show up on the immediate screens (or not at all during the same session). Such defects present themselves only on subsequent screens or even much later (through their knock-on effect). Having a test DB (in SQLite) isolated from the application's DB facilitates early detection of those bugs.
