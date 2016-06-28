@@ -11,7 +11,7 @@ layout: default
 Following add-ons are for development of Selenese [scripts][script]. For the easiest download get all add-ons of [SeLite Third Party collection](https://addons.mozilla.org/en-GB/firefox/collections/peter-kehl/selite-third-party/).
 
   * [Firebug](https://addons.mozilla.org/en-us/firefox/addon/firebug)
-  * [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath) For checking Selenese XPath selectors. Beware that sometimes an XPath works in FirePath, but not in Selenium IDE. Changing `/` to `//` within it seems to help.
+  * [FirePath](https://addons.mozilla.org/en-US/firefox/addon/firepath) For checking Selenese XPath selectors. Beware that Selenium IDE XPath is stricter than in FirePath. For example, boolean operators `and, or` are case-insensitive in Firepath, but case-sensitive in Selenium IDE. Sometimes changing `/` to `//` helps.
   * [XPath checker](https://addons.mozilla.org/en-US/firefox/addon/xpath-checker/) (beware that sometimes it doesn't pick up a change of the page)
   * [Stored Variables Viewer](https://addons.mozilla.org/en-US/firefox/addon/stored-variables-viewer-seleni/)
   * [Highlight Elements](https://addons.mozilla.org/en-us/firefox/addon/highlight-elements-selenium-id/)
