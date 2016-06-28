@@ -40,9 +40,11 @@ When calling a Selenese `function`, it doesn't inherit variables from the higher
 SelBlocks Global adheres to {{navStrictJavascript}}, which prevents some bad practice code. That also applies to Javascript expressions passed to SelBlocks Global Selenese commands, or passed through [EnhancedSelenese](EnhancedSelenese) notation `<>...<>` (and its variations). This implies the following incompatibilities with SelBlocks.
 
 ### Accessing stored variables ###
-When accessing stored variables with `getEval` and special SelBlockGlobal commands, use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks, which let its special commands access stored variables without using `$` prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) See [EnhancedSelenese](EnhancedSelenese) > [`$storedVariableName` notation](EnhancedSelenese#storedvariablename-notation) for the affected commands.
+When accessing stored variables with `getEval` and SelBlockGlobal commands that evaluate Javascript (e.g.`if, while, promise...`), use `$xyz` rather than just `xyz`. SelBlocks Global had to drop shorthand syntax of SelBlocks, which let its special commands access stored variables without using `$` prefix. (That depended on Javascript keyword `with(obj){...}`, which is [prohibited in strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode#Simplifying_variable_uses).) See [EnhancedSelenese](EnhancedSelenese) > [`$storedVariableName` notation](EnhancedSelenese#storedvariablename-notation) for the affected commands.
 
 Apply the same to right side of assignments in `value` parameter of `call`. See [Passing parameters to functions via `call`](#passing-parameters-to-functions-via-call).
+
+Also use `$storedVariableName` in [EnhancedSelenese](EnhancedSelenese) > [Javascript within &lt;&gt;...&lt;&gt;](EnhancedSelenese#javascript-within).
 
 ### Loop `for` ###
 `for` loop now must use `$xyz` notation for all stored parameters (loop iterator or any other), whether on the left side or right side of the assignment operator =. So, instead of
@@ -86,6 +88,9 @@ Use either an existing object, or an object literal. E.g.
 call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2...}<>
 ```
 
+## `getEval` can return null/undefined
+`getEval` in classic Selenium IDE couldn't return `null` or `undefined`. Instead, it replaced them with string `"null"`. SelBlocks Global returns `null` and `undefined` unchanged.
+
 # Enhancements to SelBlocks #
 These are forward-compatible with classic SelBlocks.
 
@@ -93,7 +98,7 @@ These are forward-compatible with classic SelBlocks.
 See [EnhancedSelenese](EnhancedSelenese).
 
 ## Promise-based commands
-These commands wait for a given `Promise` object to resolve. If it gets rejected or it times out, then the command throws an error.
+These commands **wait** for a given `Promise` object to resolve. If it gets rejected or it times out, then the command throws an error.
 
  * `promise` is similar to `getEval`.
  * `storePromiseValue` is similar to `storeEval`, but it stores the resolved (fulfilled) value of the promise (rather than the promise itself).
@@ -122,16 +127,16 @@ These callbacks are especially useful for presenting with [Preview](Preview).
 ## Try/catch suppresses error and timeout counts ##
 `try...catch` suppresses counts and some logs for errors, failures of asserts/verifications and timeouts. [Scripts][script] can verify that custom [commands][command] fail or time out as expected (and if they fail or time out, the script succeeds; on the other hand, if the command succeeds, the test script fails).
 
-# Flow control with Selenese boolean accessors
-Selenium, SeLite and custom add-ons define `isXyz()` Selenese boolean accessors. You may combine them with `if`, `elseIf` or `while`, by passing `selenium.isXyz()` or `selenium.isXyz('locatorString')`. For example:
+# Selenese accessors in Javascript expressions
+You may combine `getEval`, `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:
 
 ```
 if | !selenium.isVisible( 'id=pmf-navbar-collapse' )
+storeEval | selenium.browserbot.findElement('locatorString').innerText | storedVariableName
+getEval | more-complex-expression... selenium.getAttribute('locatorString@attributeName')...
 ```
 
-You may also combine the accessor calls in more complex boolean expressions.
-
-## Selenium.download
+# Selenium.download
 If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
 
 @TODO > include links
