@@ -10,7 +10,9 @@ Configurations have effect on [suites][suite], rather than to specific [cases][c
 
 A manifest affects to any [suite] under its folder subtree, unless overridden by manifest(s) at a more specific (lower) level or by a set (at any level). Teams can share common values via {{valuesManifest}}(s), yet team members can override them in their own [set(s)][set].
 
-The actual location of [case(s)][case] doesn't matter. They can even be outside of the [suite] folder. So you could run same [case(s)][case] through different suite(s), each with different combination of manifest(s) and set(s).
+The actual location of [case(s)][case] doesn't matter. They can even be outside of the [suite] folder. You could run same [case(s)][case] through different suite(s), each with different combination of manifest(s) and set(s).
+
+A manifest applies to any [suite(s)][suite] in its folder or anywhere under its folder (to any depth).
 
 Manifests work only if the module associates with folders. Otherwise the [script] uses the default set (if the module allows sets) or the only existing set (if the module doesn't allow multiple sets), or a set with a given name (if requested by an explicit API call). See [SettingsAPI](SettingsAPI).
 
@@ -25,7 +27,7 @@ The rules of applying values from manifests and configuration sets are, in order
   * more local manifests override less local manifests of the same type (either _values_ or _associations_)
   * all those override default value of the field (from definition of its module)
 
-So, a field will have value(s) based on its topmost occurrence within:
+Therefore, a field will have value(s) based on its first occurrence in the following order:
 
   * most locally associated set
   * less locally associated set
