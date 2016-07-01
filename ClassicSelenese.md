@@ -124,5 +124,8 @@ However, that is in conflict with standard Selenese use of
 ```
 to access stored variables. See [Selenium IDE > Store Commands and Selenium Variables](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp#store-commands-and-selenium-variables). See [ThirdPartyIssues](ThirdPartyIssues) > Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662).
 
-# Limitations of getEval, storeEval
+# Limitations of `getEval` and its derivatives
 [Command] `getEval` (and derived commands like `storeEval` - as per [Auto-generated Selenese commands](#auto-generated-selenese-commands) above) etc. don’t like new line string literals `"\n"` or `'\n'` (or any string literals that contain them). Then they generate a confusing error `unterminated string literal`. Use `String.fromCharCode(10)` or `'\\u000A'` (as per [a suggestion](https://code.google.com/p/selenium/issues/detail?id=1816#c7)) instead.
+
+These commands use Javascript `eval()`. That doesn't return values of some expressions as expected, e.g. `{field: "value"}`. If you want that, assing it to a local variable first, and have the last expression be that variable. For example:
+`getEval | var result=( custom-expression-here ); result`

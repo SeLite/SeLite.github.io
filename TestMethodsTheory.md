@@ -148,6 +148,7 @@ This explains [Overview](./) > [Advantages of test data separation](./#advantage
         * being a narrowed subset of app DB data
           * then the test needs to be aware that the app may show more entries than what is in [script DB], i.e. the test needs to filter/scroll/navigate across the page(s) of records shown by the app, to locate the records that it wants to test
         * should be approximately equal to the app data (for approximate fields see [HandlingData](HandlingData) and [TimeStamps](TimeStamps))
+        * supported by UUID and UUID hashes
   * keeps its DB in sync with [app DB] (or its part), updating [script DB] to reflect changes in app DB
     * but it doesn't blindly copy/replicate the changes from app DB to script DB (via a back door), since that would effectively be approach #2
     * the test updates its DB on its own, but in a way that the tester believes the app updates its DB

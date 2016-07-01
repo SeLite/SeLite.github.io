@@ -88,8 +88,8 @@ Use either an existing object, or an object literal. E.g.
 call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2...}<>
 ```
 
-## `getEval` can return null/undefined
-`getEval` in classic Selenium IDE couldn't return `null` or `undefined`. Instead, it replaced them with string `"null"`. SelBlocks Global returns `null` and `undefined` unchanged.
+## `storeEval` can return null/undefined
+`storeEval` in classic Selenium IDE couldn't store `null` or `undefined`. Instead, it replaced them with string `"null"`. In SelBlocks Global it stores `null` and `undefined` unchanged.
 
 # Enhancements to SelBlocks #
 These are forward-compatible with classic SelBlocks.
