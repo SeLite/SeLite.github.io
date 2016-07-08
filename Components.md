@@ -11,7 +11,7 @@ Install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-i
 
 Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
 
-# Single download
+# Overall package
 For the easiest download, get an [overall package](https://addons.mozilla.org/en-US/firefox/addon/selite).
 
 If you depend on recent functionality (released within last few days), see [Latest releases](#latest-releases) or [Cutting edge](#cutting-edge).
@@ -21,7 +21,7 @@ Alternatively, choose specific SeLite components [below](#details-of-components)
 <!-- [Install Collection](https://addons.mozilla.org/en-US/firefox/addon/install-collection/) doesn't seem to work in Firefox 46.0.1-->
 
 ## Latest releases
-Background: All updates of components (add-ons) are screened by Mozilla for security. You can get them at `download` links below. However, updates don't show up on Mozilla _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the components, you will get automatic updates with a delay.
+Background: All updates of components (add-ons) are screened by Mozilla for security. You can get them at *Download* links below. However, updates don't show up on Mozilla _info_ pages (nor at the above collection), until someone from Mozilla reviews them. If you've installed older versions of the components, you will get automatic updates with a delay.
 
 To get the latest releases, use the `download` links below for recent releases. **Ignore** the text: 'You should always use the latest version of an add-on.' Do not follow those _'latest version'_ links (which can be out of date).
 
@@ -51,7 +51,7 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li>license (if other than GNU LGPL 3)</li>
             <li>for low level see <a href="http://selite.github.io/API/">API documentation</a></li>
         </ul>
-        <span markdown="span">{{chromeUrl}}s only work after you install the component in Firefox</span>
+        <span markdown="span">{{chromeUrl}}s only work after you install the component in Firefox.</span>
     </td>
     <td><strong>Other</strong></td>
 </tr>
