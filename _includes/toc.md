@@ -96,9 +96,10 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
   </ul>
 </li>
 <li {{ topLiClass }}>
-  {{ menuOpener }} data-group-page-names="AboutDocumentation AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other{{ caret }}{{ menuCloser }}
+  {{ menuOpener }} data-group-page-names="AboutDocumentation Terminology AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
+    <li><a href="Terminology">Terminology</a></li>
     <li><a href="AddOnsThirdParty">AddOnsThirdParty</a></li>
     <li><a href="ComponentsDependants">ComponentsDependants</a></li>
     <li><a href="ThirdPartyIssues">ThirdPartyIssues</a></li>
