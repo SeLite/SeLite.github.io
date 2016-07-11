@@ -88,9 +88,8 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
 <li {{ topLiClass }}>
   {{ menuOpener }} data-group-page-names="HandlingData TestMethods TestMethodsTheory TimeStamps DataImport SQLiteImport SQLiteSpecifics">Data{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu" data-placement="left">
-    <li><a href="HandlingData">HandlingData</a></li>
-    <li class="divider"></li>
     <li class="dropdown-header">Testing-specific:</li>
+    <li><a href="HandlingData">HandlingData</a></li>
     <li><a href="TestMethods">TestMethods</a></li>
     <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
     <li><a href="TimeStamps">TimeStamps</a></li>

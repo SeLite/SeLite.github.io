@@ -105,6 +105,13 @@ This explains [Overview](./) > [Advantages of test data separation](./#advantage
         * containing all data from app DB, or
         * being a narrowed subset of app DB data
           * then the test needs to be aware that the app may show more entries than what is in [script DB], i.e. the test needs to filter/scroll/navigate across the page(s) of records shown by the app, to locate the records that it wants to test
+          * with command `insertCaptureKey` in DB Objects > Selenese reference
+          * see `RecordSetHolder.prototype.select` in DbObjects.js
+          * see `narrowBy` and `alwaysTestGeneratingKeys` in common settings
+          * If `narrowBy` is set, then 
+          * @TODO move to GeneralFramework.md: SeLiteData.Db instance (and optionally SeLiteData.Table instances) have `narrowMethod` field. It indicates a method of narrowing. Default is by prefix.
+          * SeLiteData.Table instances have fields `narrowColumn`. That's the name of the column, which will be automatically used for narrowing. DbStorage will inject `narrowBy` value (if any) to any new records. (There's also an optional `narrowMaxWidth` to limit the used part of `narrowBy` value.) When matching the formulas, they will also filter by `narrowBy` (if any).
+          * If `alwaysTestGeneratingKeys` is `true`, then the
         * should be approximately equal to the app data (for approximate fields see [HandlingData](HandlingData) and [TimeStamps](TimeStamps))
         * supported by UUID and UUID hashes
   * keeps its DB in sync with [app DB] (or its part), updating [script DB] to reflect changes in app DB

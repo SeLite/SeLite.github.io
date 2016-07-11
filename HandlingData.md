@@ -52,14 +52,9 @@ Some fields are difficult to replicate from [app DB] to [script DB] during the r
   * create/update/delete timestamps
 
 ## IDs of new records ##
-A lot of the following notes are for apps using Postgres for its DB. However, some notes and most of the ideas are not Postgres-specific.
+Many of the following notes are for Postgres or SQLite. However, some notes and most of the ideas are not DB-specific.
 
-Say you want a script to navigate by
-
-  * IDs of new records, or
-  * links reflecting IDs of those new records
-
-That is needed e.g. for security testing to ensure that a user can't access record(s) created by other user(s). In such a case the script can't navigate through the web app to the forbidden page, so it needs to know the ID value to generate the link.
+Navigating by record IDs is needed e.g. for security testing to ensure that a user can't get inappropriate access. In such a case the script can't navigate through the web app to the forbidden page, so it needs to know the ID value to generate the link (to verify that the access is denied).
 
 When the script creates a new record in its DB, it needs to set its ID to reflect the ID in the [app DB]. Methods:
 
