@@ -6,52 +6,10 @@ layout: default
 {:toc}
 
 # Summary #
-This describes and compares ways of test automation and its data. See also  pictures at [TestMethods](TestMethods).
+This describes and compares ways of test automation and its data. See also  [Terminology](Terminology) and pictures at [TestMethods](TestMethods).
 
 # SeLite testing of DB-driven web apps #
 It is testing of DB-driven applications, where [scripts][script] keep and update a copy of the application's DB. The scripts themselves (the steps, conditional logic etc.) are not necessarily in a DB. The script-specific input data doesn't have to be in a DB (but it may be).
-
-## Terminology
-These terms are not SeLite-specific. The goal here is to clarify possible/desirable features and connections between scripts and the tested application. This mentions benefits and shortcomings of various possible approaches. See also [Terminology](Terminology) > [Test terminology](Terminology#test-terminology).
-
-  * **application** - what is being tested, with
-    * source, libraries, webserver, single sign on etc.
-    * application data ('test app DB' or just '[app DB]')
-  * **test** - depending on the context, either
-    * the system that invokes the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + [scripts][script]
-    * [scripts][script]
-  * **data**
-    * **'app data', '[app DB]'** or just **'data'** - the application data (or its subset) relevant to testing
-      * usually it means SQLite export of the application's DB
-      * if the application uses SQLite, then it can be the app DB (SQLite file) itself (SQLite file on a network drive or local)
-    * **'script data'** or **'[script DB]'**
-      * what the [script] believes that the app data is, either
-        * same source as app data - accessed by test read-only (not a good approach, see more below), or
-        * a replica of app data, which
-          * is separate - not accessed by the application
-          * shadows [app DB]
-          * gets updated by the test to reflect the changes expected to happen in the app data (see more below)
-          * is used by test to navigate and verify the application
-          * helps to detect and identify errors in the application or the test
-          * is a core feature of SeLite
-    * **'test input data'** or just **'input data'** is
-      * data, that is used by the test, especially
-        * for inputs/choices that the test enters/selects in the application, or
-        * that determines webpage navigation during the test
-      * can be
-        * from XML using SelBlocks functionality (a part of [SelBlocksGlobal](SelBlocksGlobal))
-        * from SQLite with the help of SeLite object-oriented layer
-        * random, within a range or from a list of choices, using SeLite [ExtraCommands](ExtraCommands)
-  * **test session**
-    * custom runtime variables in the test system, which serve for
-      * tracking web app user session and page navigation
-      * temporary storage of loaded/modified test data and generated test input data
-      * custom test  control
-      * loading/updating records in [script DB]
-  * **knock-on/silent defects** are 'hidden' or mysterious errors, whose buggy effect
-    * doesn't show up immediately at all, or
-    * is not initially tested or obvious (because of the scope, complexity etc.)
-    * but the defect causes incorrect data which affects subsequent operation
 
 ## The goal ##
 SeLite is for thorough, yet practical testing of DB-driven apps. Your tests

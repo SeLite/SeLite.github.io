@@ -86,17 +86,22 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
   </ul>
 </li>
 <li {{ topLiClass }}>
-  {{ menuOpener }} data-group-page-names="HandlingData TimeStamps DataImport SQLiteImport SQLiteSpecifics">Data{{ caret }}{{ menuCloser }}
+  {{ menuOpener }} data-group-page-names="HandlingData TestMethods TestMethodsTheory TimeStamps DataImport SQLiteImport SQLiteSpecifics">Data{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu" data-placement="left">
     <li><a href="HandlingData">HandlingData</a></li>
+    <li class="divider"></li>
+    <li class="dropdown-header">Testing-specific:</li>
+    <li><a href="TestMethods">TestMethods</a></li>
+    <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
     <li><a href="TimeStamps">TimeStamps</a></li>
     <li><a href="DataImport">DataImport</a></li>
+    <li class="divider"></li>
     <li><a href="SQLiteImport">SQLiteImport</a></li>
     <li><a href="SQLiteSpecifics">SQLiteSpecifics</a></li>
   </ul>
 </li>
 <li {{ topLiClass }}>
-  {{ menuOpener }} data-group-page-names="AboutDocumentation Terminology AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE TestMethods TestMethodsTheory DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other{{ caret }}{{ menuCloser }}
+  {{ menuOpener }} data-group-page-names="AboutDocumentation Terminology AddOnsThirdParty ComponentsDependants ThirdPartyIssues TroubleShooting ReportingIssues WhySeleniumIDE DocumentationStandard DataObjects SeleniumFlow PackagedScripts">Other{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu" data-placement="left">
     <li><a href="AboutDocumentation">AboutDocumentation</a></li>
     <li><a href="Terminology">Terminology</a></li>
@@ -107,10 +112,6 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
     <li><a href="TroubleShooting">TroubleShooting</a></li>
     <li><a href="ReportingIssues">ReportingIssues</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
-    <li class="divider"></li>
-    <li class="dropdown-header">Testing-specific:</li>
-    <li><a href="TestMethods">TestMethods</a></li>
-    <li><a href="TestMethodsTheory">TestMethodsTheory</a></li>
     <li class="divider"></li>
     <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
