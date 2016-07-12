@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Overview
-[SeLite Commands](https://addons.mozilla.org/en-US/firefox/addon/selite-commands/), one of SeLite [Components](Components), provides several Selenese commands and related functionality.
+[SeLite Commands](https://addons.mozilla.org/en-US/firefox/addon/selite-commands/) ([Components](Components) > [Commands](Components#commands)) provides several Selenese commands and related functionality.
 
 # Robust commands #
 Commands with name in form `xxxRobust: typeRobust, clickRobust, selectRobust` action the same as original commands `xxx`, but if the target doesn't exist, then they skip and they don't fail.

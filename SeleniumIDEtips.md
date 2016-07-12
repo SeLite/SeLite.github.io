@@ -13,7 +13,7 @@ These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects
 When saving a [case] or a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
 # Hands-on GUI
-[Components](Components) > 'Hands-on GUI' enables
+[Components](Components) > [Hands-on GUI](Components#hands-on-gui) enables
 
 * in-place editing of Selenese commands/comments and their parameters (`target` and `value`), right in the commands list
 * productivity keyboard shortcuts
@@ -30,7 +30,7 @@ After you select a row, you can use key shortcuts `I` and `M` to insert new comm
 
 
 # Clipboard And Indent
-[Components](Components) > 'Clipboard And Indent' enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
+[Components](Components) > [Clipboard And Indent](Components#clipboard-and-indent) enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
 
 It enables Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal).
 

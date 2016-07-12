@@ -27,7 +27,7 @@ SeLite enables the following in Selenium IDE
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
   * test database isolated from the application (see [TestMethods](TestMethods) and [HandlingData](HandlingData))
-  * data access through high-level formulas (see [Components](Components) > DB Objects)
+  * data access through high-level formulas (see [Components](Components) > [DB Objects](Components#db-objects))
   * making and reverting database snapshots through [SettingsInterface](SettingsInterface) directly from Selenium IDE
 * configuration of scripts - see [Settings](Settings)
   * having custom fields ([SettingsFields](SettingsFields))

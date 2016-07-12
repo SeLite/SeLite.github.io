@@ -56,7 +56,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td><strong>Other</strong></td>
 </tr>
 <tr>
-    <td><a href="AutoCheck">AutoCheck</a></td>
+    <td><a name="autocheck"></a><a href="AutoCheck">Auto Check</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
     <td> <ul>
@@ -70,7 +70,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='Bootstrap'>Bootstrap</a></td>
+    <td> <a name="bootstrap"></a><a href='Bootstrap'>Bootstrap</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-bootstrap/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
     <td> <ul>
@@ -83,7 +83,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='SeleniumIDEtips#clipboard-and-indent'>Clipboard And Indent</a> </td>
+    <td> <a name="clipboard-and-indent"></a><a href='SeleniumIDEtips#clipboard-and-indent'>Clipboard And Indent</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/versions'>download</a> </td>
     <td> <ul>
@@ -97,7 +97,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='ExtraCommands'>Commands</a></td>
+    <td> <a name="commands"></a><a href='ExtraCommands'>Commands</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/versions/'>download</a>                </td>
     <td> <ul>
@@ -116,7 +116,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> DB Objects                </td>
+    <td> <a name="db-objects"></a>DB Objects                </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-db-objects/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-db-objects/versions/'>download</a>              </td>
     <td> <ul>
@@ -154,7 +154,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
- <td> <a href="ExtensionSequencer">ExtensionSequencer</a>        </td>
+ <td> <A name="extensionsequencer"></a><a href="ExtensionSequencer">Extension Sequencer</a>        </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/'>download</a>     </td>
     <td> <ul>
@@ -169,7 +169,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='SeleniumIDEtips#hands-on-gui'>Hands-on GUI</a> </td>
+    <td> <a name="hands-on-gui"></a><a href='SeleniumIDEtips#hands-on-gui'>Hands-on GUI</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
     <td>
@@ -218,7 +218,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> Run All Favorites         </td>
+    <td> <a name="run-all-favorites"></a>Run All Favorites         </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/versions/'>download</a>
     </td>
@@ -234,7 +234,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href="SelBlocksGlobal">SelBlocksGlobal</a></td>
+    <td> <a name="selblocksglobal"></a><a href="SelBlocksGlobal">SelBlocksGlobal</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-selblocks-global/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SelBlocks-Global/versions/'>download</a>        </td>
     <td> <ul>
@@ -269,7 +269,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a href='Settings'>Settings</a>                </td>
+    <td> <a name="settings"></a><a href='Settings'>Settings</a>                </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
     <td> <ul>

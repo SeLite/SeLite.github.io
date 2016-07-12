@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Overview #
-SelBlocks Global (one of SeLite [Components](Components)) is an enhancement of [SelBlocks](https://github.com/refactoror/SelBlocks/). It enables 
+SelBlocks Global ([Components](Components) > [SelBlocks Global](Components#selblocksglobal)) is an enhancement of [SelBlocks](https://github.com/refactoror/SelBlocks/). It enables 
 
 * calling Selenese _functions_ (blocks of steps, formerly called _scripts_) across cases and
 * [EnhancedSelenese](EnhancedSelenese)

@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Summary #
-[SeLite Settings](https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/) allows easy custom configurations of Selenese scripts and [Core extensions][core extension]. See also [Components](Components).
+[SeLite Settings](https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/) ([Components](Components) > [Settings](Components#settings)) allows easy custom configurations of Selenese scripts and [Core extensions][core extension].
 
 # Background #
 <!-- TODO Extract out: to AboutDocumentation? -->

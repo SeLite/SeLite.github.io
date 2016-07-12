@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Summary #
-[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/), one of SeLite [Components](Components), allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
+[SeLite Extension Sequencer](https://addons.mozilla.org/en-US/firefox/addon/selite-extension-sequencer/versions/) ([Components](Components) > [Extension Sequencer](Components#extensionsequencer)) allows [extensions of Selenium IDE][Extension of Selenium IDE] to declare dependencies. Then it ensures that they are loaded in a correct order.
 
 It only works for extensions packaged as Firefox add-ons (as `.xpi` files, or through [proxy files](https://developer.mozilla.org/en/Setting_up_extension_development_environment)). It doesn't cover extensions loaded from single Javascript files via Selenium IDE menu Options > Options > General, neither through [Bootstrap](Bootstrap).
 
