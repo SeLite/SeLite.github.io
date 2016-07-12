@@ -1,17 +1,19 @@
 <!-- Naming convention: link references have spaces etc. as in human text, so that they can also serve for link text
 -->
-[command]: AboutDocumentation#command
-[case]: AboutDocumentation#case
-[suite]: AboutDocumentation#suite
-[script]: AboutDocumentation#script
-[app DB]: AboutDocumentation#app-db
-[script DB]: AboutDocumentation#script-db
-[vanilla DB]: AboutDocumentation#vanilla-db
-[function]: AboutDocumentation#function
-[Core scope]: AboutDocumentation#core-scope
-[Core extension]: AboutDocumentation#core-extension
-[IDE extension]: AboutDocumentation#ide-extension
-[Extension of Selenium IDE]: AboutDocumentation#extension-of-selenium-ide
+[command]: Terminology#command
+[case]: Terminology#case
+[suite]: Terminology#suite
+[script]: Terminology#script
+
+[app DB]: Terminology#app-db
+[script DB]: Terminology#script-db
+[vanilla DB]: Terminology#vanilla-db
+
+[function]: Terminology#function
+[Core scope]: Terminology#core-scope
+[Core extension]: Terminology#core-extension
+[IDE extension]: Terminology#ide-extension
+[Extension of Selenium IDE]: Terminology#extension-of-selenium-ide
 [set]: Settings#sets
 
 [Auto Check]: AutoCheck
