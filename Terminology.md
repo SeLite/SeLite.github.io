@@ -30,7 +30,7 @@ Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-i
 Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocksGlobal](SelBlocksGlobal)/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.
 
 ## set
-_Set_ is a configuration set as per [Settings](Settings) > [Modules and sets](Settings#modules-and-sets).
+_Set_ is a configuration set as per [Settings](Settings) > [Sets](Settings#sets).
 
 ## Core scope
 _Selenium Core scope_, or just _Core scope_, is global scope (as in [JavascriptEssential](JavascriptEssential) > [Scope](JavascriptEssential#scope)) in _Core extensions_ and in Selenese _scripts_.

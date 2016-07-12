@@ -47,8 +47,9 @@ You could create custom GUI as an IDE [extension of Selenium IDE] through XUL ov
     * not well documented (some features)
   * from [script] developer's perspective, making extension(s) configurable is a not as productive/motivating as creating extensions themselves
 
-# Functionality #
+# Functionality
 It defines API and GUI that simplify management and sharing of configurations. They
+
   * organise fields in modules and sets
   * use Firefox preferences and/or manifest files
   * allow fine-grain granularity
@@ -71,10 +72,10 @@ You can
       * alternatively edit them access via url _about:config_
   * have your [Core extension] access the preferences via a Javascript code module (API)
 
-Associated [sets][set] and {{valuesManifest}}s work only in standalone Selenium IDE, but not in [SeleniumIDEtips](SeleniumIDEtips) > [auxiliary Selenium IDEs inside browser](SeleniumIDEtips#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
+Associated [sets](#sets) and {{valuesManifest}}s work only in standalone Selenium IDE, but not in [SeleniumIDEtips](SeleniumIDEtips) > [auxiliary Selenium IDEs inside browser](SeleniumIDEtips#auxiliary-selenium-ides-inside-browser) (neither in Selenium IDE in browser sidebar).
 
-# Modules and sets #
-Modules are schemas/templates of user's configuration(s). They define each field and
+# Modules
+Modules are schemas/templates of user's configuration(s). They define each [field](SettingsFields):
 
   * its  name
   * its type
@@ -84,13 +85,7 @@ Modules are schemas/templates of user's configuration(s). They define each field
 
 Test developers define configuration modules (schemas) in Javascript. See [SettingsFields](SettingsFields) and [SettingsAPI](SettingsAPI).
 
-A field can be either
-
-  * free-type - a string, an integer, a decimal
-  * choice from a fixed list
-  * boolean checkbox
-  * file/folder picker
-<!-- todo merget thif file with AboutDocumentation-->
+# Sets
 <!-- TODO Firefox profile-based preferences-->User's configuration(s) - values of the fields - are stored in _sets_. A module can have either
 
   * exactly one set, or
