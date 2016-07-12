@@ -22,7 +22,7 @@ SeLite enables DB-driven navigation with SQLite (the [most widely deployed](http
 SeLite enables the following in Selenium IDE
 
 * reusable, structured and expressive scripts
-  * [SelBlocks Global]: flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
+  * [SelBlocks Global] - flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
   * [EnhancedSelenese](EnhancedSelenese): enhanced syntax for shorter and cleaner scripts
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
