@@ -6,7 +6,7 @@ layout: default
 {:toc}
 
 # Level of applying configurations and manifests #
-Configurations have effect on [suites][suite], rather than to specific [cases][case]. That's because an automation case can call Selenese function from another [case] (using [SelBlocksGlobal](SelBlocksGlobal)). That would be confusing if those [cases][case] were associated with different configurations.
+Configurations have effect on [suites][suite], rather than to specific [cases][case]. That's because an automation case can call Selenese function from another [case] (using [SelBlocks Global]). That would be confusing if those [cases][case] were associated with different configurations.
 
 A manifest affects to any [suite] under its folder subtree, unless overridden by manifest(s) at a more specific (lower) level or by a set (at any level). Teams can share common values via {{valuesManifest}}(s), yet team members can override them in their own [set(s)][set].
 

@@ -9,7 +9,7 @@ layout: default
 # Dependancies
 Install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/). Unless you're choosing specific components, also get [Favorites (Selenium IDE)](https://addons.mozilla.org/en-US/firefox/addon/favorites-selenium-ide/).
 
-Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocksGlobal](SelBlocksGlobal)).
+Don't install SeLite together with SelBlocks, Flow Control, GoTo, Sideflow or Implicit Wait. (Those extensions are incompatible with [SelBlocks Global]).
 
 # Overall package
 For the easiest download, get an [overall package](https://addons.mozilla.org/en-US/firefox/addon/selite).

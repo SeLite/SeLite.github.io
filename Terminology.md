@@ -24,10 +24,10 @@ A suite and any of its cases don't have to be in the same folder. Therefore a ca
 ## script
 When some functionality applies to both [cases][case] or [suites][suite], SeLite calls them _scripts_. To differentiate them from Javascript (or other scripts), they are sometimes called _Selenese scripts_. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocksGlobal](SelBlocksGlobal)/SeLite refer to them as _functions_ rather than _scripts_.
+Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocks Global]/SeLite refer to them as _functions_ rather than _scripts_.
 
 ## function
-Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocksGlobal](SelBlocksGlobal)/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.
+Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocks Global]/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.
 
 ## set
 _Set_ is a configuration set as per [Settings](Settings) > [Sets](Settings#sets).
@@ -38,7 +38,7 @@ _Selenium Core scope_, or just _Core scope_, is global scope (as in [JavascriptE
 Implementation notes:
 
 * _Core scope_ is the same as `selenium` object.
-* See also [ExtensionSequencer](ExtensionSequencer) > [Global symbols and strict mode](ExtensionSequencer#global-symbols-and-strict-mode).
+* See also [Extension Sequencer] > [Global symbols and strict mode](ExtensionSequencer#global-symbols-and-strict-mode).
 
 ## Core extension
 _Selenium Core extension_, or just _Core extension_, extends functionality available to Selenese scripts. It doesn't provide any visual interface. Generally it can be loaded from Selenium IDE or Webdriver. But even if a Core extension is for Selenium IDE only, it's called a _Core extension_ rather than _IDE extension_. Core extensions from SeLite are like that: they are Selenium IDE-specific and they don't work with Webdriver.
@@ -93,7 +93,7 @@ Also 'input data' is data, that is used by the test, especially
 
 It can be
 
-   * from XML using SelBlocks functionality (a part of [SelBlocksGlobal](SelBlocksGlobal))
+   * from XML using SelBlocks functionality (a part of [SelBlocks Global])
    * from SQLite with the help of SeLite object-oriented layer
    * random, within a range or from a list of choices, using SeLite [ExtraCommands](ExtraCommands)
 

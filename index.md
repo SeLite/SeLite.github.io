@@ -22,7 +22,7 @@ SeLite enables DB-driven navigation with SQLite (the [most widely deployed](http
 SeLite enables the following in Selenium IDE
 
 * reusable, structured and expressive scripts
-  * [SelBlocksGlobal](SelBlocksGlobal): flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
+  * [SelBlocks Global]: flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
   * [EnhancedSelenese](EnhancedSelenese): enhanced syntax for shorter and cleaner scripts
   * [ExtraCommands](ExtraCommands) (e.g. random input generators)
 * DB-driven operations
@@ -34,14 +34,14 @@ SeLite enables the following in Selenium IDE
   * managed through files ([SettingsManifests](SettingsManifests)) or via GUI ([SettingsInterface](SettingsInterface))
   * team-friendly: selectively shareable ([SettingsScope](SettingsScope))
 * extra automation
-  * [ExitConfirmationChecker](ExitConfirmationChecker) validates presence of confirmation when leaving unsubmitted forms
-  * [AutoCheck](AutoCheck) detects webserver errors/warnings
+  * [Exit Confirmation Checker] validates presence of confirmation when leaving unsubmitted forms
+  * [Auto Check] detects webserver errors/warnings
   * [Run All Favorites](https://addons.mozilla.org/en-US/firefox/addon/selite-run-all-favorites/) executes multiple Selenese [suites][suite]
 * productive environment
   * [Hands-on GUI](SeleniumIDEtips#hands-on-gui) enhances Selenium IDE visual interface. It enables editing commands in-place (in the list itself). It makes Selenium IDE more intuitive.
   * [Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/) improves operation of clibpoard. It supports indentation of commands.
   * fast development cycle for custom Javascript functionality (via [Bootstrap](Bootstrap))
-  * robust loading of extensions honouring dependancies (through [ExtensionSequencer](ExtensionSequencer))
+  * robust loading of extensions honouring dependancies (through [Extension Sequencer])
   * [Preview](Preview) presents custom reports and forms. User can preview and confirm next actions.
   * see also [tips on Selenium IDE](SeleniumIDEtips) productivity.
 
@@ -84,11 +84,11 @@ Quality is ensured by
  * testing by [PackagedScripts](PackagedScripts)
  * processes for [TroubleShooting](TroubleShooting) and [ReportingIssues](ReportingIssues)
  * [DocumentationStandard](DocumentationStandard)
- * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal) and [this documentation](https://github.com/SeLite/SeLite.github.io)
+ * code on GitHub: [SeLite](https://github.com/SeLite/SeLite), [SelBlocks Global](https://github.com/SeLite/SelBlocksGlobal) and [this documentation](https://github.com/SeLite/SeLite.github.io)
  * [Components](Components) are verified by Mozilla.
 
 ## Compatibility
-SeLite is compatible with Firefox 48 and Selenium IDE 2.9.1. It's platform-independent. (It doesn't support Flash/Silverlight/ActiveX.) Its part [SelBlocksGlobal](SelBlocksGlobal) is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
+SeLite is compatible with Firefox 48 and Selenium IDE 2.9.1. It's platform-independent. (It doesn't support Flash/Silverlight/ActiveX.) Its part [SelBlocks Global] is mostly forward compatible with SelBlocks 2.0.1.<!-- Comment: Regarding Adobe Flash: I have't tried https://addons.mozilla.org/en-us/firefox/addon/flex-pilot-x (https://github.com/admc/flex-pilot-x - both last updated in May 2011!), neither https://code.google.com/p/sfapi/. They inject .swf, or they need to be compiled with the Flash application, respectively.-->
 
 Currently it doesn't operate with browsers other than Firefox. However, in 2017 Firefox extensions will use the same API as Opera and Chrome.
 
@@ -104,7 +104,7 @@ You could get more out of SeLite. However, it depends on third party components.
 
  * vote for [ThirdPartyIssues](ThirdPartyIssues)
  * star on GitHub
-   * code projects: [SeLite](https://github.com/SeLite/SeLite) and [SelBlocksGlobal](https://github.com/SeLite/SelBlocksGlobal)
+   * code projects: [SeLite](https://github.com/SeLite/SeLite) and [SelBlocks Global](https://github.com/SeLite/SelBlocksGlobal)
    * documentation projects: [SeLite documentation](https://github.com/SeLite/SeLite.github.io) and [API reference](https://github.com/SeLite/API)
  * star and review at Mozilla
    * [multi-package](https://addons.mozilla.org/en-US/firefox/addon/selite/) (all SeLite components packaged together)

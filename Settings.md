@@ -13,7 +13,7 @@ layout: default
 Selenium IDE can be extensively customised via [Core extensions][core extension] (written in Javascript). This way you add new Selenese [commands][command] and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
 
   * users or credentials
-  * location of XML files (which an extension can pass to loadXmlVars and forXml from [SelBlocksGlobal](SelBlocksGlobal))
+  * location of XML files (which an extension can pass to loadXmlVars and forXml from [SelBlocks Global])
   * location of SQLite data files
 
 # Configuration interface #

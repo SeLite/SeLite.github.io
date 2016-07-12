@@ -49,8 +49,8 @@ If you introduce or modify any Selenese [commands][command] - i.e. <code>Seleniu
 If you remove a filename from `bootstrapCoreExtensions` (or you switch to a different default [set] or a [suite] with a different [set] associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.
 
 ## Dependencies between files ##
-Bootstrap initiates extensions after any [Core extensions][core extension] loaded as Firefox add-ons (whether they use [ExtensionSequencer](ExtensionSequencer) or not).
+Bootstrap initiates extensions after any [Core extensions][core extension] loaded as Firefox add-ons (whether they use [Extension Sequencer] or not).
 
-If you have multiple files registered with Bootstrap through a {{valuesManifest}}, they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [ExtensionSequencer](ExtensionSequencer).
+If you have multiple files registered with Bootstrap through a {{valuesManifest}}, they get loaded in that order. However, if you register multiple files through profile-based configuration (as per [SettingsInterface](SettingsInterface)), their order is not guaranteed. Then you need more structure for that: package them as Firefox extensions and load them through [Extension Sequencer].
 
 On change, Bootstrap re-loads all registered files, not just the one(s) updated. That allows dependant files (that were registered with Bootstrap through a {{valuesManifest}}) to inject any hooks in the expected order.

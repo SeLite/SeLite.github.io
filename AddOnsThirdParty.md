@@ -26,8 +26,8 @@ If you develop [Core extensions][core extension] or SeLite frameworks (as per [G
 # Incompatible add-ons #
 Don't use
 
-  * original SelBlocks - it doesn't call Selenese functions across [cases][case]. Use [SelBlocksGlobal](SelBlocksGlobal) instead;
-  * Flow Control, Sideflow, GoTo - they are incompatible with [SelBlocksGlobal](SelBlocksGlobal) (and also with SelBlocks).
+  * original SelBlocks - it doesn't call Selenese functions across [cases][case]. Use [SelBlocks Global] instead;
+  * Flow Control, Sideflow, GoTo - they are incompatible with [SelBlocks Global] (and also with SelBlocks).
 
 # Other versions of Selenium IDE #
 In order to use an old version of Selenium IDE 

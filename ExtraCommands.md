@@ -26,7 +26,7 @@ For that the commands have two parameters:
     * `store` is a name of stored variable, where the command saves the clicked/selected/typed value. It may include field or sub(sub-...)-field e.g. `variableName.fieldName, variableName.fieldName.subfieldName...`
     * `paramsOrStore` can be either
       * a string: a name of stored variable, just like `store` above
-      * an object with one or multiple fields. Following examples use [SelBlocksGlobal](SelBlocksGlobal) and its [EnhancedSelenese](EnhancedSelenese) to pass objects through `=<>...<>` notation.
+      * an object with one or multiple fields. Following examples use [SelBlocks Global] and its [EnhancedSelenese](EnhancedSelenese) to pass objects through `=<>...<>` notation.
 
 `typeRandomEmail` co-operates with `typeRandom`. It types a random email address, based on a name already typed in another element.
 

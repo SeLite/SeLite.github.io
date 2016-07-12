@@ -11,7 +11,7 @@ Do not search for implementation functions of Selenese action [commands][command
 For locating the source code of those Javascript functions see [JavascriptSpecial](JavascriptSpecial) > [Locating a Javascript function in sources](JavascriptSpecial#locating-a-javascript-function-in-sources).
 
 # Defining functions in Selenium Core #
-This is for files normally loaded into [Core scope] (via [Bootstrap](Bootstrap) or [ExtensionSequencer](ExtensionSequencer), which use [JavascriptComplex](JavascriptComplex) > [mozIJSSubScriptLoader](JavascriptComplex#mozIJSSubScriptLoader)). (That's not for {{navJavascriptCodeModules}}.)
+This is for files normally loaded into [Core scope] (via [Bootstrap](Bootstrap) or [Extension Sequencer], which use [JavascriptComplex](JavascriptComplex) > [mozIJSSubScriptLoader](JavascriptComplex#mozIJSSubScriptLoader)). (That's not for {{navJavascriptCodeModules}}.)
 
 You can define functions for [Core scope] in either way mentioned at [JavascriptEssential](JavascriptEssential) > [Defining Javascript functions](JavascriptEssential#defining-javascript-functions). However, if you use [the classic way](JavascriptEssential#the-classic-way), do that only in `strict` mode. Otherwise the function will be in the Selenium global scope (i.e. outside of [Core scope]) - then you need to see {{navCoreExtensionsLoadedTwice}}.
 

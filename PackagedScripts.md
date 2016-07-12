@@ -31,7 +31,7 @@ Reasoning: A case can open local pages relative to its location, or to location 
 We indent commands in tests. That requires [SeLite Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/). Otherwise run `sed -r -e 's/<td>(&nbsp;)+/<td>/' test-case-location >temp_out; cp temp_out >test-case-location`.
 
 ## Negative tests that succeed
-If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocksGlobal](SelBlocksGlobal). Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
+If you need verify that a Selenese command fails under certain circumstances, put it within ``try..catch` of a `try..catch..endTry` block as per [SelBlocks Global]. Use its `catch..endTry` part to set a stored variable of your choice. Check that variable after `endTry` (e.g. with `getEval`) and if not set, throw an error. Remember to clear that stored variable **before** that block of steps, so that it can run multiple times.
 
 ## Negative tests that fail
 There are real negative tests in e.g. `selite.sel-blocks-global/selenese-scripts-negative/`. Those tests themselves are supposed to fail (e.g. they validate situations when `try..catch..endTry` is supposed not to catch an error). If these tests don't fail, then there's a problem.
@@ -44,7 +44,7 @@ Before you run a [script] packaged with local forms/pages, the current tab in Fi
 Open a suite using Selenium IDE menu File > Open... or Open Test Suite... Do not open actual [cases][case] via menu File > Open..., otherwise they won't be able to access any local forms/pages (as per above) nor any shared Selenese functions. Then you can run the whole suite, or selected cases. Shared [cases][case] that only define Selenese functions are not intended as runnable.
 
 ## Running multiple suites
-In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-scripts-negative/`), use [Components](Components) > [Run All Favorites](Components#run-all-favorites). Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocksGlobal](SelBlocksGlobal) to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
+In order to run the whole set of SeLite [suites][suite] (except for `selite.sel-blocks-global/selenese-scripts-negative/`), use [Components](Components) > [Run All Favorites](Components#run-all-favorites). Import `SeLite/run-all-favorites.json`. You need source of SeLite and [SelBlocks Global] to be in their default folders (`SeLite` and `SelBlocksGlobal`) under your home folder. Those folder names are the default when you [check them out](https://github.com/SeLite/Selite) from GIT. If you download them instead, rename the folders to `SeLite` and `SelBlocksGlobal`.<!-- TODO Test. replace here and elsewhere -->
 
 # Javascript tests #
 These validate functionality
@@ -56,4 +56,4 @@ These validate functionality
 There's no extra installation - they come as a part of their components (in folders `javascript-tests`). You can invoke them offline and directly from Firefox (without starting Selenium IDE) through {{chromeUrl}}s listed at [Components](Components). However, you normally don't need to run them separately, since they get invoked from packaged Selenese scripts.
 
 # Shell tests #
-These are invoked from shell (i.e. `cmd` on Windows). They only exist for [ExtensionSequencer](ExtensionSequencer) > [Shell tests](ExtensionSequencer#shell-tests).
+These are invoked from shell (i.e. `cmd` on Windows). They only exist for [Extension Sequencer] > [Shell tests](ExtensionSequencer#shell-tests).

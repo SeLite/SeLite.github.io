@@ -76,7 +76,7 @@ If you'd like to edit profile-based configuration set(s), open _chrome://selite-
   * Fill in `webRoot` (it doesn't matter whether it ends with a slash or not). Your [scripts][script] can access it via `SeLiteSettings.webRoot()`. (This is a workaround for Selenium IDE issue ['Base URL Should Allow Path'](https://github.com/SeleniumHQ/selenium/issues/1550). Please, vote for it and also for other [ThirdPartyIssues](ThirdPartyIssues).)
   * Fill in `tablePrefix`.
   * Open the URL of the installation, log in with account(s) that you entered for role(s) above and make Firefox save your password(s). (That's for [SettingsLogins](SettingsLogins).)
-  * You may want to activate [AutoCheck](AutoCheck) to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
+  * You may want to activate [Auto Check] to detect notices/warnings/errors. Currently that works out-of-the-box for PHP only.
 
 # Run scripts
 Unless you are using GUI to maintain or review configuration, you can run [scripts][script] ([cases][case] or [suites][suite]) right after you start Selenium IDE. You don't need to run any single Selenese command first.

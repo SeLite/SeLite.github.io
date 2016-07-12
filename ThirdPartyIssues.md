@@ -66,9 +66,9 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)        | Selenium        | Readable test cases |
 | [Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662)                                     | Selenium        | Compact tests |
 | [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                 | Selenium        | Practical testing and integration |
-| [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                  | Selenium        | Stable API of [SelBlocksGlobal](SelBlocksGlobal) |
+| [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                  | Selenium        | Stable API of [SelBlocks Global] |
 | [Core extensions are loaded 2x - document this, or prevent it](https://github.com/SeleniumHQ/selenium/issues/1549)               | Selenium        | Robust core extensions |
-| [verify* should show the diff](https://github.com/SeleniumHQ/selenium/issues/1538)                                               | Selenium        | Robust tests. <br>See [ExitConfirmationChecker](ExitConfirmationChecker) &gt; [Details](ExitConfirmationChecker#details) |
+| [verify* should show the diff](https://github.com/SeleniumHQ/selenium/issues/1538)                                               | Selenium        | Robust tests. <br>See [Exit Confirmation Checker] &gt; [Details](ExitConfirmationChecker#details) |
 | [Details of error reporting in user/plugin javascript](https://github.com/SeleniumHQ/selenium/pull/61)                           | Selenium        | Productive development |
 | [IDE: alert() fails in a modified test case](https://github.com/SeleniumHQ/selenium/issues/1768)                                 | Selenium        | Reliable automation |
 | [IDE: a subsequent call to open() fails with multiprocessed Firefox (e10s)](https://github.com/SeleniumHQ/selenium/issues/1769)  | Selenium | Major Firefox Compatibility |

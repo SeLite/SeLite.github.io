@@ -9,14 +9,14 @@ You need SeLite source to get [AppsFrameworks](AppsFrameworks) and [PackagedScri
 
 There are repositories for
 
-* all components (except for [SelBlocksGlobal](SelBlocksGlobal)) and frameworks
-* [SelBlocksGlobal](SelBlocksGlobal)
+* all components (except for [SelBlocks Global]) and frameworks
+* [SelBlocks Global]
 * documentation (you can view it offline as per [AboutDocumentation](AboutDocumentation)).
 
 | **Purpose**                        | **Repository: files and details** | **Download ZIP** | **Clone from GIT** | **Updates (XML feed)** |
 |--------------------------------------|---------------------------------------|-----------------------|------|
-| SeLite source (except for [SelBlocksGlobal](SelBlocksGlobal)) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git | [Updates (feed)](https://github.com/SeLite/SeLite/commits/master.atom) |
-| [SelBlocksGlobal](SelBlocksGlobal) source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git | [Updates (feed)](https://github.com/SeLite/SeLBlocksGlobal/commits/master.atom) |
+| SeLite source (except for [SelBlocks Global]) | [source](https://github.com/SeLite/SeLite) | [Download ZIP](https://github.com/SeLite/SeLite/archive/master.zip) | https://github.com/SeLite/SeLite.git | [Updates (feed)](https://github.com/SeLite/SeLite/commits/master.atom) |
+| [SelBlocks Global] source                | [source](https://github.com/SeLite/SelBlocksGlobal) | [Download ZIP](https://github.com/SeLite/SelBlocksGlobal/archive/master.zip) | https://github.com/SeLite/SelBlocksGlobal.git | [Updates (feed)](https://github.com/SeLite/SeLBlocksGlobal/commits/master.atom) |
 | Documentation                | [source](https://github.com/SeLite/SeLite.github.io) | [Download ZIP](https://github.com/SeLite/SeLite.github.io/archive/master.zip) | https://github.com/SeLite/SeLite.github.io.git | [Updates (feed)](https://github.com/SeLite/SeLite.github.io/commits/master.atom) |
 {: .table}
 
