@@ -43,7 +43,7 @@ Selenium.prototype.methodName= function(pqr...) {
 See also {{navFunctionIntercepts}}.
 
 ## Adding/modifying Selenese commands ##
-If you introduce or modify any Selenese [commands][command] - i.e. <code>Selenium.prototype.do<em>Xyz</em>, Selenium.prototype.get<em>Xyz</em></code> or <code>Selenium.prototype.is<em>Xyz</em></code> - then those will be available to your [case]/[suite] only **after** you run any Selenese command first. <!-- TODO don't know why -->
+If you introduce or modify any Selenese [commands][command] - i.e. <code>Selenium.prototype.do<em>Xyz</em>, Selenium.prototype.get<em>Xyz</em></code> or <code>Selenium.prototype.is<em>Xyz</em></code> - then those will be available to your [case]/[suite] only **after** you run any Selenese command first.
 
 ## Switching between files ##
 If you remove a filename from `bootstrapCoreExtensions` (or you switch to a different default [set] or a [suite] with a different [set] associated with it), Bootstrap can't 'unload' a file that it has loaded already. If you change that option later and you add the filename back, it won't re-run the file, unless its timestamp has changed.

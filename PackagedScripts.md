@@ -26,7 +26,7 @@ Selenium IDE doesn't indicate the current [suite]'s folder in the GUI. Therefore
 
 Reasoning: A case can open local pages relative to its location, or to location of the current suite (the one loaded). Either choice has some positives, and can also be confusing. However, using URLs relative to the current suite allows flexible re-use of automation cases and their Selenese functions, with customised versions of local pages for each [suite]. If all such suites can use same version of a local page, such a file can be in a common parent folder. This results in similar suites having the same folder structure and same names for local pages, which simplifies navigation.
 
-[Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g. <!-- TODO check/FIX--> <code>open | file://` SeLiteSettings.getTestSuiteFolder() `/form.html</code>
+[Suites][suite] that share [cases][case] from parent folder(s) should be at the same directory depth, so that they can access any local `.html` files in higher folders through same relative URLs (e.g. `../page.html`). Scripts open local forms/pages by e.g. `open | file://<> SeLiteSettings.getTestSuiteFolder() <>/form.html`.
 
 We indent commands in tests. That requires [SeLite Clipboard And Indent](https://addons.mozilla.org/en-US/firefox/addon/selite-clipboard-and-indent/). Otherwise run `sed -r -e 's/<td>(&nbsp;)+/<td>/' test-case-location >temp_out; cp temp_out >test-case-location`.
 

@@ -44,7 +44,7 @@ SeLite doesn't use GitHub Wiki, which doesn't utilise screen well, especially on
 ## Drawn diagrams
 Don't use UML tools, as they are more restrictive and less efficient. <!-- That"s why I didn"t consider using e.g. http://plantuml.sourceforge.net and http://sourceforge.net/projects/plantumlnb -->
 
-Draw diagrams in LibreOffice/OpenOffice and save them as `.odg`. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. TODO: In documentation use URLs to the .png images from git ([selite/diagrams/](https://github.com/selite/selite/tree/master/diagrams) > navigate to `.png` file > get URL of 'Raw' button).
+Draw diagrams in LibreOffice/OpenOffice and save them as `.odg`. Then Edit > Select All; File > Export (export the selection, rather than the whole drawing area). Export as a .png, not interlaced, with lowest compression. Then commit both .odg and .png to git. In documentation use URLs of 'Raw' images from git (e.g. [selite/diagrams/](https://github.com/selite/selite/tree/master/diagrams) > navigate to `.png` file > get URL of 'Raw' button).
 
 ### Versions of LibreOffice
   * LibreOffice version that came with CentOS 6.4 didn't export as `.png` well - the quality was low.
@@ -58,7 +58,7 @@ Please
   * use colours black, Chart 11 for red, Green 4, Chart 12 for blue, Chart 3 for yellow
 
 ## Textual object diagrams
-Object Diagrams draw ownership/reference relationships between objects, fields and functions. They usually don't necessarily describe class inheritance (which is clear from the source<!--TODO: and from Javadoc -->).
+Object Diagrams draw ownership/reference relationships between objects, fields and functions. They usually don't necessarily describe class inheritance (which is clear from the source and from [API]).
 
 Text diagrams don't need to be esthetic, but clear and easy to edit - so you can quickly update them whenever you change the relevant code. They are in plain text, with **`<, >, ^, v`** for connections. The diagrams look like this:
 

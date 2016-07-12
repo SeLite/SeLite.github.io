@@ -110,12 +110,12 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
     <li class="divider"></li>
     <li><a href="TroubleShooting">TroubleShooting</a></li>
     <li><a href="ReportingIssues">ReportingIssues</a></li>
+    <li><a href="PackagedScripts">PackagedScripts</a></li>
     <li><a href="WhySeleniumIDE">WhySeleniumIDE</a></li>
     <li class="divider"></li>
     <li class="dropdown-header">Internal:</li>
     <li><a href="DocumentationStandard">DocumentationStandard</a></li>
     <li><a href="DataObjects">DataObjects</a></li>
     <li><a href="SeleniumFlow">SeleniumFlow</a></li>
-    <li><a href="PackagedScripts">PackagedScripts</a></li>
   </ul>
 </li>
