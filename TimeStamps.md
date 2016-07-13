@@ -33,9 +33,9 @@ The above situations cause
 If you are testing performance/responsiveness of the web application, you could balance the negative effect of delays by throttling down application resources.
 
 ## Timezones ##
-Will try to implement for Firefox 27 (Internationalisation API).
+This is pending Firefox Internationalisation API.
 
-TODO time/speed reporting by scripts - stop/pause clock, which excludes the timestamp robustness wait time
+<!-- TODO time/speed reporting by scripts - stop/pause clock, which excludes the timestamp robustness wait time-->
 
 # Configuration of time sync difference #
 [Commands](Commands) adds field `maxTimeDifference` to [Settings](Settings) module `extensions.selite-settings.common`. It's  the max. time difference between the server and your script machine (in milliseconds).

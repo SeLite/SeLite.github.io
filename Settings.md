@@ -9,7 +9,6 @@ layout: default
 [SeLite Settings](https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/) ([Components](Components) > [Settings](Components#settings)) allows easy custom configurations of Selenese scripts and [Core extensions][core extension].
 
 # Background #
-<!-- TODO Extract out: to AboutDocumentation? -->
 Selenium IDE can be extensively customised via [Core extensions][core extension] (written in Javascript). This way you add new Selenese [commands][command] and related functionality. Many extensions are worth reusing (by yourself, within your team or publicly). But then they often need to be configured, e.g. in regard of
 
   * users or credentials
@@ -86,7 +85,7 @@ Modules are schemas/templates of user's configuration(s). They define each [fiel
 Test developers define configuration modules (schemas) in Javascript. See [SettingsFields](SettingsFields) and [SettingsAPI](SettingsAPI).
 
 # Sets
-<!-- TODO Firefox profile-based preferences-->User's configuration(s) - values of the fields - are stored in _sets_. A module can have either
+User's configuration(s) - values of the fields - are grouped in _set(s)_. Those are stored in Firefox preferences. A module can have either
 
   * exactly one set, or
   * any number of sets; one of them can be selected as default

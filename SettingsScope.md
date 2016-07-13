@@ -38,8 +38,7 @@ Therefore, a field will have value(s) based on its first occurrence in the follo
   * less local {{valuesManifest}}
   * ...
   * least local {{valuesManifest}}
-  * field default value(s) from module definition (only if the module associates with folders)
-<a href='Hidden comment: TODO Check "(only if the module associates with folders)"'></a>
+  * field default value(s) from module definition (if any)
 
 # Caching #
 Manifests are cached
