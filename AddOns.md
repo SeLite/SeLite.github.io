@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<!-- Don't use permalink: /Components in YAML matter above. It doesn't auto-redirect this page. -->
+<!-- Don't use permalink: /Components in YAML matter above. It doesn't auto-redirect. -->
 ### Page has moved
 
 Please see [Components](Components) instead.

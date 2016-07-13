@@ -97,7 +97,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> <a name="commands"></a><a href='ExtraCommands'>Commands</a></td>
+    <td> <a name="commands"></a><a href='Commands'>Commands</a></td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-commands/versions/'>download</a>                </td>
     <td> <ul>

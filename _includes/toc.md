@@ -50,12 +50,12 @@ Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableO
   </ul>
 </li>
 <li {{ topLiClass }}>
-  {{ menuOpener }} data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese ExtraCommands">Selenese{{ caret }}{{ menuCloser }}
+  {{ menuOpener }} data-group-page-names="SelBlocksGlobal CustomisingSelenese ClassicSelenese EnhancedSelenese Commands">Selenese{{ caret }}{{ menuCloser }}
   <ul {{ luClass }} role="menu">
     <li><a href="ClassicSelenese">ClassicSelenese</a></li>
     <li><a href="EnhancedSelenese">EnhancedSelenese</a></li>
     <li><a href="SelBlocksGlobal">SelBlocksGlobal</a></li>
-    <li><a href="ExtraCommands">ExtraCommands</a></li>
+    <li><a href="Commands">Commands</a></li>
     <li><a href="CustomisingSelenese">CustomisingSelenese</a></li>
   </ul>
 </li>

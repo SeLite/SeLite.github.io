@@ -95,7 +95,7 @@ It can be
 
    * from XML using SelBlocks functionality (a part of [SelBlocks Global])
    * from SQLite with the help of SeLite object-oriented layer
-   * random, within a range or from a list of choices, using SeLite [ExtraCommands](ExtraCommands)
+   * random, within a range or from a list of choices, using SeLite [Commands](Commands)
 
 ## Test session
 It contains custom runtime variables in the test system, which serve for

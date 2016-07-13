@@ -24,7 +24,7 @@ SeLite enables the following in Selenium IDE
 * reusable, structured and expressive scripts
   * [SelBlocks Global] - flow structures, blocks of Selenese commands (functions) re-used across Selenese [cases][case]
   * [EnhancedSelenese](EnhancedSelenese): enhanced syntax for shorter and cleaner scripts
-  * [ExtraCommands](ExtraCommands) (e.g. random input generators)
+  * [Commands](Commands) (e.g. random input generators)
 * DB-driven operations
   * test database isolated from the application (see [TestMethods](TestMethods) and [HandlingData](HandlingData))
   * data access through high-level formulas (see [Components](Components) > [DB Objects](Components#db-objects))
