@@ -32,7 +32,7 @@ By submitting an issue or a comment you agree that project administrator(s) can,
 '></a>
 
 ## Submit any failing scripts
-Save your [scripts][script] ([cases][case] and [suites][suite]), along with any HTML forms/pages as per [PackagedScripts](PackagedScripts) > [Structure](PackagedScripts#structure). If needed, include any [Settings](Settings) as per {{navValuesManifests}}. Put that in a `.zip` file and <!--TODO: can't attach non-picutres -->attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:
+Save your [scripts][script] ([cases][case] and [suites][suite]), along with any HTML forms/pages as per [PackagedScripts](PackagedScripts) > [Structure](PackagedScripts#structure). If needed, include any [Settings](Settings) as per {{navValuesManifests}}. Put that in a `.zip` file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:
 
 ```
 command | target | value

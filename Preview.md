@@ -17,5 +17,3 @@ The content renders in a standard Firefox window. The user can bookmark it, or p
 Preview is "live" and connected to Selenium IDE, but only in the window that was opened from Selenium IDE by `getEval | editor.openPreview( templateURL, data, config )`. From the content in Preview invoke Selenese functions via [SelBlocks Global] &gt; [Out-of-flow Selenese callbacks](SelBlocksGlobal#out-of-flow-selenese-callbacks).
 
 The user may not be able to navigate backwards & forwards in Preview. Otherwise links in Preview could be in conflict with Selenese state (call stack, stored variables) once the user executes any further Selenese commands.
-<!-- TODO try open in FF sidebar.
-TODO Have it configurable via Settings. -->

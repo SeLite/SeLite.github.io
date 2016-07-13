@@ -24,7 +24,7 @@ A suite and any of its cases don't have to be in the same folder. Therefore a ca
 ## script
 When some functionality applies to both [cases][case] or [suites][suite], SeLite calls them _scripts_. To differentiate them from Javascript (or other scripts), they are sometimes called _Selenese scripts_. Some other terms are at [TestMethods](TestMethods) and [TestMethodsTheory](TestMethodsTheory).
 
-Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/versions/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocks Global]/SeLite refer to them as _functions_ rather than _scripts_.
+Side note: [SelBlocks](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/) used to call Selenese _functions_ (defined by `function...endFunction`) _scripts_. (Originally they were defined by `script...endScript`.) However, both SelBlocks and [SelBlocks Global]/SeLite refer to them as _functions_ rather than _scripts_.
 
 ## function
 Word _function_ can refer to a Javascript `function` (whether in Selenium Core scope or not), or to a _function_ defined by [SelBlocks Global]/SelBlocks construct `function...endFunction`. Where it's unclear, let's call the later _Selenese function_ or _script function_.

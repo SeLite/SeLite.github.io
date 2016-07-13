@@ -14,7 +14,7 @@ layout: default
     * Reflecting on what you intend to implement can save you unnecessary work (immediately or later).
     * Complexity makes coding often slow and frustrating. By documenting first, you will be free to relax with no paperwork duty once implemented.
     * If you can't finish implementation or you need assistance, it's easier for someone else to pick it up if there's some documentation.
-  * Create [scripts][script] to be run from Selenium IDE - see [PackagedScripts](PackagedScripts).<!-- TODO move this elsewhere: it's Selenese scripts, not JS.-->
+  * Create Selenese [scripts][script] to be run from Selenium IDE - see [PackagedScripts](PackagedScripts).
   * Don't use fixed line length - see [DocumentationStandard](DocumentationStandard). However, split complex expressions on multiple lines.
   * Use ESLint. [Install it](http://eslint.org/docs/user-guide/command-line-interface) and run it as `eslint .` in both `SeLite` and `SelBlocksGlobal` folders.
   * Apply [Mozilla WebExtensions code style](https://wiki.mozilla.org/WebExtensions/Hacking#Code_Style).
