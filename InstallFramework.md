@@ -26,21 +26,13 @@ There are two methods for this. The simpler one manages it through text file(s),
 
 An alternative method is Firefox profile-based configuration set(s), controlled through GUI. It can also override any {{valuesManifest}}s. It's done through {{navAssociationsManifests}}. However, using GUI (for any part of configuration) usually requires the whole configuration to be in two stages.
 
-## Configure SeLite to load the framework ##
+## Configure loading the framework ##
 
 ### Through _values_ manifests ###
 This is already done for [scripts][script] that come with SeLite frameworks. If you're using one of those frameworks, you can copy its {{ valuesManifest }} `SeLiteSettingsValues.txt`. Otherwise create it as a plain text file. Either way, you then need to adjust/enter value of field `extensions.selite-settings.common.bootstrappedCoreExtensions`, so it points to location of the framework Javascript file. See also {{navValuesManifests}} and {{navLiteralsForSpecialValues}}.
 
-### Through GUI ###
-<!-- @TODO eliminate or Move to SettingsInterface? -->
-You can configure that via GUI as per [SettingsInterface](SettingsInterface):
-
-  1. Visit {{chromeUrl}} _chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common_
-  2. create a new [set]
-  3. if you're using just one script configuration, make the set default (click at Default next to its name)
-  4. select 'Add a new value' next to `bootstrapCoreExtensions`. Point it to where you downloaded the framework JS file.
-
-However, if you're going to use several script configurations, then create a [set] for each, but don't make any of those sets default. Then connect the sets with folders of your [suite(s)][suite] through {{associationsManifest}} as per {{navAssociationsManifests}}.
+### Through GUI
+See [SettingsInterface](SettingsInterface) > [Managing mode](SettingsInterface#managing-mode). Select 'Add a new value' next to `bootstrapCoreExtensions`. Point it to where you downloaded the framework JS file.
 
 ## Edit or review configuration of the framework ##
 
