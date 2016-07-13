@@ -127,8 +127,13 @@ These callbacks are especially useful for presenting with [Preview](Preview).
 ## Try/catch suppresses error and timeout counts ##
 `try...catch` suppresses counts and some logs for errors, failures of asserts/verifications and timeouts. [Scripts][script] can verify that custom [commands][command] fail or time out as expected (and if they fail or time out, the script succeeds; on the other hand, if the command succeeds, the test script fails).
 
-# Selenese accessors in Javascript expressions
-You may combine `getEval`, `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:
+# Selenium.download
+If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
+
+# Productivity tips
+
+## Selenese accessors in Javascript expressions
+You may combine `getEval` (and its derivatives), `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:
 
 ```
 if | !selenium.isVisible( 'id=pmf-navbar-collapse' )
@@ -136,9 +141,9 @@ storeEval | selenium.browserbot.findElement('locatorString').innerText | storedV
 getEval | more-complex-expression... selenium.getAttribute('locatorString@attributeName')...
 ```
 
-# Selenium.download
-If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
+ Use variable `selenium` instead of `this`. Those two are the same in [Core scope]. However, `selenium` is more expressive. (Also `this` has a different meaning in closures.) For example: `if | selenium.isElementPresent( 'locator...' )| ... endIf`.
 
-@TODO > include links
-@TODO DOC Selenese > ???: CombiningExpressions: Use variable `selenium` in [Core scope] for the same as what `this` keyword is in context of Selenese actions `getEval` (and related), if, while. However, in their context `this===selenium`, hence use `selenium` instead of `this`, so that it's the same as in [Core scope]. (In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module and use `SeLiteMisc.selenium` instead<!--TODO example of loading-->.)
--> So, unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't call `storeEval` but use [EnhancedSelenese](EnhancedSelenese) to pass the Javascript expression directly within pairs `<>...<>` (or `=<>...<>` if the result can be other than a string). This minimises use of `storeEval` and auxiliary stored variables. That makes Selenese scripts shorter, clearer, more robust and reusable.
+In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module `Components.utils.import( 'chrome://selite-misc/content/SeLiteMisc.js' );` and use `SeLiteMisc.selenium` instead.
+
+## Minimize auxiliary variables
+Unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't call `storeEval` but use [EnhancedSelenese](EnhancedSelenese) to pass the Javascript expression directly within pairs `<>...<>` (or `=<>...<>` if the result can be other than a string). This minimises use of `storeEval` and auxiliary stored variables. That makes Selenese scripts shorter, clearer and more robust.
