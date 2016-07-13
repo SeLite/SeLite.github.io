@@ -104,7 +104,7 @@ These commands **wait** for a given `Promise` object to resolve. If it gets reje
  * `storePromiseValue` is similar to `storeEval`, but it stores the resolved (fulfilled) value of the promise (rather than the promise itself).
  * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to non-strict false (i.e. any of `false, null, 0, ` empty string `""` or `undefined`), then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected or it times out, the command throws an error.
 
-You may want to increase `selenium.defaultTimeout` programatically (through `getEval`). Such a change applies only to the current [case] run. <!--TODO current case, suite or all favorites? TEST -->
+You may want to increase `selenium.defaultTimeout` programatically (through `getEval`). Such a change applies only to the current [case] run. That covers any [functions][function] from other [cases][case], but only while running the top [case] that modified `selenium.defaultTimeout`. It gets reset before running any further cases from the same suite (or before running the rest of favorites, if using [Components](Components) > [Run All Favorites](Components#run-all-favorites).
 
 ## Iterator and iterable-based loops
 `forIterator...endForIterator` and `forIterable...endForIterable` iterate the given iterator or iterable object. See [MDN > Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
