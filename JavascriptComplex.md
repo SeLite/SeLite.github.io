@@ -69,10 +69,10 @@ Operator `instanceof` doesn't work for objects of most standard classes (`Array,
 # Loading Javascript files
 
 ## Files loaded through mozIJSSubScriptLoader
-Such Javascript files don't need any special structures. SeLite ([Bootstrap](Bootstrap) and [Extension Sequencer]) uses this to load Javascript files into [Core scope]. It's intended for files that extend Selenium or add functonality that should be available in parameters to Selenese commands. This uses [mozIJSSubScriptLoader](https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/mozIJSSubScriptLoader)'s `loadSubScript()`. See also {{navCoreExtensionsLoadedTwice}}.
+Such Javascript files don't need any special structures. SeLite ([Bootstrap](Bootstrap) and [Extension Sequencer]) uses this to load Javascript files into [Core scope]. It's intended for files that extend Selenium or add functonality that should be available in parameters to Selenese commands. This uses [mozIJSSubScriptLoader](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIJSSubScriptLoader)'s `loadSubScript()`. See also {{navCoreExtensionsLoadedTwice}}.
 
 ## Javascript code modules
-[Javascript code modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using) are loaded via [Components.utils.import(url, scope)](https://developer.mozilla.org/en/docs/Components.utils.import). They have separate scopes, with any exported classes/functions/objects listed in array `EXPORTED_SYMBOLS`. Code modules don't have access to the outer scope (e.g. to `window` object and to Selenese objects). They are suitable for non-GUI operations and also for functionality not specific to Selenium.
+[Javascript code modules](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Using) are loaded via [Components.utils.import(url, scope)](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils.import). They have separate scopes, with any exported classes/functions/objects listed in array `EXPORTED_SYMBOLS`. Code modules don't have access to the outer scope (e.g. to `window` object and to Selenese objects). They are suitable for non-GUI operations and also for functionality not specific to Selenium.
 
 ### Functions in Javascript code modules ###
 In Javascript code modules you can define functions in [JavascriptEssential](JavascriptEssential) > [the classic way](JavascriptEssential#the-classic-way). You don't need an anonymous function to protect the global scope, because the global scope will contain exported symbols only. So you can use
@@ -161,4 +161,3 @@ See
   * [JavascriptEssential](JavascriptEssential)
   * [Google Style Guide](https://google.github.io/styleguide/javascriptguide.xml), especially [Closures](https://google.github.io/styleguide/javascriptguide.xml#Closures)
   * [MDN: Guide to iterators and generators](https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators)
-  * [MDN: Array comprehensions](https://developer.mozilla.org/en/JavaScript/Guide/Predefined_Core_Objects#Array_comprehensions)

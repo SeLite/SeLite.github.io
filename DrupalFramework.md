@@ -43,8 +43,7 @@ chmod 644 settings.php<br>
 cd files<br>
 setfacl -m u:testersUserName:rw data.sqlite<br>
 </pre>
-<a href='Hidden comment: TODO test DB prefix
-'></a>
+<!-- TODO test DB prefix-->
 
 Notes
 

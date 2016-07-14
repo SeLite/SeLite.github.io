@@ -25,11 +25,11 @@ Collect any errors from logs (as per [TroubleShooting](TroubleShooting)). If log
 
 By submitting an issue or a comment you agree that project administrator(s) can, without notice, edit your comment, and/or incorporate your comment into SeLite, under the current or any future license.
 
-<a href='Hidden comment: Comment: too much:
+<!-- too much:
 * apply [https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines Bug Writing Guidelines] from Mozilla
 * follow [https://bugzilla.mozilla.org/page.cgi?id=etiquette.html Etiquette] of Bugzilla
 * create reports as [http://sscce.org/ Short, Self Contained, Correct Examples]
-'></a>
+-->
 
 ## Submit any failing scripts
 Save your [scripts][script] ([cases][case] and [suites][suite]), along with any HTML forms/pages as per [PackagedScripts](PackagedScripts) > [Structure](PackagedScripts#structure). If needed, include any [Settings](Settings) as per {{navValuesManifests}}. Put that in a `.zip` file and attach it to the issue. That prevents typing mistakes and misunderstanding. Alternatively, if you report only a few simple Selenese command calls, you could send them as text, e.g.:

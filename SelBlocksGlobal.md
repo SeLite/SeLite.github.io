@@ -91,6 +91,9 @@ call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2..
 ## `storeEval` can return null/undefined
 `storeEval` in classic Selenium IDE couldn't store `null` or `undefined`. Instead, it replaced them with string `"null"`. In SelBlocks Global it stores `null` and `undefined` unchanged.
 
+## Renamed `foreach` to `forEach`
+This renamed `foreach` to `forEach` (and `endForeach` to `endForEach`). The old commands still work for now. 
+
 # Enhancements to SelBlocks #
 These are forward-compatible with classic SelBlocks.
 
@@ -105,6 +108,11 @@ These commands **wait** for a given `Promise` object to resolve. If it gets reje
  * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to non-strict false (i.e. any of `false, null, 0, ` empty string `""` or `undefined`), then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected or it times out, the command throws an error.
 
 You may want to increase `selenium.defaultTimeout` programatically (through `getEval`). Such a change applies only to the current [case] run. That covers any [functions][function] from other [cases][case], but only while running the top [case] that modified `selenium.defaultTimeout`. It gets reset before running any further cases from the same suite (or before running the rest of favorites, if using [Components](Components) > [Run All Favorites](Components#run-all-favorites).
+
+## `repeat...until` loop (with a condition at the end)
+`repeat...until` is a loop with a condition at the end. It runs its body at least once. Its condition indicates its end: the loop repeats the body until the condition evaluates to non-strict `true` (i.e. not `false, null, 0, ` empty string `""` neither `undefined`).
+
+`repeatPromise...untilPromise` is similar. However, the condition must evaluate to a `Promise`. The loop repeats until the promise resolves to `true`. If the promise rejects, this throws a (catcheable) error.
 
 ## Iterator and iterable-based loops
 `forIterator...endForIterator` and `forIterable...endForIterable` iterate the given iterator or iterable object. See [MDN > Iteration protocols](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
@@ -131,6 +139,8 @@ These callbacks are especially useful for presenting with [Preview](Preview).
 If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
 
 # Productivity tips
+
+## `breakPoint` command
 
 ## Selenese accessors in Javascript expressions
 You may combine `getEval` (and its derivatives), `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:

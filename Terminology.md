@@ -118,7 +118,7 @@ Also 'silent defects' are 'hidden' or mysterious errors, whose buggy effect
 _App DB_ is a database (ideally, but not necessarily, in SQLite) used by the automated web application.
 
 ## script DB
-_Script DB_ is a database (in SQLite) used by [scripts][script]. (It's not a DB of/containing _scripts_.) When used in automated testing, it is the test's expected/assumed version of the application data. It's usually populated from an (optionally filtered) export of [app DB]. See [TestMethodTheory](TestMethodTheory) > [Terminology](TestMethodTheory#terminology).
+_Script DB_ is a database (in SQLite) used by [scripts][script]. (It's not a DB of/containing _scripts_.) When used in automated testing, it is the test's expected/assumed version of the application data. It's usually populated from an (optionally filtered) export of [app DB].
 
 ## vanilla DB
 _Vanilla DB_ is a database (in SQLite) used for reloading [script DB] and [app DB]. It requires [app DB] to be in SQLite. It's a snapshot of exported [app DB], to which you can revert [script DB] when the [script] and app get out of sync.
