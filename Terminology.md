@@ -60,42 +60,7 @@ What is being controlled or tested, with
  * application data ('test app DB' or just '[app DB]')
 
 ## Test 
-Depending on the context, it's either
-
-  * the system that invokes the application, i.e. Firefox + Selenium IDE + SeLite + optional custom [Core extensions][core extension] + [scripts][script]
-    * [scripts][script]
-
-## Data data
-
-### App data
-Also '[app DB]' or just 'data' - the application data (or its subset) relevant to testing
-
-  * usually it means SQLite export of the application's DB
-  * if the application uses SQLite, then it can be the app DB (SQLite file) itself (SQLite file on a network drive or local)
-
-## Script data
-Or '[script DB]' - what the [script] believes that the app data is, either
-
-  * same source as app data - accessed by test read-only (not a good approach, see more below), or
-  * a replica of app data, which
-    * is separate - not accessed by the application
-    * shadows [app DB]
-    * gets updated by the test to reflect the changes expected to happen in the app data (see more below)
-    * is used by test to navigate and verify the application
-    * helps to detect and identify errors in the application or the test
-    * is a core feature of SeLite
-
-## Test input data
-Also 'input data' is data, that is used by the test, especially
-
-  * for inputs/choices that the test enters/selects in the application, or
-  * that determines webpage navigation during the test
-
-It can be
-
-   * from XML using SelBlocks functionality (a part of [SelBlocks Global])
-   * from SQLite with the help of SeLite object-oriented layer
-   * random, within a range or from a list of choices, using SeLite [Commands](Commands)
+Test consists of Selenese [scripts][script], custom [Core extensions][core extension] and [script DB].
 
 ## Test session
 It contains custom runtime variables in the test system, which serve for
@@ -112,13 +77,33 @@ Also 'silent defects' are 'hidden' or mysterious errors, whose buggy effect
    * is not initially tested or obvious (because of the scope, complexity etc.)
    * but the defect causes incorrect data which affects subsequent operation
 
-# Databases
+# Data and databases
+
+## Test input data
+Also 'input data' is data, that is used by the test, especially
+
+  * for inputs/choices that the test enters/selects in the application, or
+  * that determines webpage navigation during the test
+
+It can be
+
+   * from XML using SelBlocks functionality (a part of [SelBlocks Global])
+   * from SQLite with the help of SeLite object-oriented layer
+   * random, within a range or from a list of choices, using SeLite [Commands](Commands)
 
 ## app DB
-_App DB_ is a database (ideally, but not necessarily, in SQLite) used by the automated web application.
+_App DB_ is an SQLite database (a file). It is the same as the application's database (if in SQLite), or its export to SQLite.
 
 ## script DB
-_Script DB_ is a database (in SQLite) used by [scripts][script]. (It's not a DB of/containing _scripts_.) When used in automated testing, it is the test's expected/assumed version of the application data. It's usually populated from an (optionally filtered) export of [app DB].
+_Script DB_ is an SQLite database (a file) used by [scripts][script]. (It's not a database containing _scripts_ or steps, neither a database of data to feed the tests.) In automated testing this is the test's expectation of the application data. It's usually populated from an (optionally filtered) export of [app DB]. It is
+
+  * the same source as app data - accessed by test read-only. This is not an ideal approach. See [TestMethodsTheory](TestMethodsTheory) > [Web app and its test use the same DB](TestMethodsTheory#web-app-and-its-test-use-the-same-db).
+  * a replica of app data as per [TestMethodsTheory](TestMethodsTheory) > [Web app and its test have separate DBs](TestMethodsTheory#web-app-and-its-test-have-separate-dbs). It
+    * is separate - not accessed by the application
+    * shadows [app DB]
+    * gets updated by the test to reflect the changes expected to happen in the app data (see more below)
+    * is used by test to navigate and verify the application
+    * helps to detect and identify errors in the application or the test.
 
 ## vanilla DB
 _Vanilla DB_ is a database (in SQLite) used for reloading [script DB] and [app DB]. It requires [app DB] to be in SQLite. It's a snapshot of exported [app DB], to which you can revert [script DB] when the [script] and app get out of sync.
