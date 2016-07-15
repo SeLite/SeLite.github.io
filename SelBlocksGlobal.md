@@ -94,7 +94,7 @@ call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2..
 ## Renamed `foreach` to `forEach`
 This renamed `foreach` to `forEach` (and `endForeach` to `endForEach`). The old commands still work for now. 
 
-# Enhancements to SelBlocks #
+# New structures
 These are forward-compatible with classic SelBlocks.
 
 ## Usage of &lt;&gt;
@@ -135,12 +135,17 @@ These callbacks are especially useful for presenting with [Preview](Preview).
 ## Try/catch suppresses error and timeout counts ##
 `try...catch` suppresses counts and some logs for errors, failures of asserts/verifications and timeouts. [Scripts][script] can verify that custom [commands][command] fail or time out as expected (and if they fail or time out, the script succeeds; on the other hand, if the command succeeds, the test script fails).
 
-# Selenium.download
+# Functions and commands
+
+## `Selenium.download()`
 If you use Windows, see [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
 
-# Productivity tips
+## `browserbot.getElements()`
+In [core] you can use `this.browserbot.getElements()` to get an array of matching elements (if any).
 
 ## `breakPoint` command
+
+# Productivity tips
 
 ## Selenese accessors in Javascript expressions
 You may combine `getEval` (and its derivatives), `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:

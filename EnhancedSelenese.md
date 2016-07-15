@@ -61,6 +61,8 @@ If a Selenese command supports (or requires) an object passed this way, then do 
 
 Like <code><>...<></code> without prefix, <code>\<>...<></code> evaluates the enclosed part as Javascript expression. The result is treated as content of a string literal/constant for XPath. Then this escapes both apostrophes and/or quotation marks in it. It generates an XPath string sub-expression that may use XPath function `concat()`. (For details see `quoteForXPath()` in Selenium Core's online [htmlutils.js](https://github.com/SeleniumHQ/selenium/blob/master/javascript/selenium-core/scripts/htmlutils.js) or offline at {{chromeUrl}} _chrome://selenium-ide/content/selenium-core/scripts/htmlutils.js_).
 
+Due to a bug in Selenium IDE, you need to put two backslashes in the edit field for that cell. Please vote for [ThirdPartyIssues](ThirdPartyIssues) > [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215).
+
 ### @&lt;&gt;...&lt;&gt; (an extra Selenese parameter)
 {:#an-extra-selenese-parameter}
 By default, Selenium IDE allows to pass only two parameters to commands: `target` (usually a locator) and `value`. However, some SeLite commands (e.g. in [Exit Confirmation Checker]) need to receive extra one or two parameters. [SelBlocks Global] enhances syntax by allowing value of each standard Selenese parameter (`target` or `value`) to include one occurrence of <code>@<>...<></code> containing a Javascript expression.
