@@ -80,12 +80,12 @@ call | myFunction | myParam=$storedVariableInCallingScope
 ```
 
 ### Passing an object ###
-This benefits from [EnhancedSelenese](EnhancedSelenese) > [`=<>…<> (with preserved type)`](EnhancedSelenese#with-preserved-type). Pass an object in Selenese `value` parameter. Its direct fields become parameters passed to the chosen Selenese function (defined by respective Selenese block `function...endFunction`). (This also enables expressions that contain a comma, which is not allowed by syntax of classic SelBlocks.)
+This benefits from [EnhancedSelenese](EnhancedSelenese) > [`@<>…<> (an extra Selenese parameter)`](EnhancedSelenese#an-extra-selenese-parameter). Pass an object. Its direct fields become parameters passed to the chosen Selenese function (defined by respective Selenese block `function...endFunction`). (This also enables expressions that contain a comma, which is not allowed in classic SelBlocks.)
 
 Use an existing object. Alternatively pass an object literal within a pair of parenthesis (see [ClassicSelenese](ClassicSelenese) > [Limitations of `getEval` and its derivatives](ClassicSelenese#limitations-of-geteval-and-its-derivatives):
 
 ```
-call | myFunction | =<>({ seleneseParamName1: value1, seleneseParamName2: value2... })<>
+call | myFunction | @<>({ seleneseParamName1: value1, seleneseParamName2: value2... })<>
 ```
 
 ## `storeEval` can return null/undefined
