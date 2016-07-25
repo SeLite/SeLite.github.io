@@ -77,7 +77,7 @@ The Selenese command (i.e. a custom command or a custom override/intercept of st
 However, <code><>...${storedVariableName}...<></code> (as per [ClassicSelenese](ClassicSelenese) > [Stored variables](ClassicSelenese#stored-variables)) doesn't work. Side note: We don't want this second form anyway, because `${storedVariableName}` works through brute string substitution. It could cause unexpected Javascript errors. E.g. when developing the script, `${variableName}` could be a number. However, later it could become a non-numeric string. If there were no quotes/apostrophes around it, an the Javascript expression would expect a number, it would fail. Also, it would need extra handling of strings containing apostrophes/quotes. Indeed, `${storedVariableName}` works in any prefix/suffix of <code><>...<></code> (as per standard Selenese).
 
 ## Limitations
-Same limitations apply as per [ClassicSelenese](ClassicSelenese) > [limitations of `geteval` and its derivatives](ClassicSelenese#limitations-of-geteval-and-its-derivatives).
+Same limitations apply as per [ClassicSelenese](ClassicSelenese) > [limitations of `getEval` and its derivatives](ClassicSelenese#limitations-of-geteval-and-its-derivatives).
 
 ## Special rules on using =&lt;&gt;...&lt;&gt; or @&lt;&gt;...&lt;&gt;
 {:#special-rules-on-using}

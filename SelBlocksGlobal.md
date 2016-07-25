@@ -85,7 +85,7 @@ This benefits from [EnhancedSelenese](EnhancedSelenese) > [`=<>…<> (with prese
 Use either an existing object, or an object literal. E.g.
 
 ```
-call | myFunction | =<>{seleneseParamName1: value1, seleneseParamName2: value2...}<>
+call | myFunction | =<>({ seleneseParamName1: value1, seleneseParamName2: value2... })<>
 ```
 
 ## `storeEval` can return null/undefined
@@ -107,7 +107,7 @@ These commands **wait** for a given `Promise` object to resolve. If it gets reje
  * `storePromiseValue` is similar to `storeEval`, but it stores the resolved (fulfilled) value of the promise (rather than the promise itself).
  * `ifPromise...elseIfPromise...elsePromise...endPromise` is similar to `if...elseIf...else...endIf`. `whilePromise...endWhilePromise` is similar to `while...endWhile`. `repeatPromise...untilPromise` is similar to `repat...until`. However, these commands wait for given `Promise` object to resolve (fulfill). If the promise resolves to non-strict false (i.e. any of `false, null, 0, ` empty string `""` or `undefined`), then it runs appropriate `elseIfPromise` or `endPromise` branch, or the loop ends. If the promise gets rejected or it times out, the command throws a (catcheable) error.
 
-You may want to increase `selenium.defaultTimeout` programatically (through `getEval`). Such a change applies only to the current [case] run. That covers any [functions][function] from other [cases][case], but only while running the top [case] that modified `selenium.defaultTimeout`. It gets reset before running any further cases from the same suite (or before running the rest of favorites, if using [Components](Components) > [Run All Favorites](Components#run-all-favorites).
+You may want to increase `selenium.defaultTimeout` programatically (through `getEval`). Such a change applies only to the current [case] run. That covers any [functions][function] from other [cases][case], but only while running the top [case] that modified `selenium.defaultTimeout`. It gets reset before running any further cases from the same suite (or before running the rest of favorites, if using [Components](Components) > [Run All Favorites](Components#run-all-favorites)).
 
 ## `repeat...until` loop (with a condition at the end)
 `repeat...until` is a loop with a condition at the end. It runs its body at least once. Its condition indicates its end: the loop repeats the body until the condition evaluates to non-strict `true` (i.e. not `false, null, 0, ` empty string `""` neither `undefined`).
@@ -145,7 +145,7 @@ In [core] you can use `this.browserbot.getElements()` to get an array of matchin
 
 ## `breakPoint` command
 
-# Productivity tips
+# Productivity tip
 
 ## Selenese accessors in Javascript expressions
 You may combine `getEval` (and its derivatives), `promise`, `if`, `while` and other commands that evaluate Javascript, with Selenese accessors. For example:
@@ -159,6 +159,3 @@ getEval | more-complex-expression... selenium.getAttribute('locatorString@attrib
  Use variable `selenium` instead of `this`. Those two are the same in [Core scope]. However, `selenium` is more expressive. (Also `this` has a different meaning in closures.) For example: `if | selenium.isElementPresent( 'locator...' )| ... endIf`.
 
 In other scopes, e.g. in an [IDE extension] or a [Javascript code module](JavascriptComplex#javascript-code-modules), load `SeLiteMisc` code module `Components.utils.import( 'chrome://selite-misc/content/SeLiteMisc.js' );` and use `SeLiteMisc.selenium` instead.
-
-## Minimize auxiliary variables
-Unless you need a result of a Javascript expression in multiple places in the same Selenese part or the same Selenese function, don't call `storeEval` but use [EnhancedSelenese](EnhancedSelenese) to pass the Javascript expression directly within pairs `<>...<>` (or `=<>...<>` if the result can be other than a string). This minimises use of `storeEval` and auxiliary stored variables. That makes Selenese scripts shorter, clearer and more robust.

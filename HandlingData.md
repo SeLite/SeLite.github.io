@@ -62,7 +62,7 @@ When the script creates a new record in its DB, it needs to set its ID to reflec
     * the last used values are the same between [script DB] (SQLite) and [app DB], and [script DB] (SQLite) uses same method to generate the new IDs as [app DB]
     * this is optimistic - it breaks if one side gets broken temporarily and the last used values get out of sync
     * script SQLite tables can use following options (as relevant to SeLite)
-      * `INTEGER PRIMARY KEY`, which
+      * `INTEGER PRIMARY KEY` (but not `INT PRIMARY KEY`), which
         * generates  an ID one larger than the largest ID currently present (unless the IDs reach 64bit signed limit)
         * reuses IDs of deleted rows (but only if they had the highest IDs, i.e. there are no existing rows with a higher ID)
       * `INTEGER PRIMARY KEY AUTOINCREMENT`
