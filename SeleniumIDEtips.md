@@ -7,7 +7,7 @@ layout: default
 {:toc}
 
 # Summary and scope
-These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop [scripts][script], frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
+These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See also [Selenium IDE documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop [scripts][script], frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
 # Add .html extension to files
 When saving a [case] or a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.

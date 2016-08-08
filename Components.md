@@ -287,15 +287,6 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-    <td> SQLite Connection Manager </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-sqlite-connection-mg/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SQLite-Connection-Mg/versions/'>download</a>     </td>
-    <td>&#160;</td>
-    <td>
-        <ul><li> Since 2013</li></ul>
-    </td>
-</tr>
-<tr>
     <td> TestCase Debug Context   </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/'>info</a> </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-TestCase-Debug-Conte/versions/'>download</a>      </td>
