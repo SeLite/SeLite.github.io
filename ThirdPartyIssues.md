@@ -62,25 +62,27 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 
 | *Issue*                                                                                                                          | *Third party*   | *Reason*                           |
 | [tree.inputField's type as autocomplete fails](https://bugzilla.mozilla.org/show_bug.cgi?id=1247476)                             | Mozilla         | Usable Clipboard And Indent |
-| [Selenium IDE chrome/content/formats/html.js has an incorrect regex](https://github.com/SeleniumHQ/selenium/issues/1636)         | Selenium        | Reliable testing |
-| [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)        | Selenium        | Readable test cases |
-| [Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662)                                     | Selenium        | Compact tests |
-| [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                 | Selenium        | Practical testing and integration |
+| [Selenium IDE chrome/content/formats/html.js has an incorrect regex](https://github.com/SeleniumHQ/selenium/issues/1636)         | Selenium        | Reliable export/import |
+| [Selenium IDE chrome/content/formats/html.js to preserve indented...](https://github.com/SeleniumHQ/selenium/issues/1546)        | Selenium        | Readable cases |
+| [Support ECMAScript 6 Template Literals](https://github.com/SeleniumHQ/selenium/issues/1662)                                     | Selenium        | Compact scripts |
+| [Base URL Should Allow Path](https://github.com/SeleniumHQ/selenium/issues/1550)                                                 | Selenium        | Practicality and integration |
 | [Refactor TestCase.debugContext to have a class on its own](https://github.com/SeleniumHQ/selenium/issues/1537)                  | Selenium        | Stable API of [SelBlocks Global] |
 | [Core extensions are loaded 2x - document this, or prevent it](https://github.com/SeleniumHQ/selenium/issues/1549)               | Selenium        | Robust core extensions |
-| [verify* should show the diff](https://github.com/SeleniumHQ/selenium/issues/1538)                                               | Selenium        | Robust tests. <br>See [Exit Confirmation Checker] &gt; [Details](ExitConfirmationChecker#details) |
-| [Details of error reporting in user/plugin javascript](https://github.com/SeleniumHQ/selenium/pull/61)                           | Selenium        | Productive development |
+| [verify* should show the diff](https://github.com/SeleniumHQ/selenium/issues/1538)                                               | Selenium        | Robust cases. <br>See [Exit Confirmation Checker] &gt; [Details](ExitConfirmationChecker#details) |
+| [Details of error reporting in user/plugin javascript](https://github.com/SeleniumHQ/selenium/pull/61)                           | Selenium        | Productive debugging |
 | [IDE: alert() fails in a modified test case](https://github.com/SeleniumHQ/selenium/issues/1768)                                 | Selenium        | Reliable automation |
 | [IDE: a subsequent call to open() fails with multiprocessed Firefox (e10s)](https://github.com/SeleniumHQ/selenium/issues/1769)  | Selenium | Major Firefox Compatibility |
-| [XPath 2.0](https://bugzilla.mozilla.org/show_bug.cgi?id=396966)                                                                 | Mozilla         | Robust tests.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) |
-| [Breakpoint triggers on code that doesn't run...](https://bugzilla.mozilla.org/show_bug.cgi?id=1051632)                          | Mozilla         | Productive development |
+| [Selecting a command or executing a command/case/suite...](https://github.com/SeleniumHQ/selenium/issues/2624) | Selenium | Intuitive navigation |
+| [Switching between Log/Reference/UI-element/Rollup to use native Firefox tabs](https://github.com/SeleniumHQ/selenium/issues/2646) | Selenium | Visual navigation |
+| [XPath 2.0](https://bugzilla.mozilla.org/show_bug.cgi?id=396966)                                                                 | Mozilla         | Robust cases.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) |
+| [Breakpoint triggers on code that doesn't run...](https://bugzilla.mozilla.org/show_bug.cgi?id=1051632)                          | Mozilla         | Productive debugging |
 | [Sidebars  (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629)              | Mozilla         | GUI usability |
 | [Allow sidebar to be selected and turned on/off independently](https://bugzilla.mozilla.org/show_bug.cgi?id=962861)              | Mozilla         | GUI usability |
 | [Support for( var value of array ) {...} loop](https://netbeans.org/bugzilla/show_bug.cgi?id=237640)                             | NetBeans        | Cleaner code |
 | [ICU-based Intl.DateTimeFormat implementation...](https://bugzilla.mozilla.org/show_bug.cgi?id=852837)                           | Mozilla         | Timestamps across timezones |
 | [Add support for IANA time zone names to internationalization API](https://bugzilla.mozilla.org/show_bug.cgi?id=837961)          | Mozilla         | Timestamps across timezones |
 | [Selblocks and SelBlocksGlobal](https://github.com/refactoror/SelBlocks/issues/4)                                                | Selblocks       | Joined effort |
-| [Report user extension/plugin error stack](https://github.com/SeleniumHQ/selenium/issues/1548)                                   | Selenium        | Debugging |
+| [Report user extension/plugin error stack](https://github.com/SeleniumHQ/selenium/issues/1548)                                   | Selenium        | Robust debugging |
 | [safe_alert() fails at UI element startup in Selenium IDE](https://github.com/SeleniumHQ/selenium/issues/1535)                   | Selenium        | Design of UI element locators |
 | [UI element test cases should be run even after Selenium IDE startup](https://github.com/SeleniumHQ/selenium/issues/1536)        | Selenium        | Design of UI element locators |
 | [Incorrect Error Reporting for Javascript 1.7 keywords](https://netbeans.org/bugzilla/show_bug.cgi?id=238942)                    | NetBeans        | Simpler & robust code using 'const' keyword |
@@ -88,19 +90,19 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Code fold at indention level](https://netbeans.org/bugzilla/show_bug.cgi?id=234888)                                             | NetBeans        | Code navigation |
 | [Highlight NaN, Infinity and undefined](https://netbeans.org/bugzilla/show_bug.cgi?id=238121)                                    | NetBeans        | Editing |
 | [Show version awaiting review in detail page...](https://bugzilla.mozilla.org/show_bug.cgi?id=627808)                            | Mozilla         | Distributing new versions<br> (Can't be voted on yet) |
-| [Optionally wrap long lines in the debugger](https://bugzilla.mozilla.org/show_bug.cgi?id=1108132)                               | Mozilla         | Productive development |
+| [Optionally wrap long lines in the debugger](https://bugzilla.mozilla.org/show_bug.cgi?id=1108132)                               | Mozilla         | Visual interface |
 | [Don't collapse empty {}](https://netbeans.org/bugzilla/show_bug.cgi?id=240529)                                                  | NetBeans        | Code navigation |
 | [JavaScript editor uses camelCase navigation even when disabled](https://netbeans.org/bugzilla/show_bug.cgi?id=238691)           | NetBeans        | Code navigation |
-| [&lt;treechildren tooltip="_child"&gt; doesn't work](https://bugzilla.mozilla.org/show_bug.cgi?id=929703)                        | Mozilla         | Robust code |
-| [Allow sidebars to be different widths](https://bugzilla.mozilla.org/show_bug.cgi?id=932578)                                     | Mozilla         | Flexible testing |
-| [JavaScript Console reports exceptions as warnings when using "use strict"](https://bugzilla.mozilla.org/show_bug.cgi?id=725468) | Mozilla         | Robust development |
-| ["use strict"; violations only logged at LOG level from AddonManager.jsm](https://bugzilla.mozilla.org/show_bug.cgi?id=1096135)  | Mozilla         | Robust development |
-| [nsTreeView and TreeView.setCellText() is either badly...](https://bugzilla.mozilla.org/show_bug.cgi?id=891774)                  | Mozilla         | Robust SeLite Settings |
-| [Tree documentation: setCellText and redrawing](https://bugzilla.mozilla.org/show_bug.cgi?id=278536)                             | Mozilla         | Robust SeLite Settings |
+| [&lt;treechildren tooltip="_child"&gt; doesn't work](https://bugzilla.mozilla.org/show_bug.cgi?id=929703)                        | Mozilla         | Robust export/import |
+| [Allow sidebars to be different widths](https://bugzilla.mozilla.org/show_bug.cgi?id=932578)                                     | Mozilla         | Flexible usage |
+| [JavaScript Console reports exceptions as warnings when using "use strict"](https://bugzilla.mozilla.org/show_bug.cgi?id=725468) | Mozilla         | Robust debugging |
+| ["use strict"; violations only logged at LOG level from AddonManager.jsm](https://bugzilla.mozilla.org/show_bug.cgi?id=1096135)  | Mozilla         | Productive debugging |
+| [nsTreeView and TreeView.setCellText() is either badly...](https://bugzilla.mozilla.org/show_bug.cgi?id=891774)                  | Mozilla         | Visual - SeLite Settings |
+| [Tree documentation: setCellText and redrawing](https://bugzilla.mozilla.org/show_bug.cgi?id=278536)                             | Mozilla         | Visual - SeLite Settings |
 | [console reports syntax error for valid json fetched via jquery.ajax](https://bugzilla.mozilla.org/show_bug.cgi?id=1031985)      | Mozilla         | Cleaner log in Browser Console |
 | [Support loading BOMless UTF-8 text/plain files from file: URLs](https://bugzilla.mozilla.org/show_bug.cgi?id=1071816)           | Mozilla         | Cleaner log in Browser Console |
 | [Confusing text: Be careful with old versions!...](https://bugzilla.mozilla.org/show_bug.cgi?id=1239898)                         | Mozilla         | Clear download instructions<br> (Can't be voted on yet) |
-| [Regex search in any folder tree with an empty file fails](https://netbeans.org/bugzilla/show_bug.cgi?id=257897)                 | NetBeans        | Smooth development |
+| [Regex search in any folder tree with an empty file fails](https://netbeans.org/bugzilla/show_bug.cgi?id=257897)                 | NetBeans        | Smooth customization |
 | [Documentation and handling of Selenium.prototype.getXYZ functions...](https://github.com/SeleniumHQ/selenium/issues/1635)       | Selenium        | Reliable API |
 | [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215) | Selenium | Usability |
 {: .table #issues}
