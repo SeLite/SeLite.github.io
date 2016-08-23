@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include links %}
 * TOC
 {:toc}
 
