@@ -47,3 +47,6 @@ Do not just attach screenshots that just show messages or your command(s). Also 
 If the problem only happens with third party or custom extensions, or if it involves a complex situation, you may need to attach your Firefox profile. See also [TroubleShooting](TroubleShooting) > [Separate Firefox profile](TroubleShooting#separate-firefox-profile). [Locate the Firefox profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data#w_how-do-i-find-my-profile) folder. Turn Firefox off, remove any [private data](https://support.mozilla.org/en-US/kb/recovering-important-data-from-an-old-profile#w_your-important-data-and-their-files) and `places.sqlite`.
 
 However, GitHub doesn't allow issue attachments other than images. So, zip up the folder, upload it to somewhere on the internet and add a link to it to the issue. Alternatively, and only if the `.zip` file is under 10MB, email it to the maintainer.
+
+# GitHub references
+Please, refer to other issues, projects, forks, commits and pull requests with GitHub [Autolinked references and URLs](https://help.github.com/articles/autolinked-references-and-urls/).
