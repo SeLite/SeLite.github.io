@@ -85,7 +85,15 @@ GitHub doesn't serve raw versions of most file types with their MIME, except for
 In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. Therefore we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. If you change e.g. `component's-name/src/chrome/content/reference.xml` or `extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl`, then update its _cdn.rawgit.com_ URLs to use the new commit hash or tag.
 
 ### Updating links to cdn.rawgit.com
-Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button. The URL will start with _https://raw.githubusercontent.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._
+The most difficult part is to locate the 'Raw' link (on GitHub) for a chosen commit.
+
+ * Locating by commit first: Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button.
+ * Locating by file first: For example _https://github.com/DaisyDiff/DaisyDiff/blob/master/css/diff.css_ -> button 'History' near the top-right > button '<>' (with 
+mouseover "Browse the repository at this point") > button 'Raw'.
+
+The URL will start with _https://raw.githubusercontent.com/_. Copy the URL. Paste it at _https://rawgit.com_. Take the url starting with _https://cdn.rawgit.com_.
+
+For example, the 'Rw' URL is_https://raw.githubusercontent.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._
 
 Apply similar steps to SelBlocksGlobal.
 <!--TODO

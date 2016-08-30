@@ -32,7 +32,7 @@ After you select a row, you can use key shortcuts `I` and `M` to insert new comm
 # Clipboard And Indent
 [Components](Components) > [Clipboard And Indent](Components#clipboard-and-indent) enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
 
-It supports Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal).
+It supports Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal). It also indents logs.
 
 When saving cases (as HTML), it transforms comments from HTML comments to table cells (with `class="comment"`). That brings three benefits:
 
@@ -40,7 +40,7 @@ When saving cases (as HTML), it transforms comments from HTML comments to table 
  * It allows `--` and special characters in comments.
  * You can compare changes in your cases with HTML diff tool [DaisyDiff](https://github.com/DaisyDiff/DaisyDiff) ( see also its [wiki](http://daisydiff.github.io/)).
 
-This feature is backwards compatible, but not forward compatible. Once you save a case with Clipboard And Indent, it can be open only with Clipboard And Indent.
+This feature is backwards compatible, but not forward compatible. Once you save a case with Clipboard And Indent, it can be open only with Clipboard And Indent. To use this functionality, install Clipboard And Indent (or better, whole SeLite). Start Selenium IDE and close it. Only then it activates.
 
 # Using multiple Selenium IDEs in parallel
 A running Firefox instance can show only one standard Selenium IDE window. Yet, viewing/editing different [cases][case] in multiple Selenium IDE windows (at the same time) increases productivity. It's beneficial for restructuring scripts (e.g. into Selenese functions), or as a reference for cases. Several ways exist for it, varying in intuitiveness, simplicity and accessibility. Some involve multiple running instances of Firefox, with separate profiles.
