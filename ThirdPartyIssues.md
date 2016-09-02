@@ -75,6 +75,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Selecting a command or executing a command/case/suite...](https://github.com/SeleniumHQ/selenium/issues/2624) | Selenium | Intuitive navigation |
 | [Switching between Log/Reference/UI-element/Rollup to use native Firefox tabs](https://github.com/SeleniumHQ/selenium/issues/2646) | Selenium | Visual navigation |
 | [XPath 2.0](https://bugzilla.mozilla.org/show_bug.cgi?id=396966)                                                                 | Mozilla         | Robust cases.<br>(For now see <a href='https://developer.mozilla.org/en-US/docs/XPath/Functions'>supported functions</a>.) |
+| [expose EXSLT functions to DOM Level 3 XPath API](https://bugzilla.mozilla.org/show_bug.cgi?id=365801) | Mozilla | Using modern XPath in Javascript |
 | [Breakpoint triggers on code that doesn't run...](https://bugzilla.mozilla.org/show_bug.cgi?id=1051632)                          | Mozilla         | Productive debugging |
 | [Sidebars  (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629)              | Mozilla         | GUI usability |
 | [Allow sidebar to be selected and turned on/off independently](https://bugzilla.mozilla.org/show_bug.cgi?id=962861)              | Mozilla         | GUI usability |

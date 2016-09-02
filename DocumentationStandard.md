@@ -91,7 +91,7 @@ The most difficult part is to locate the 'Raw' link (on GitHub) for a chosen com
  * Locating by file first: For example _https://github.com/DaisyDiff/DaisyDiff/blob/master/css/diff.css_ -> button 'History' near the top-right > button '<>' (with 
 mouseover "Browse the repository at this point") > button 'Raw'.
 
-The URL will start with _https://raw.githubusercontent.com/_. Copy the URL. Paste it at _https://rawgit.com_. Take the url starting with _https://cdn.rawgit.com_.
+The URL will start with _https://raw.githubusercontent.com/_. Copy the URL. Paste it at [https://rawgit.com](https://rawgit.com). Take the url starting with _https://cdn.rawgit.com_.
 
 For example, the 'Rw' URL is_https://raw.githubusercontent.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._ Then append the path part of that URL to _https://cdn.rawgit.com/_, i.e. _https://cdn.rawgit.com/selite/selite/XYZ.../\<component's-name\>/src/chrome/..._
 
