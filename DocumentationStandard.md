@@ -10,10 +10,10 @@ This is a standard for contributing to this documentation ([SeLite.github.io](ht
 # Format
 Having documentation in one large piece would make its structure too rigid. Maintenance and online navigation would be impractical. Instead, it's split into small pages. Therefore it doesn't exist in other formats. Offline viewing is easy in Firefox:
 
-* install [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
-* clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
-* for navigation open [custom 404 page](404)
-* note that Markdown Viewer is not 100% proof
+  * install [Markdown Viewer](https://addons.mozilla.org/en-us/firefox/addon/markdown-viewer/) extension
+  * clone [documentation from GitHub](https://github.com/selite/selite.github.io) or [download it as a zip](https://github.com/selite/selite.github.io/archive/master.zip).
+  * for navigation open [custom 404 page](404)
+  * note that Markdown Viewer is not 100% proof
 
 Alternatively, run [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/). Install Jekyll 3.0 or newer (so that it is [Github-compatible](https://github.com/jekyll/jekyll/pull/3452)).
 
@@ -79,12 +79,16 @@ but rather as a value of a defined constant.
 # Headers IDs must be the same as their text
 Don't use [Kramdown-specific header IDs](http://kramdown.gettalong.org/syntax.html#specifying-a-header-id), since they don't work in Markdown Viewer in Firefox..
 
-# Generating raw links
-GitHub doesn't serve raw versions of most file types with their MIME, except for images. So we use [htmlpreview.github.io](http://htmlpreview.github.io) for `.html` files. For any other files, e.g. `.xml, .xsl` or `.js`, use [rawgit.com](http://rawgit.com).
+# Raw content from GitHub
+GitHub doesn't serve raw versions of most file types with their MIME, except for images.
 
-In detail: Use _htmlpreview.github.io_ rather than _rawgit.com_ for `.html`, because if you pass a generic Github URL (rather than a commit hash or a tag), _htmlpreview.github.io_ fetches the latest commit of that file. Therefore we don't have to update those _htmlpreview.github.io_ links. However, production _cdn.rawgit.com_ caches the files. If you change e.g. `component's-name/src/chrome/content/reference.xml` or `extension-sequencer/src/chrome/content/selenese_reference_to_html.xsl`, then update its _cdn.rawgit.com_ URLs to use the new commit hash or tag.
+ * Use [htmlpreview.github.io](http://htmlpreview.github.io) only for displaying `.html` files (but not for processing them programatically). It fetches the latest commit of that file. Therefore you don't have to update those links (unless you move the file).
+ * For any other files (e.g. `.xml, .xsl` or `.js`), and for processing `.html` files programatically, use [rawgit.com](http://rawgit.com)
+   * only development only use _https://rawgit.com_ -based URLs. They fetch the latest commit.
+   * in production use _https://cdn.rawgit.com_ -based URLs. They are cached. Hence (re)generate a unique link for the commit you need. See below. Then update any existing links.
+ * Don't use _raw.githubusercontent.com_, because it doesn't serve the right MIME type (SEC7112 - `'blocked due to mime type mismatch'`).
 
-## Updating links to cdn.rawgit.com
+## Generating _cdn.rawgit.com_-based URLs
 The most difficult part is to locate the 'Raw' link (on GitHub) for a chosen commit.
 
  * Locating by commit first: Navigate to [github.com/selite/selite](https://github.com/selite/selite) > 'latest commit XYZ...' link near middle top > 'Browse files' button near the right top > locate the file > 'Raw' button.
