@@ -9,16 +9,26 @@ layout: default
 # Summary and scope
 These notes are about usability of [Selenium IDE](http://seleniumhq.org/projects/ide) GUI. See also [Selenium IDE documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp). See [ClassicSelenese](ClassicSelenese) and [EnhancedSelenese](EnhancedSelenese) regarding Selenese syntax. If you develop [scripts][script], frameworks or plugins, see also [DevelopmentTools](DevelopmentTools).
 
-# Add .html extension to suite files
+# Small tricks
+
+## Add .html extension to suite files
 When saving a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.html` yourself, which will let you identify the file more easily.
 
-# Hands-on GUI
-[Components](Components) > [Hands-on GUI](Components#hands-on-gui) enables
+## Opening the most recent suite or case
+At start, Selenium IDE can open the most recent suite (or case). However,
+
+  * you need to enable Options > General > 'Activate developer tools'
+  * when it starts with the most recent suite, it won't show the suite name in the window title.
+
+# Usability add-ons in SeLite
+
+## Hands-on GUI
+Currently disabled. See [Components](Components) > [Hands-on GUI](Components#hands-on-gui). The goal is to enable
 
 * in-place editing of Selenese commands/comments and their parameters (`target` and `value`), right in the commands list
 * productivity keyboard shortcuts
 
-You can edit commands/comments an 'in place' by clicking at them (where they are listed). In order to edit 'in place'
+You can edit commands/comments 'in place' by clicking at them (where they are listed). In order to edit 'in place'
 
 * click at a cell, or
 * select a row (more below), then hit `Enter` or `I` or `M`, or
@@ -29,7 +39,7 @@ After you select a row, you can use key shortcuts `I` and `M` to insert new comm
 'Command' cell (of commands, i.e. non-comments) operates with autocomplete dropdown. Long comments overflow to the right. 'Target' cell (of commands, i.e. non-comments) overflows to the right (if there is nothing in 'Value' cell), which lets you see long selectors.
 
 
-# Clipboard And Indent
+## Clipboard And Indent
 [Components](Components) > [Clipboard And Indent](Components#clipboard-and-indent) enables clipboard sharing between Selenium IDE and other applications. Otherwise Selenium IDE doesn't accept Selenese commands/comments passed through clipboard from another Selenium IDE instance when [using multiple Selenium IDEs in parallel](#using-multiple-selenium-ides-in-parallel).
 
 It supports Selenese commands/comments to be indented with spaces into blocks, through menu or by pressing right or left arrow. It automatically indents and unindents structured commands that come with [SelBlocks Global](SelBlocksGlobal). It also indents logs.
