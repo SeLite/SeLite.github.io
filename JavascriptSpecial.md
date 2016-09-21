@@ -4,8 +4,10 @@ layout: default
 * TOC
 {:toc}
 
-# Locating a Javascript function in sources #
-There are various ways of how to define/set/override a function in Javascript (usually through setting it as if it were a field on the class prototype object). So if you need to debug/modify/extend a function, it may not be easy to locate. You can use the following regular expressions to find definition(s) of a function (if implemented in one of the common ways). Replace `FUNCTION` with the name of the function.
+# Locating Javascript symbols in source
+
+## Locating a Javascript function
+There are various ways of how to define/set/override a function in Javascript (usually through setting it as if it were a field on the class prototype object). Hence if you need to debug/modify/extend a function, it may not be easy to locate. You can use the following regular expressions to find definition of a function (if implemented in one of the common ways). Replace `FUNCTIONNAME` with the name of the function.
 
 The regex itself, e.g. for use in NetBeans:
 
@@ -21,11 +23,24 @@ egrep -r "function\s+FUNCTIONNAME[^a-zA-Z0-9_]|[^a-zA-Z0-9_]FUNCTIONNAME\s*[:=]\
 
 This is especially useful with Selenium which uses same name functions in various classes/components. There may be various versions of the same class/component, depending on how the code is executed - via Selenium IDE or via webdriver (but only Selenium Core and IDE is relevant to SeLite).
 
+## Locating classes in Selenium IDE
 In Selenium IDE sources search for class definitions with regex:
 
 ```
 className *= *classCreate *\(
 ```
+
+## Locating variables and object fields
+Replace `VARIABLENAME` with the name of the variable. The regex itself, e.g. for use in NetBeans:
+
+`[^a-zA-Z0-9_]VARIABLENAME\s*[:=]|\[\s*['"]VARIABLENAME['"]\s*\]\s*=|\.VARIABLENAME\s*[=]|var +([^\n;]+ *, *)*VARIABLENAME[ ,;\n]`
+
+### Object fields from top-level variables
+When searching for an object field (rather than a variable), if the above doesn't find it as a field but only as a top-level variable, that may be when the Javascript file that defines the variable is loaded within a scope that is stored in the target object.
+
+For example, _chrome/content/selenium-runner.js_ defines a top-level variable `var LOG`. That file is loaded within scope of `runner` object from file _content/debugger.js_. That defines field `LOG` in `runner` object.
+
+Search for (literal) `.loadSubScript` and find one that is `.loadSubScript`( _locationOfJavascriptFileThatDefinesTheVariable_, _objectWhereThatVariableBecomesAField_ ).
 
 # Function intercepts
 This is for extending or completely replacing behaviour of existing functions that come from Selenium or third party. It can be done for ordinary (non-member) functions (including class constructors) and also for methods (member functions of objects). Methods can be intercepted on either
