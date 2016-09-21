@@ -89,16 +89,19 @@ Steps
 
 In auxiliary IDEs
 
-* optionally, press F11 for full screen mode (this is probably beneficial only if you have more than two physical screens)
-* (-) if you hide Firefox menu, it often doesn't show up when you press _Alt_ key. Then you need to click at the very top of the browser window (which shows `testCaseName (testCaseFileName.html) - Selenium IDE X.Y.Z - Mozilla Firefox`) and then press _Alt_.
-* (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite. The safest way is not to modify scripts in auxiliary IDEs.
+ * _Alt_ key opens Selenium IDE menu, not Firefox menu. However, if you are not running Firefox in full screen mode (F11), then pressing _Alt_ again opens Firefox menu.
+ * (-) if you hide Firefox menu, then _Alt_ key won't open it.
+ * (-) don't call `alert()` or `confirm()` from `getEval`
+ * (+) optionally, press F11 for full screen mode
+ * (-) pressing F5 (which reloads Selenium IDE), or closing Selenium IDE tab/window with 'x' icon, applies without any confirmation about unsaved case(s) or suite! The safest way is not to modify scripts in auxiliary IDEs.
 
 Side note: There is also Firefox menu > View > Sidebar > Selenium IDE. However, that Selenium IDE sidebar has restricted width. Like Auxiliary Selenium IDEs, Selenium IDE in a sidebar doesn't load any [SettingsManifests](SettingsManifests), any [Settings](Settings) sets, neither any extensions through [Bootstrap](Bootstrap). Please, vote at [ThirdPartyIssues](ThirdPartyIssues) > [Sidebars (history, bookmarks) should not have maximum width](https://bugzilla.mozilla.org/show_bug.cgi?id=406629) so that it gets fixed.
 
 ## Multiple standard Selenium IDEs
 This shows multiple Selenium IDEs, detached from Firefox browser windows. Compared to the previous method, this
-* (-) needs multiple running Firefox instances (and profiles). Each profile each needs an installation of Selenium IDE; ones that run scripts also need their own installations of SeLite [Components](Components) and any other extensions.
-* (+) can run multiple scripts in parallel with separate sessions (cookies)
+
+ * (-) needs multiple running Firefox instances (and profiles). Each profile each needs an installation of Selenium IDE; ones that run scripts also need their own installations of SeLite [Components](Components) and any other extensions.
+ * (+) can run multiple scripts in parallel with separate sessions (cookies)
 
 To set up
 
