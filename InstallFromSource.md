@@ -26,7 +26,7 @@ There are repositories for
 
 You may need to accept components (add-ons). Verify that all SeLite components are enabled at Firefox menu > Tools > Add-ons > Extensions.
 
-Visit Firefox chrome URL _about:config_. Find or create a preference with name `xpinstall.signatures.required` and set it to `false`. (See [MDN Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)). <!-- Also see https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct and https://wiki.mozilla.org/Add-ons/Extension_Signing -->
+Apply [DevelopmentTools](DevelopmentTools), especially set `xpinstall.signatures.required` to `false`. (See [MDN Signing and distributing your add-on](https://developer.mozilla.org/en-US/Add-ons/Distribution)). <!-- Also see https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct and https://wiki.mozilla.org/Add-ons/Extension_Signing -->
 
 Restart Firefox.
 

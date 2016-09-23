@@ -6,9 +6,12 @@ layout: default
 {:toc}
 
 # Scope and downloads #
-This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). However, if you haven't downloaded SeLite [Components](Components) yet, getting them from source (which you'll need anyway) may be faster.
+This assumes that you've set up your web application and that there is an SeLite framework for it. You'll need packages mentioned at [Overview](./) > [Install](./#install). If you haven't downloaded SeLite [Components](Components) yet, getting them from source (which you'll need anyway) may be faster.
 
-Regardless of how you install [Components](Components), download SeLite source to get the frameworks: follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source). If you're installing components from source, follow [Install components from source](InstallFromSource#install-components-from-source).
+Regardless of how you install [Components](Components), either
+
+ * download a ZIP of a chosen framework as per [AppsFrameworks](AppsFrameworks). However, then you can't maintain it with GIT. Or
+ * follow [InstallFromSource](InstallFromSource) > [Get the source](InstallFromSource#get-the-source). If you're installing components from source, follow [Install components from source](InstallFromSource#install-components-from-source).
 
 If your web application uses SQLite, you'll get full SeLite functionality and smoother script data life cycle. You'll be able to copy/restore {{ appDB }}, {{ scriptDB }} and {{ vanillaDB}} from within SeLite (via [SettingsInterface](SettingsInterface)). Otherwise you need to apply [DataImport](DataImport).
 

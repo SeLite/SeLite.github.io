@@ -18,7 +18,7 @@ When saving a [suite], Selenium IDE doesn't add `'.html'` extension. So, add `.h
 At start, Selenium IDE can open the most recent suite (or case). However,
 
   * you need to enable Options > General > 'Activate developer tools'
-  * when it starts with the most recent suite, it won't show the suite name in the window title.
+  * when it starts with the most recent suite, it won't show the suite name in the window title. TODO report & add to ThirdPartyIssues
 
 # Usability add-ons in SeLite
 
