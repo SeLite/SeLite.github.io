@@ -108,11 +108,8 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td> <ul>
             <li><a href='https://cdn.rawgit.com/selite/selite/master/commands/src/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-commands/content/reference.xml</em></li>
-            <li>selenese-scripts/
-                <ul>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/commands/selenese-scripts/case.html'>case.html</a></li>
-                </ul>
-            </li>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/commands/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/commands/selenese-scripts)</li>
         </ul>
     </td>
     <td> <ul>
@@ -141,16 +138,8 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
     <td> <ul>
             <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
-            <li>selenese-scripts/
-                <ul>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/ignored/case.html'>ignored/case.html</a></li>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/includeRevertedChanges/positive_case.html'>includeRevertedChanges/positive_case.html</a></li>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/includeRevertedChanges/assert/negative_case.html'>includeRevertedChanges/assert/negative_case.html</a></li>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/positive_case.html'>skipRevertedChanges/positive_case.html</a></li>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/assert/negative_case.html'>skipRevertedChanges/assert/negative_case.html</a></li>
-                    <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/exit-confirmation-checker/selenese-scripts/skipRevertedChanges/verify/negative_case.html'>skipRevertedChanges/verify/negative_case.html</a></li>
-                </ul>
-            </li>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
         </ul>
     </td>
     <td> <ul>
@@ -199,11 +188,8 @@ To get the latest releases, use the `download` links below for recent releases. 
          <li><a href='https://github.com/SeLite/SeLite/blob/master/misc/src/chrome/content/extensions/core-extension.js'>Source</a></li>
          <li>Source (offline): <em>chrome://selite-misc/content/extensions/core-extension.js</em></li>
          <li>Javascript tests: <em>chrome://selite-misc/content/javascript_test_runner.html?chrome://selite-misc/content/javascript-tests/test.js</em><!-- This link only works offline, because neither gitraw.com nor htmlpreview.github.io accept URL-based HTTP parameters passed to .html file.--></li>
-        <li>selenese-scripts/
-            <ul>
-                 <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SeLite/blob/master/misc/selenese-scripts/case.html'>case.html</a></li>
-            </ul>
-        </li>
+        <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/misc/selenese-scripts)</li>
+        <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/misc/selenese-scripts)</li>
      </ul>
    </td>
    <td> <ul>
@@ -247,24 +233,10 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
             <li><a href='https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml'>Selenese reference (online)</a></li>
             <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
-            <li>selenese-scripts/
-                <ul>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/misc_case.html'>misc_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/plain_function_call_case.html'>plain_function_call_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/plain_function_definition_case.html'>plain_function_definition_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/try_catch_function_calls_case.html'>try_catch_function_calls_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/try_catch_function_definitions_case.html'>try_catch_function_definitions_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts/use_data_from_files_case.html'>use_data_from_files_case.html</a></li>
-                </ul>
-            </li>
-            <li>selenese-scripts-negative/
-                <ul>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/successful_try_then_failed_assert.html'>successful_try_then_failed_assert.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_with_no_catch_nor_finally_at_top_level_case.html'>try_with_no_catch_nor_finally_at_top_level_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_without_catch_at_top_level_case.html'>try_without_catch_at_top_level_case.html</a></li>
-                     <li><a href='http://htmlpreview.github.io/?https://github.com/SeLite/SelBlocksGlobal/blob/master/selenese-scripts-negative/try_with_unmatching_catch_at_top_level_case.html'>try_with_unmatching_catch_at_top_level_case.html</a></li>
-                </ul>
-            </li>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts-negative/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
+            <li markdown="span">[selenese-scripts-negative.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
         </ul>
     </td>
     <td> <ul>

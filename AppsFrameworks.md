@@ -22,6 +22,6 @@ To install follow [InstallFramework](InstallFramework).
 | PHP        |                                   | [Dotclear](http://dotclear.org/)                            | [DotclearFramework](DotclearFramework) <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/dotclear) |
 | PHP        |                                   | [Drupal 7](http://drupal.org)                               | [DrupalFramework](DrupalFramework) <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/drupal) |
 | PHP        |                                   | [FUDforum](http://fudforum.org/forum/) (& [FUDforum downloads, sources etc.](http://sourceforge.net/projects/fudforum/)) | [FUFDforumFramework](FUFDforumFramework) <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/fudforum) |
-| PHP        |                                   | [phpMyFAQ](http://www.phpmyfaq.de/)                           | TODO <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/masterphpmyfaq) |
+| PHP        |                                   | [phpMyFAQ](http://www.phpmyfaq.de/)                           | TODO <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/phpmyfaq) |
 | PHP        |                                   | [Serendipity](http://www.s9y.org)                           | [SerendipityFramework](SerendipityFramework) <br> [download](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/serendipity) |
 {: .table}
