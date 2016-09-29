@@ -202,7 +202,14 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/'>info</a>  </td>
     <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/versions/'>download</a>
     </td>
-    <td>&#160;</td>
+    <td>
+        <ul>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
+            <li markdown="span">[demo/](https://github.com/SeLite/SeLite/tree/master/preview/demo)</li>
+            <li markdown="span">[demo.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/demo)</li>
+        </ul>
+    </td>
     <td> <ul>
             <li>Since 2016</li>
         </ul>
