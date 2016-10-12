@@ -181,29 +181,5 @@
 <!-- Based on http://getbootstrap.com/components/#navbar -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        // Following enables both GitHub page-like links (with no .md at the end) and running Jekyll locally. It's because for each page Abc.md Jekyll generates Abc.html. GitHub pages support both URLs Abc and Abc.html; however, we use Abc since it seems clearer and more Markdown-compatible.
-        // @TODO Remove once Jekyll 3 is common. See https://github.com/jekyll/jekyll/pull/3452.
-        // A reverse of http://stackoverflow.com/questions/15214762/how-can-i-sync-documentation-with-github-pages/16389663#16389663. See also https://github.com/github/pages-gem/issues/69.
-        if( location.host!=='selite.github.io' && false) {
-            $(function () {
-                // Match any local URLs to other files with no extension, i.e. URLS with no protocol, not starting with #, with any directory path (optional), ending with a filename that doesn't contain a dot. This doesn't match './' or URLs ending with '/' (e.g. ones for /index.md or subfolder/index.md), which is OK, since those work well with both GitHub pages and Jekyll.
-                var urlWithNoProtocolAndNoExtensionRegex= /^(?!#|[a-z]+:\/\/)(.*\/)?([^/.]+)$/;
-                $('a').each(function () {
-                    var href = $(this).attr('href');
-                    if( urlWithNoProtocolAndNoExtensionRegex.test(href) ) {
-                        var indexOfHash= href.indexOf('#');
-                        var url= indexOfHash>0
-                            ? href.substring(0, indexOfHash)
-                            : href;
-                        var hashPart= indexOfHash>0
-                            ? href.substring(indexOfHash)
-                            : '';
-                        $(this).attr( 'href', url +'.html' +hashPart );
-                    }
-                });
-            });
-        }
-    </script>
   </body>
 </html>

@@ -2,12 +2,11 @@
  Don't add any more 1st level menu items, neither make wording of the existing items longer. Reason: With Firefox 46.0.1 on Samsung S5 (SM-G900I) in landscape, the menu still shows up vertically. When there were more menu items at 1st level, they wouldn't all show up on the screen. (The problem is bigger in landscape than in portrait).
 
 This page doesn't have YAML Front Matter block (which would be between ---- and ----). Otherwise, such YAML would show up as page content this when file is included from _layouts/default.md.
-This page has to be .md rather than .html, so that we can use it with Markdown Viewer add-on(see DocumentationStandard.md). Only when it's an .md file, Markdown Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
+This page has to be .md rather than .html, so that we can use it with Markdown Viewer add-on (see DocumentationStandard.md). Only when it's an .md file, Markdown Viewer automatically changes the local links that don't contain .md extension to contain .md extension. (Otherwise the referenced files won't open locally in Firefox.)
 
 To test links from this webpage with Markdown Viewer on Linux/Mac OS, create a symlink to this file from a folder above.
 -->
 {% endcomment %}
-<!-- pageName contains "TableOfContents" and "TableOfContents" contains pageName -->
 {% if include.asBootstrapMenu %}
     {% assign topLiClass = 'class="dropdown"' %}
     {% assign luClass = 'class="dropdown-menu"' %}
