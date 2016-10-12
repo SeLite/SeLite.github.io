@@ -7,13 +7,6 @@ This page has to be .md rather than .html, so that we can use it with Markdown V
 To test links from this webpage with Markdown Viewer on Linux/Mac OS, create a symlink to this file from a folder above.
 -->
 {% endcomment %}
-{% comment %}
-Following turns on/off Bootstrap menu classes. It allows selite.github.io/TableOfContents to display both the Bootstrap menu, and then the following lists as a tree (below the menu) rather than as a Bootstrap menu. I've tried to turn these Bootstrap classes on/off in Javascript, but then Bootstrap menu didn't show well:
-        $( function () {
-            $( "#selite-menu-span li.toc-menu" ).addClass( 'dropdown' );
-            $( "#selite-menu-span ul.toc-menu" ).addClass( 'dropdown-menu' );
-        } );
-{% endcomment %}
 <!-- pageName contains "TableOfContents" and "TableOfContents" contains pageName -->
 {% if include.asBootstrapMenu %}
     {% assign topLiClass = 'class="dropdown"' %}
