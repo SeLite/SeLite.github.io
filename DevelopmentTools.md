@@ -26,7 +26,7 @@ For the easiest download get all components of [SeLite Development Tools collect
  * [AMO admin assistant](https://addons.mozilla.org/en-US/firefox/addon/amo-admin-assistant/)
  * [DOM Inspector](https://addons.mozilla.org/en-US/firefox/addon/dom-inspector-6622/)
  * [DevPrefs](https://addons.mozilla.org/en-US/firefox/addon/devprefs/). If you don't install DevPrefs, visit Firefox URL _about:config_ and set the following preferences:
-  * `browser.tabs.remote.autostart` to boolean `false`. This turns electrolysis (e10s) until Selenium IDE works with it.
+  * `browser.tabs.remote.autostart` to boolean `false`. This turns electrolysis (e10s) until Selenium IDE works with it. (Alternatively, turn e10s at Firefox URL _about:preferences#general_ > 'Enable multi-process').
   * `xpinstall.signatures.required` to boolean `false`
   * `browser.dom.window.dump.enabled` to boolean `true`
   * `devtools.chrome.enabled` to boolean `true`

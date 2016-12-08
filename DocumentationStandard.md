@@ -15,7 +15,7 @@ Having documentation in one large piece would make its structure too rigid. Main
   * for navigation open [custom 404 page](404)
   * note that Markdown Viewer is not 100% proof
 
-Alternatively, run [Jekyll locally](https://help.github.com/articles/using-jekyll-with-pages/). Install Jekyll 3.0 or newer (so that it is [Github-compatible](https://github.com/jekyll/jekyll/pull/3452)).
+Run [Jekyll locally](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
 
 SeLite doesn't use GitHub Wiki, which doesn't utilise screen well, especially on mobile devices. (E.g. its sidebar has a wide mandatory part).
 
