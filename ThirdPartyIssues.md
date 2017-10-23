@@ -53,7 +53,7 @@ By default, you will get notifications for issues that you comment on. After you
 ## Mozilla and NetBeans
 Mozilla and NetBeans also require you to register in order to vote. It takes a few steps, but it's important: those products have many more other issues and voters (when compared to Selenium), so we need many votes to expedite the issues. Register yourself at [NetBeans registration](https://netbeans.org/people/new) and [Mozilla registration](https://bugzilla.mozilla.org/createaccount.cgi). Submit those forms, then check your email inbox and confirm your registration by following a link that you'll receive.
 
-The actual voting is in two steps. Click at 'vote' right of Importance (for Mozilla) or right of Priority (for NetBeans). That takes you to a page with a checkbox next to Vote For This Bug. Activate the checkbox and submit by clicking at button Change My Votes near the bottom-left.
+To navigate to voting, you may need to expand 'Details' section. The actual voting is in two steps. Click at 'vote' right of Importance (for Mozilla) or right of Priority (for NetBeans). That takes you to a page with a checkbox next to Vote For This Bug. Activate the checkbox and submit by clicking at button Change My Votes near the bottom-left.
 
 You can turn off any notifications at [Mozilla preferences](https://bugzilla.mozilla.org/userprefs.cgi?tab=email) or [NetBeans preferences](https://netbeans.org/bugzilla/userprefs.cgi?tab=email) > button Disable All Mail and then button Submit Changes at the bottom.
 
@@ -106,6 +106,7 @@ You can turn off any notifications at [Mozilla preferences](https://bugzilla.moz
 | [Regex search in any folder tree with an empty file fails](https://netbeans.org/bugzilla/show_bug.cgi?id=257897)                 | NetBeans        | Smooth customization |
 | [Documentation and handling of Selenium.prototype.getXYZ functions...](https://github.com/SeleniumHQ/selenium/issues/1635)       | Selenium        | Reliable API |
 | [Backslashes get reduced to half](https://github.com/SeleniumHQ/selenium/issues/2215) | Selenium | Usability |
+| [Support compound selectors and complex selectors...](https://bugzilla.mozilla.org/show_bug.cgi?id=933562) | Mozilla | Flexible usage
 {: .table #issues}
 
 <!--
