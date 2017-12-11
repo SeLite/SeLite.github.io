@@ -33,7 +33,6 @@ To get the latest releases, use the `download` links below for recent releases. 
 <tbody>
 <tr>
     <td> <strong>Extension name</strong><br/>and <strong>user documentation</strong><br/>
-        (if it exists)
     </td>
     <td><strong>General<br/>info</strong></td>
     <td><strong>Download</strong> <br/>
@@ -61,31 +60,7 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td><strong>Other</strong></td>
 </tr>
 <tr>
-    <td><a name="autocheck"></a><a href="AutoCheck">Auto Check</a></td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
-    <td> <ul>
-            <li> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>autoCheck</em>...</li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-            <li> Since July 2014</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td> <a name="bootstrap"></a><a href='Bootstrap'>Bootstrap</a></td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-bootstrap/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
-    <td> <ul>
-            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions</li>
-         </ul>
-    </td>
-    <td> <ul>
-            <li>Since 2012</li>
-         </ul>
-    </td>
+    <td colspan="5">VISUAL</td>
 </tr>
 <tr>
     <td> <a name="clipboard-and-indent"></a><a href='SeleniumIDEtips#clipboard-and-indent'>Clipboard And Indent</a> </td>
@@ -100,6 +75,61 @@ To get the latest releases, use the `download` links below for recent releases. 
             <li>Since February 2015</li>
          </ul>
     </td>
+</tr>
+<tr>
+    <td> <a name="hands-on-gui"></a><a href='SeleniumIDEtips#hands-on-gui'>Hands-on GUI</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
+    <td>
+        <b>Urgent note</b><br/>
+        This productivity add-on is affected by Firefox defect <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1247476'>"tree.inputField's type as autocomplete fails"</a>. Vote for that bug, please.<br/><br/>
+        Your vote is essential. Otherwise Mozilla may take years to fix it. Please, also vote for <a href="ThirdPartyIssues">ThirdPartyIssues</a>.
+    </td>
+    <td> <ul>
+            <li>Apache License&#160;2</li>
+            <li>Since February 2015</li>
+        </ul>
+    </td>
+</tr>
+<tr>
+    <td> <a href='Preview'>Preview</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/'>info</a>  </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/versions/'>download</a>
+    </td>
+    <td>
+        <ul>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
+            <li markdown="span">[demo/](https://github.com/SeLite/SeLite/tree/master/preview/demo)</li>
+            <li markdown="span">[demo.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/demo)</li>
+        </ul>
+    </td>
+    <td> <ul>
+            <li>Since 2016</li>
+        </ul>
+    </td>
+</tr>
+<tr>
+    <td> <a name="settings"></a><a href='Settings'>Settings</a>                </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
+    <td> <ul>
+            <li>Options > SeLite Settings for this suite</li>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul</em></li>
+            <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
+            <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>
+            <li><a href='https://github.com/SeLite/SeLite/blob/master/settings/src/chrome/content/SeLiteSettings.js'>source</a></li>
+        </ul>
+    </td>
+    <td> <ul>
+            <li>GUI is under GNU GPL&#160;3; API is under GNU LGPL&#160;3</li>
+            <li>Since 2013</li>
+        </ul>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">ACTIONS (COMMANDS)</td>
 </tr>
 <tr>
     <td> <a name="commands"></a><a href='Commands'>Commands</a></td>
@@ -133,19 +163,29 @@ To get the latest releases, use the `download` links below for recent releases. 
     </td>
 </tr>
 <tr>
-<td> <a href="ExitConfirmationChecker">ExitConfirmationChecker</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
+    <td> <a name="selblocksglobal"></a><a href="SelBlocksGlobal">SelBlocksGlobal</a></td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-selblocks-global/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SelBlocks-Global/versions/'>download</a>        </td>
     <td> <ul>
-            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
-            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
-            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
+            <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
+            <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
+            <li><a href='https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml'>Selenese reference (online)</a></li>
+            <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts-negative/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
+            <li markdown="span">[selenese-scripts-negative.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
         </ul>
     </td>
     <td> <ul>
-            <li>Since June 2014</li>
+            <li>MPL License&#160;1.1</li>
+            <li>Since 2011</li>
         </ul>
     </td>
+</tr>
+
+<tr>
+    <td colspan="5">API</td>
 </tr>
 <tr>
  <td> <A name="extensionsequencer"></a><a href="ExtensionSequencer">Extension Sequencer</a>        </td>
@@ -159,21 +199,6 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td> <ul>
             <li>Apache License&#160;2</li>
             <li>Since September 2013</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td> <a name="hands-on-gui"></a><a href='SeleniumIDEtips#hands-on-gui'>Hands-on GUI</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/'>info</a>  </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-hands-on-gui/versions/'>download</a>           </td>
-    <td>
-        <b>Urgent note</b><br/>
-        This productivity add-on is affected by Firefox defect <a href='https://bugzilla.mozilla.org/show_bug.cgi?id=1247476'>"tree.inputField's type as autocomplete fails"</a>. Vote for that bug, please.<br/><br/>
-        Your vote is essential. Otherwise Mozilla may take years to fix it. Please, also vote for <a href="ThirdPartyIssues">ThirdPartyIssues</a>.
-    </td>
-    <td> <ul>
-            <li>Apache License&#160;2</li>
-            <li>Since February 2015</li>
         </ul>
     </td>
 </tr>
@@ -198,20 +223,59 @@ To get the latest releases, use the `download` links below for recent releases. 
    </td>
 </tr>
 <tr>
-    <td> <a href='Preview'>Preview</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/'>info</a>  </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-preview/versions/'>download</a>
+    <td> TestCase Debug Context   </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-TestCase-Debug-Conte/versions/'>download</a>      </td>
+    <td>&#160;</td>
+    <td> <ul>
+            <li>Apache License&#160;2</li>
+            <li>Since 2013</li>
+        </ul>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="5">PRODUCTIVITY</td>
+</tr>
+<tr>
+    <td><a name="autocheck"></a><a href="AutoCheck">Auto Check</a></td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-auto-check/versions/'>download</a></td>
+    <td> <ul>
+            <li> Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>autoCheck</em>...</li>
+        </ul>
     </td>
     <td>
         <ul>
-            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
-            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/selenese-scripts)</li>
-            <li markdown="span">[demo/](https://github.com/SeLite/SeLite/tree/master/preview/demo)</li>
-            <li markdown="span">[demo.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/preview/demo)</li>
+            <li> Since July 2014</li>
+        </ul>
+    </td>
+</tr>
+<tr>
+    <td> <a name="bootstrap"></a><a href='Bootstrap'>Bootstrap</a></td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-bootstrap/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-Bootstrap/versions/'>download</a></td>
+    <td> <ul>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > bootstrappedCoreExtensions</li>
+         </ul>
+    </td>
+    <td> <ul>
+            <li>Since 2012</li>
+         </ul>
+    </td>
+</tr>
+<tr>
+<td> <a href="ExitConfirmationChecker">ExitConfirmationChecker</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/'>info</a> </td>
+    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-exit-confirmation-check/versions'>download</a> </td>
+    <td> <ul>
+            <li>Configuration: <em>chrome://selite-settings/content/tree.xul?module=extensions.selite-settings.common</em> > <em>exitConfirmationChecker</em>...</li>
+            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
+            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SeLite/tree/master/exit-confirmation-checker/selenese-scripts)</li>
         </ul>
     </td>
     <td> <ul>
-            <li>Since 2016</li>
+            <li>Since June 2014</li>
         </ul>
     </td>
 </tr>
@@ -228,56 +292,6 @@ To get the latest releases, use the `download` links below for recent releases. 
     <td> <ul>
             <li>MPL License&#160;1.1</li>
             <li>Since September 2014</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td> <a name="selblocksglobal"></a><a href="SelBlocksGlobal">SelBlocksGlobal</a></td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-selblocks-global/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-SelBlocks-Global/versions/'>download</a>        </td>
-    <td> <ul>
-            <li><a href='https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-sel-blocks/'>SelBlocks summary</a></li>
-            <li><a href='http://refactoror.wikia.com/wiki/Selblocks_Reference'>SelBlocks reference</a> (most applies, for differences see SelBlocksGlobal)</li>
-            <li><a href='https://cdn.rawgit.com/SeLite/SelBlocksGlobal/master/sel-blocks-fx_xpi/chrome/content/reference.xml'>Selenese reference (online)</a></li>
-            <li>Selenese reference (offline) <em>chrome://selite-extension-sequencer/content/selenese_reference.html?chrome://selite-selblocks-global/content/reference.xml</em></li>
-            <li markdown="span">[selenese-scripts/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
-            <li markdown="span">[selenese-scripts.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts)</li>
-            <li markdown="span">[selenese-scripts-negative/](https://github.com/SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
-            <li markdown="span">[selenese-scripts-negative.zip](https://kinolien.github.com/gitzip/?download=SeLite/SelBlocksGlobal/tree/master/selenese-scripts-negative)</li>
-        </ul>
-    </td>
-    <td> <ul>
-            <li>MPL License&#160;1.1</li>
-            <li>Since 2011</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td> <a name="settings"></a><a href='Settings'>Settings</a>                </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-settings/versions/'>download</a>                </td>
-    <td> <ul>
-            <li>Options > SeLite Settings for this suite</li>
-            <li>Configuration: <em>chrome://selite-settings/content/tree.xul</em></li>
-            <li>Registration: <em>chrome://selite-settings/content/tree.xul?register</em></li>
-            <li>Resolving per folder: <em>chrome://selite-settings/content/tree.xul?selectFolder</em></li>
-            <li><a href='https://github.com/SeLite/SeLite/blob/master/settings/src/chrome/content/SeLiteSettings.js'>source</a></li>
-        </ul>
-    </td>
-    <td> <ul>
-            <li>GUI is under GNU GPL&#160;3; API is under GNU LGPL&#160;3</li>
-            <li>Since 2013</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td> TestCase Debug Context   </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/selite-testcase-debug-conte/'>info</a> </td>
-    <td> <a href='https://addons.mozilla.org/en-US/firefox/addon/SeLite-TestCase-Debug-Conte/versions/'>download</a>      </td>
-    <td>&#160;</td>
-    <td> <ul>
-            <li>Apache License&#160;2</li>
-            <li>Since 2013</li>
         </ul>
     </td>
 </tr>
