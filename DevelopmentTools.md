@@ -7,6 +7,13 @@ layout: default
 
 This is on top of [AddOnsThirdParty](AddOnsThirdParty).
 
+# Running with web-ext#
+Use firefox --ProfileManager to create a new profile. Then start web-ext --firefox-profile with that profile. Don't let web-ext create a new profile, as it will name it 'dev-edition-default'. If you rename it later (with firefox --ProfileManager), web-ext seems not able to pick it up!
+
+See also [MDN: web-ext](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Getting_started_with_web-ext).
+
+Most of the following is obsolete.
+
 # Development and debugging #
 
 This is for developing [Core extensions][core extension] and SeLite frameworks (as per [GeneralFramework](GeneralFramework)). Apply this in parallel to
