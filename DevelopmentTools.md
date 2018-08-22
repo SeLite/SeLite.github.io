@@ -45,7 +45,7 @@ Regardless of whether you installed DevPrefs add-on or whether you set the above
   * set `devtools.debugger.prompt-connection` to boolean `false`. Otherwise, when you start Browser Toolbox, it shows up greyed out. Then you need to switch back to the main Firefox window, which show a modal dialog regarding the access that you need to allow. Disable this only if you are on a secured network.
   * add `dom.allow_XUL_XBL_for_file` as boolean `true` (this preference is not set by default). It is for developing XUL GUI. (It enables access to `.xul` files via _file://_ URLs in addition to using {{chromeUrl}}s. Beware that such files are limited, with less access than `.xul` files under _chrome://_ URLs (e.g. no access to `Components.utils.import()`).
 
-Follow [MDN: Browser Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox) > [Enabling the Browser_Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox).
+Follow [MDN: Browser Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox) > [Enabling the Browser_Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox#Enabling_the_Browser_Toolbox).
 
 Restart Firefox, so that the above configuration takes effect.
 
