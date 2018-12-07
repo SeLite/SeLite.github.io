@@ -1,4 +1,5 @@
 {% capture nameOfVariableToCapture %}any markdown here...{% endcapture %}
 
-{{ nameOfVariableToCapture }}
-
+Content before variable.<br/>
+{{ nameOfVariableToCapture }}<br/>
+Content after variable.<br/>
